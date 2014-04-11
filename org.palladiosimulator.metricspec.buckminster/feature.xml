@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.palladiosimulator.metricspec.buckminster"
+      label="Palladio Metric Specification Framework"
+      version="1.0.0.qualifier"
+      provider-name="palladiosimulator.org">
+
+   <url>
+      <discovery label="Eclipse Orbit" url="http://download.eclipse.org/tools/orbit/downloads/drops/R20130827064939/repository"/>
+   </url>
+
+   <includes
+         id="org.palladiosimulator.metricspec.feature"
+         version="0.0.0"/>
+
+   <requires>
+      <import plugin="org.junit"/>
+   </requires>
+
+   <plugin
+         id="org.palladiosimulator.metricspec.tests"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
