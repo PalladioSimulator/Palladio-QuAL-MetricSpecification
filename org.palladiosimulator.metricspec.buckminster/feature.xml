@@ -5,10 +5,6 @@
       version="1.0.0.qualifier"
       provider-name="palladiosimulator.org">
 
-   <url>
-      <discovery label="Eclipse Orbit" url="http://download.eclipse.org/tools/orbit/downloads/drops/R20130827064939/repository"/>
-   </url>
-
    <includes
          id="org.palladiosimulator.metricspec.feature"
          version="0.0.0"/>
