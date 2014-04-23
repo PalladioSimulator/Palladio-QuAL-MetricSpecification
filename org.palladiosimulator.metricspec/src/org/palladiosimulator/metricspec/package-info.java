@@ -1,5 +1,5 @@
 /**
- * Constants used by the probespec framework, e.g., metrics and matching rules.
+ * Constants used by ProbeFramework, e.g., metrics and matching rules.
  * 
  * @author Sebastian Lehrig
  */

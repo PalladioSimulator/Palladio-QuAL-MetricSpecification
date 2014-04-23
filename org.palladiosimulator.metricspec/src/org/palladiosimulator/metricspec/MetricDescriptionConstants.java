@@ -18,7 +18,7 @@ import org.palladiosimulator.edp2.models.ExperimentData.PersistenceKindOptions;
 import org.palladiosimulator.edp2.models.ExperimentData.Scale;
 
 /**
- * Constant metric descriptions, commonly used by ProbeSpec.
+ * Constant metric descriptions, commonly used by ProbeFramework.
  * 
  * TODO Extract metric descriptions to separate EDP2 Repository.
  * 
