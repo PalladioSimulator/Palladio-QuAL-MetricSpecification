@@ -2,5 +2,5 @@
     <cq:rootRequest name="org.palladiosimulator.metricspec.buckminster" componentType="eclipse.feature"/>
     <cq:property key="pass" value="anonymous"/>
     <cq:property key="user" value="anonymous"/>
-    <cq:advisorNode namePattern=".*" filter="(buckminster.source=true)" useWorkspace="false"/>
+    <cq:advisorNode namePattern=".*metricspec.*" useWorkspace="false"/>
 </cq:componentQuery>
