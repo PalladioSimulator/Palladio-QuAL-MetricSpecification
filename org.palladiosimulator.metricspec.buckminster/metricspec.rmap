@@ -10,6 +10,8 @@
   <rm:locator searchPathRef="orbit" failOnError="false"/>
   <rm:searchPath name="metricspec">
     <rm:provider componentTypes="eclipse.feature,osgi.bundle" readerType="svn">
+      <rm:property key="buckminster.source" value="true"/>
+      <rm:property key="buckminster.mutable" value="true"/>
       <rm:uri format="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/MetricSpecification/trunk/{0}">
         <bc:propertyRef key="buckminster.component"/>
       </rm:uri>
