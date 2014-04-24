@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?><cq:componentQuery xmlns:cq="http://www.eclipse.org/buckminster/CQuery-1.0" resourceMap="metricspec.rmap">
     <cq:rootRequest name="org.palladiosimulator.metricspec.buckminster" componentType="eclipse.feature"/>
-    <cq:property key="pass" value="anonymous"/>
-    <cq:property key="user" value="anonymous"/>
-    <cq:advisorNode namePattern=".*metricspec.*" useWorkspace="false"/>
+    <cq:advisorNode namePattern="$org\.palladiosimulator\.metricspec.*" useWorkspace="false"/>
 </cq:componentQuery>
