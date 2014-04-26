@@ -1,4 +1,4 @@
-package org.palladiosimulator.metricspec;
+package org.palladiosimulator.metricspec.metricentity;
 
 import java.util.Arrays;
 import java.util.List;
@@ -6,16 +6,17 @@ import java.util.List;
 import javax.measure.quantity.Dimensionless;
 import javax.measure.unit.SI;
 
-import org.palladiosimulator.edp2.models.ExperimentData.BaseMetricDescription;
-import org.palladiosimulator.edp2.models.ExperimentData.CaptureType;
-import org.palladiosimulator.edp2.models.ExperimentData.DataType;
-import org.palladiosimulator.edp2.models.ExperimentData.ExperimentDataFactory;
-import org.palladiosimulator.edp2.models.ExperimentData.ExperimentDataPackage;
-import org.palladiosimulator.edp2.models.ExperimentData.MetricDescription;
-import org.palladiosimulator.edp2.models.ExperimentData.MetricSetDescription;
-import org.palladiosimulator.edp2.models.ExperimentData.Monotonic;
-import org.palladiosimulator.edp2.models.ExperimentData.PersistenceKindOptions;
-import org.palladiosimulator.edp2.models.ExperimentData.Scale;
+import org.palladiosimulator.metricspec.BaseMetricDescription;
+import org.palladiosimulator.metricspec.CaptureType;
+import org.palladiosimulator.metricspec.DataType;
+import org.palladiosimulator.metricspec.MetricDescription;
+import org.palladiosimulator.metricspec.MetricSetDescription;
+import org.palladiosimulator.metricspec.MetricSpecFactory;
+import org.palladiosimulator.metricspec.Monotonic;
+import org.palladiosimulator.metricspec.PersistenceKindOptions;
+import org.palladiosimulator.metricspec.Scale;
+import org.palladiosimulator.metricspec.util.builder.MetricSetDescriptionBuilder;
+import org.palladiosimulator.metricspec.util.builder.NumericalBaseMetricDescriptionBuilder;
 
 /**
  * Constant metric descriptions, commonly used by ProbeFramework.
@@ -28,10 +29,7 @@ public final class MetricDescriptionConstants {
 
     /** EMF initialization. Must exist but not be used in the further code. */
     @SuppressWarnings("unused")
-    private final static ExperimentDataPackage experimentDataPackage = ExperimentDataPackage.eINSTANCE;
-
-    /** Shortcut to experiment data factory. */
-    private final static ExperimentDataFactory experimentDataFactory = ExperimentDataFactory.eINSTANCE;
+    private final static MetricSpecFactory experimentDataPackage = MetricSpecFactory.eINSTANCE;
 
     /** Specifies a CPU metric, e.g., to store CPU utilization at a certain time/state. */
     public final static BaseMetricDescription CPU_STATE_METRIC = createNewNaturalNumberMetric("State of the CPU resource", "This measure represents the state of the CPU resource", "_BoroIZMbEd6Vw8NDgVSYcgLehr0");
@@ -64,10 +62,13 @@ public final class MetricDescriptionConstants {
     }
 
     private static MetricSetDescription createNewMetricSetDescription(final List<MetricDescription> submetrics, final String name, final String description, final String uuid) {
-        final MetricSetDescription result = experimentDataFactory.createMetricSetDescription(name, description);
-        result.setUuid(uuid);
-        result.getSubsumedMetrics().addAll(submetrics);
-
+        final MetricSetDescription result = MetricSetDescriptionBuilder.
+                newMetricSetDescriptionBuilder().
+                name(name).
+                textualDescription(description).
+                id(uuid).
+                subsumedMetrics(submetrics).
+                build();
         return result;
     }
 
@@ -84,17 +85,18 @@ public final class MetricDescriptionConstants {
      * @return A new MeasurementMetric for time.
      */
     private static BaseMetricDescription createNewTimeMetric(final String name, final String description, final String uuid) {
-        final BaseMetricDescription metric = experimentDataFactory.createNumericalBaseMetricDescription(
-                name,
-                description,
-                CaptureType.REAL_NUMBER,
-                Scale.RATIO, // time is generally Scale.INTERVAL but for our time metrics, we have an absolute 0-point (-> Scale.RATIO!)
-                DataType.QUANTITATIVE,
-                SI.SECOND,
-                Monotonic.NO,
-                PersistenceKindOptions.BINARY_PREFERRED
-                );
-        metric.setUuid(uuid);
+        final BaseMetricDescription metric = NumericalBaseMetricDescriptionBuilder.
+                newNumericalBaseMetricDescriptionBuilder().
+                name(name).
+                textualDescription(description).
+                captureType(CaptureType.REAL_NUMBER).
+                scale(Scale.RATIO).
+                dataType(DataType.QUANTITATIVE).
+                defaultUnit(SI.SECOND).
+                monotonic(Monotonic.NO).
+                persistenceKind(PersistenceKindOptions.BINARY_PREFERRED).
+                id(uuid).
+                build();
         return metric;
     }
 
@@ -109,17 +111,18 @@ public final class MetricDescriptionConstants {
      * @return A new MeasurementMetric for state information.
      */
     private static BaseMetricDescription createNewNaturalNumberMetric(final String name, final String description, final String uuid) {
-        final BaseMetricDescription metric = experimentDataFactory.createNumericalBaseMetricDescription(
-                name,
-                description,
-                CaptureType.INTEGER_NUMBER,
-                Scale.ORDINAL,
-                DataType.QUANTITATIVE,
-                Dimensionless.UNIT,
-                Monotonic.NO,
-                PersistenceKindOptions.BINARY_PREFERRED
-                );
-        metric.setUuid(uuid);
+        final BaseMetricDescription metric = NumericalBaseMetricDescriptionBuilder.
+                newNumericalBaseMetricDescriptionBuilder().
+                name(name).
+                textualDescription(description).
+                captureType(CaptureType.INTEGER_NUMBER).
+                scale(Scale.ORDINAL).
+                dataType(DataType.QUANTITATIVE).
+                defaultUnit(Dimensionless.UNIT).
+                monotonic(Monotonic.NO).
+                persistenceKind(PersistenceKindOptions.BINARY_PREFERRED).
+                id(uuid).
+                build();
         return metric;
     }
 }

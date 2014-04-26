@@ -3,4 +3,4 @@
  * 
  * @author Sebastian Lehrig
  */
-package org.palladiosimulator.metricspec;
+package org.palladiosimulator.metricspec.metricentity;

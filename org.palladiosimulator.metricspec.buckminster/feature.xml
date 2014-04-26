@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.palladiosimulator.metricspec.buckminster"
+      id="org.palladiosimulator.metricspec.metricentity.buckminster"
       label="Palladio Metric Specification Framework"
       version="1.0.0.qualifier"
       provider-name="palladiosimulator.org">
 
    <includes
-         id="org.palladiosimulator.metricspec.feature"
+         id="org.palladiosimulator.metricspec.metricentity.feature"
          version="0.0.0"/>
 
    <requires>
