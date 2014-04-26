@@ -6,7 +6,7 @@
       provider-name="palladiosimulator.org">
 
    <includes
-         id="org.palladiosimulator.metricspec.metricentity.feature"
+         id="org.palladiosimulator.metricspec.feature"
          version="0.0.0"/>
 
    <requires>
