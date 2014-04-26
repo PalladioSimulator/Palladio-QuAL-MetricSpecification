@@ -1,4 +1,4 @@
-package org.palladiosimulator.metricspec.metricentity;
+package org.palladiosimulator.metricspec.constants;
 
 import java.util.Arrays;
 import java.util.List;

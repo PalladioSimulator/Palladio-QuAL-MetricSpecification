@@ -1,4 +1,4 @@
-package org.palladiosimulator.metricspec.metricentity;
+package org.palladiosimulator.metricspec;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
