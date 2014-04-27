@@ -8,13 +8,28 @@ public abstract class MetricEntity implements IMetricEntity {
 
     /** The subclasses' metric
      */
-    protected final MetricDescription metricDesciption;
+    private MetricDescription metricDesciption;
+    private boolean isInitialised = false;
+
+    protected MetricEntity() {
+        super();
+    }
 
     /**
      * @param metricDesciption
      */
     protected MetricEntity(final MetricDescription metricDesciption) {
         super();
+        setMetricDescription(metricDesciption);
+    }
+
+    /**
+     * @param metricDesciption
+     */
+    protected void setMetricDescription(final MetricDescription metricDesciption) {
+        if (isInitialised) {
+            throw new IllegalStateException("Metric description of metric entity cannot be changed after initalisation");
+        }
         if (metricDesciption == null) {
             throw new IllegalArgumentException("Metric description has to be a valid instance.");
         }
@@ -34,6 +49,7 @@ public abstract class MetricEntity implements IMetricEntity {
                 }
             }
         });
+        isInitialised = true;
     }
 
     /* (non-Javadoc)
@@ -41,7 +57,17 @@ public abstract class MetricEntity implements IMetricEntity {
      */
     @Override
     public final MetricDescription getMetricDesciption() {
+        checkInitialised();
         return metricDesciption;
+    }
+
+    /**
+     * 
+     */
+    private void checkInitialised() {
+        if (!isInitialised) {
+            throw new IllegalStateException("Metric description is not initialised");
+        }
     }
 
     /* (non-Javadoc)
@@ -49,6 +75,7 @@ public abstract class MetricEntity implements IMetricEntity {
      */
     @Override
     public final boolean isCompatibleWith(final MetricDescription other) {
+        checkInitialised();
         if (this.getMetricDesciption() == other || this.metricDesciption.equals(other)) {
             return true;
         }
