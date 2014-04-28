@@ -1,119 +1,70 @@
 package org.palladiosimulator.metricspec.constants;
 
-import java.util.Arrays;
-import java.util.List;
+import java.io.IOException;
+import java.util.Collections;
 
-import javax.measure.quantity.Dimensionless;
-import javax.measure.unit.SI;
-
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.palladiosimulator.metricspec.BaseMetricDescription;
-import org.palladiosimulator.metricspec.CaptureType;
-import org.palladiosimulator.metricspec.DataType;
-import org.palladiosimulator.metricspec.MetricDescription;
 import org.palladiosimulator.metricspec.MetricSetDescription;
-import org.palladiosimulator.metricspec.PersistenceKindOptions;
-import org.palladiosimulator.metricspec.Scale;
-import org.palladiosimulator.metricspec.util.builder.MetricSetDescriptionBuilder;
-import org.palladiosimulator.metricspec.util.builder.NumericalBaseMetricDescriptionBuilder;
 
 /**
  * Constant metric descriptions, commonly used by ProbeFramework.
  * 
- * TODO Extract metric descriptions to separate EDP2 Repository.
- * 
  * @author Sebastian Lehrig, Steffen Becker
  */
 public final class MetricDescriptionConstants {
+    private static final String PATHMAP_METRIC_SPEC_MODELS_COMMON_METRICS_METRICSPEC = "pathmap://METRIC_SPEC_MODELS/commonMetrics.metricspec";
+
+	static {
+    	final ResourceSet resourceSet = new ResourceSetImpl();
+    	final Resource resource = resourceSet.createResource(URI.createURI(PATHMAP_METRIC_SPEC_MODELS_COMMON_METRICS_METRICSPEC, true));
+    	try {
+			resource.load(Collections.EMPTY_MAP);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block. Use eclipse error log instead?
+			e.printStackTrace();
+		}
+    	
+    	RESPONSE_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_6rYmYs7nEeOX_4BzImuHbA");
+    	POINT_IN_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_NCRBos7pEeOX_4BzImuHbA");
+    	HOLD_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_zETOUs7pEeOX_4BzImuHbA");
+    	WAITING_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_QWjAYs7qEeOX_4BzImuHbA");
+    	RESOURCE_DEMAND_METRIC = (BaseMetricDescription) resource.getEObject("_eg_F0s7qEeOX_4BzImuHbA");
+    	CPU_STATE_METRIC = (BaseMetricDescription) resource.getEObject("_paDhIs7qEeOX_4BzImuHbA");
+    	PASSIVE_RESOURCE_STATE_METRIC = (BaseMetricDescription) resource.getEObject("_x0-pks7rEeOX_4BzImuHbA");
+    	EXECUTION_RESULT_METRIC = (BaseMetricDescription) resource.getEObject("_7Is3ss7rEeOX_4BzImuHbA");
+    	CPU_STATE_OVER_TIME_METRIC = (MetricSetDescription) resource.getEObject("_MSlw0c7sEeOX_4BzImuHbA");
+    }
+	
+    /** Specifies a response time metric, e.g., to store the response time of operation calls. */
+    public final static BaseMetricDescription RESPONSE_TIME_METRIC;
+    
+    /** Specifies a point in time metric, e.g., to store an event time stamp. */
+    public final static BaseMetricDescription POINT_IN_TIME_METRIC;
+    
+    /** Specifies a hold time metric, e.g., to store the time spend in a passive resource. */
+    public final static BaseMetricDescription HOLD_TIME_METRIC;
+    
+    /** Specifies a waiting time metric, e.g., to store the waiting time at passive resource pools. */
+    public final static BaseMetricDescription WAITING_TIME_METRIC;
+    
+    /** Specifies a resource demand metric, e.g., to store CPU demand measurements. */
+    public final static BaseMetricDescription RESOURCE_DEMAND_METRIC;
+    
     /** Specifies a CPU metric, e.g., to store CPU utilization at a certain time/state. */
-    public final static BaseMetricDescription CPU_STATE_METRIC = createNewNaturalNumberMetric("State of the CPU resource", "This measure represents the state of the CPU resource", "_BoroIZMbEd6Vw8NDgVSYcgLehr0");
+    public final static BaseMetricDescription CPU_STATE_METRIC;
 
     /** Specifies a passive resource state metric. */
-    public final static BaseMetricDescription PASSIVE_RESOURCE_STATE_METRIC = createNewNaturalNumberMetric("State of the passive resource", "This represents the number of free tokens in a passive resource", "_BoroIZMbEd6Vw8NDgVSYcgLehr5");
+    public final static BaseMetricDescription PASSIVE_RESOURCE_STATE_METRIC;
 
     /** Specifies an execution results metric, e.g., to store simulated failure occurances. */
-    public final static BaseMetricDescription EXECUTION_RESULT_METRIC = createNewNaturalNumberMetric("Type of execution result", "This measure represents the type of execution result", "_AiroIZMbEd6Vw8NDgVSYcgLehr1");
+    public final static BaseMetricDescription EXECUTION_RESULT_METRIC;
 
-    /** Specifies a hold time metric, e.g., to store the time spend in a passive resource. */
-    public final static BaseMetricDescription HOLD_TIME_METRIC = createNewTimeMetric("Hold Time", "This measure represents the hold time at a resource, e.g., a passive resource pool.", "_0xrYsCUQEd6gmLudJva2DwLehr2");
-
-    /** Specifies a point in time metric, e.g., to store an event time stamp. */
-    public final static BaseMetricDescription POINT_IN_TIME_METRIC = createNewTimeMetric("Point in time", "This measure represents the point of time when the value is taken", "_38mSASUPEd6gmLudJva2DwLehr3");
-
-    /** Specifies a resource demand metric, e.g., to store CPU demand measurements. */
-    public final static BaseMetricDescription RESOURCE_DEMAND_METRIC = createNewTimeMetric("Demand of the entity", "This measure represents the CPU/HDD/DELAY/... demand of the entity", "_fvNrgCUQEd6gmLudJva2DwLehr4");
-
-    /** Specifies a response time metric, e.g., to store the response time of operation calls. */
-    public final static BaseMetricDescription RESPONSE_TIME_METRIC = createNewTimeMetric("Response Time", "This measure represents the response time.", "_QC3ucCUQEd6gmLudJva2DwLehr5");
-
-    /** Specifies a waiting time metric, e.g., to store the waiting time at passive resource pools. */
-    public final static BaseMetricDescription WAITING_TIME_METRIC = createNewTimeMetric("Waiting Time", "This measure represents the waiting time", "_nU2AICUQEd6gmLudJva2DwLehr6");
-
-    public final static MetricSetDescription CPU_STATE_OVER_TIME_METRIC = createNewMetricSetDescription(Arrays.asList((MetricDescription)POINT_IN_TIME_METRIC,(MetricDescription)CPU_STATE_METRIC),"CPU State over Time","Numer of elements in the CPU queue over time","_BoroIZMbEd6Vw8NDgVSYcgLehr6");
+    public final static MetricSetDescription CPU_STATE_OVER_TIME_METRIC;
 
     private MetricDescriptionConstants() {
-
-    }
-
-    private static MetricSetDescription createNewMetricSetDescription(final List<MetricDescription> submetrics, final String name, final String description, final String uuid) {
-        final MetricSetDescription result = MetricSetDescriptionBuilder.
-                newMetricSetDescriptionBuilder().
-                name(name).
-                textualDescription(description).
-                id(uuid).
-                subsumedMetrics(submetrics).
-                build();
-        return result;
-    }
-
-    /**
-     * Creates a new time metric for a given name and description. Time metrics are
-     * expressed in natural numbers and with seconds as unit. Moreover, they are
-     * ration scaled. An example time metric is response time.
-     * 
-     * TODO Do we really only use ratio scales here?
-     * 
-     * @param name The name of the metric, e.g., "response time".
-     * @param description The description of the metric.
-     * @param uuid A unique ID for the metric.
-     * @return A new MeasurementMetric for time.
-     */
-    private static BaseMetricDescription createNewTimeMetric(final String name, final String description, final String uuid) {
-        final BaseMetricDescription metric = NumericalBaseMetricDescriptionBuilder.
-                newNumericalBaseMetricDescriptionBuilder().
-                name(name).
-                textualDescription(description).
-                captureType(CaptureType.REAL_NUMBER).
-                scale(Scale.RATIO).
-                dataType(DataType.QUANTITATIVE).
-                defaultUnit(SI.SECOND).
-                persistenceKind(PersistenceKindOptions.BINARY_PREFERRED).
-                id(uuid).
-                build();
-        return metric;
-    }
-
-    /**
-     * Creates a new natural number metric for a given name and description. Natural number metrics are
-     * expressed in natural numbers and have a dimensionless unit. Moreover, they are
-     * ordinal. An example natural number metric is resource demand.
-     * 
-     * @param name The name of the metric, e.g., "resource demand".
-     * @param description The description of the metric.
-     * @param uuid A unique ID for the metric.
-     * @return A new MeasurementMetric for state information.
-     */
-    private static BaseMetricDescription createNewNaturalNumberMetric(final String name, final String description, final String uuid) {
-        final BaseMetricDescription metric = NumericalBaseMetricDescriptionBuilder.
-                newNumericalBaseMetricDescriptionBuilder().
-                name(name).
-                textualDescription(description).
-                captureType(CaptureType.INTEGER_NUMBER).
-                scale(Scale.ORDINAL).
-                dataType(DataType.QUANTITATIVE).
-                defaultUnit(Dimensionless.UNIT).
-                persistenceKind(PersistenceKindOptions.BINARY_PREFERRED).
-                id(uuid).
-                build();
-        return metric;
     }
 }
