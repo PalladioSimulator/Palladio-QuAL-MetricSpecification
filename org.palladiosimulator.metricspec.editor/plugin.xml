@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated metricspec -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.metricspec.presentation.MetricSpecModelWizardID"
+            name="%_UI_MetricSpecModelWizard_label"
+            class="org.palladiosimulator.metricspec.presentation.MetricSpecModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/MetricSpecModelFile.gif">
+         <description>%_UI_MetricSpecModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated metricspec -->
+      <editor
+            id="org.palladiosimulator.metricspec.presentation.MetricSpecEditorID"
+            name="%_UI_MetricSpecEditor_label"
+            icon="icons/full/obj16/MetricSpecModelFile.gif"
+            extensions="metricspec"
+            class="org.palladiosimulator.metricspec.presentation.MetricSpecEditor"
+            contributorClass="org.palladiosimulator.metricspec.presentation.MetricSpecActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
