@@ -18,22 +18,22 @@ import org.palladiosimulator.metricspec.MetricSpecPackage;
  */
 public abstract class MetricDescriptionImpl extends DescriptionImpl implements MetricDescription {
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     protected MetricDescriptionImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     protected EClass eStaticClass() {
-        return MetricSpecPackage.Literals.METRIC_DESCRIPTION;
-    }
+		return MetricSpecPackage.Literals.METRIC_DESCRIPTION;
+	}
 
 } //MetricDescriptionImpl

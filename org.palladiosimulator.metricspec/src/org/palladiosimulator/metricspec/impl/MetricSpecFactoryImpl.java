@@ -23,288 +23,264 @@ import org.palladiosimulator.metricspec.*;
  */
 public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFactory {
     /**
-     * Creates the default factory implementation.
-     * <!-- begin-user-doc -->
+	 * Creates the default factory implementation.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public static MetricSpecFactory init() {
-        try {
-            MetricSpecFactory theMetricSpecFactory = (MetricSpecFactory)EPackage.Registry.INSTANCE.getEFactory(MetricSpecPackage.eNS_URI);
-            if (theMetricSpecFactory != null) {
-                return theMetricSpecFactory;
-            }
-        }
-        catch (Exception exception) {
-            EcorePlugin.INSTANCE.log(exception);
-        }
-        return new MetricSpecFactoryImpl();
-    }
+		try {
+			MetricSpecFactory theMetricSpecFactory = (MetricSpecFactory)EPackage.Registry.INSTANCE.getEFactory(MetricSpecPackage.eNS_URI);
+			if (theMetricSpecFactory != null) {
+				return theMetricSpecFactory;
+			}
+		}
+		catch (Exception exception) {
+			EcorePlugin.INSTANCE.log(exception);
+		}
+		return new MetricSpecFactoryImpl();
+	}
 
     /**
-     * Creates an instance of the factory.
-     * <!-- begin-user-doc -->
+	 * Creates an instance of the factory.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public MetricSpecFactoryImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     public EObject create(EClass eClass) {
-        switch (eClass.getClassifierID()) {
-            case MetricSpecPackage.IDENTIFIER: return createIdentifier();
-            case MetricSpecPackage.TEXTUAL_BASE_METRIC_DESCRIPTION: return createTextualBaseMetricDescription();
-            case MetricSpecPackage.AGGREGATION_FUNCTION_DESCRIPTION: return createAggregationFunctionDescription();
-            case MetricSpecPackage.METRIC_SET_DESCRIPTION: return createMetricSetDescription();
-            case MetricSpecPackage.NUMERICAL_BASE_METRIC_DESCRIPTION: return createNumericalBaseMetricDescription();
-            default:
-                throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-        }
-    }
+		switch (eClass.getClassifierID()) {
+			case MetricSpecPackage.IDENTIFIER: return createIdentifier();
+			case MetricSpecPackage.TEXTUAL_BASE_METRIC_DESCRIPTION: return createTextualBaseMetricDescription();
+			case MetricSpecPackage.AGGREGATION_FUNCTION_DESCRIPTION: return createAggregationFunctionDescription();
+			case MetricSpecPackage.METRIC_SET_DESCRIPTION: return createMetricSetDescription();
+			case MetricSpecPackage.NUMERICAL_BASE_METRIC_DESCRIPTION: return createNumericalBaseMetricDescription();
+			default:
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     public Object createFromString(EDataType eDataType, String initialValue) {
-        switch (eDataType.getClassifierID()) {
-            case MetricSpecPackage.CAPTURE_TYPE:
-                return createCaptureTypeFromString(eDataType, initialValue);
-            case MetricSpecPackage.SCALE:
-                return createScaleFromString(eDataType, initialValue);
-            case MetricSpecPackage.MONOTONIC:
-                return createMonotonicFromString(eDataType, initialValue);
-            case MetricSpecPackage.PERSISTENCE_KIND_OPTIONS:
-                return createPersistenceKindOptionsFromString(eDataType, initialValue);
-            case MetricSpecPackage.DATA_TYPE:
-                return createDataTypeFromString(eDataType, initialValue);
-            case MetricSpecPackage.EJS_UNIT:
-                return createEJSUnitFromString(eDataType, initialValue);
-            default:
-                throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-        }
-    }
+		switch (eDataType.getClassifierID()) {
+			case MetricSpecPackage.CAPTURE_TYPE:
+				return createCaptureTypeFromString(eDataType, initialValue);
+			case MetricSpecPackage.SCALE:
+				return createScaleFromString(eDataType, initialValue);
+			case MetricSpecPackage.PERSISTENCE_KIND_OPTIONS:
+				return createPersistenceKindOptionsFromString(eDataType, initialValue);
+			case MetricSpecPackage.DATA_TYPE:
+				return createDataTypeFromString(eDataType, initialValue);
+			case MetricSpecPackage.EJS_UNIT:
+				return createEJSUnitFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     public String convertToString(EDataType eDataType, Object instanceValue) {
-        switch (eDataType.getClassifierID()) {
-            case MetricSpecPackage.CAPTURE_TYPE:
-                return convertCaptureTypeToString(eDataType, instanceValue);
-            case MetricSpecPackage.SCALE:
-                return convertScaleToString(eDataType, instanceValue);
-            case MetricSpecPackage.MONOTONIC:
-                return convertMonotonicToString(eDataType, instanceValue);
-            case MetricSpecPackage.PERSISTENCE_KIND_OPTIONS:
-                return convertPersistenceKindOptionsToString(eDataType, instanceValue);
-            case MetricSpecPackage.DATA_TYPE:
-                return convertDataTypeToString(eDataType, instanceValue);
-            case MetricSpecPackage.EJS_UNIT:
-                return convertEJSUnitToString(eDataType, instanceValue);
-            default:
-                throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-        }
-    }
+		switch (eDataType.getClassifierID()) {
+			case MetricSpecPackage.CAPTURE_TYPE:
+				return convertCaptureTypeToString(eDataType, instanceValue);
+			case MetricSpecPackage.SCALE:
+				return convertScaleToString(eDataType, instanceValue);
+			case MetricSpecPackage.PERSISTENCE_KIND_OPTIONS:
+				return convertPersistenceKindOptionsToString(eDataType, instanceValue);
+			case MetricSpecPackage.DATA_TYPE:
+				return convertDataTypeToString(eDataType, instanceValue);
+			case MetricSpecPackage.EJS_UNIT:
+				return convertEJSUnitToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Identifier createIdentifier() {
-        IdentifierImpl identifier = new IdentifierImpl();
-        return identifier;
-    }
+		IdentifierImpl identifier = new IdentifierImpl();
+		return identifier;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public TextualBaseMetricDescription createTextualBaseMetricDescription() {
-        TextualBaseMetricDescriptionImpl textualBaseMetricDescription = new TextualBaseMetricDescriptionImpl();
-        return textualBaseMetricDescription;
-    }
+		TextualBaseMetricDescriptionImpl textualBaseMetricDescription = new TextualBaseMetricDescriptionImpl();
+		return textualBaseMetricDescription;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public AggregationFunctionDescription createAggregationFunctionDescription() {
-        AggregationFunctionDescriptionImpl aggregationFunctionDescription = new AggregationFunctionDescriptionImpl();
-        return aggregationFunctionDescription;
-    }
+		AggregationFunctionDescriptionImpl aggregationFunctionDescription = new AggregationFunctionDescriptionImpl();
+		return aggregationFunctionDescription;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public MetricSetDescription createMetricSetDescription() {
-        MetricSetDescriptionImpl metricSetDescription = new MetricSetDescriptionImpl();
-        return metricSetDescription;
-    }
+		MetricSetDescriptionImpl metricSetDescription = new MetricSetDescriptionImpl();
+		return metricSetDescription;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public NumericalBaseMetricDescription createNumericalBaseMetricDescription() {
-        NumericalBaseMetricDescriptionImpl numericalBaseMetricDescription = new NumericalBaseMetricDescriptionImpl();
-        return numericalBaseMetricDescription;
-    }
+		NumericalBaseMetricDescriptionImpl numericalBaseMetricDescription = new NumericalBaseMetricDescriptionImpl();
+		return numericalBaseMetricDescription;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public CaptureType createCaptureTypeFromString(EDataType eDataType, String initialValue) {
-        CaptureType result = CaptureType.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-        return result;
-    }
+		CaptureType result = CaptureType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public String convertCaptureTypeToString(EDataType eDataType, Object instanceValue) {
-        return instanceValue == null ? null : instanceValue.toString();
-    }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Scale createScaleFromString(EDataType eDataType, String initialValue) {
-        Scale result = Scale.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-        return result;
-    }
+		Scale result = Scale.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public String convertScaleToString(EDataType eDataType, Object instanceValue) {
-        return instanceValue == null ? null : instanceValue.toString();
-    }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
-    public Monotonic createMonotonicFromString(EDataType eDataType, String initialValue) {
-        Monotonic result = Monotonic.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-        return result;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public String convertMonotonicToString(EDataType eDataType, Object instanceValue) {
-        return instanceValue == null ? null : instanceValue.toString();
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public PersistenceKindOptions createPersistenceKindOptionsFromString(EDataType eDataType, String initialValue) {
-        PersistenceKindOptions result = PersistenceKindOptions.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-        return result;
-    }
+		PersistenceKindOptions result = PersistenceKindOptions.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public String convertPersistenceKindOptionsToString(EDataType eDataType, Object instanceValue) {
-        return instanceValue == null ? null : instanceValue.toString();
-    }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public DataType createDataTypeFromString(EDataType eDataType, String initialValue) {
-        DataType result = DataType.get(initialValue);
-        if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-        return result;
-    }
+		DataType result = DataType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public String convertDataTypeToString(EDataType eDataType, Object instanceValue) {
-        return instanceValue == null ? null : instanceValue.toString();
-    }
+		return instanceValue == null ? null : instanceValue.toString();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public Unit<?> createEJSUnitFromString(EDataType eDataType, String initialValue) {
-        return (Unit<?>)super.createFromString(initialValue);
-    }
+		return (Unit<?>)super.createFromString(initialValue);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public String convertEJSUnitToString(EDataType eDataType, Object instanceValue) {
-        return super.convertToString(instanceValue);
-    }
+		return super.convertToString(instanceValue);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public MetricSpecPackage getMetricSpecPackage() {
-        return (MetricSpecPackage)getEPackage();
-    }
+		return (MetricSpecPackage)getEPackage();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @deprecated
-     * @generated
-     */
+	 * @deprecated
+	 * @generated
+	 */
     @Deprecated
     public static MetricSpecPackage getPackage() {
-        return MetricSpecPackage.eINSTANCE;
-    }
+		return MetricSpecPackage.eINSTANCE;
+	}
 
 } //MetricSpecFactoryImpl

@@ -34,262 +34,262 @@ import org.palladiosimulator.metricspec.util.MetricSpecAdapterFactory;
  */
 public class MetricSpecItemProviderAdapterFactory extends MetricSpecAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
-     * This keeps track of the root adapter factory that delegates to this adapter factory.
-     * <!-- begin-user-doc -->
+	 * This keeps track of the root adapter factory that delegates to this adapter factory.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     protected ComposedAdapterFactory parentAdapterFactory;
 
     /**
-     * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
-     * <!-- begin-user-doc -->
+	 * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     protected IChangeNotifier changeNotifier = new ChangeNotifier();
 
     /**
-     * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
-     * <!-- begin-user-doc -->
+	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
     /**
-     * This constructs an instance.
-     * <!-- begin-user-doc -->
+	 * This constructs an instance.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public MetricSpecItemProviderAdapterFactory() {
-        supportedTypes.add(IEditingDomainItemProvider.class);
-        supportedTypes.add(IStructuredItemContentProvider.class);
-        supportedTypes.add(ITreeItemContentProvider.class);
-        supportedTypes.add(IItemLabelProvider.class);
-        supportedTypes.add(IItemPropertySource.class);
-    }
+		supportedTypes.add(IEditingDomainItemProvider.class);
+		supportedTypes.add(IStructuredItemContentProvider.class);
+		supportedTypes.add(ITreeItemContentProvider.class);
+		supportedTypes.add(IItemLabelProvider.class);
+		supportedTypes.add(IItemPropertySource.class);
+	}
 
     /**
-     * This keeps track of the one adapter used for all {@link org.palladiosimulator.metricspec.Identifier} instances.
-     * <!-- begin-user-doc -->
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.metricspec.Identifier} instances.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     protected IdentifierItemProvider identifierItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.metricspec.Identifier}.
-     * <!-- begin-user-doc -->
+	 * This creates an adapter for a {@link org.palladiosimulator.metricspec.Identifier}.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     public Adapter createIdentifierAdapter() {
-        if (identifierItemProvider == null) {
-            identifierItemProvider = new IdentifierItemProvider(this);
-        }
+		if (identifierItemProvider == null) {
+			identifierItemProvider = new IdentifierItemProvider(this);
+		}
 
-        return identifierItemProvider;
-    }
+		return identifierItemProvider;
+	}
 
     /**
-     * This keeps track of the one adapter used for all {@link org.palladiosimulator.metricspec.TextualBaseMetricDescription} instances.
-     * <!-- begin-user-doc -->
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.metricspec.TextualBaseMetricDescription} instances.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     protected TextualBaseMetricDescriptionItemProvider textualBaseMetricDescriptionItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.metricspec.TextualBaseMetricDescription}.
-     * <!-- begin-user-doc -->
+	 * This creates an adapter for a {@link org.palladiosimulator.metricspec.TextualBaseMetricDescription}.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     public Adapter createTextualBaseMetricDescriptionAdapter() {
-        if (textualBaseMetricDescriptionItemProvider == null) {
-            textualBaseMetricDescriptionItemProvider = new TextualBaseMetricDescriptionItemProvider(this);
-        }
+		if (textualBaseMetricDescriptionItemProvider == null) {
+			textualBaseMetricDescriptionItemProvider = new TextualBaseMetricDescriptionItemProvider(this);
+		}
 
-        return textualBaseMetricDescriptionItemProvider;
-    }
+		return textualBaseMetricDescriptionItemProvider;
+	}
 
     /**
-     * This keeps track of the one adapter used for all {@link org.palladiosimulator.metricspec.AggregationFunctionDescription} instances.
-     * <!-- begin-user-doc -->
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.metricspec.AggregationFunctionDescription} instances.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     protected AggregationFunctionDescriptionItemProvider aggregationFunctionDescriptionItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.metricspec.AggregationFunctionDescription}.
-     * <!-- begin-user-doc -->
+	 * This creates an adapter for a {@link org.palladiosimulator.metricspec.AggregationFunctionDescription}.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     public Adapter createAggregationFunctionDescriptionAdapter() {
-        if (aggregationFunctionDescriptionItemProvider == null) {
-            aggregationFunctionDescriptionItemProvider = new AggregationFunctionDescriptionItemProvider(this);
-        }
+		if (aggregationFunctionDescriptionItemProvider == null) {
+			aggregationFunctionDescriptionItemProvider = new AggregationFunctionDescriptionItemProvider(this);
+		}
 
-        return aggregationFunctionDescriptionItemProvider;
-    }
+		return aggregationFunctionDescriptionItemProvider;
+	}
 
     /**
-     * This keeps track of the one adapter used for all {@link org.palladiosimulator.metricspec.MetricSetDescription} instances.
-     * <!-- begin-user-doc -->
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.metricspec.MetricSetDescription} instances.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     protected MetricSetDescriptionItemProvider metricSetDescriptionItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.metricspec.MetricSetDescription}.
-     * <!-- begin-user-doc -->
+	 * This creates an adapter for a {@link org.palladiosimulator.metricspec.MetricSetDescription}.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     public Adapter createMetricSetDescriptionAdapter() {
-        if (metricSetDescriptionItemProvider == null) {
-            metricSetDescriptionItemProvider = new MetricSetDescriptionItemProvider(this);
-        }
+		if (metricSetDescriptionItemProvider == null) {
+			metricSetDescriptionItemProvider = new MetricSetDescriptionItemProvider(this);
+		}
 
-        return metricSetDescriptionItemProvider;
-    }
+		return metricSetDescriptionItemProvider;
+	}
 
     /**
-     * This keeps track of the one adapter used for all {@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription} instances.
-     * <!-- begin-user-doc -->
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription} instances.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     protected NumericalBaseMetricDescriptionItemProvider numericalBaseMetricDescriptionItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription}.
-     * <!-- begin-user-doc -->
+	 * This creates an adapter for a {@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription}.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     public Adapter createNumericalBaseMetricDescriptionAdapter() {
-        if (numericalBaseMetricDescriptionItemProvider == null) {
-            numericalBaseMetricDescriptionItemProvider = new NumericalBaseMetricDescriptionItemProvider(this);
-        }
+		if (numericalBaseMetricDescriptionItemProvider == null) {
+			numericalBaseMetricDescriptionItemProvider = new NumericalBaseMetricDescriptionItemProvider(this);
+		}
 
-        return numericalBaseMetricDescriptionItemProvider;
-    }
+		return numericalBaseMetricDescriptionItemProvider;
+	}
 
     /**
-     * This returns the root adapter factory that contains this factory.
-     * <!-- begin-user-doc -->
+	 * This returns the root adapter factory that contains this factory.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public ComposeableAdapterFactory getRootAdapterFactory() {
-        return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
-    }
+		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
+	}
 
     /**
-     * This sets the composed adapter factory that contains this factory.
-     * <!-- begin-user-doc -->
+	 * This sets the composed adapter factory that contains this factory.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
-        this.parentAdapterFactory = parentAdapterFactory;
-    }
+		this.parentAdapterFactory = parentAdapterFactory;
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     public boolean isFactoryForType(Object type) {
-        return supportedTypes.contains(type) || super.isFactoryForType(type);
-    }
+		return supportedTypes.contains(type) || super.isFactoryForType(type);
+	}
 
     /**
-     * This implementation substitutes the factory itself as the key for the adapter.
-     * <!-- begin-user-doc -->
+	 * This implementation substitutes the factory itself as the key for the adapter.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     public Adapter adapt(Notifier notifier, Object type) {
-        return super.adapt(notifier, this);
-    }
+		return super.adapt(notifier, this);
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     public Object adapt(Object object, Object type) {
-        if (isFactoryForType(type)) {
-            Object adapter = super.adapt(object, type);
-            if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
-                return adapter;
-            }
-        }
+		if (isFactoryForType(type)) {
+			Object adapter = super.adapt(object, type);
+			if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
+				return adapter;
+			}
+		}
 
-        return null;
-    }
+		return null;
+	}
 
     /**
-     * This adds a listener.
-     * <!-- begin-user-doc -->
+	 * This adds a listener.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void addListener(INotifyChangedListener notifyChangedListener) {
-        changeNotifier.addListener(notifyChangedListener);
-    }
+		changeNotifier.addListener(notifyChangedListener);
+	}
 
     /**
-     * This removes a listener.
-     * <!-- begin-user-doc -->
+	 * This removes a listener.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void removeListener(INotifyChangedListener notifyChangedListener) {
-        changeNotifier.removeListener(notifyChangedListener);
-    }
+		changeNotifier.removeListener(notifyChangedListener);
+	}
 
     /**
-     * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
-     * <!-- begin-user-doc -->
+	 * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void fireNotifyChanged(Notification notification) {
-        changeNotifier.fireNotifyChanged(notification);
+		changeNotifier.fireNotifyChanged(notification);
 
-        if (parentAdapterFactory != null) {
-            parentAdapterFactory.fireNotifyChanged(notification);
-        }
-    }
+		if (parentAdapterFactory != null) {
+			parentAdapterFactory.fireNotifyChanged(notification);
+		}
+	}
 
     /**
-     * This disposes all of the item providers created by this factory. 
-     * <!-- begin-user-doc -->
+	 * This disposes all of the item providers created by this factory. 
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     public void dispose() {
-        if (identifierItemProvider != null) identifierItemProvider.dispose();
-        if (textualBaseMetricDescriptionItemProvider != null) textualBaseMetricDescriptionItemProvider.dispose();
-        if (aggregationFunctionDescriptionItemProvider != null) aggregationFunctionDescriptionItemProvider.dispose();
-        if (metricSetDescriptionItemProvider != null) metricSetDescriptionItemProvider.dispose();
-        if (numericalBaseMetricDescriptionItemProvider != null) numericalBaseMetricDescriptionItemProvider.dispose();
-    }
+		if (identifierItemProvider != null) identifierItemProvider.dispose();
+		if (textualBaseMetricDescriptionItemProvider != null) textualBaseMetricDescriptionItemProvider.dispose();
+		if (aggregationFunctionDescriptionItemProvider != null) aggregationFunctionDescriptionItemProvider.dispose();
+		if (metricSetDescriptionItemProvider != null) metricSetDescriptionItemProvider.dispose();
+		if (numericalBaseMetricDescriptionItemProvider != null) numericalBaseMetricDescriptionItemProvider.dispose();
+	}
 
 }

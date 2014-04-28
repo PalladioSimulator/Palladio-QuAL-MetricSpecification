@@ -18,22 +18,22 @@ import org.palladiosimulator.metricspec.MetricSpecPackage;
  */
 public class AggregationFunctionDescriptionImpl extends DescriptionImpl implements AggregationFunctionDescription {
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     protected AggregationFunctionDescriptionImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     @Override
     protected EClass eStaticClass() {
-        return MetricSpecPackage.Literals.AGGREGATION_FUNCTION_DESCRIPTION;
-    }
+		return MetricSpecPackage.Literals.AGGREGATION_FUNCTION_DESCRIPTION;
+	}
 
 } //AggregationFunctionDescriptionImpl

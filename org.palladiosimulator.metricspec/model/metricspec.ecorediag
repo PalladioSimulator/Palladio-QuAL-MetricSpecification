@@ -51,10 +51,6 @@
         <element xmi:type="ecore:EAttribute" href="metricspec.ecore#//BaseMetricDescription/scale"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_B7bjwcz_EeO1HK0DaXVYcw"/>
       </children>
-      <children xmi:type="notation:Node" xmi:id="_B7bjwsz_EeO1HK0DaXVYcw" type="2001">
-        <element xmi:type="ecore:EAttribute" href="metricspec.ecore#//BaseMetricDescription/monotonic"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_B7bjw8z_EeO1HK0DaXVYcw"/>
-      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_B7a8scz_EeO1HK0DaXVYcw"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_B7a8ssz_EeO1HK0DaXVYcw"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_B7a8s8z_EeO1HK0DaXVYcw"/>
@@ -157,29 +153,6 @@
     <styles xmi:type="notation:ShapeStyle" xmi:id="_B7f1Mcz_EeO1HK0DaXVYcw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EEnum" href="metricspec.ecore#//Scale"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B7f1Msz_EeO1HK0DaXVYcw" x="165"/>
-  </children>
-  <children xmi:type="notation:Node" xmi:id="_B7iRcsz_EeO1HK0DaXVYcw" type="1005">
-    <children xmi:type="notation:Node" xmi:id="_B7i4gMz_EeO1HK0DaXVYcw" type="4010"/>
-    <children xmi:type="notation:Node" xmi:id="_B7i4gcz_EeO1HK0DaXVYcw" type="5008">
-      <children xmi:type="notation:Node" xmi:id="_B7jfkMz_EeO1HK0DaXVYcw" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="metricspec.ecore#//Monotonic/No"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_B7jfkcz_EeO1HK0DaXVYcw"/>
-      </children>
-      <children xmi:type="notation:Node" xmi:id="_B7jfksz_EeO1HK0DaXVYcw" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="metricspec.ecore#//Monotonic/Yes"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_B7jfk8z_EeO1HK0DaXVYcw"/>
-      </children>
-      <children xmi:type="notation:Node" xmi:id="_B7kGoMz_EeO1HK0DaXVYcw" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="metricspec.ecore#//Monotonic/Strong"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_B7kGocz_EeO1HK0DaXVYcw"/>
-      </children>
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_B7i4gsz_EeO1HK0DaXVYcw"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_B7i4g8z_EeO1HK0DaXVYcw"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_B7i4hMz_EeO1HK0DaXVYcw"/>
-    </children>
-    <styles xmi:type="notation:ShapeStyle" xmi:id="_B7iRc8z_EeO1HK0DaXVYcw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EEnum" href="metricspec.ecore#//Monotonic"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B7iRdMz_EeO1HK0DaXVYcw" x="327"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_B7kGosz_EeO1HK0DaXVYcw" type="1001">
     <children xmi:type="notation:Node" xmi:id="_B7kGpcz_EeO1HK0DaXVYcw" type="4001"/>

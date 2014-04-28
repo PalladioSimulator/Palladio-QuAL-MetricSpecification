@@ -13,7 +13,6 @@ public class NumericalBaseMetricDescriptionBuilder implements org.palladiosimula
   private org.palladiosimulator.metricspec.DataType m_dataType;
   private javax.measure.unit.Unit m_defaultUnit;
   private java.lang.String m_id;
-  private org.palladiosimulator.metricspec.Monotonic m_monotonic;
   private java.lang.String m_name;
   private org.palladiosimulator.metricspec.PersistenceKindOptions m_persistenceKind;
   private org.palladiosimulator.metricspec.Scale m_scale;
@@ -23,7 +22,6 @@ public class NumericalBaseMetricDescriptionBuilder implements org.palladiosimula
   private boolean m_featureDataTypeSet = false;
   private boolean m_featureDefaultUnitSet = false;
   private boolean m_featureIdSet = false;
-  private boolean m_featureMonotonicSet = false;
   private boolean m_featureNameSet = false;
   private boolean m_featurePersistenceKindSet = false;
   private boolean m_featureScaleSet = false;
@@ -61,7 +59,6 @@ public class NumericalBaseMetricDescriptionBuilder implements org.palladiosimula
     _builder.dataType(_numericalBaseMetricDescription.getDataType());
     _builder.defaultUnit(_numericalBaseMetricDescription.getDefaultUnit());
     _builder.id(_numericalBaseMetricDescription.getId());
-    _builder.monotonic(_numericalBaseMetricDescription.getMonotonic());
     _builder.name(_numericalBaseMetricDescription.getName());
     _builder.persistenceKind(_numericalBaseMetricDescription.getPersistenceKind());
     _builder.scale(_numericalBaseMetricDescription.getScale());
@@ -82,8 +79,6 @@ public class NumericalBaseMetricDescriptionBuilder implements org.palladiosimula
     _builder.m_defaultUnit = m_defaultUnit;
     _builder.m_featureIdSet = m_featureIdSet;
     _builder.m_id = m_id;
-    _builder.m_featureMonotonicSet = m_featureMonotonicSet;
-    _builder.m_monotonic = m_monotonic;
     _builder.m_featureNameSet = m_featureNameSet;
     _builder.m_name = m_name;
     _builder.m_featurePersistenceKindSet = m_featurePersistenceKindSet;
@@ -113,9 +108,6 @@ public class NumericalBaseMetricDescriptionBuilder implements org.palladiosimula
     }
     if (m_featureIdSet) {
       _newInstance.setId(m_id);
-    }
-    if (m_featureMonotonicSet) {
-      _newInstance.setMonotonic(m_monotonic);
     }
     if (m_featureNameSet) {
       _newInstance.setName(m_name);
@@ -153,12 +145,6 @@ public class NumericalBaseMetricDescriptionBuilder implements org.palladiosimula
   public NumericalBaseMetricDescriptionBuilder id(java.lang.String p_id) {
     m_id = p_id;
     m_featureIdSet = true;
-    return this;
-  }
-
-  public NumericalBaseMetricDescriptionBuilder monotonic(org.palladiosimulator.metricspec.Monotonic p_monotonic) {
-    m_monotonic = p_monotonic;
-    m_featureMonotonicSet = true;
     return this;
   }
 

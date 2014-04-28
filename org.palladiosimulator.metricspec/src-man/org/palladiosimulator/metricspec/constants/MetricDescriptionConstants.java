@@ -11,8 +11,6 @@ import org.palladiosimulator.metricspec.CaptureType;
 import org.palladiosimulator.metricspec.DataType;
 import org.palladiosimulator.metricspec.MetricDescription;
 import org.palladiosimulator.metricspec.MetricSetDescription;
-import org.palladiosimulator.metricspec.MetricSpecFactory;
-import org.palladiosimulator.metricspec.Monotonic;
 import org.palladiosimulator.metricspec.PersistenceKindOptions;
 import org.palladiosimulator.metricspec.Scale;
 import org.palladiosimulator.metricspec.util.builder.MetricSetDescriptionBuilder;
@@ -26,11 +24,6 @@ import org.palladiosimulator.metricspec.util.builder.NumericalBaseMetricDescript
  * @author Sebastian Lehrig, Steffen Becker
  */
 public final class MetricDescriptionConstants {
-
-    /** EMF initialization. Must exist but not be used in the further code. */
-    @SuppressWarnings("unused")
-    private final static MetricSpecFactory experimentDataPackage = MetricSpecFactory.eINSTANCE;
-
     /** Specifies a CPU metric, e.g., to store CPU utilization at a certain time/state. */
     public final static BaseMetricDescription CPU_STATE_METRIC = createNewNaturalNumberMetric("State of the CPU resource", "This measure represents the state of the CPU resource", "_BoroIZMbEd6Vw8NDgVSYcgLehr0");
 
@@ -93,7 +86,6 @@ public final class MetricDescriptionConstants {
                 scale(Scale.RATIO).
                 dataType(DataType.QUANTITATIVE).
                 defaultUnit(SI.SECOND).
-                monotonic(Monotonic.NO).
                 persistenceKind(PersistenceKindOptions.BINARY_PREFERRED).
                 id(uuid).
                 build();
@@ -119,7 +111,6 @@ public final class MetricDescriptionConstants {
                 scale(Scale.ORDINAL).
                 dataType(DataType.QUANTITATIVE).
                 defaultUnit(Dimensionless.UNIT).
-                monotonic(Monotonic.NO).
                 persistenceKind(PersistenceKindOptions.BINARY_PREFERRED).
                 id(uuid).
                 build();

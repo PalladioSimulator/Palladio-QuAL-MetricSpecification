@@ -26,21 +26,21 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface TextualBaseMetricDescription extends BaseMetricDescription {
     /**
-     * Returns the value of the '<em><b>Identifiers</b></em>' containment reference list.
-     * The list contents are of type {@link org.palladiosimulator.metricspec.Identifier}.
-     * It is bidirectional and its opposite is '{@link org.palladiosimulator.metricspec.Identifier#getTextualBaseMetricDescription <em>Textual Base Metric Description</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Identifiers</b></em>' containment reference list.
+	 * The list contents are of type {@link org.palladiosimulator.metricspec.Identifier}.
+	 * It is bidirectional and its opposite is '{@link org.palladiosimulator.metricspec.Identifier#getTextualBaseMetricDescription <em>Textual Base Metric Description</em>}'.
+	 * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Identifiers</em>' containment reference list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Identifiers</em>' containment reference list.
-     * @see org.palladiosimulator.metricspec.MetricSpecPackage#getTextualBaseMetricDescription_Identifiers()
-     * @see org.palladiosimulator.metricspec.Identifier#getTextualBaseMetricDescription
-     * @model opposite="textualBaseMetricDescription" containment="true" required="true" ordered="false"
-     * @generated
-     */
+	 * @return the value of the '<em>Identifiers</em>' containment reference list.
+	 * @see org.palladiosimulator.metricspec.MetricSpecPackage#getTextualBaseMetricDescription_Identifiers()
+	 * @see org.palladiosimulator.metricspec.Identifier#getTextualBaseMetricDescription
+	 * @model opposite="textualBaseMetricDescription" containment="true" required="true" ordered="false"
+	 * @generated
+	 */
     EList<Identifier> getIdentifiers();
 
 } // TextualBaseMetricDescription

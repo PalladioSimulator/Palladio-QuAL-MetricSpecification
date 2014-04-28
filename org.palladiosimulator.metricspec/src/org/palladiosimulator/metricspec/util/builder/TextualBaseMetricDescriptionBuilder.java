@@ -12,7 +12,6 @@ public class TextualBaseMetricDescriptionBuilder implements org.palladiosimulato
   private org.palladiosimulator.metricspec.CaptureType m_captureType;
   private org.palladiosimulator.metricspec.DataType m_dataType;
   private java.lang.String m_id;
-  private org.palladiosimulator.metricspec.Monotonic m_monotonic;
   private java.lang.String m_name;
   private org.palladiosimulator.metricspec.Scale m_scale;
   private java.lang.String m_textualDescription;
@@ -23,7 +22,6 @@ public class TextualBaseMetricDescriptionBuilder implements org.palladiosimulato
   private boolean m_featureDataTypeSet = false;
   private boolean m_featureIdSet = false;
   private boolean m_featureIdentifiersSet = false;
-  private boolean m_featureMonotonicSet = false;
   private boolean m_featureNameSet = false;
   private boolean m_featureScaleSet = false;
   private boolean m_featureTextualDescriptionSet = false;
@@ -59,7 +57,6 @@ public class TextualBaseMetricDescriptionBuilder implements org.palladiosimulato
     _builder.captureType(_textualBaseMetricDescription.getCaptureType());
     _builder.dataType(_textualBaseMetricDescription.getDataType());
     _builder.id(_textualBaseMetricDescription.getId());
-    _builder.monotonic(_textualBaseMetricDescription.getMonotonic());
     _builder.name(_textualBaseMetricDescription.getName());
     _builder.scale(_textualBaseMetricDescription.getScale());
     _builder.textualDescription(_textualBaseMetricDescription.getTextualDescription());
@@ -83,8 +80,6 @@ public class TextualBaseMetricDescriptionBuilder implements org.palladiosimulato
     _builder.m_featureIdentifiersSet = m_featureIdentifiersSet;
     _builder.m_identifiers = m_identifiers;
     _builder.m_featureIdentifiersBuilder = m_featureIdentifiersBuilder;
-    _builder.m_featureMonotonicSet = m_featureMonotonicSet;
-    _builder.m_monotonic = m_monotonic;
     _builder.m_featureNameSet = m_featureNameSet;
     _builder.m_name = m_name;
     _builder.m_featureScaleSet = m_featureScaleSet;
@@ -109,9 +104,6 @@ public class TextualBaseMetricDescriptionBuilder implements org.palladiosimulato
     }
     if (m_featureIdSet) {
       _newInstance.setId(m_id);
-    }
-    if (m_featureMonotonicSet) {
-      _newInstance.setMonotonic(m_monotonic);
     }
     if (m_featureNameSet) {
       _newInstance.setName(m_name);
@@ -149,12 +141,6 @@ public class TextualBaseMetricDescriptionBuilder implements org.palladiosimulato
   public TextualBaseMetricDescriptionBuilder id(java.lang.String p_id) {
     m_id = p_id;
     m_featureIdSet = true;
-    return this;
-  }
-
-  public TextualBaseMetricDescriptionBuilder monotonic(org.palladiosimulator.metricspec.Monotonic p_monotonic) {
-    m_monotonic = p_monotonic;
-    m_featureMonotonicSet = true;
     return this;
   }
 

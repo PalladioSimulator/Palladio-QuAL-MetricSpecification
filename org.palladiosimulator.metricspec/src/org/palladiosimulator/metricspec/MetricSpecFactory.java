@@ -14,65 +14,65 @@ import org.eclipse.emf.ecore.EFactory;
  */
 public interface MetricSpecFactory extends EFactory {
     /**
-     * The singleton instance of the factory.
-     * <!-- begin-user-doc -->
+	 * The singleton instance of the factory.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     MetricSpecFactory eINSTANCE = org.palladiosimulator.metricspec.impl.MetricSpecFactoryImpl.init();
 
     /**
-     * Returns a new object of class '<em>Identifier</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Identifier</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Identifier</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Identifier</em>'.
+	 * @generated
+	 */
     Identifier createIdentifier();
 
     /**
-     * Returns a new object of class '<em>Textual Base Metric Description</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Textual Base Metric Description</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Textual Base Metric Description</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Textual Base Metric Description</em>'.
+	 * @generated
+	 */
     TextualBaseMetricDescription createTextualBaseMetricDescription();
 
     /**
-     * Returns a new object of class '<em>Aggregation Function Description</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Aggregation Function Description</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Aggregation Function Description</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Aggregation Function Description</em>'.
+	 * @generated
+	 */
     AggregationFunctionDescription createAggregationFunctionDescription();
 
     /**
-     * Returns a new object of class '<em>Metric Set Description</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Metric Set Description</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Metric Set Description</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Metric Set Description</em>'.
+	 * @generated
+	 */
     MetricSetDescription createMetricSetDescription();
 
     /**
-     * Returns a new object of class '<em>Numerical Base Metric Description</em>'.
-     * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Numerical Base Metric Description</em>'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Numerical Base Metric Description</em>'.
-     * @generated
-     */
+	 * @return a new object of class '<em>Numerical Base Metric Description</em>'.
+	 * @generated
+	 */
     NumericalBaseMetricDescription createNumericalBaseMetricDescription();
 
     /**
-     * Returns the package supported by this factory.
-     * <!-- begin-user-doc -->
+	 * Returns the package supported by this factory.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the package supported by this factory.
-     * @generated
-     */
+	 * @return the package supported by this factory.
+	 * @generated
+	 */
     MetricSpecPackage getMetricSpecPackage();
 
 } //MetricSpecFactory

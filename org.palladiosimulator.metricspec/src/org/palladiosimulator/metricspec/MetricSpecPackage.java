@@ -29,1005 +29,947 @@ import org.eclipse.emf.ecore.EReference;
  */
 public interface MetricSpecPackage extends EPackage {
     /**
-     * The package name.
-     * <!-- begin-user-doc -->
+	 * The package name.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     String eNAME = "metricspec";
 
     /**
-     * The package namespace URI.
-     * <!-- begin-user-doc -->
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     String eNS_URI = "http://palladiosimulator.org/MetricSpec/1.0";
 
     /**
-     * The package namespace name.
-     * <!-- begin-user-doc -->
+	 * The package namespace name.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     String eNS_PREFIX = "metricspec";
 
     /**
-     * The singleton instance of the package.
-     * <!-- begin-user-doc -->
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     MetricSpecPackage eINSTANCE = org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl.init();
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.IdentifierImpl <em>Identifier</em>}' class.
-     * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.IdentifierImpl <em>Identifier</em>}' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.palladiosimulator.metricspec.impl.IdentifierImpl
-     * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getIdentifier()
-     * @generated
-     */
+	 * @see org.palladiosimulator.metricspec.impl.IdentifierImpl
+	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getIdentifier()
+	 * @generated
+	 */
     int IDENTIFIER = 0;
 
     /**
-     * The feature id for the '<em><b>Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int IDENTIFIER__ID = IdentifierPackage.IDENTIFIER__ID;
 
     /**
-     * The feature id for the '<em><b>Literal</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Literal</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int IDENTIFIER__LITERAL = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
     /**
-     * The feature id for the '<em><b>Textual Base Metric Description</b></em>' container reference.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Textual Base Metric Description</b></em>' container reference.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
     /**
-     * The number of structural features of the '<em>Identifier</em>' class.
-     * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Identifier</em>' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int IDENTIFIER_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 2;
 
     /**
-     * The number of operations of the '<em>Identifier</em>' class.
-     * <!-- begin-user-doc -->
+	 * The number of operations of the '<em>Identifier</em>' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int IDENTIFIER_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.DescriptionImpl <em>Description</em>}' class.
-     * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.DescriptionImpl <em>Description</em>}' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.palladiosimulator.metricspec.impl.DescriptionImpl
-     * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getDescription()
-     * @generated
-     */
+	 * @see org.palladiosimulator.metricspec.impl.DescriptionImpl
+	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getDescription()
+	 * @generated
+	 */
     int DESCRIPTION = 4;
 
     /**
-     * The feature id for the '<em><b>Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int DESCRIPTION__ID = IdentifierPackage.IDENTIFIER__ID;
 
     /**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int DESCRIPTION__NAME = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
     /**
-     * The feature id for the '<em><b>Textual Description</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Textual Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int DESCRIPTION__TEXTUAL_DESCRIPTION = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
     /**
-     * The number of structural features of the '<em>Description</em>' class.
-     * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Description</em>' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int DESCRIPTION_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 2;
 
     /**
-     * The number of operations of the '<em>Description</em>' class.
-     * <!-- begin-user-doc -->
+	 * The number of operations of the '<em>Description</em>' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int DESCRIPTION_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.MetricDescriptionImpl <em>Metric Description</em>}' class.
-     * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.MetricDescriptionImpl <em>Metric Description</em>}' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.palladiosimulator.metricspec.impl.MetricDescriptionImpl
-     * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getMetricDescription()
-     * @generated
-     */
+	 * @see org.palladiosimulator.metricspec.impl.MetricDescriptionImpl
+	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getMetricDescription()
+	 * @generated
+	 */
     int METRIC_DESCRIPTION = 3;
 
     /**
-     * The feature id for the '<em><b>Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int METRIC_DESCRIPTION__ID = DESCRIPTION__ID;
 
     /**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int METRIC_DESCRIPTION__NAME = DESCRIPTION__NAME;
 
     /**
-     * The feature id for the '<em><b>Textual Description</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Textual Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int METRIC_DESCRIPTION__TEXTUAL_DESCRIPTION = DESCRIPTION__TEXTUAL_DESCRIPTION;
 
     /**
-     * The number of structural features of the '<em>Metric Description</em>' class.
-     * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Metric Description</em>' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int METRIC_DESCRIPTION_FEATURE_COUNT = DESCRIPTION_FEATURE_COUNT + 0;
 
     /**
-     * The number of operations of the '<em>Metric Description</em>' class.
-     * <!-- begin-user-doc -->
+	 * The number of operations of the '<em>Metric Description</em>' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int METRIC_DESCRIPTION_OPERATION_COUNT = DESCRIPTION_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl <em>Base Metric Description</em>}' class.
-     * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl <em>Base Metric Description</em>}' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl
-     * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getBaseMetricDescription()
-     * @generated
-     */
+	 * @see org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl
+	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getBaseMetricDescription()
+	 * @generated
+	 */
     int BASE_METRIC_DESCRIPTION = 2;
 
     /**
-     * The feature id for the '<em><b>Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int BASE_METRIC_DESCRIPTION__ID = METRIC_DESCRIPTION__ID;
 
     /**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int BASE_METRIC_DESCRIPTION__NAME = METRIC_DESCRIPTION__NAME;
 
     /**
-     * The feature id for the '<em><b>Textual Description</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Textual Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int BASE_METRIC_DESCRIPTION__TEXTUAL_DESCRIPTION = METRIC_DESCRIPTION__TEXTUAL_DESCRIPTION;
 
     /**
-     * The feature id for the '<em><b>Capture Type</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Capture Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int BASE_METRIC_DESCRIPTION__CAPTURE_TYPE = METRIC_DESCRIPTION_FEATURE_COUNT + 0;
 
     /**
-     * The feature id for the '<em><b>Data Type</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Data Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int BASE_METRIC_DESCRIPTION__DATA_TYPE = METRIC_DESCRIPTION_FEATURE_COUNT + 1;
 
     /**
-     * The feature id for the '<em><b>Scale</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Scale</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int BASE_METRIC_DESCRIPTION__SCALE = METRIC_DESCRIPTION_FEATURE_COUNT + 2;
 
     /**
-     * The feature id for the '<em><b>Monotonic</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Base Metric Description</em>' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int BASE_METRIC_DESCRIPTION__MONOTONIC = METRIC_DESCRIPTION_FEATURE_COUNT + 3;
+	 * @generated
+	 * @ordered
+	 */
+    int BASE_METRIC_DESCRIPTION_FEATURE_COUNT = METRIC_DESCRIPTION_FEATURE_COUNT + 3;
 
     /**
-     * The number of structural features of the '<em>Base Metric Description</em>' class.
-     * <!-- begin-user-doc -->
+	 * The number of operations of the '<em>Base Metric Description</em>' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int BASE_METRIC_DESCRIPTION_FEATURE_COUNT = METRIC_DESCRIPTION_FEATURE_COUNT + 4;
-
-    /**
-     * The number of operations of the '<em>Base Metric Description</em>' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int BASE_METRIC_DESCRIPTION_OPERATION_COUNT = METRIC_DESCRIPTION_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.TextualBaseMetricDescriptionImpl <em>Textual Base Metric Description</em>}' class.
-     * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.TextualBaseMetricDescriptionImpl <em>Textual Base Metric Description</em>}' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.palladiosimulator.metricspec.impl.TextualBaseMetricDescriptionImpl
-     * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getTextualBaseMetricDescription()
-     * @generated
-     */
+	 * @see org.palladiosimulator.metricspec.impl.TextualBaseMetricDescriptionImpl
+	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getTextualBaseMetricDescription()
+	 * @generated
+	 */
     int TEXTUAL_BASE_METRIC_DESCRIPTION = 1;
 
     /**
-     * The feature id for the '<em><b>Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int TEXTUAL_BASE_METRIC_DESCRIPTION__ID = BASE_METRIC_DESCRIPTION__ID;
 
     /**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int TEXTUAL_BASE_METRIC_DESCRIPTION__NAME = BASE_METRIC_DESCRIPTION__NAME;
 
     /**
-     * The feature id for the '<em><b>Textual Description</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Textual Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int TEXTUAL_BASE_METRIC_DESCRIPTION__TEXTUAL_DESCRIPTION = BASE_METRIC_DESCRIPTION__TEXTUAL_DESCRIPTION;
 
     /**
-     * The feature id for the '<em><b>Capture Type</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Capture Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int TEXTUAL_BASE_METRIC_DESCRIPTION__CAPTURE_TYPE = BASE_METRIC_DESCRIPTION__CAPTURE_TYPE;
 
     /**
-     * The feature id for the '<em><b>Data Type</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Data Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int TEXTUAL_BASE_METRIC_DESCRIPTION__DATA_TYPE = BASE_METRIC_DESCRIPTION__DATA_TYPE;
 
     /**
-     * The feature id for the '<em><b>Scale</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Scale</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int TEXTUAL_BASE_METRIC_DESCRIPTION__SCALE = BASE_METRIC_DESCRIPTION__SCALE;
 
     /**
-     * The feature id for the '<em><b>Monotonic</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Identifiers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int TEXTUAL_BASE_METRIC_DESCRIPTION__MONOTONIC = BASE_METRIC_DESCRIPTION__MONOTONIC;
-
-    /**
-     * The feature id for the '<em><b>Identifiers</b></em>' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int TEXTUAL_BASE_METRIC_DESCRIPTION__IDENTIFIERS = BASE_METRIC_DESCRIPTION_FEATURE_COUNT + 0;
 
     /**
-     * The number of structural features of the '<em>Textual Base Metric Description</em>' class.
-     * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Textual Base Metric Description</em>' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int TEXTUAL_BASE_METRIC_DESCRIPTION_FEATURE_COUNT = BASE_METRIC_DESCRIPTION_FEATURE_COUNT + 1;
 
     /**
-     * The number of operations of the '<em>Textual Base Metric Description</em>' class.
-     * <!-- begin-user-doc -->
+	 * The number of operations of the '<em>Textual Base Metric Description</em>' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int TEXTUAL_BASE_METRIC_DESCRIPTION_OPERATION_COUNT = BASE_METRIC_DESCRIPTION_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.AggregationFunctionDescriptionImpl <em>Aggregation Function Description</em>}' class.
-     * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.AggregationFunctionDescriptionImpl <em>Aggregation Function Description</em>}' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.palladiosimulator.metricspec.impl.AggregationFunctionDescriptionImpl
-     * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getAggregationFunctionDescription()
-     * @generated
-     */
+	 * @see org.palladiosimulator.metricspec.impl.AggregationFunctionDescriptionImpl
+	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getAggregationFunctionDescription()
+	 * @generated
+	 */
     int AGGREGATION_FUNCTION_DESCRIPTION = 5;
 
     /**
-     * The feature id for the '<em><b>Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int AGGREGATION_FUNCTION_DESCRIPTION__ID = DESCRIPTION__ID;
 
     /**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int AGGREGATION_FUNCTION_DESCRIPTION__NAME = DESCRIPTION__NAME;
 
     /**
-     * The feature id for the '<em><b>Textual Description</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Textual Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int AGGREGATION_FUNCTION_DESCRIPTION__TEXTUAL_DESCRIPTION = DESCRIPTION__TEXTUAL_DESCRIPTION;
 
     /**
-     * The number of structural features of the '<em>Aggregation Function Description</em>' class.
-     * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Aggregation Function Description</em>' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int AGGREGATION_FUNCTION_DESCRIPTION_FEATURE_COUNT = DESCRIPTION_FEATURE_COUNT + 0;
 
     /**
-     * The number of operations of the '<em>Aggregation Function Description</em>' class.
-     * <!-- begin-user-doc -->
+	 * The number of operations of the '<em>Aggregation Function Description</em>' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int AGGREGATION_FUNCTION_DESCRIPTION_OPERATION_COUNT = DESCRIPTION_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.MetricSetDescriptionImpl <em>Metric Set Description</em>}' class.
-     * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.MetricSetDescriptionImpl <em>Metric Set Description</em>}' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.palladiosimulator.metricspec.impl.MetricSetDescriptionImpl
-     * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getMetricSetDescription()
-     * @generated
-     */
+	 * @see org.palladiosimulator.metricspec.impl.MetricSetDescriptionImpl
+	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getMetricSetDescription()
+	 * @generated
+	 */
     int METRIC_SET_DESCRIPTION = 6;
 
     /**
-     * The feature id for the '<em><b>Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int METRIC_SET_DESCRIPTION__ID = METRIC_DESCRIPTION__ID;
 
     /**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int METRIC_SET_DESCRIPTION__NAME = METRIC_DESCRIPTION__NAME;
 
     /**
-     * The feature id for the '<em><b>Textual Description</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Textual Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int METRIC_SET_DESCRIPTION__TEXTUAL_DESCRIPTION = METRIC_DESCRIPTION__TEXTUAL_DESCRIPTION;
 
     /**
-     * The feature id for the '<em><b>Subsumed Metrics</b></em>' reference list.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Subsumed Metrics</b></em>' reference list.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int METRIC_SET_DESCRIPTION__SUBSUMED_METRICS = METRIC_DESCRIPTION_FEATURE_COUNT + 0;
 
     /**
-     * The number of structural features of the '<em>Metric Set Description</em>' class.
-     * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Metric Set Description</em>' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int METRIC_SET_DESCRIPTION_FEATURE_COUNT = METRIC_DESCRIPTION_FEATURE_COUNT + 1;
 
     /**
-     * The number of operations of the '<em>Metric Set Description</em>' class.
-     * <!-- begin-user-doc -->
+	 * The number of operations of the '<em>Metric Set Description</em>' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int METRIC_SET_DESCRIPTION_OPERATION_COUNT = METRIC_DESCRIPTION_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.NumericalBaseMetricDescriptionImpl <em>Numerical Base Metric Description</em>}' class.
-     * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.NumericalBaseMetricDescriptionImpl <em>Numerical Base Metric Description</em>}' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.palladiosimulator.metricspec.impl.NumericalBaseMetricDescriptionImpl
-     * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getNumericalBaseMetricDescription()
-     * @generated
-     */
+	 * @see org.palladiosimulator.metricspec.impl.NumericalBaseMetricDescriptionImpl
+	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getNumericalBaseMetricDescription()
+	 * @generated
+	 */
     int NUMERICAL_BASE_METRIC_DESCRIPTION = 7;
 
     /**
-     * The feature id for the '<em><b>Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int NUMERICAL_BASE_METRIC_DESCRIPTION__ID = BASE_METRIC_DESCRIPTION__ID;
 
     /**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int NUMERICAL_BASE_METRIC_DESCRIPTION__NAME = BASE_METRIC_DESCRIPTION__NAME;
 
     /**
-     * The feature id for the '<em><b>Textual Description</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Textual Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int NUMERICAL_BASE_METRIC_DESCRIPTION__TEXTUAL_DESCRIPTION = BASE_METRIC_DESCRIPTION__TEXTUAL_DESCRIPTION;
 
     /**
-     * The feature id for the '<em><b>Capture Type</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Capture Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int NUMERICAL_BASE_METRIC_DESCRIPTION__CAPTURE_TYPE = BASE_METRIC_DESCRIPTION__CAPTURE_TYPE;
 
     /**
-     * The feature id for the '<em><b>Data Type</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Data Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int NUMERICAL_BASE_METRIC_DESCRIPTION__DATA_TYPE = BASE_METRIC_DESCRIPTION__DATA_TYPE;
 
     /**
-     * The feature id for the '<em><b>Scale</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Scale</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int NUMERICAL_BASE_METRIC_DESCRIPTION__SCALE = BASE_METRIC_DESCRIPTION__SCALE;
 
     /**
-     * The feature id for the '<em><b>Monotonic</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Default Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int NUMERICAL_BASE_METRIC_DESCRIPTION__MONOTONIC = BASE_METRIC_DESCRIPTION__MONOTONIC;
-
-    /**
-     * The feature id for the '<em><b>Default Unit</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int NUMERICAL_BASE_METRIC_DESCRIPTION__DEFAULT_UNIT = BASE_METRIC_DESCRIPTION_FEATURE_COUNT + 0;
 
     /**
-     * The feature id for the '<em><b>Persistence Kind</b></em>' attribute.
-     * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Persistence Kind</b></em>' attribute.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int NUMERICAL_BASE_METRIC_DESCRIPTION__PERSISTENCE_KIND = BASE_METRIC_DESCRIPTION_FEATURE_COUNT + 1;
 
     /**
-     * The number of structural features of the '<em>Numerical Base Metric Description</em>' class.
-     * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Numerical Base Metric Description</em>' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int NUMERICAL_BASE_METRIC_DESCRIPTION_FEATURE_COUNT = BASE_METRIC_DESCRIPTION_FEATURE_COUNT + 2;
 
     /**
-     * The number of operations of the '<em>Numerical Base Metric Description</em>' class.
-     * <!-- begin-user-doc -->
+	 * The number of operations of the '<em>Numerical Base Metric Description</em>' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int NUMERICAL_BASE_METRIC_DESCRIPTION_OPERATION_COUNT = BASE_METRIC_DESCRIPTION_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link javax.measure.quantity.Quantity <em>IJS Quantity</em>}' class.
-     * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link javax.measure.quantity.Quantity <em>IJS Quantity</em>}' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see javax.measure.quantity.Quantity
-     * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getIJSQuantity()
-     * @generated
-     */
+	 * @see javax.measure.quantity.Quantity
+	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getIJSQuantity()
+	 * @generated
+	 */
     int IJS_QUANTITY = 8;
 
     /**
-     * The number of structural features of the '<em>IJS Quantity</em>' class.
-     * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>IJS Quantity</em>' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int IJS_QUANTITY_FEATURE_COUNT = 0;
 
     /**
-     * The number of operations of the '<em>IJS Quantity</em>' class.
-     * <!-- begin-user-doc -->
+	 * The number of operations of the '<em>IJS Quantity</em>' class.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
+	 * @generated
+	 * @ordered
+	 */
     int IJS_QUANTITY_OPERATION_COUNT = 0;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.metricspec.CaptureType <em>Capture Type</em>}' enum.
-     * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link org.palladiosimulator.metricspec.CaptureType <em>Capture Type</em>}' enum.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.palladiosimulator.metricspec.CaptureType
-     * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getCaptureType()
-     * @generated
-     */
+	 * @see org.palladiosimulator.metricspec.CaptureType
+	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getCaptureType()
+	 * @generated
+	 */
     int CAPTURE_TYPE = 9;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.metricspec.Scale <em>Scale</em>}' enum.
-     * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link org.palladiosimulator.metricspec.Scale <em>Scale</em>}' enum.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.palladiosimulator.metricspec.Scale
-     * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getScale()
-     * @generated
-     */
+	 * @see org.palladiosimulator.metricspec.Scale
+	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getScale()
+	 * @generated
+	 */
     int SCALE = 10;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.metricspec.Monotonic <em>Monotonic</em>}' enum.
-     * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link org.palladiosimulator.metricspec.PersistenceKindOptions <em>Persistence Kind Options</em>}' enum.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.palladiosimulator.metricspec.Monotonic
-     * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getMonotonic()
-     * @generated
-     */
-    int MONOTONIC = 11;
+	 * @see org.palladiosimulator.metricspec.PersistenceKindOptions
+	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getPersistenceKindOptions()
+	 * @generated
+	 */
+    int PERSISTENCE_KIND_OPTIONS = 11;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.metricspec.PersistenceKindOptions <em>Persistence Kind Options</em>}' enum.
-     * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link org.palladiosimulator.metricspec.DataType <em>Data Type</em>}' enum.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.palladiosimulator.metricspec.PersistenceKindOptions
-     * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getPersistenceKindOptions()
-     * @generated
-     */
-    int PERSISTENCE_KIND_OPTIONS = 12;
+	 * @see org.palladiosimulator.metricspec.DataType
+	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getDataType()
+	 * @generated
+	 */
+    int DATA_TYPE = 12;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.metricspec.DataType <em>Data Type</em>}' enum.
-     * <!-- begin-user-doc -->
+	 * The meta object id for the '<em>EJS Unit</em>' data type.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.palladiosimulator.metricspec.DataType
-     * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getDataType()
-     * @generated
-     */
-    int DATA_TYPE = 13;
-
-    /**
-     * The meta object id for the '<em>EJS Unit</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see javax.measure.unit.Unit
-     * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getEJSUnit()
-     * @generated
-     */
-    int EJS_UNIT = 14;
+	 * @see javax.measure.unit.Unit
+	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getEJSUnit()
+	 * @generated
+	 */
+    int EJS_UNIT = 13;
 
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.metricspec.Identifier <em>Identifier</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link org.palladiosimulator.metricspec.Identifier <em>Identifier</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Identifier</em>'.
-     * @see org.palladiosimulator.metricspec.Identifier
-     * @generated
-     */
+	 * @return the meta object for class '<em>Identifier</em>'.
+	 * @see org.palladiosimulator.metricspec.Identifier
+	 * @generated
+	 */
     EClass getIdentifier();
 
     /**
-     * Returns the meta object for the attribute '{@link org.palladiosimulator.metricspec.Identifier#getLiteral <em>Literal</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.metricspec.Identifier#getLiteral <em>Literal</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Literal</em>'.
-     * @see org.palladiosimulator.metricspec.Identifier#getLiteral()
-     * @see #getIdentifier()
-     * @generated
-     */
+	 * @return the meta object for the attribute '<em>Literal</em>'.
+	 * @see org.palladiosimulator.metricspec.Identifier#getLiteral()
+	 * @see #getIdentifier()
+	 * @generated
+	 */
     EAttribute getIdentifier_Literal();
 
     /**
-     * Returns the meta object for the container reference '{@link org.palladiosimulator.metricspec.Identifier#getTextualBaseMetricDescription <em>Textual Base Metric Description</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for the container reference '{@link org.palladiosimulator.metricspec.Identifier#getTextualBaseMetricDescription <em>Textual Base Metric Description</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the container reference '<em>Textual Base Metric Description</em>'.
-     * @see org.palladiosimulator.metricspec.Identifier#getTextualBaseMetricDescription()
-     * @see #getIdentifier()
-     * @generated
-     */
+	 * @return the meta object for the container reference '<em>Textual Base Metric Description</em>'.
+	 * @see org.palladiosimulator.metricspec.Identifier#getTextualBaseMetricDescription()
+	 * @see #getIdentifier()
+	 * @generated
+	 */
     EReference getIdentifier_TextualBaseMetricDescription();
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.metricspec.TextualBaseMetricDescription <em>Textual Base Metric Description</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link org.palladiosimulator.metricspec.TextualBaseMetricDescription <em>Textual Base Metric Description</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Textual Base Metric Description</em>'.
-     * @see org.palladiosimulator.metricspec.TextualBaseMetricDescription
-     * @generated
-     */
+	 * @return the meta object for class '<em>Textual Base Metric Description</em>'.
+	 * @see org.palladiosimulator.metricspec.TextualBaseMetricDescription
+	 * @generated
+	 */
     EClass getTextualBaseMetricDescription();
 
     /**
-     * Returns the meta object for the containment reference list '{@link org.palladiosimulator.metricspec.TextualBaseMetricDescription#getIdentifiers <em>Identifiers</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.metricspec.TextualBaseMetricDescription#getIdentifiers <em>Identifiers</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Identifiers</em>'.
-     * @see org.palladiosimulator.metricspec.TextualBaseMetricDescription#getIdentifiers()
-     * @see #getTextualBaseMetricDescription()
-     * @generated
-     */
+	 * @return the meta object for the containment reference list '<em>Identifiers</em>'.
+	 * @see org.palladiosimulator.metricspec.TextualBaseMetricDescription#getIdentifiers()
+	 * @see #getTextualBaseMetricDescription()
+	 * @generated
+	 */
     EReference getTextualBaseMetricDescription_Identifiers();
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.metricspec.BaseMetricDescription <em>Base Metric Description</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link org.palladiosimulator.metricspec.BaseMetricDescription <em>Base Metric Description</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Base Metric Description</em>'.
-     * @see org.palladiosimulator.metricspec.BaseMetricDescription
-     * @generated
-     */
+	 * @return the meta object for class '<em>Base Metric Description</em>'.
+	 * @see org.palladiosimulator.metricspec.BaseMetricDescription
+	 * @generated
+	 */
     EClass getBaseMetricDescription();
 
     /**
-     * Returns the meta object for the attribute '{@link org.palladiosimulator.metricspec.BaseMetricDescription#getCaptureType <em>Capture Type</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.metricspec.BaseMetricDescription#getCaptureType <em>Capture Type</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Capture Type</em>'.
-     * @see org.palladiosimulator.metricspec.BaseMetricDescription#getCaptureType()
-     * @see #getBaseMetricDescription()
-     * @generated
-     */
+	 * @return the meta object for the attribute '<em>Capture Type</em>'.
+	 * @see org.palladiosimulator.metricspec.BaseMetricDescription#getCaptureType()
+	 * @see #getBaseMetricDescription()
+	 * @generated
+	 */
     EAttribute getBaseMetricDescription_CaptureType();
 
     /**
-     * Returns the meta object for the attribute '{@link org.palladiosimulator.metricspec.BaseMetricDescription#getDataType <em>Data Type</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.metricspec.BaseMetricDescription#getDataType <em>Data Type</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Data Type</em>'.
-     * @see org.palladiosimulator.metricspec.BaseMetricDescription#getDataType()
-     * @see #getBaseMetricDescription()
-     * @generated
-     */
+	 * @return the meta object for the attribute '<em>Data Type</em>'.
+	 * @see org.palladiosimulator.metricspec.BaseMetricDescription#getDataType()
+	 * @see #getBaseMetricDescription()
+	 * @generated
+	 */
     EAttribute getBaseMetricDescription_DataType();
 
     /**
-     * Returns the meta object for the attribute '{@link org.palladiosimulator.metricspec.BaseMetricDescription#getScale <em>Scale</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.metricspec.BaseMetricDescription#getScale <em>Scale</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Scale</em>'.
-     * @see org.palladiosimulator.metricspec.BaseMetricDescription#getScale()
-     * @see #getBaseMetricDescription()
-     * @generated
-     */
+	 * @return the meta object for the attribute '<em>Scale</em>'.
+	 * @see org.palladiosimulator.metricspec.BaseMetricDescription#getScale()
+	 * @see #getBaseMetricDescription()
+	 * @generated
+	 */
     EAttribute getBaseMetricDescription_Scale();
 
     /**
-     * Returns the meta object for the attribute '{@link org.palladiosimulator.metricspec.BaseMetricDescription#getMonotonic <em>Monotonic</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link org.palladiosimulator.metricspec.MetricDescription <em>Metric Description</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Monotonic</em>'.
-     * @see org.palladiosimulator.metricspec.BaseMetricDescription#getMonotonic()
-     * @see #getBaseMetricDescription()
-     * @generated
-     */
-    EAttribute getBaseMetricDescription_Monotonic();
-
-    /**
-     * Returns the meta object for class '{@link org.palladiosimulator.metricspec.MetricDescription <em>Metric Description</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Metric Description</em>'.
-     * @see org.palladiosimulator.metricspec.MetricDescription
-     * @generated
-     */
+	 * @return the meta object for class '<em>Metric Description</em>'.
+	 * @see org.palladiosimulator.metricspec.MetricDescription
+	 * @generated
+	 */
     EClass getMetricDescription();
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.metricspec.Description <em>Description</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link org.palladiosimulator.metricspec.Description <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Description</em>'.
-     * @see org.palladiosimulator.metricspec.Description
-     * @generated
-     */
+	 * @return the meta object for class '<em>Description</em>'.
+	 * @see org.palladiosimulator.metricspec.Description
+	 * @generated
+	 */
     EClass getDescription();
 
     /**
-     * Returns the meta object for the attribute '{@link org.palladiosimulator.metricspec.Description#getName <em>Name</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.metricspec.Description#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Name</em>'.
-     * @see org.palladiosimulator.metricspec.Description#getName()
-     * @see #getDescription()
-     * @generated
-     */
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.palladiosimulator.metricspec.Description#getName()
+	 * @see #getDescription()
+	 * @generated
+	 */
     EAttribute getDescription_Name();
 
     /**
-     * Returns the meta object for the attribute '{@link org.palladiosimulator.metricspec.Description#getTextualDescription <em>Textual Description</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.metricspec.Description#getTextualDescription <em>Textual Description</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Textual Description</em>'.
-     * @see org.palladiosimulator.metricspec.Description#getTextualDescription()
-     * @see #getDescription()
-     * @generated
-     */
+	 * @return the meta object for the attribute '<em>Textual Description</em>'.
+	 * @see org.palladiosimulator.metricspec.Description#getTextualDescription()
+	 * @see #getDescription()
+	 * @generated
+	 */
     EAttribute getDescription_TextualDescription();
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.metricspec.AggregationFunctionDescription <em>Aggregation Function Description</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link org.palladiosimulator.metricspec.AggregationFunctionDescription <em>Aggregation Function Description</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Aggregation Function Description</em>'.
-     * @see org.palladiosimulator.metricspec.AggregationFunctionDescription
-     * @generated
-     */
+	 * @return the meta object for class '<em>Aggregation Function Description</em>'.
+	 * @see org.palladiosimulator.metricspec.AggregationFunctionDescription
+	 * @generated
+	 */
     EClass getAggregationFunctionDescription();
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.metricspec.MetricSetDescription <em>Metric Set Description</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link org.palladiosimulator.metricspec.MetricSetDescription <em>Metric Set Description</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Metric Set Description</em>'.
-     * @see org.palladiosimulator.metricspec.MetricSetDescription
-     * @generated
-     */
+	 * @return the meta object for class '<em>Metric Set Description</em>'.
+	 * @see org.palladiosimulator.metricspec.MetricSetDescription
+	 * @generated
+	 */
     EClass getMetricSetDescription();
 
     /**
-     * Returns the meta object for the reference list '{@link org.palladiosimulator.metricspec.MetricSetDescription#getSubsumedMetrics <em>Subsumed Metrics</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference list '{@link org.palladiosimulator.metricspec.MetricSetDescription#getSubsumedMetrics <em>Subsumed Metrics</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Subsumed Metrics</em>'.
-     * @see org.palladiosimulator.metricspec.MetricSetDescription#getSubsumedMetrics()
-     * @see #getMetricSetDescription()
-     * @generated
-     */
+	 * @return the meta object for the reference list '<em>Subsumed Metrics</em>'.
+	 * @see org.palladiosimulator.metricspec.MetricSetDescription#getSubsumedMetrics()
+	 * @see #getMetricSetDescription()
+	 * @generated
+	 */
     EReference getMetricSetDescription_SubsumedMetrics();
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription <em>Numerical Base Metric Description</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription <em>Numerical Base Metric Description</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Numerical Base Metric Description</em>'.
-     * @see org.palladiosimulator.metricspec.NumericalBaseMetricDescription
-     * @generated
-     */
+	 * @return the meta object for class '<em>Numerical Base Metric Description</em>'.
+	 * @see org.palladiosimulator.metricspec.NumericalBaseMetricDescription
+	 * @generated
+	 */
     EClass getNumericalBaseMetricDescription();
 
     /**
-     * Returns the meta object for the attribute '{@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getDefaultUnit <em>Default Unit</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getDefaultUnit <em>Default Unit</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Default Unit</em>'.
-     * @see org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getDefaultUnit()
-     * @see #getNumericalBaseMetricDescription()
-     * @generated
-     */
+	 * @return the meta object for the attribute '<em>Default Unit</em>'.
+	 * @see org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getDefaultUnit()
+	 * @see #getNumericalBaseMetricDescription()
+	 * @generated
+	 */
     EAttribute getNumericalBaseMetricDescription_DefaultUnit();
 
     /**
-     * Returns the meta object for the attribute '{@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getPersistenceKind <em>Persistence Kind</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getPersistenceKind <em>Persistence Kind</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Persistence Kind</em>'.
-     * @see org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getPersistenceKind()
-     * @see #getNumericalBaseMetricDescription()
-     * @generated
-     */
+	 * @return the meta object for the attribute '<em>Persistence Kind</em>'.
+	 * @see org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getPersistenceKind()
+	 * @see #getNumericalBaseMetricDescription()
+	 * @generated
+	 */
     EAttribute getNumericalBaseMetricDescription_PersistenceKind();
 
     /**
-     * Returns the meta object for class '{@link javax.measure.quantity.Quantity <em>IJS Quantity</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link javax.measure.quantity.Quantity <em>IJS Quantity</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>IJS Quantity</em>'.
-     * @see javax.measure.quantity.Quantity
-     * @model instanceClass="javax.measure.quantity.Quantity"
-     * @generated
-     */
+	 * @return the meta object for class '<em>IJS Quantity</em>'.
+	 * @see javax.measure.quantity.Quantity
+	 * @model instanceClass="javax.measure.quantity.Quantity"
+	 * @generated
+	 */
     EClass getIJSQuantity();
 
     /**
-     * Returns the meta object for enum '{@link org.palladiosimulator.metricspec.CaptureType <em>Capture Type</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for enum '{@link org.palladiosimulator.metricspec.CaptureType <em>Capture Type</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for enum '<em>Capture Type</em>'.
-     * @see org.palladiosimulator.metricspec.CaptureType
-     * @generated
-     */
+	 * @return the meta object for enum '<em>Capture Type</em>'.
+	 * @see org.palladiosimulator.metricspec.CaptureType
+	 * @generated
+	 */
     EEnum getCaptureType();
 
     /**
-     * Returns the meta object for enum '{@link org.palladiosimulator.metricspec.Scale <em>Scale</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for enum '{@link org.palladiosimulator.metricspec.Scale <em>Scale</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for enum '<em>Scale</em>'.
-     * @see org.palladiosimulator.metricspec.Scale
-     * @generated
-     */
+	 * @return the meta object for enum '<em>Scale</em>'.
+	 * @see org.palladiosimulator.metricspec.Scale
+	 * @generated
+	 */
     EEnum getScale();
 
     /**
-     * Returns the meta object for enum '{@link org.palladiosimulator.metricspec.Monotonic <em>Monotonic</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for enum '{@link org.palladiosimulator.metricspec.PersistenceKindOptions <em>Persistence Kind Options</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for enum '<em>Monotonic</em>'.
-     * @see org.palladiosimulator.metricspec.Monotonic
-     * @generated
-     */
-    EEnum getMonotonic();
-
-    /**
-     * Returns the meta object for enum '{@link org.palladiosimulator.metricspec.PersistenceKindOptions <em>Persistence Kind Options</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for enum '<em>Persistence Kind Options</em>'.
-     * @see org.palladiosimulator.metricspec.PersistenceKindOptions
-     * @generated
-     */
+	 * @return the meta object for enum '<em>Persistence Kind Options</em>'.
+	 * @see org.palladiosimulator.metricspec.PersistenceKindOptions
+	 * @generated
+	 */
     EEnum getPersistenceKindOptions();
 
     /**
-     * Returns the meta object for enum '{@link org.palladiosimulator.metricspec.DataType <em>Data Type</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for enum '{@link org.palladiosimulator.metricspec.DataType <em>Data Type</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for enum '<em>Data Type</em>'.
-     * @see org.palladiosimulator.metricspec.DataType
-     * @generated
-     */
+	 * @return the meta object for enum '<em>Data Type</em>'.
+	 * @see org.palladiosimulator.metricspec.DataType
+	 * @generated
+	 */
     EEnum getDataType();
 
     /**
-     * Returns the meta object for data type '{@link javax.measure.unit.Unit <em>EJS Unit</em>}'.
-     * <!-- begin-user-doc -->
+	 * Returns the meta object for data type '{@link javax.measure.unit.Unit <em>EJS Unit</em>}'.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for data type '<em>EJS Unit</em>'.
-     * @see javax.measure.unit.Unit
-     * @model instanceClass="javax.measure.unit.Unit" typeParameters="Q" QBounds="org.palladiosimulator.metricspec.IJSQuantity"
-     * @generated
-     */
+	 * @return the meta object for data type '<em>EJS Unit</em>'.
+	 * @see javax.measure.unit.Unit
+	 * @model instanceClass="javax.measure.unit.Unit" typeParameters="Q" QBounds="org.palladiosimulator.metricspec.IJSQuantity"
+	 * @generated
+	 */
     EDataType getEJSUnit();
 
     /**
-     * Returns the factory that creates the instances of the model.
-     * <!-- begin-user-doc -->
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the factory that creates the instances of the model.
-     * @generated
-     */
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
     MetricSpecFactory getMetricSpecFactory();
 
     /**
-     * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
      * Defines literals for the meta objects that represent
      * <ul>
      *   <li>each class,</li>
@@ -1037,253 +979,235 @@ public interface MetricSpecPackage extends EPackage {
      *   <li>and each data type</li>
      * </ul>
      * <!-- end-user-doc -->
-     * @generated
-     */
+	 * @generated
+	 */
     interface Literals {
         /**
-         * The meta object literal for the '{@link org.palladiosimulator.metricspec.impl.IdentifierImpl <em>Identifier</em>}' class.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link org.palladiosimulator.metricspec.impl.IdentifierImpl <em>Identifier</em>}' class.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.palladiosimulator.metricspec.impl.IdentifierImpl
-         * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getIdentifier()
-         * @generated
-         */
+		 * @see org.palladiosimulator.metricspec.impl.IdentifierImpl
+		 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getIdentifier()
+		 * @generated
+		 */
         EClass IDENTIFIER = eINSTANCE.getIdentifier();
 
         /**
-         * The meta object literal for the '<em><b>Literal</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Literal</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @generated
-         */
+		 * @generated
+		 */
         EAttribute IDENTIFIER__LITERAL = eINSTANCE.getIdentifier_Literal();
 
         /**
-         * The meta object literal for the '<em><b>Textual Base Metric Description</b></em>' container reference feature.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Textual Base Metric Description</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @generated
-         */
+		 * @generated
+		 */
         EReference IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION = eINSTANCE.getIdentifier_TextualBaseMetricDescription();
 
         /**
-         * The meta object literal for the '{@link org.palladiosimulator.metricspec.impl.TextualBaseMetricDescriptionImpl <em>Textual Base Metric Description</em>}' class.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link org.palladiosimulator.metricspec.impl.TextualBaseMetricDescriptionImpl <em>Textual Base Metric Description</em>}' class.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.palladiosimulator.metricspec.impl.TextualBaseMetricDescriptionImpl
-         * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getTextualBaseMetricDescription()
-         * @generated
-         */
+		 * @see org.palladiosimulator.metricspec.impl.TextualBaseMetricDescriptionImpl
+		 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getTextualBaseMetricDescription()
+		 * @generated
+		 */
         EClass TEXTUAL_BASE_METRIC_DESCRIPTION = eINSTANCE.getTextualBaseMetricDescription();
 
         /**
-         * The meta object literal for the '<em><b>Identifiers</b></em>' containment reference list feature.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Identifiers</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @generated
-         */
+		 * @generated
+		 */
         EReference TEXTUAL_BASE_METRIC_DESCRIPTION__IDENTIFIERS = eINSTANCE.getTextualBaseMetricDescription_Identifiers();
 
         /**
-         * The meta object literal for the '{@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl <em>Base Metric Description</em>}' class.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl <em>Base Metric Description</em>}' class.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl
-         * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getBaseMetricDescription()
-         * @generated
-         */
+		 * @see org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl
+		 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getBaseMetricDescription()
+		 * @generated
+		 */
         EClass BASE_METRIC_DESCRIPTION = eINSTANCE.getBaseMetricDescription();
 
         /**
-         * The meta object literal for the '<em><b>Capture Type</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Capture Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @generated
-         */
+		 * @generated
+		 */
         EAttribute BASE_METRIC_DESCRIPTION__CAPTURE_TYPE = eINSTANCE.getBaseMetricDescription_CaptureType();
 
         /**
-         * The meta object literal for the '<em><b>Data Type</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Data Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @generated
-         */
+		 * @generated
+		 */
         EAttribute BASE_METRIC_DESCRIPTION__DATA_TYPE = eINSTANCE.getBaseMetricDescription_DataType();
 
         /**
-         * The meta object literal for the '<em><b>Scale</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Scale</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @generated
-         */
+		 * @generated
+		 */
         EAttribute BASE_METRIC_DESCRIPTION__SCALE = eINSTANCE.getBaseMetricDescription_Scale();
 
         /**
-         * The meta object literal for the '<em><b>Monotonic</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link org.palladiosimulator.metricspec.impl.MetricDescriptionImpl <em>Metric Description</em>}' class.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute BASE_METRIC_DESCRIPTION__MONOTONIC = eINSTANCE.getBaseMetricDescription_Monotonic();
-
-        /**
-         * The meta object literal for the '{@link org.palladiosimulator.metricspec.impl.MetricDescriptionImpl <em>Metric Description</em>}' class.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @see org.palladiosimulator.metricspec.impl.MetricDescriptionImpl
-         * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getMetricDescription()
-         * @generated
-         */
+		 * @see org.palladiosimulator.metricspec.impl.MetricDescriptionImpl
+		 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getMetricDescription()
+		 * @generated
+		 */
         EClass METRIC_DESCRIPTION = eINSTANCE.getMetricDescription();
 
         /**
-         * The meta object literal for the '{@link org.palladiosimulator.metricspec.impl.DescriptionImpl <em>Description</em>}' class.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link org.palladiosimulator.metricspec.impl.DescriptionImpl <em>Description</em>}' class.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.palladiosimulator.metricspec.impl.DescriptionImpl
-         * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getDescription()
-         * @generated
-         */
+		 * @see org.palladiosimulator.metricspec.impl.DescriptionImpl
+		 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getDescription()
+		 * @generated
+		 */
         EClass DESCRIPTION = eINSTANCE.getDescription();
 
         /**
-         * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @generated
-         */
+		 * @generated
+		 */
         EAttribute DESCRIPTION__NAME = eINSTANCE.getDescription_Name();
 
         /**
-         * The meta object literal for the '<em><b>Textual Description</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Textual Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @generated
-         */
+		 * @generated
+		 */
         EAttribute DESCRIPTION__TEXTUAL_DESCRIPTION = eINSTANCE.getDescription_TextualDescription();
 
         /**
-         * The meta object literal for the '{@link org.palladiosimulator.metricspec.impl.AggregationFunctionDescriptionImpl <em>Aggregation Function Description</em>}' class.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link org.palladiosimulator.metricspec.impl.AggregationFunctionDescriptionImpl <em>Aggregation Function Description</em>}' class.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.palladiosimulator.metricspec.impl.AggregationFunctionDescriptionImpl
-         * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getAggregationFunctionDescription()
-         * @generated
-         */
+		 * @see org.palladiosimulator.metricspec.impl.AggregationFunctionDescriptionImpl
+		 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getAggregationFunctionDescription()
+		 * @generated
+		 */
         EClass AGGREGATION_FUNCTION_DESCRIPTION = eINSTANCE.getAggregationFunctionDescription();
 
         /**
-         * The meta object literal for the '{@link org.palladiosimulator.metricspec.impl.MetricSetDescriptionImpl <em>Metric Set Description</em>}' class.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link org.palladiosimulator.metricspec.impl.MetricSetDescriptionImpl <em>Metric Set Description</em>}' class.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.palladiosimulator.metricspec.impl.MetricSetDescriptionImpl
-         * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getMetricSetDescription()
-         * @generated
-         */
+		 * @see org.palladiosimulator.metricspec.impl.MetricSetDescriptionImpl
+		 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getMetricSetDescription()
+		 * @generated
+		 */
         EClass METRIC_SET_DESCRIPTION = eINSTANCE.getMetricSetDescription();
 
         /**
-         * The meta object literal for the '<em><b>Subsumed Metrics</b></em>' reference list feature.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Subsumed Metrics</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @generated
-         */
+		 * @generated
+		 */
         EReference METRIC_SET_DESCRIPTION__SUBSUMED_METRICS = eINSTANCE.getMetricSetDescription_SubsumedMetrics();
 
         /**
-         * The meta object literal for the '{@link org.palladiosimulator.metricspec.impl.NumericalBaseMetricDescriptionImpl <em>Numerical Base Metric Description</em>}' class.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link org.palladiosimulator.metricspec.impl.NumericalBaseMetricDescriptionImpl <em>Numerical Base Metric Description</em>}' class.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.palladiosimulator.metricspec.impl.NumericalBaseMetricDescriptionImpl
-         * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getNumericalBaseMetricDescription()
-         * @generated
-         */
+		 * @see org.palladiosimulator.metricspec.impl.NumericalBaseMetricDescriptionImpl
+		 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getNumericalBaseMetricDescription()
+		 * @generated
+		 */
         EClass NUMERICAL_BASE_METRIC_DESCRIPTION = eINSTANCE.getNumericalBaseMetricDescription();
 
         /**
-         * The meta object literal for the '<em><b>Default Unit</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Default Unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @generated
-         */
+		 * @generated
+		 */
         EAttribute NUMERICAL_BASE_METRIC_DESCRIPTION__DEFAULT_UNIT = eINSTANCE.getNumericalBaseMetricDescription_DefaultUnit();
 
         /**
-         * The meta object literal for the '<em><b>Persistence Kind</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Persistence Kind</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @generated
-         */
+		 * @generated
+		 */
         EAttribute NUMERICAL_BASE_METRIC_DESCRIPTION__PERSISTENCE_KIND = eINSTANCE.getNumericalBaseMetricDescription_PersistenceKind();
 
         /**
-         * The meta object literal for the '{@link javax.measure.quantity.Quantity <em>IJS Quantity</em>}' class.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link javax.measure.quantity.Quantity <em>IJS Quantity</em>}' class.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see javax.measure.quantity.Quantity
-         * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getIJSQuantity()
-         * @generated
-         */
+		 * @see javax.measure.quantity.Quantity
+		 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getIJSQuantity()
+		 * @generated
+		 */
         EClass IJS_QUANTITY = eINSTANCE.getIJSQuantity();
 
         /**
-         * The meta object literal for the '{@link org.palladiosimulator.metricspec.CaptureType <em>Capture Type</em>}' enum.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link org.palladiosimulator.metricspec.CaptureType <em>Capture Type</em>}' enum.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.palladiosimulator.metricspec.CaptureType
-         * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getCaptureType()
-         * @generated
-         */
+		 * @see org.palladiosimulator.metricspec.CaptureType
+		 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getCaptureType()
+		 * @generated
+		 */
         EEnum CAPTURE_TYPE = eINSTANCE.getCaptureType();
 
         /**
-         * The meta object literal for the '{@link org.palladiosimulator.metricspec.Scale <em>Scale</em>}' enum.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link org.palladiosimulator.metricspec.Scale <em>Scale</em>}' enum.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.palladiosimulator.metricspec.Scale
-         * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getScale()
-         * @generated
-         */
+		 * @see org.palladiosimulator.metricspec.Scale
+		 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getScale()
+		 * @generated
+		 */
         EEnum SCALE = eINSTANCE.getScale();
 
         /**
-         * The meta object literal for the '{@link org.palladiosimulator.metricspec.Monotonic <em>Monotonic</em>}' enum.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link org.palladiosimulator.metricspec.PersistenceKindOptions <em>Persistence Kind Options</em>}' enum.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.palladiosimulator.metricspec.Monotonic
-         * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getMonotonic()
-         * @generated
-         */
-        EEnum MONOTONIC = eINSTANCE.getMonotonic();
-
-        /**
-         * The meta object literal for the '{@link org.palladiosimulator.metricspec.PersistenceKindOptions <em>Persistence Kind Options</em>}' enum.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @see org.palladiosimulator.metricspec.PersistenceKindOptions
-         * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getPersistenceKindOptions()
-         * @generated
-         */
+		 * @see org.palladiosimulator.metricspec.PersistenceKindOptions
+		 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getPersistenceKindOptions()
+		 * @generated
+		 */
         EEnum PERSISTENCE_KIND_OPTIONS = eINSTANCE.getPersistenceKindOptions();
 
         /**
-         * The meta object literal for the '{@link org.palladiosimulator.metricspec.DataType <em>Data Type</em>}' enum.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link org.palladiosimulator.metricspec.DataType <em>Data Type</em>}' enum.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.palladiosimulator.metricspec.DataType
-         * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getDataType()
-         * @generated
-         */
+		 * @see org.palladiosimulator.metricspec.DataType
+		 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getDataType()
+		 * @generated
+		 */
         EEnum DATA_TYPE = eINSTANCE.getDataType();
 
         /**
-         * The meta object literal for the '<em>EJS Unit</em>' data type.
-         * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em>EJS Unit</em>' data type.
+		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see javax.measure.unit.Unit
-         * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getEJSUnit()
-         * @generated
-         */
+		 * @see javax.measure.unit.Unit
+		 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getEJSUnit()
+		 * @generated
+		 */
         EDataType EJS_UNIT = eINSTANCE.getEJSUnit();
 
     }
