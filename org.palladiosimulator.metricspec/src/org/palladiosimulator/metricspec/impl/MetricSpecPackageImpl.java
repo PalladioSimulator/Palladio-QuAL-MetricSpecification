@@ -2,9 +2,9 @@
  */
 package org.palladiosimulator.metricspec.impl;
 
-import de.uka.ipd.sdq.identifier.IdentifierPackage;
 import javax.measure.quantity.Quantity;
 import javax.measure.unit.Unit;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -21,6 +21,7 @@ import org.palladiosimulator.metricspec.DataType;
 import org.palladiosimulator.metricspec.Description;
 import org.palladiosimulator.metricspec.Identifier;
 import org.palladiosimulator.metricspec.MetricDescription;
+import org.palladiosimulator.metricspec.MetricDescriptionRepository;
 import org.palladiosimulator.metricspec.MetricSetDescription;
 import org.palladiosimulator.metricspec.MetricSpecFactory;
 import org.palladiosimulator.metricspec.MetricSpecPackage;
@@ -28,6 +29,8 @@ import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
 import org.palladiosimulator.metricspec.PersistenceKindOptions;
 import org.palladiosimulator.metricspec.Scale;
 import org.palladiosimulator.metricspec.TextualBaseMetricDescription;
+
+import de.uka.ipd.sdq.identifier.IdentifierPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -100,6 +103,13 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
     private EClass ijsQuantityEClass = null;
 
     /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass metricDescriptionRepositoryEClass = null;
+
+				/**
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
@@ -290,6 +300,15 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMetricDescription_Repository() {
+		return (EReference)metricDescriptionEClass.getEStructuralFeatures().get(0);
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -380,6 +399,24 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMetricDescriptionRepository() {
+		return metricDescriptionRepositoryEClass;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMetricDescriptionRepository_MetricDescriptions() {
+		return (EReference)metricDescriptionRepositoryEClass.getEStructuralFeatures().get(0);
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -464,6 +501,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 		createEAttribute(baseMetricDescriptionEClass, BASE_METRIC_DESCRIPTION__SCALE);
 
 		metricDescriptionEClass = createEClass(METRIC_DESCRIPTION);
+		createEReference(metricDescriptionEClass, METRIC_DESCRIPTION__REPOSITORY);
 
 		descriptionEClass = createEClass(DESCRIPTION);
 		createEAttribute(descriptionEClass, DESCRIPTION__NAME);
@@ -479,6 +517,9 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 		createEAttribute(numericalBaseMetricDescriptionEClass, NUMERICAL_BASE_METRIC_DESCRIPTION__PERSISTENCE_KIND);
 
 		ijsQuantityEClass = createEClass(IJS_QUANTITY);
+
+		metricDescriptionRepositoryEClass = createEClass(METRIC_DESCRIPTION_REPOSITORY);
+		createEReference(metricDescriptionRepositoryEClass, METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS);
 
 		// Create enums
 		captureTypeEEnum = createEEnum(CAPTURE_TYPE);
@@ -532,6 +573,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 		aggregationFunctionDescriptionEClass.getESuperTypes().add(this.getDescription());
 		metricSetDescriptionEClass.getESuperTypes().add(this.getMetricDescription());
 		numericalBaseMetricDescriptionEClass.getESuperTypes().add(this.getBaseMetricDescription());
+		metricDescriptionRepositoryEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(identifierEClass, Identifier.class, "Identifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -547,6 +589,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 		initEAttribute(getBaseMetricDescription_Scale(), this.getScale(), "scale", null, 1, 1, BaseMetricDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(metricDescriptionEClass, MetricDescription.class, "MetricDescription", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMetricDescription_Repository(), this.getMetricDescriptionRepository(), this.getMetricDescriptionRepository_MetricDescriptions(), "repository", null, 1, 1, MetricDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(descriptionEClass, Description.class, "Description", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDescription_Name(), ecorePackage.getEString(), "name", null, 1, 1, Description.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -565,6 +608,9 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 		initEAttribute(getNumericalBaseMetricDescription_PersistenceKind(), this.getPersistenceKindOptions(), "persistenceKind", null, 1, 1, NumericalBaseMetricDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(ijsQuantityEClass, Quantity.class, "IJSQuantity", IS_ABSTRACT, IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(metricDescriptionRepositoryEClass, MetricDescriptionRepository.class, "MetricDescriptionRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMetricDescriptionRepository_MetricDescriptions(), this.getMetricDescription(), this.getMetricDescription_Repository(), "metricDescriptions", null, 0, -1, MetricDescriptionRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(captureTypeEEnum, CaptureType.class, "CaptureType");

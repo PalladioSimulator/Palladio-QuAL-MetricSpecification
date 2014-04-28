@@ -8,7 +8,6 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
@@ -20,7 +19,6 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-
 import org.palladiosimulator.metricspec.util.MetricSpecAdapterFactory;
 
 /**
@@ -187,6 +185,29 @@ public class MetricSpecItemProviderAdapterFactory extends MetricSpecAdapterFacto
 	}
 
     /**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.metricspec.MetricDescriptionRepository} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MetricDescriptionRepositoryItemProvider metricDescriptionRepositoryItemProvider;
+
+				/**
+	 * This creates an adapter for a {@link org.palladiosimulator.metricspec.MetricDescriptionRepository}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMetricDescriptionRepositoryAdapter() {
+		if (metricDescriptionRepositoryItemProvider == null) {
+			metricDescriptionRepositoryItemProvider = new MetricDescriptionRepositoryItemProvider(this);
+		}
+
+		return metricDescriptionRepositoryItemProvider;
+	}
+
+				/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -290,6 +311,7 @@ public class MetricSpecItemProviderAdapterFactory extends MetricSpecAdapterFacto
 		if (aggregationFunctionDescriptionItemProvider != null) aggregationFunctionDescriptionItemProvider.dispose();
 		if (metricSetDescriptionItemProvider != null) metricSetDescriptionItemProvider.dispose();
 		if (numericalBaseMetricDescriptionItemProvider != null) numericalBaseMetricDescriptionItemProvider.dispose();
+		if (metricDescriptionRepositoryItemProvider != null) metricDescriptionRepositoryItemProvider.dispose();
 	}
 
 }

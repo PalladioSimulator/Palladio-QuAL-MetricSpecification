@@ -8,12 +8,20 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
-import org.palladiosimulator.metricspec.*;
+import org.palladiosimulator.metricspec.AggregationFunctionDescription;
+import org.palladiosimulator.metricspec.CaptureType;
+import org.palladiosimulator.metricspec.DataType;
+import org.palladiosimulator.metricspec.Identifier;
+import org.palladiosimulator.metricspec.MetricDescriptionRepository;
+import org.palladiosimulator.metricspec.MetricSetDescription;
+import org.palladiosimulator.metricspec.MetricSpecFactory;
+import org.palladiosimulator.metricspec.MetricSpecPackage;
+import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
+import org.palladiosimulator.metricspec.PersistenceKindOptions;
+import org.palladiosimulator.metricspec.Scale;
+import org.palladiosimulator.metricspec.TextualBaseMetricDescription;
 
 /**
  * <!-- begin-user-doc -->
@@ -64,6 +72,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 			case MetricSpecPackage.AGGREGATION_FUNCTION_DESCRIPTION: return createAggregationFunctionDescription();
 			case MetricSpecPackage.METRIC_SET_DESCRIPTION: return createMetricSetDescription();
 			case MetricSpecPackage.NUMERICAL_BASE_METRIC_DESCRIPTION: return createNumericalBaseMetricDescription();
+			case MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY: return createMetricDescriptionRepository();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -166,6 +175,16 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 	}
 
     /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MetricDescriptionRepository createMetricDescriptionRepository() {
+		MetricDescriptionRepositoryImpl metricDescriptionRepository = new MetricDescriptionRepositoryImpl();
+		return metricDescriptionRepository;
+	}
+
+				/**
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated

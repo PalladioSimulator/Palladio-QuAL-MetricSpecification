@@ -67,6 +67,15 @@ public interface MetricSpecFactory extends EFactory {
     NumericalBaseMetricDescription createNumericalBaseMetricDescription();
 
     /**
+	 * Returns a new object of class '<em>Metric Description Repository</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Metric Description Repository</em>'.
+	 * @generated
+	 */
+	MetricDescriptionRepository createMetricDescriptionRepository();
+
+				/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

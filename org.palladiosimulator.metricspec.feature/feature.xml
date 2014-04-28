@@ -241,4 +241,17 @@ litigation.
          version="0.0.0"
          unpack="false"/>
 
+   <plugin
+         id="org.palladiosimulator.metricspec.resources"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.palladiosimulator.metricspec.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>

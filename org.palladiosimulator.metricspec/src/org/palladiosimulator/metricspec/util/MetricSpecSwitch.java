@@ -6,10 +6,17 @@ import javax.measure.quantity.Quantity;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
-
-import org.palladiosimulator.metricspec.*;
+import org.palladiosimulator.metricspec.AggregationFunctionDescription;
+import org.palladiosimulator.metricspec.BaseMetricDescription;
+import org.palladiosimulator.metricspec.Description;
+import org.palladiosimulator.metricspec.Identifier;
+import org.palladiosimulator.metricspec.MetricDescription;
+import org.palladiosimulator.metricspec.MetricDescriptionRepository;
+import org.palladiosimulator.metricspec.MetricSetDescription;
+import org.palladiosimulator.metricspec.MetricSpecPackage;
+import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
+import org.palladiosimulator.metricspec.TextualBaseMetricDescription;
 
 /**
  * <!-- begin-user-doc -->
@@ -139,6 +146,13 @@ public class MetricSpecSwitch<T> extends Switch<T> {
 			case MetricSpecPackage.IJS_QUANTITY: {
 				Quantity ijsQuantity = (Quantity)theEObject;
 				T result = caseIJSQuantity(ijsQuantity);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY: {
+				MetricDescriptionRepository metricDescriptionRepository = (MetricDescriptionRepository)theEObject;
+				T result = caseMetricDescriptionRepository(metricDescriptionRepository);
+				if (result == null) result = caseIdentifier_Identifier(metricDescriptionRepository);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -282,6 +296,21 @@ public class MetricSpecSwitch<T> extends Switch<T> {
 	}
 
     /**
+	 * Returns the result of interpreting the object as an instance of '<em>Metric Description Repository</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Metric Description Repository</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMetricDescriptionRepository(MetricDescriptionRepository object) {
+		return null;
+	}
+
+				/**
 	 * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'.
 	 * <!-- begin-user-doc -->
      * This implementation returns null;

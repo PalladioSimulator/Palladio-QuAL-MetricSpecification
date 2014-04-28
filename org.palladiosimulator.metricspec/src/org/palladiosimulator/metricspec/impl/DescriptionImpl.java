@@ -2,16 +2,13 @@
  */
 package org.palladiosimulator.metricspec.impl;
 
-import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.palladiosimulator.metricspec.Description;
 import org.palladiosimulator.metricspec.MetricSpecPackage;
+
+import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
 
 /**
  * <!-- begin-user-doc -->

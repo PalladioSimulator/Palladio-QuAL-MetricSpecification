@@ -3,15 +3,11 @@
 package org.palladiosimulator.metricspec.impl;
 
 import javax.measure.quantity.Quantity;
-
 import javax.measure.unit.Unit;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.palladiosimulator.metricspec.MetricSpecPackage;
 import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
 import org.palladiosimulator.metricspec.PersistenceKindOptions;

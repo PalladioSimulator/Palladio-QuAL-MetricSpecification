@@ -2,14 +2,14 @@
  */
 package org.palladiosimulator.metricspec;
 
-import de.uka.ipd.sdq.identifier.IdentifierPackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
+import de.uka.ipd.sdq.identifier.IdentifierPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -208,13 +208,22 @@ public interface MetricSpecPackage extends EPackage {
     int METRIC_DESCRIPTION__TEXTUAL_DESCRIPTION = DESCRIPTION__TEXTUAL_DESCRIPTION;
 
     /**
+	 * The feature id for the '<em><b>Repository</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METRIC_DESCRIPTION__REPOSITORY = DESCRIPTION_FEATURE_COUNT + 0;
+
+				/**
 	 * The number of structural features of the '<em>Metric Description</em>' class.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int METRIC_DESCRIPTION_FEATURE_COUNT = DESCRIPTION_FEATURE_COUNT + 0;
+    int METRIC_DESCRIPTION_FEATURE_COUNT = DESCRIPTION_FEATURE_COUNT + 1;
 
     /**
 	 * The number of operations of the '<em>Metric Description</em>' class.
@@ -263,6 +272,15 @@ public interface MetricSpecPackage extends EPackage {
     int BASE_METRIC_DESCRIPTION__TEXTUAL_DESCRIPTION = METRIC_DESCRIPTION__TEXTUAL_DESCRIPTION;
 
     /**
+	 * The feature id for the '<em><b>Repository</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASE_METRIC_DESCRIPTION__REPOSITORY = METRIC_DESCRIPTION__REPOSITORY;
+
+				/**
 	 * The feature id for the '<em><b>Capture Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -345,6 +363,15 @@ public interface MetricSpecPackage extends EPackage {
     int TEXTUAL_BASE_METRIC_DESCRIPTION__TEXTUAL_DESCRIPTION = BASE_METRIC_DESCRIPTION__TEXTUAL_DESCRIPTION;
 
     /**
+	 * The feature id for the '<em><b>Repository</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXTUAL_BASE_METRIC_DESCRIPTION__REPOSITORY = BASE_METRIC_DESCRIPTION__REPOSITORY;
+
+				/**
 	 * The feature id for the '<em><b>Capture Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -491,6 +518,15 @@ public interface MetricSpecPackage extends EPackage {
     int METRIC_SET_DESCRIPTION__TEXTUAL_DESCRIPTION = METRIC_DESCRIPTION__TEXTUAL_DESCRIPTION;
 
     /**
+	 * The feature id for the '<em><b>Repository</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METRIC_SET_DESCRIPTION__REPOSITORY = METRIC_DESCRIPTION__REPOSITORY;
+
+				/**
 	 * The feature id for the '<em><b>Subsumed Metrics</b></em>' reference list.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -555,6 +591,15 @@ public interface MetricSpecPackage extends EPackage {
     int NUMERICAL_BASE_METRIC_DESCRIPTION__TEXTUAL_DESCRIPTION = BASE_METRIC_DESCRIPTION__TEXTUAL_DESCRIPTION;
 
     /**
+	 * The feature id for the '<em><b>Repository</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERICAL_BASE_METRIC_DESCRIPTION__REPOSITORY = BASE_METRIC_DESCRIPTION__REPOSITORY;
+
+				/**
 	 * The feature id for the '<em><b>Capture Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -646,6 +691,52 @@ public interface MetricSpecPackage extends EPackage {
     int IJS_QUANTITY_OPERATION_COUNT = 0;
 
     /**
+	 * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.MetricDescriptionRepositoryImpl <em>Metric Description Repository</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.metricspec.impl.MetricDescriptionRepositoryImpl
+	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getMetricDescriptionRepository()
+	 * @generated
+	 */
+	int METRIC_DESCRIPTION_REPOSITORY = 9;
+
+				/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METRIC_DESCRIPTION_REPOSITORY__ID = IdentifierPackage.IDENTIFIER__ID;
+
+				/**
+	 * The feature id for the '<em><b>Metric Descriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+
+				/**
+	 * The number of structural features of the '<em>Metric Description Repository</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METRIC_DESCRIPTION_REPOSITORY_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+
+				/**
+	 * The number of operations of the '<em>Metric Description Repository</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METRIC_DESCRIPTION_REPOSITORY_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
+
+				/**
 	 * The meta object id for the '{@link org.palladiosimulator.metricspec.CaptureType <em>Capture Type</em>}' enum.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -653,7 +744,7 @@ public interface MetricSpecPackage extends EPackage {
 	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getCaptureType()
 	 * @generated
 	 */
-    int CAPTURE_TYPE = 9;
+    int CAPTURE_TYPE = 10;
 
     /**
 	 * The meta object id for the '{@link org.palladiosimulator.metricspec.Scale <em>Scale</em>}' enum.
@@ -663,7 +754,7 @@ public interface MetricSpecPackage extends EPackage {
 	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getScale()
 	 * @generated
 	 */
-    int SCALE = 10;
+    int SCALE = 11;
 
     /**
 	 * The meta object id for the '{@link org.palladiosimulator.metricspec.PersistenceKindOptions <em>Persistence Kind Options</em>}' enum.
@@ -673,7 +764,7 @@ public interface MetricSpecPackage extends EPackage {
 	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getPersistenceKindOptions()
 	 * @generated
 	 */
-    int PERSISTENCE_KIND_OPTIONS = 11;
+    int PERSISTENCE_KIND_OPTIONS = 12;
 
     /**
 	 * The meta object id for the '{@link org.palladiosimulator.metricspec.DataType <em>Data Type</em>}' enum.
@@ -683,7 +774,7 @@ public interface MetricSpecPackage extends EPackage {
 	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getDataType()
 	 * @generated
 	 */
-    int DATA_TYPE = 12;
+    int DATA_TYPE = 13;
 
     /**
 	 * The meta object id for the '<em>EJS Unit</em>' data type.
@@ -693,7 +784,7 @@ public interface MetricSpecPackage extends EPackage {
 	 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getEJSUnit()
 	 * @generated
 	 */
-    int EJS_UNIT = 13;
+    int EJS_UNIT = 14;
 
 
     /**
@@ -803,6 +894,17 @@ public interface MetricSpecPackage extends EPackage {
     EClass getMetricDescription();
 
     /**
+	 * Returns the meta object for the container reference '{@link org.palladiosimulator.metricspec.MetricDescription#getRepository <em>Repository</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Repository</em>'.
+	 * @see org.palladiosimulator.metricspec.MetricDescription#getRepository()
+	 * @see #getMetricDescription()
+	 * @generated
+	 */
+	EReference getMetricDescription_Repository();
+
+				/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.metricspec.Description <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -909,6 +1011,27 @@ public interface MetricSpecPackage extends EPackage {
     EClass getIJSQuantity();
 
     /**
+	 * Returns the meta object for class '{@link org.palladiosimulator.metricspec.MetricDescriptionRepository <em>Metric Description Repository</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Metric Description Repository</em>'.
+	 * @see org.palladiosimulator.metricspec.MetricDescriptionRepository
+	 * @generated
+	 */
+	EClass getMetricDescriptionRepository();
+
+				/**
+	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.metricspec.MetricDescriptionRepository#getMetricDescriptions <em>Metric Descriptions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Metric Descriptions</em>'.
+	 * @see org.palladiosimulator.metricspec.MetricDescriptionRepository#getMetricDescriptions()
+	 * @see #getMetricDescriptionRepository()
+	 * @generated
+	 */
+	EReference getMetricDescriptionRepository_MetricDescriptions();
+
+				/**
 	 * Returns the meta object for enum '{@link org.palladiosimulator.metricspec.CaptureType <em>Capture Type</em>}'.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1071,6 +1194,14 @@ public interface MetricSpecPackage extends EPackage {
         EClass METRIC_DESCRIPTION = eINSTANCE.getMetricDescription();
 
         /**
+		 * The meta object literal for the '<em><b>Repository</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference METRIC_DESCRIPTION__REPOSITORY = eINSTANCE.getMetricDescription_Repository();
+
+								/**
 		 * The meta object literal for the '{@link org.palladiosimulator.metricspec.impl.DescriptionImpl <em>Description</em>}' class.
 		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -1161,6 +1292,24 @@ public interface MetricSpecPackage extends EPackage {
         EClass IJS_QUANTITY = eINSTANCE.getIJSQuantity();
 
         /**
+		 * The meta object literal for the '{@link org.palladiosimulator.metricspec.impl.MetricDescriptionRepositoryImpl <em>Metric Description Repository</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.metricspec.impl.MetricDescriptionRepositoryImpl
+		 * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getMetricDescriptionRepository()
+		 * @generated
+		 */
+		EClass METRIC_DESCRIPTION_REPOSITORY = eINSTANCE.getMetricDescriptionRepository();
+
+								/**
+		 * The meta object literal for the '<em><b>Metric Descriptions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS = eINSTANCE.getMetricDescriptionRepository_MetricDescriptions();
+
+								/**
 		 * The meta object literal for the '{@link org.palladiosimulator.metricspec.CaptureType <em>Capture Type</em>}' enum.
 		 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->

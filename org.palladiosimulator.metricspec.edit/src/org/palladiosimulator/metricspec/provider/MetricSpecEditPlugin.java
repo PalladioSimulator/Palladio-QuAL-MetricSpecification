@@ -2,11 +2,10 @@
  */
 package org.palladiosimulator.metricspec.provider;
 
-import de.uka.ipd.sdq.identifier.provider.IdentifierEditPlugin;
-
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
+
+import de.uka.ipd.sdq.identifier.provider.IdentifierEditPlugin;
 
 /**
  * This is the central singleton for the MetricSpec edit plugin.

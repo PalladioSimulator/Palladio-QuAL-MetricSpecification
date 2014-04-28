@@ -3,7 +3,6 @@
 package org.palladiosimulator.metricspec;
 
 import javax.measure.quantity.Quantity;
-
 import javax.measure.unit.Unit;
 
 /**

@@ -6,12 +6,18 @@ import javax.measure.quantity.Quantity;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
-import org.palladiosimulator.metricspec.*;
+import org.palladiosimulator.metricspec.AggregationFunctionDescription;
+import org.palladiosimulator.metricspec.BaseMetricDescription;
+import org.palladiosimulator.metricspec.Description;
+import org.palladiosimulator.metricspec.Identifier;
+import org.palladiosimulator.metricspec.MetricDescription;
+import org.palladiosimulator.metricspec.MetricDescriptionRepository;
+import org.palladiosimulator.metricspec.MetricSetDescription;
+import org.palladiosimulator.metricspec.MetricSpecPackage;
+import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
+import org.palladiosimulator.metricspec.TextualBaseMetricDescription;
 
 /**
  * <!-- begin-user-doc -->
@@ -104,6 +110,10 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseIJSQuantity(Quantity object) {
 				return createIJSQuantityAdapter();
+			}
+			@Override
+			public Adapter caseMetricDescriptionRepository(MetricDescriptionRepository object) {
+				return createMetricDescriptionRepositoryAdapter();
 			}
 			@Override
 			public Adapter caseIdentifier_Identifier(de.uka.ipd.sdq.identifier.Identifier object) {
@@ -256,6 +266,20 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
 	}
 
     /**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.metricspec.MetricDescriptionRepository <em>Metric Description Repository</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.metricspec.MetricDescriptionRepository
+	 * @generated
+	 */
+	public Adapter createMetricDescriptionRepositoryAdapter() {
+		return null;
+	}
+
+				/**
 	 * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.identifier.Identifier <em>Identifier</em>}'.
 	 * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;

@@ -42,7 +42,10 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MetricDescription" abstract="true" eSuperTypes="#//Description"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MetricDescription" abstract="true" eSuperTypes="#//Description">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="repository" lowerBound="1"
+        eType="#//MetricDescriptionRepository" eOpposite="#//MetricDescriptionRepository/metricDescriptions"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Description" abstract="true" eSuperTypes="../../de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -135,4 +138,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IJSQuantity" instanceClassName="javax.measure.quantity.Quantity"
       abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MetricDescriptionRepository" eSuperTypes="../../de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metricDescriptions" upperBound="-1"
+        eType="#//MetricDescription" containment="true" eOpposite="#//MetricDescription/repository"/>
+  </eClassifiers>
 </ecore:EPackage>

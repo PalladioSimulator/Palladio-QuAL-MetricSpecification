@@ -3,7 +3,6 @@
 package org.palladiosimulator.metricspec.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.palladiosimulator.metricspec.AggregationFunctionDescription;
 import org.palladiosimulator.metricspec.MetricSpecPackage;
 
