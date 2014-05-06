@@ -5,7 +5,7 @@
          point="org.eclipse.emf.ecore.uri_mapping">
       <mapping
             source="pathmap://METRIC_SPEC_MODELS/"
-            target="platform:/plugin/org.palladiosimulator.metricspec.resources/models/">
+            target="platform:/plugin/org.palladiosimulator.metricspec.resources/">
       </mapping>
    </extension>
 
