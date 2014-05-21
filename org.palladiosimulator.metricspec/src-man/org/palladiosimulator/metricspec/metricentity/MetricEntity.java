@@ -4,7 +4,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.palladiosimulator.metricspec.MetricDescription;
 
-public abstract class MetricEntity implements IMetricEntity {
+public class MetricEntity implements IMetricEntity {
 
     /** The subclasses' metric
      */
@@ -18,7 +18,7 @@ public abstract class MetricEntity implements IMetricEntity {
     /**
      * @param metricDesciption
      */
-    protected MetricEntity(final MetricDescription metricDesciption) {
+    public MetricEntity(final MetricDescription metricDesciption) {
         super();
         setMetricDescription(metricDesciption);
     }
