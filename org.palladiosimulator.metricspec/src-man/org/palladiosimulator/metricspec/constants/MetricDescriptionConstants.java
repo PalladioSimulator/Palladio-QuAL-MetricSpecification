@@ -15,6 +15,8 @@ import org.palladiosimulator.metricspec.MetricSpecPackage;
 /**
  * Constant metric descriptions, commonly used by ProbeFramework.
  * 
+ * TODO Let this file be generated from model. [Lehrig]
+ * 
  * @author Sebastian Lehrig, Steffen Becker
  */
 public final class MetricDescriptionConstants {
@@ -34,7 +36,7 @@ public final class MetricDescriptionConstants {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
-        
+
         POINT_IN_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_NCRBos7pEeOX_4BzImuHbA");
 
         RESPONSE_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_6rYmYs7nEeOX_4BzImuHbA");
@@ -47,11 +49,18 @@ public final class MetricDescriptionConstants {
         WAITING_TIME_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_CEIUodpkEeO-WvSDaR6unQ");
 
         RESOURCE_DEMAND_METRIC = (BaseMetricDescription) resource.getEObject("_eg_F0s7qEeOX_4BzImuHbA");
+        RESOURCE_DEMAND_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_sefjUeJCEeO6l86uYUhhyw");
 
-        CPU_STATE_METRIC = (BaseMetricDescription) resource.getEObject("_paDhIs7qEeOX_4BzImuHbA");
-        PASSIVE_RESOURCE_STATE_METRIC = (BaseMetricDescription) resource.getEObject("_x0-pks7rEeOX_4BzImuHbA");
+        STATE_OF_ACTIVE_RESOURCE_METRIC = (BaseMetricDescription) resource.getEObject("_paDhIs7qEeOX_4BzImuHbA");
+        STATE_OF_ACTIVE_RESOURCE_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_-buIceJDEeO6l86uYUhhyw");
+        OVERALL_STATE_OF_ACTIVE_RESOURCE_METRIC = (MetricSetDescription) resource.getEObject("_1dsBAeJEEeO6l86uYUhhyw");
+        STATE_OF_ACTIVE_RESOURCE_OVER_TIME_METRIC = (MetricSetDescription) resource
+                .getEObject("_MSlw0c7sEeOX_4BzImuHbA");
+
+        STATE_OF_PASSIVE_RESOURCE_METRIC = (BaseMetricDescription) resource.getEObject("_x0-pks7rEeOX_4BzImuHbA");
+
         EXECUTION_RESULT_METRIC = (BaseMetricDescription) resource.getEObject("_7Is3ss7rEeOX_4BzImuHbA");
-        CPU_STATE_OVER_TIME_METRIC = (MetricSetDescription) resource.getEObject("_MSlw0c7sEeOX_4BzImuHbA");
+        EXECUTION_RESULT_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_3aoZYeJFEeO6l86uYUhhyw");
 
         SCALABILITY_RANGE = (BaseMetricDescription) resource.getEObject("_gNxNEtBxEeONzY86HEL4JQ");
         SLOPE = (BaseMetricDescription) resource.getEObject("_Nz_HctBzEeONzY86HEL4JQ");
@@ -86,7 +95,7 @@ public final class MetricDescriptionConstants {
 
     /** Specifies a waiting time metric, e.g., to store the waiting time at passive resource pools. */
     public final static BaseMetricDescription WAITING_TIME_METRIC;
-    
+
     /**
      * Specifies a (point in time, waiting time)-tuple, i.e., start of the waiting plus the waiting
      * time.
@@ -96,16 +105,46 @@ public final class MetricDescriptionConstants {
     /** Specifies a resource demand metric, e.g., to store CPU demand measurements. */
     public final static BaseMetricDescription RESOURCE_DEMAND_METRIC;
 
-    /** Specifies a CPU metric, e.g., to store CPU utilization at a certain time/state. */
-    public final static BaseMetricDescription CPU_STATE_METRIC;
+    /**
+     * Specifies a (point in time, demand)-tuple, i.e., start of the demand plus the demand.
+     */
+    public final static MetricSetDescription RESOURCE_DEMAND_METRIC_TUPLE;
+
+    /**
+     * This measure represents the state of an active resource, e.g., to store CPU utilization at a
+     * certain time/state.
+     */
+    public final static BaseMetricDescription STATE_OF_ACTIVE_RESOURCE_METRIC;
+
+    /**
+     * Specifies a (point in time, state of active resource)-tuple, i.e., the state of an active
+     * resource plus the time when the state was taken.
+     */
+    public final static MetricSetDescription STATE_OF_ACTIVE_RESOURCE_METRIC_TUPLE;
+
+    /**
+     * Overall state of an active resource, starting from a given point in time. For example, this
+     * metric allows to store the utilization of a CPU over the complete simulation time.
+     */
+    public final static MetricSetDescription OVERALL_STATE_OF_ACTIVE_RESOURCE_METRIC;
+
+    /**
+     * State of an active resource over time, e.g., to store the number of elements in the CPU queue
+     * over time.
+     */
+    public final static MetricSetDescription STATE_OF_ACTIVE_RESOURCE_OVER_TIME_METRIC;
 
     /** Specifies a passive resource state metric. */
-    public final static BaseMetricDescription PASSIVE_RESOURCE_STATE_METRIC;
+    public final static BaseMetricDescription STATE_OF_PASSIVE_RESOURCE_METRIC;
 
-    /** Specifies an execution results metric, e.g., to store simulated failure occurances. */
+    /** Specifies an execution results metric, e.g., to store simulated failure occurrences. */
     public final static BaseMetricDescription EXECUTION_RESULT_METRIC;
 
-    public final static MetricSetDescription CPU_STATE_OVER_TIME_METRIC;
+    /**
+     * Specifies a (point in time, execution result)-tuple, i.e., time of getting the execution
+     * result plus the execution result itself.
+     */
+    public final static MetricSetDescription EXECUTION_RESULT_METRIC_TUPLE;
 
     /** Scalability range without violating SLOs, e.g., the system scales up to 1,000 users. */
     public final static BaseMetricDescription SCALABILITY_RANGE;
