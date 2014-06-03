@@ -58,6 +58,11 @@ public final class MetricDescriptionConstants {
                 .getEObject("_MSlw0c7sEeOX_4BzImuHbA");
 
         STATE_OF_PASSIVE_RESOURCE_METRIC = (BaseMetricDescription) resource.getEObject("_x0-pks7rEeOX_4BzImuHbA");
+        STATE_OF_PASSIVE_RESOURCE_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_E-GEoespEeOpcPDUs0BVCg");
+        OVERALL_STATE_OF_PASSIVE_RESOURCE_METRIC = (MetricSetDescription) resource
+                .getEObject("_INq_AespEeOpcPDUs0BVCg");
+        STATE_OF_PASSIVE_RESOURCE_OVER_TIME_METRIC = (MetricSetDescription) resource
+                .getEObject("_M_jZoespEeOpcPDUs0BVCg");
 
         EXECUTION_RESULT_METRIC = (BaseMetricDescription) resource.getEObject("_7Is3ss7rEeOX_4BzImuHbA");
         EXECUTION_RESULT_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_3aoZYeJFEeO6l86uYUhhyw");
@@ -136,6 +141,25 @@ public final class MetricDescriptionConstants {
 
     /** Specifies a passive resource state metric. */
     public final static BaseMetricDescription STATE_OF_PASSIVE_RESOURCE_METRIC;
+
+    /**
+     * Specifies a (point in time, state of passive resource)-tuple, i.e., the state of a passive
+     * resource plus the time when the state was taken.
+     */
+    public final static MetricSetDescription STATE_OF_PASSIVE_RESOURCE_METRIC_TUPLE;
+
+    /**
+     * Overall state of a passive resource, starting from a given point in time. For example, this
+     * metric allows to store the number of connections of a connection pool over the complete
+     * simulation time.
+     */
+    public final static MetricSetDescription OVERALL_STATE_OF_PASSIVE_RESOURCE_METRIC;
+
+    /**
+     * State of a passive resource over time, e.g., to store the number of connections in a
+     * connection pool over time.
+     */
+    public final static MetricSetDescription STATE_OF_PASSIVE_RESOURCE_OVER_TIME_METRIC;
 
     /** Specifies an execution results metric, e.g., to store simulated failure occurrences. */
     public final static BaseMetricDescription EXECUTION_RESULT_METRIC;
