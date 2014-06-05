@@ -10,9 +10,7 @@ Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  de.uka.ipd.sdq.identifier;visibility:=reexport,
- org.jscience;bundle-version="4.1.3",
- edu.kit.ipd.sdq.mdsd.profiles;bundle-version="1.0.0",
- org.modelversioning.emfprofile;bundle-version="1.1.0"
+ org.jscience;bundle-version="4.1.3"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: org.palladiosimulator.metricspec,
