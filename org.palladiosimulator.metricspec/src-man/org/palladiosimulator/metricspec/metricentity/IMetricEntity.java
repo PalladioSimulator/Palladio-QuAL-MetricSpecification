@@ -2,7 +2,6 @@ package org.palladiosimulator.metricspec.metricentity;
 
 import org.palladiosimulator.metricspec.MetricDescription;
 
-
 public interface IMetricEntity {
 
     /**

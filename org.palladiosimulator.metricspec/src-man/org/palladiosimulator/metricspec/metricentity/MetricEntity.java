@@ -6,7 +6,8 @@ import org.palladiosimulator.metricspec.MetricDescription;
 
 public class MetricEntity implements IMetricEntity {
 
-    /** The subclasses' metric
+    /**
+     * The subclasses' metric
      */
     private MetricDescription metricDesciption;
     private boolean isInitialised = false;
@@ -42,17 +43,21 @@ public class MetricEntity implements IMetricEntity {
         this.metricDesciption.eAdapters().add(new AdapterImpl() {
             @Override
             public void notifyChanged(final Notification notification) {
-                if (notification.getEventType() != Notification.REMOVING_ADAPTER && notification.getEventType() != Notification.RESOLVE) {
-                    //                    if (notification.getFeature() != MetricSpecFactory.eINSTANCE.getDescription_Repository()) {
+                if (notification.getEventType() != Notification.REMOVING_ADAPTER
+                        && notification.getEventType() != Notification.RESOLVE) {
+                    // if (notification.getFeature() !=
+                    // MetricSpecFactory.eINSTANCE.getDescription_Repository()) {
                     throw new RuntimeException("Metric description altered after initializing. This is not allowed.");
-                    //                    }
+                    // }
                 }
             }
         });
         isInitialised = true;
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
+     * 
      * @see org.palladiosimulator.edp2.metricentity.IMetricEntity#getMetricDesciption()
      */
     @Override
@@ -70,8 +75,12 @@ public class MetricEntity implements IMetricEntity {
         }
     }
 
-    /* (non-Javadoc)
-     * @see org.palladiosimulator.edp2.metricentity.IMetricEntity#isCompatibleWith(org.palladiosimulator.edp2.models.ExperimentData.MetricDescription)
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * org.palladiosimulator.edp2.metricentity.IMetricEntity#isCompatibleWith(org.palladiosimulator
+     * .edp2.models.ExperimentData.MetricDescription)
      */
     @Override
     public final boolean isCompatibleWith(final MetricDescription other) {
