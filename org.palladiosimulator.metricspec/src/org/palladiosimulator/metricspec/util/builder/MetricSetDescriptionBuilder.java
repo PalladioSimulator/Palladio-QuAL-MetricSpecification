@@ -10,6 +10,7 @@ public class MetricSetDescriptionBuilder
         implements
         org.palladiosimulator.metricspec.util.builder.IMetricspecBuilder<org.palladiosimulator.metricspec.MetricSetDescription> {
     // features and builders
+    private java.lang.String m_id;
     private java.lang.String m_name;
     private org.palladiosimulator.metricspec.MetricDescriptionRepository m_repository;
     private org.palladiosimulator.metricspec.util.builder.IMetricspecBuilder<? extends org.palladiosimulator.metricspec.MetricDescriptionRepository> m_featureRepositoryBuilder;
@@ -17,6 +18,7 @@ public class MetricSetDescriptionBuilder
     private java.util.Collection<org.palladiosimulator.metricspec.MetricDescription> m_subsumedMetrics = new java.util.LinkedList<org.palladiosimulator.metricspec.MetricDescription>();
     private java.util.Collection<org.palladiosimulator.metricspec.util.builder.IMetricspecBuilder<? extends org.palladiosimulator.metricspec.MetricDescription>> m_featureSubsumedMetricsBuilder = new java.util.LinkedList<org.palladiosimulator.metricspec.util.builder.IMetricspecBuilder<? extends org.palladiosimulator.metricspec.MetricDescription>>();
     // helper attributes
+    private boolean m_featureIdSet = false;
     private boolean m_featureNameSet = false;
     private boolean m_featureRepositorySet = false;
     private boolean m_featureSubsumedMetricsSet = false;
@@ -60,6 +62,7 @@ public class MetricSetDescriptionBuilder
                 .copy(((org.palladiosimulator.metricspec.MetricSetDescription) p_metricSetDescription));
         c.copyReferences();
         MetricSetDescriptionBuilder _builder = newMetricSetDescriptionBuilder();
+        _builder.id(_metricSetDescription.getId());
         _builder.name(_metricSetDescription.getName());
         _builder.repository(_metricSetDescription.getRepository());
         _builder.textualDescription(_metricSetDescription.getTextualDescription());
@@ -75,6 +78,8 @@ public class MetricSetDescriptionBuilder
      */
     public MetricSetDescriptionBuilder but() {
         MetricSetDescriptionBuilder _builder = newMetricSetDescriptionBuilder();
+        _builder.m_featureIdSet = m_featureIdSet;
+        _builder.m_id = m_id;
         _builder.m_featureNameSet = m_featureNameSet;
         _builder.m_name = m_name;
         _builder.m_featureRepositorySet = m_featureRepositorySet;
@@ -96,6 +101,9 @@ public class MetricSetDescriptionBuilder
     public org.palladiosimulator.metricspec.MetricSetDescription build() {
         final org.palladiosimulator.metricspec.MetricSetDescription _newInstance = (org.palladiosimulator.metricspec.MetricSetDescription) org.palladiosimulator.metricspec.MetricSpecFactory.eINSTANCE
                 .create(org.palladiosimulator.metricspec.MetricSpecPackage.eINSTANCE.getMetricSetDescription());
+        if (m_featureIdSet) {
+            _newInstance.setId(m_id);
+        }
         if (m_featureNameSet) {
             _newInstance.setName(m_name);
         }
@@ -119,6 +127,12 @@ public class MetricSetDescriptionBuilder
             }
         }
         return _newInstance;
+    }
+
+    public MetricSetDescriptionBuilder id(java.lang.String p_id) {
+        m_id = p_id;
+        m_featureIdSet = true;
+        return this;
     }
 
     public MetricSetDescriptionBuilder name(java.lang.String p_name) {

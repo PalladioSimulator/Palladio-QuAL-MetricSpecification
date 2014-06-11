@@ -14,6 +14,7 @@ public class NumericalBaseMetricDescriptionBuilder
     private org.palladiosimulator.metricspec.CaptureType m_captureType;
     private org.palladiosimulator.metricspec.DataType m_dataType;
     private javax.measure.unit.Unit m_defaultUnit;
+    private java.lang.String m_id;
     private java.lang.String m_name;
     private org.palladiosimulator.metricspec.PersistenceKindOptions m_persistenceKind;
     private org.palladiosimulator.metricspec.MetricDescriptionRepository m_repository;
@@ -24,6 +25,7 @@ public class NumericalBaseMetricDescriptionBuilder
     private boolean m_featureCaptureTypeSet = false;
     private boolean m_featureDataTypeSet = false;
     private boolean m_featureDefaultUnitSet = false;
+    private boolean m_featureIdSet = false;
     private boolean m_featureNameSet = false;
     private boolean m_featurePersistenceKindSet = false;
     private boolean m_featureRepositorySet = false;
@@ -71,6 +73,7 @@ public class NumericalBaseMetricDescriptionBuilder
         _builder.captureType(_numericalBaseMetricDescription.getCaptureType());
         _builder.dataType(_numericalBaseMetricDescription.getDataType());
         _builder.defaultUnit(_numericalBaseMetricDescription.getDefaultUnit());
+        _builder.id(_numericalBaseMetricDescription.getId());
         _builder.name(_numericalBaseMetricDescription.getName());
         _builder.persistenceKind(_numericalBaseMetricDescription.getPersistenceKind());
         _builder.repository(_numericalBaseMetricDescription.getRepository());
@@ -91,6 +94,8 @@ public class NumericalBaseMetricDescriptionBuilder
         _builder.m_dataType = m_dataType;
         _builder.m_featureDefaultUnitSet = m_featureDefaultUnitSet;
         _builder.m_defaultUnit = m_defaultUnit;
+        _builder.m_featureIdSet = m_featureIdSet;
+        _builder.m_id = m_id;
         _builder.m_featureNameSet = m_featureNameSet;
         _builder.m_name = m_name;
         _builder.m_featurePersistenceKindSet = m_featurePersistenceKindSet;
@@ -124,6 +129,9 @@ public class NumericalBaseMetricDescriptionBuilder
         }
         if (m_featureDefaultUnitSet) {
             _newInstance.setDefaultUnit(m_defaultUnit);
+        }
+        if (m_featureIdSet) {
+            _newInstance.setId(m_id);
         }
         if (m_featureNameSet) {
             _newInstance.setName(m_name);
@@ -162,6 +170,12 @@ public class NumericalBaseMetricDescriptionBuilder
     public NumericalBaseMetricDescriptionBuilder defaultUnit(javax.measure.unit.Unit p_defaultUnit) {
         m_defaultUnit = p_defaultUnit;
         m_featureDefaultUnitSet = true;
+        return this;
+    }
+
+    public NumericalBaseMetricDescriptionBuilder id(java.lang.String p_id) {
+        m_id = p_id;
+        m_featureIdSet = true;
         return this;
     }
 

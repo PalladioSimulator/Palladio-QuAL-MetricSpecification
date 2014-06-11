@@ -13,6 +13,7 @@ public class TextualBaseMetricDescriptionBuilder
     // features and builders
     private org.palladiosimulator.metricspec.CaptureType m_captureType;
     private org.palladiosimulator.metricspec.DataType m_dataType;
+    private java.lang.String m_id;
     private java.lang.String m_name;
     private org.palladiosimulator.metricspec.MetricDescriptionRepository m_repository;
     private org.palladiosimulator.metricspec.util.builder.IMetricspecBuilder<? extends org.palladiosimulator.metricspec.MetricDescriptionRepository> m_featureRepositoryBuilder;
@@ -23,6 +24,7 @@ public class TextualBaseMetricDescriptionBuilder
     // helper attributes
     private boolean m_featureCaptureTypeSet = false;
     private boolean m_featureDataTypeSet = false;
+    private boolean m_featureIdSet = false;
     private boolean m_featureIdentifiersSet = false;
     private boolean m_featureNameSet = false;
     private boolean m_featureRepositorySet = false;
@@ -69,6 +71,7 @@ public class TextualBaseMetricDescriptionBuilder
         TextualBaseMetricDescriptionBuilder _builder = newTextualBaseMetricDescriptionBuilder();
         _builder.captureType(_textualBaseMetricDescription.getCaptureType());
         _builder.dataType(_textualBaseMetricDescription.getDataType());
+        _builder.id(_textualBaseMetricDescription.getId());
         _builder.name(_textualBaseMetricDescription.getName());
         _builder.repository(_textualBaseMetricDescription.getRepository());
         _builder.scale(_textualBaseMetricDescription.getScale());
@@ -89,6 +92,8 @@ public class TextualBaseMetricDescriptionBuilder
         _builder.m_captureType = m_captureType;
         _builder.m_featureDataTypeSet = m_featureDataTypeSet;
         _builder.m_dataType = m_dataType;
+        _builder.m_featureIdSet = m_featureIdSet;
+        _builder.m_id = m_id;
         _builder.m_featureIdentifiersSet = m_featureIdentifiersSet;
         _builder.m_identifiers = m_identifiers;
         _builder.m_featureIdentifiersBuilder = m_featureIdentifiersBuilder;
@@ -119,6 +124,9 @@ public class TextualBaseMetricDescriptionBuilder
         }
         if (m_featureDataTypeSet) {
             _newInstance.setDataType(m_dataType);
+        }
+        if (m_featureIdSet) {
+            _newInstance.setId(m_id);
         }
         if (m_featureNameSet) {
             _newInstance.setName(m_name);
@@ -157,6 +165,12 @@ public class TextualBaseMetricDescriptionBuilder
     public TextualBaseMetricDescriptionBuilder dataType(org.palladiosimulator.metricspec.DataType p_dataType) {
         m_dataType = p_dataType;
         m_featureDataTypeSet = true;
+        return this;
+    }
+
+    public TextualBaseMetricDescriptionBuilder id(java.lang.String p_id) {
+        m_id = p_id;
+        m_featureIdSet = true;
         return this;
     }
 

@@ -11,9 +11,11 @@ public class AggregationFunctionDescriptionBuilder
         implements
         org.palladiosimulator.metricspec.util.builder.IMetricspecBuilder<org.palladiosimulator.metricspec.AggregationFunctionDescription> {
     // features and builders
+    private java.lang.String m_id;
     private java.lang.String m_name;
     private java.lang.String m_textualDescription;
     // helper attributes
+    private boolean m_featureIdSet = false;
     private boolean m_featureNameSet = false;
     private boolean m_featureTextualDescriptionSet = false;
 
@@ -55,6 +57,7 @@ public class AggregationFunctionDescriptionBuilder
                 .copy(((org.palladiosimulator.metricspec.AggregationFunctionDescription) p_aggregationFunctionDescription));
         c.copyReferences();
         AggregationFunctionDescriptionBuilder _builder = newAggregationFunctionDescriptionBuilder();
+        _builder.id(_aggregationFunctionDescription.getId());
         _builder.name(_aggregationFunctionDescription.getName());
         _builder.textualDescription(_aggregationFunctionDescription.getTextualDescription());
         return _builder;
@@ -66,6 +69,8 @@ public class AggregationFunctionDescriptionBuilder
      */
     public AggregationFunctionDescriptionBuilder but() {
         AggregationFunctionDescriptionBuilder _builder = newAggregationFunctionDescriptionBuilder();
+        _builder.m_featureIdSet = m_featureIdSet;
+        _builder.m_id = m_id;
         _builder.m_featureNameSet = m_featureNameSet;
         _builder.m_name = m_name;
         _builder.m_featureTextualDescriptionSet = m_featureTextualDescriptionSet;
@@ -84,6 +89,9 @@ public class AggregationFunctionDescriptionBuilder
         final org.palladiosimulator.metricspec.AggregationFunctionDescription _newInstance = (org.palladiosimulator.metricspec.AggregationFunctionDescription) org.palladiosimulator.metricspec.MetricSpecFactory.eINSTANCE
                 .create(org.palladiosimulator.metricspec.MetricSpecPackage.eINSTANCE
                         .getAggregationFunctionDescription());
+        if (m_featureIdSet) {
+            _newInstance.setId(m_id);
+        }
         if (m_featureNameSet) {
             _newInstance.setName(m_name);
         }
@@ -91,6 +99,12 @@ public class AggregationFunctionDescriptionBuilder
             _newInstance.setTextualDescription(m_textualDescription);
         }
         return _newInstance;
+    }
+
+    public AggregationFunctionDescriptionBuilder id(java.lang.String p_id) {
+        m_id = p_id;
+        m_featureIdSet = true;
+        return this;
     }
 
     public AggregationFunctionDescriptionBuilder name(java.lang.String p_name) {

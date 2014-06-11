@@ -9,10 +9,12 @@ package org.palladiosimulator.metricspec.util.builder;
 public class IdentifierBuilder implements
         org.palladiosimulator.metricspec.util.builder.IMetricspecBuilder<org.palladiosimulator.metricspec.Identifier> {
     // features and builders
+    private java.lang.String m_id;
     private java.lang.String m_literal;
     private org.palladiosimulator.metricspec.TextualBaseMetricDescription m_textualBaseMetricDescription;
     private org.palladiosimulator.metricspec.util.builder.IMetricspecBuilder<? extends org.palladiosimulator.metricspec.TextualBaseMetricDescription> m_featureTextualBaseMetricDescriptionBuilder;
     // helper attributes
+    private boolean m_featureIdSet = false;
     private boolean m_featureLiteralSet = false;
     private boolean m_featureTextualBaseMetricDescriptionSet = false;
 
@@ -51,6 +53,7 @@ public class IdentifierBuilder implements
                 .copy(((org.palladiosimulator.metricspec.Identifier) p_identifier));
         c.copyReferences();
         IdentifierBuilder _builder = newIdentifierBuilder();
+        _builder.id(_identifier.getId());
         _builder.literal(_identifier.getLiteral());
         _builder.textualBaseMetricDescription(_identifier.getTextualBaseMetricDescription());
         return _builder;
@@ -62,6 +65,8 @@ public class IdentifierBuilder implements
      */
     public IdentifierBuilder but() {
         IdentifierBuilder _builder = newIdentifierBuilder();
+        _builder.m_featureIdSet = m_featureIdSet;
+        _builder.m_id = m_id;
         _builder.m_featureLiteralSet = m_featureLiteralSet;
         _builder.m_literal = m_literal;
         _builder.m_featureTextualBaseMetricDescriptionSet = m_featureTextualBaseMetricDescriptionSet;
@@ -78,6 +83,9 @@ public class IdentifierBuilder implements
     public org.palladiosimulator.metricspec.Identifier build() {
         final org.palladiosimulator.metricspec.Identifier _newInstance = (org.palladiosimulator.metricspec.Identifier) org.palladiosimulator.metricspec.MetricSpecFactory.eINSTANCE
                 .create(org.palladiosimulator.metricspec.MetricSpecPackage.eINSTANCE.getIdentifier());
+        if (m_featureIdSet) {
+            _newInstance.setId(m_id);
+        }
         if (m_featureLiteralSet) {
             _newInstance.setLiteral(m_literal);
         }
@@ -89,6 +97,12 @@ public class IdentifierBuilder implements
             }
         }
         return _newInstance;
+    }
+
+    public IdentifierBuilder id(java.lang.String p_id) {
+        m_id = p_id;
+        m_featureIdSet = true;
+        return this;
     }
 
     public IdentifierBuilder literal(java.lang.String p_literal) {
