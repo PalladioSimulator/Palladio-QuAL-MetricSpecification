@@ -85,7 +85,8 @@ public class MetricEntity implements IMetricEntity {
     @Override
     public final boolean isCompatibleWith(final MetricDescription other) {
         checkInitialised();
-        if (this.getMetricDesciption() == other || this.metricDesciption.equals(other)) {
+        if (this.getMetricDesciption() == other || this.metricDesciption.equals(other)
+                || this.metricDesciption.getId().equals(other.getId())) {
             return true;
         }
         return false;

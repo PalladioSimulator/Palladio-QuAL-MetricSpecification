@@ -71,7 +71,10 @@ public final class MetricDescriptionConstants {
         SLOPE = (BaseMetricDescription) resource.getEObject("_Nz_HctBzEeONzY86HEL4JQ");
         SCALABILITY_SPEED = (MetricSetDescription) resource.getEObject("_kx_7UdBzEeONzY86HEL4JQ");
         USER_CAPACITY = (BaseMetricDescription) resource.getEObject("_HlBOUtB0EeONzY86HEL4JQ");
+
         NUMBER_OF_SLO_VIOLATIONS = (BaseMetricDescription) resource.getEObject("_LJJm8tB1EeONzY86HEL4JQ");
+        NUMBER_OF_SLO_VIOLATIONS_OVER_TIME = (MetricSetDescription) resource.getEObject("_la5r0RlYEeSLJe9XpFDksA");
+
         MEAN_TIME_TO_QUALITY_REPAIR = (BaseMetricDescription) resource.getEObject("_8m5pAtB1EeONzY86HEL4JQ");
         RESOURCE_PROVISIONING_EFFICIENCY = (BaseMetricDescription) resource.getEObject("_RjNq4tB2EeONzY86HEL4JQ");
         MARGINAL_COST = (BaseMetricDescription) resource.getEObject("_eQICYtB2EeONzY86HEL4JQ");
@@ -193,6 +196,12 @@ public final class MetricDescriptionConstants {
      * in 1 hour.
      */
     public final static BaseMetricDescription NUMBER_OF_SLO_VIOLATIONS;
+
+    /**
+     * The number of SLO violations counted over time, e.g., 42 SLO (response time) violations after
+     * 1 simulated hour.
+     */
+    public final static MetricSetDescription NUMBER_OF_SLO_VIOLATIONS_OVER_TIME;
 
     /** The mean time to stop violating SLOs, e.g., 30 seconds fir an additional 10 requests/hour. */
     public final static BaseMetricDescription MEAN_TIME_TO_QUALITY_REPAIR;
