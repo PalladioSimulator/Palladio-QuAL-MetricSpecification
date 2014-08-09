@@ -71,6 +71,7 @@ public final class MetricDescriptionConstants {
         SLOPE = (BaseMetricDescription) resource.getEObject("_Nz_HctBzEeONzY86HEL4JQ");
         SCALABILITY_SPEED = (MetricSetDescription) resource.getEObject("_kx_7UdBzEeONzY86HEL4JQ");
         USER_CAPACITY = (BaseMetricDescription) resource.getEObject("_HlBOUtB0EeONzY86HEL4JQ");
+        USER_CAPACITY_TUPLE = (MetricSetDescription) resource.getEObject("_gUGzAR-sEeS5JNmAl33L9g");
 
         NUMBER_OF_SLO_VIOLATIONS = (BaseMetricDescription) resource.getEObject("_LJJm8tB1EeONzY86HEL4JQ");
         NUMBER_OF_SLO_VIOLATIONS_OVER_TIME = (MetricSetDescription) resource.getEObject("_la5r0RlYEeSLJe9XpFDksA");
@@ -190,6 +191,12 @@ public final class MetricDescriptionConstants {
      * to 1,000 users for a fixed set of resources.
      */
     public final static BaseMetricDescription USER_CAPACITY;
+
+    /**
+     * FIXME Artificial Metric (MetricSets are required for current UI support; generally we are
+     * just interested in a user capacity number).
+     */
+    public final static MetricSetDescription USER_CAPACITY_TUPLE;
 
     /**
      * The number of SLO violations in a certain time frame, e.g., 42 SLO (response time) violations
