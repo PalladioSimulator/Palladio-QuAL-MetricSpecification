@@ -2,6 +2,7 @@ package org.palladiosimulator.metricspec.constants;
 
 import java.io.IOException;
 import java.util.Collections;
+import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -9,8 +10,6 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.palladiosimulator.metricspec.BaseMetricDescription;
 import org.palladiosimulator.metricspec.MetricSetDescription;
-import org.palladiosimulator.metricspec.MetricSpecFactory;
-import org.palladiosimulator.metricspec.MetricSpecPackage;
 
 /**
  * Constant metric descriptions, commonly used by ProbeFramework.
@@ -21,16 +20,14 @@ import org.palladiosimulator.metricspec.MetricSpecPackage;
  */
 public final class MetricDescriptionConstants {
     private static final String PATHMAP_METRIC_SPEC_MODELS_COMMON_METRICS_METRICSPEC = "pathmap://METRIC_SPEC_MODELS/commonMetrics.metricspec";
+    private static final Map<?, ?> OPTIONS = Collections.emptyMap();
 
     static {
-        final MetricSpecPackage msPackage = MetricSpecPackage.eINSTANCE;
-        final MetricSpecFactory msFactory = MetricSpecFactory.eINSTANCE;
-
         final ResourceSet resourceSet = new ResourceSetImpl();
         final Resource resource = resourceSet.createResource(URI.createURI(
                 PATHMAP_METRIC_SPEC_MODELS_COMMON_METRICS_METRICSPEC, true));
         try {
-            resource.load(Collections.EMPTY_MAP);
+            resource.load(OPTIONS);
         } catch (final IOException e) {
             // TODO Auto-generated catch block. Use eclipse error log instead?
             e.printStackTrace();
@@ -79,6 +76,9 @@ public final class MetricDescriptionConstants {
         MEAN_TIME_TO_QUALITY_REPAIR = (BaseMetricDescription) resource.getEObject("_8m5pAtB1EeONzY86HEL4JQ");
         RESOURCE_PROVISIONING_EFFICIENCY = (BaseMetricDescription) resource.getEObject("_RjNq4tB2EeONzY86HEL4JQ");
         MARGINAL_COST = (BaseMetricDescription) resource.getEObject("_eQICYtB2EeONzY86HEL4JQ");
+        
+        UTILIZATION_OF_ACTIVE_RESOURCE = (BaseMetricDescription) resource.getEObject("_QIb6cikUEeSuf8LV7cHLgA");
+        UTILIZATION_OF_ACTIVE_RESOURCE_TUPLE = (MetricSetDescription) resource.getEObject("_mhws4SkUEeSuf8LV7cHLgA");
     }
 
     /** Specifies a point in time metric, e.g., to store an event time stamp. */
@@ -219,6 +219,21 @@ public final class MetricDescriptionConstants {
     /** Marginal cost for serving additional load, e.g., $1.00 for an additional 100 requests/hour. */
     public final static BaseMetricDescription MARGINAL_COST;
 
+    /**
+     * Specifies the utilization of an active resource based on the resource's last state measurements.<br>
+     * For example, a utilization of {@code 50%} might indicate that the active resource was in a busy state in 5 of the last 10s,
+     * but might also indicate that the active resource was in a busy state in 7.5 of the last 15s.<br>
+     * Thus, the utilization value is always relative to a fixed time period.
+     */
+    public static final BaseMetricDescription UTILIZATION_OF_ACTIVE_RESOURCE;
+    
+    /**
+     * Specifies a {@code (point in time, utilization)} tuple, i.e., the point in time the utilization was measured
+     * plus the utilization itself.
+     * @see MetricDescriptionConstants#UTILIZATION_OF_ACTIVE_RESOURCE
+     */
+    public static final MetricSetDescription UTILIZATION_OF_ACTIVE_RESOURCE_TUPLE;
+    
     /**
      * Private constructor to forbid instantiation.
      */
