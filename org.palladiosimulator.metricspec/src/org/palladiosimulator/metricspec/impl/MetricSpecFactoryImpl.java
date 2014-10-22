@@ -2,7 +2,10 @@
  */
 package org.palladiosimulator.metricspec.impl;
 
+import java.text.ParsePosition;
+
 import javax.measure.unit.Unit;
+import javax.measure.unit.UnitFormat;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -277,20 +280,29 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Used to return only (Unit<?>) super.createFromString(initialValue)
      * 
-     * @generated
+     * @generated NOT
+     * 
      */
     public Unit<?> createEJSUnitFromString(EDataType eDataType, String initialValue) {
-        return (Unit<?>) super.createFromString(initialValue);
+    	UnitFormat formatter = UnitFormat.getInstance();
+    	Unit<?> unit = formatter.parseObject(initialValue, new ParsePosition(0));    	
+    	return unit;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Used to return only super.convertToString(instanceValue)
      * 
-     * @generated
+     * @generated NOT
      */
     public String convertEJSUnitToString(EDataType eDataType, Object instanceValue) {
-        return super.convertToString(instanceValue);
+    	if(instanceValue == null || !(instanceValue instanceof Unit<?>)){
+    		return "";
+    	}
+    	Unit<?> unit = (Unit<?>) instanceValue;
+    	return unit.toString();
     }
 
     /**
