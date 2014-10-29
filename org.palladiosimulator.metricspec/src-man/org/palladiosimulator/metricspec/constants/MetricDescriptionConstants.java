@@ -79,6 +79,9 @@ public final class MetricDescriptionConstants {
         
         UTILIZATION_OF_ACTIVE_RESOURCE = (BaseMetricDescription) resource.getEObject("_QIb6cikUEeSuf8LV7cHLgA");
         UTILIZATION_OF_ACTIVE_RESOURCE_TUPLE = (MetricSetDescription) resource.getEObject("_mhws4SkUEeSuf8LV7cHLgA");
+        
+        POWER_CONSUMPTION = (BaseMetricDescription) resource.getEObject("_NbIowlt_EeS0LdH-diVVEQ");
+        POWER_CONSUMPTION_TUPLE = (MetricSetDescription) resource.getEObject("EZBPQV91EeSUTcC2MkYv_Q");
     }
 
     /** Specifies a point in time metric, e.g., to store an event time stamp. */
@@ -233,6 +236,19 @@ public final class MetricDescriptionConstants {
      * @see MetricDescriptionConstants#UTILIZATION_OF_ACTIVE_RESOURCE
      */
     public static final MetricSetDescription UTILIZATION_OF_ACTIVE_RESOURCE_TUPLE;
+    
+    /**
+     * Specifies the power consumption of an entity based on its utilization and the utilization of potential child nodes.<br>
+     * Thus, the power consumption value is always relative to a fixed time period.
+     */
+    public static final BaseMetricDescription POWER_CONSUMPTION;
+    
+    /**
+     * Specifies a {@code (point in time, power consumption)} tuple, i.e., the point in time the power consumption was measured
+     * plus the consumption itself.
+     * @see MetricDescriptionConstants#POWER_CONSUMPTION
+     */
+    public static final MetricSetDescription POWER_CONSUMPTION_TUPLE;
     
     /**
      * Private constructor to forbid instantiation.
