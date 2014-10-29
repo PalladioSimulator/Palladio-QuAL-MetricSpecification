@@ -81,7 +81,7 @@ public final class MetricDescriptionConstants {
         UTILIZATION_OF_ACTIVE_RESOURCE_TUPLE = (MetricSetDescription) resource.getEObject("_mhws4SkUEeSuf8LV7cHLgA");
         
         POWER_CONSUMPTION = (BaseMetricDescription) resource.getEObject("_NbIowlt_EeS0LdH-diVVEQ");
-        POWER_CONSUMPTION_TUPLE = (MetricSetDescription) resource.getEObject("EZBPQV91EeSUTcC2MkYv_Q");
+        POWER_CONSUMPTION_TUPLE = (MetricSetDescription) resource.getEObject("_EZBPQV91EeSUTcC2MkYv_Q");
     }
 
     /** Specifies a point in time metric, e.g., to store an event time stamp. */
