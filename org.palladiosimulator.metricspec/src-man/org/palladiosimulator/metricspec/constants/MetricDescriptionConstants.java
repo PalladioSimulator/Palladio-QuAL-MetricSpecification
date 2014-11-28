@@ -82,6 +82,9 @@ public final class MetricDescriptionConstants {
         
         POWER_CONSUMPTION = (BaseMetricDescription) resource.getEObject("_NbIowlt_EeS0LdH-diVVEQ");
         POWER_CONSUMPTION_TUPLE = (MetricSetDescription) resource.getEObject("_EZBPQV91EeSUTcC2MkYv_Q");
+        
+        ENERGY_CONSUMPTION = (BaseMetricDescription) resource.getEObject("_SxzJMncPEeS8FogxzuXBPA");
+        CUMULATIVE_ENERGY_CONSUMPTION_TUPLE = (MetricSetDescription) resource.getEObject("_hjElIXcPEeS8FogxzuXBPA");
     }
 
     /** Specifies a point in time metric, e.g., to store an event time stamp. */
@@ -249,6 +252,20 @@ public final class MetricDescriptionConstants {
      * @see MetricDescriptionConstants#POWER_CONSUMPTION
      */
     public static final MetricSetDescription POWER_CONSUMPTION_TUPLE;
+    
+    /**
+     * Specifies the energy consumption of an entity based on its power consumption and the power consumption of potential child nodes.<br>
+     * Thus, the power consumption value is always relative to a fixed time period.
+     * @see MetricDescriptionConstants#POWER_CONSUMPTION
+     */
+    public static final BaseMetricDescription ENERGY_CONSUMPTION;
+    
+    /**
+     * Specifies a {@code (point in time, energy consumption)} tuple, i.e., the total energy consumption until the interval ending at the specified point in time.
+     * @see MetricDescriptionConstants#ENERGY_CONSUMPTION
+     * @see MetricDescriptionConstants#POWER_CONSUMPTION_TUPLE
+     */
+    public static final MetricSetDescription CUMULATIVE_ENERGY_CONSUMPTION_TUPLE;
     
     /**
      * Private constructor to forbid instantiation.
