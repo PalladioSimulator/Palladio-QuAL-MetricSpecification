@@ -76,15 +76,18 @@ public final class MetricDescriptionConstants {
         MEAN_TIME_TO_QUALITY_REPAIR = (BaseMetricDescription) resource.getEObject("_8m5pAtB1EeONzY86HEL4JQ");
         RESOURCE_PROVISIONING_EFFICIENCY = (BaseMetricDescription) resource.getEObject("_RjNq4tB2EeONzY86HEL4JQ");
         MARGINAL_COST = (BaseMetricDescription) resource.getEObject("_eQICYtB2EeONzY86HEL4JQ");
-        
+
         UTILIZATION_OF_ACTIVE_RESOURCE = (BaseMetricDescription) resource.getEObject("_QIb6cikUEeSuf8LV7cHLgA");
         UTILIZATION_OF_ACTIVE_RESOURCE_TUPLE = (MetricSetDescription) resource.getEObject("_mhws4SkUEeSuf8LV7cHLgA");
-        
+
         POWER_CONSUMPTION = (BaseMetricDescription) resource.getEObject("_NbIowlt_EeS0LdH-diVVEQ");
         POWER_CONSUMPTION_TUPLE = (MetricSetDescription) resource.getEObject("_EZBPQV91EeSUTcC2MkYv_Q");
-        
+
         ENERGY_CONSUMPTION = (BaseMetricDescription) resource.getEObject("_SxzJMncPEeS8FogxzuXBPA");
         CUMULATIVE_ENERGY_CONSUMPTION_TUPLE = (MetricSetDescription) resource.getEObject("_hjElIXcPEeS8FogxzuXBPA");
+
+        NUMBER_OF_RESOURCE_CONTAINERS = (BaseMetricDescription) resource.getEObject("_e7x3gq-eEeSgL6DrxYuwZg");
+        NUMBER_OF_RESOURCE_CONTAINERS_OVER_TIME = (MetricSetDescription) resource.getEObject("_d4k4oa-fEeSgL6DrxYuwZg");
     }
 
     /** Specifies a point in time metric, e.g., to store an event time stamp. */
@@ -226,47 +229,67 @@ public final class MetricDescriptionConstants {
     public final static BaseMetricDescription MARGINAL_COST;
 
     /**
-     * Specifies the utilization of an active resource based on the resource's last state measurements.<br>
-     * For example, a utilization of {@code 50%} might indicate that the active resource was in a busy state in 5 of the last 10s,
-     * but might also indicate that the active resource was in a busy state in 7.5 of the last 15s.<br>
+     * Specifies the utilization of an active resource based on the resource's last state
+     * measurements.<br>
+     * For example, a utilization of {@code 50%} might indicate that the active resource was in a
+     * busy state in 5 of the last 10s, but might also indicate that the active resource was in a
+     * busy state in 7.5 of the last 15s.<br>
      * Thus, the utilization value is always relative to a fixed time period.
      */
     public static final BaseMetricDescription UTILIZATION_OF_ACTIVE_RESOURCE;
-    
+
     /**
-     * Specifies a {@code (point in time, utilization)} tuple, i.e., the point in time the utilization was measured
-     * plus the utilization itself.
+     * Specifies a {@code (point in time, utilization)} tuple, i.e., the point in time the
+     * utilization was measured plus the utilization itself.
+     * 
      * @see MetricDescriptionConstants#UTILIZATION_OF_ACTIVE_RESOURCE
      */
     public static final MetricSetDescription UTILIZATION_OF_ACTIVE_RESOURCE_TUPLE;
-    
+
     /**
-     * Specifies the power consumption of an entity based on its utilization and the utilization of potential child nodes.<br>
+     * Specifies the power consumption of an entity based on its utilization and the utilization of
+     * potential child nodes.<br>
      * Thus, the power consumption value is always relative to a fixed time period.
      */
     public static final BaseMetricDescription POWER_CONSUMPTION;
-    
+
     /**
-     * Specifies a {@code (point in time, power consumption)} tuple, i.e., the point in time the power consumption was measured
-     * plus the consumption itself.
+     * Specifies a {@code (point in time, power consumption)} tuple, i.e., the point in time the
+     * power consumption was measured plus the consumption itself.
+     * 
      * @see MetricDescriptionConstants#POWER_CONSUMPTION
      */
     public static final MetricSetDescription POWER_CONSUMPTION_TUPLE;
-    
+
     /**
-     * Specifies the energy consumption of an entity based on its power consumption and the power consumption of potential child nodes.<br>
+     * Specifies the energy consumption of an entity based on its power consumption and the power
+     * consumption of potential child nodes.<br>
      * Thus, the power consumption value is always relative to a fixed time period.
+     * 
      * @see MetricDescriptionConstants#POWER_CONSUMPTION
      */
     public static final BaseMetricDescription ENERGY_CONSUMPTION;
-    
+
     /**
-     * Specifies a {@code (point in time, energy consumption)} tuple, i.e., the total energy consumption until the interval ending at the specified point in time.
+     * Specifies a {@code (point in time, energy consumption)} tuple, i.e., the total energy
+     * consumption until the interval ending at the specified point in time.
+     * 
      * @see MetricDescriptionConstants#ENERGY_CONSUMPTION
      * @see MetricDescriptionConstants#POWER_CONSUMPTION_TUPLE
      */
     public static final MetricSetDescription CUMULATIVE_ENERGY_CONSUMPTION_TUPLE;
-    
+
+    /**
+     * The number of resource containers present within a resource environment, e.g., 3 resource
+     * containers for a 3-tier resource environment.
+     */
+    public final static BaseMetricDescription NUMBER_OF_RESOURCE_CONTAINERS;
+
+    /**
+     * The number of resource containers over time, e.g., 5 resource containers after a scaling-out.
+     */
+    public final static MetricSetDescription NUMBER_OF_RESOURCE_CONTAINERS_OVER_TIME;
+
     /**
      * Private constructor to forbid instantiation.
      */
