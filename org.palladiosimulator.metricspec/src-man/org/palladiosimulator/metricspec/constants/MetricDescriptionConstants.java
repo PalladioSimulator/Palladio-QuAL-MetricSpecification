@@ -69,6 +69,8 @@ public final class MetricDescriptionConstants {
         SCALABILITY_SPEED = (MetricSetDescription) resource.getEObject("_kx_7UdBzEeONzY86HEL4JQ");
         USER_CAPACITY = (BaseMetricDescription) resource.getEObject("_HlBOUtB0EeONzY86HEL4JQ");
         USER_CAPACITY_TUPLE = (MetricSetDescription) resource.getEObject("_gUGzAR-sEeS5JNmAl33L9g");
+        INTER_ARRIVAL_TIME_CAPACITY = (BaseMetricDescription) resource.getEObject("_Q6HwkrgjEeScGvogGbaYPw");
+        INTER_ARRIVAL_TIME_CAPACITY_TUPLE = (MetricSetDescription) resource.getEObject("_VTNQsbgjEeScGvogGbaYPw");
 
         NUMBER_OF_SLO_VIOLATIONS = (BaseMetricDescription) resource.getEObject("_LJJm8tB1EeONzY86HEL4JQ");
         NUMBER_OF_SLO_VIOLATIONS_OVER_TIME = (MetricSetDescription) resource.getEObject("_la5r0RlYEeSLJe9XpFDksA");
@@ -206,6 +208,18 @@ public final class MetricDescriptionConstants {
      * just interested in a user capacity number).
      */
     public final static MetricSetDescription USER_CAPACITY_TUPLE;
+
+    /**
+     * Maximal interarrival time for fixed resource without violating SLOs, e.g., a system scales up
+     * to 100 users per second for a fixed set of resources.
+     */
+    public final static BaseMetricDescription INTER_ARRIVAL_TIME_CAPACITY;
+
+    /**
+     * FIXME Artificial Metric (MetricSets are required for current UI support; generally we are
+     * just interested in a interarrival time capacity number).
+     */
+    public final static MetricSetDescription INTER_ARRIVAL_TIME_CAPACITY_TUPLE;
 
     /**
      * The number of SLO violations in a certain time frame, e.g., 42 SLO (response time) violations
