@@ -90,6 +90,9 @@ public final class MetricDescriptionConstants {
 
         NUMBER_OF_RESOURCE_CONTAINERS = (BaseMetricDescription) resource.getEObject("_e7x3gq-eEeSgL6DrxYuwZg");
         NUMBER_OF_RESOURCE_CONTAINERS_OVER_TIME = (MetricSetDescription) resource.getEObject("_d4k4oa-fEeSgL6DrxYuwZg");
+
+        RECONFIGURATION_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_VYg6MujFEeSB6OBq2SKZxQ");
+        RECONFIGURATION_TIME_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_2mStsejFEeSB6OBq2SKZxQ");
     }
 
     /** Specifies a point in time metric, e.g., to store an event time stamp. */
@@ -303,6 +306,15 @@ public final class MetricDescriptionConstants {
      * The number of resource containers over time, e.g., 5 resource containers after a scaling-out.
      */
     public final static MetricSetDescription NUMBER_OF_RESOURCE_CONTAINERS_OVER_TIME;
+
+    /** Specifies a reconfiguration time metric. */
+    public final static BaseMetricDescription RECONFIGURATION_TIME_METRIC;
+
+    /**
+     * Specifies a (point in time, reconfiguration time)-tuple, i.e., start of the reconfiguration
+     * plus the reconfiguration time.
+     */
+    public final static MetricSetDescription RECONFIGURATION_TIME_METRIC_TUPLE;
 
     /**
      * Private constructor to forbid instantiation.
