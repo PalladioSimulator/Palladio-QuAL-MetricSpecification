@@ -3,10 +3,11 @@
 package org.palladiosimulator.metricspec.util;
 
 import javax.measure.quantity.Quantity;
-
+import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.palladiosimulator.mdsdprofiles.StereotypableElement;
 import org.palladiosimulator.metricspec.AggregationFunctionDescription;
 import org.palladiosimulator.metricspec.BaseMetricDescription;
 import org.palladiosimulator.metricspec.Description;
@@ -24,21 +25,20 @@ import org.palladiosimulator.metricspec.TextualBaseMetricDescription;
  * each class of the model, starting with the actual class of the object and proceeding up the
  * inheritance hierarchy until a non-null result is returned, which is the result of the switch.
  * <!-- end-user-doc -->
- * 
  * @see org.palladiosimulator.metricspec.MetricSpecPackage
  * @generated
  */
 public class MetricSpecSwitch<T> extends Switch<T> {
     /**
-     * The cached model package <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached model package
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     protected static MetricSpecPackage modelPackage;
 
     /**
-     * Creates an instance of the switch. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Creates an instance of the switch.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public MetricSpecSwitch() {
@@ -48,9 +48,9 @@ public class MetricSpecSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Checks whether this is a switch for the given package. <!-- begin-user-doc --> <!--
+     * Checks whether this is a switch for the given package.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @parameter ePackage the package in question.
      * @return whether this is a switch for the given package.
      * @generated
@@ -61,129 +61,114 @@ public class MetricSpecSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Calls <code>caseXXX</code> for each class of the model until one returns a non null result;
-     * it yields that result. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @return the first non-null result returned by a <code>caseXXX</code> call.
      * @generated
      */
     @Override
     protected T doSwitch(int classifierID, EObject theEObject) {
         switch (classifierID) {
-        case MetricSpecPackage.IDENTIFIER: {
-            Identifier identifier = (Identifier) theEObject;
-            T result = caseIdentifier(identifier);
-            if (result == null)
-                result = caseIdentifier_Identifier(identifier);
-            if (result == null)
-                result = defaultCase(theEObject);
-            return result;
-        }
-        case MetricSpecPackage.TEXTUAL_BASE_METRIC_DESCRIPTION: {
-            TextualBaseMetricDescription textualBaseMetricDescription = (TextualBaseMetricDescription) theEObject;
-            T result = caseTextualBaseMetricDescription(textualBaseMetricDescription);
-            if (result == null)
-                result = caseBaseMetricDescription(textualBaseMetricDescription);
-            if (result == null)
-                result = caseMetricDescription(textualBaseMetricDescription);
-            if (result == null)
-                result = caseDescription(textualBaseMetricDescription);
-            if (result == null)
-                result = caseIdentifier_Identifier(textualBaseMetricDescription);
-            if (result == null)
-                result = defaultCase(theEObject);
-            return result;
-        }
-        case MetricSpecPackage.BASE_METRIC_DESCRIPTION: {
-            BaseMetricDescription baseMetricDescription = (BaseMetricDescription) theEObject;
-            T result = caseBaseMetricDescription(baseMetricDescription);
-            if (result == null)
-                result = caseMetricDescription(baseMetricDescription);
-            if (result == null)
-                result = caseDescription(baseMetricDescription);
-            if (result == null)
-                result = caseIdentifier_Identifier(baseMetricDescription);
-            if (result == null)
-                result = defaultCase(theEObject);
-            return result;
-        }
-        case MetricSpecPackage.METRIC_DESCRIPTION: {
-            MetricDescription metricDescription = (MetricDescription) theEObject;
-            T result = caseMetricDescription(metricDescription);
-            if (result == null)
-                result = caseDescription(metricDescription);
-            if (result == null)
-                result = caseIdentifier_Identifier(metricDescription);
-            if (result == null)
-                result = defaultCase(theEObject);
-            return result;
-        }
-        case MetricSpecPackage.DESCRIPTION: {
-            Description description = (Description) theEObject;
-            T result = caseDescription(description);
-            if (result == null)
-                result = caseIdentifier_Identifier(description);
-            if (result == null)
-                result = defaultCase(theEObject);
-            return result;
-        }
-        case MetricSpecPackage.AGGREGATION_FUNCTION_DESCRIPTION: {
-            AggregationFunctionDescription aggregationFunctionDescription = (AggregationFunctionDescription) theEObject;
-            T result = caseAggregationFunctionDescription(aggregationFunctionDescription);
-            if (result == null)
-                result = caseDescription(aggregationFunctionDescription);
-            if (result == null)
-                result = caseIdentifier_Identifier(aggregationFunctionDescription);
-            if (result == null)
-                result = defaultCase(theEObject);
-            return result;
-        }
-        case MetricSpecPackage.METRIC_SET_DESCRIPTION: {
-            MetricSetDescription metricSetDescription = (MetricSetDescription) theEObject;
-            T result = caseMetricSetDescription(metricSetDescription);
-            if (result == null)
-                result = caseMetricDescription(metricSetDescription);
-            if (result == null)
-                result = caseDescription(metricSetDescription);
-            if (result == null)
-                result = caseIdentifier_Identifier(metricSetDescription);
-            if (result == null)
-                result = defaultCase(theEObject);
-            return result;
-        }
-        case MetricSpecPackage.NUMERICAL_BASE_METRIC_DESCRIPTION: {
-            NumericalBaseMetricDescription numericalBaseMetricDescription = (NumericalBaseMetricDescription) theEObject;
-            T result = caseNumericalBaseMetricDescription(numericalBaseMetricDescription);
-            if (result == null)
-                result = caseBaseMetricDescription(numericalBaseMetricDescription);
-            if (result == null)
-                result = caseMetricDescription(numericalBaseMetricDescription);
-            if (result == null)
-                result = caseDescription(numericalBaseMetricDescription);
-            if (result == null)
-                result = caseIdentifier_Identifier(numericalBaseMetricDescription);
-            if (result == null)
-                result = defaultCase(theEObject);
-            return result;
-        }
-        case MetricSpecPackage.IJS_QUANTITY: {
-            Quantity ijsQuantity = (Quantity) theEObject;
-            T result = caseIJSQuantity(ijsQuantity);
-            if (result == null)
-                result = defaultCase(theEObject);
-            return result;
-        }
-        case MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY: {
-            MetricDescriptionRepository metricDescriptionRepository = (MetricDescriptionRepository) theEObject;
-            T result = caseMetricDescriptionRepository(metricDescriptionRepository);
-            if (result == null)
-                result = caseIdentifier_Identifier(metricDescriptionRepository);
-            if (result == null)
-                result = defaultCase(theEObject);
-            return result;
-        }
-        default:
-            return defaultCase(theEObject);
+            case MetricSpecPackage.IDENTIFIER: {
+                Identifier identifier = (Identifier)theEObject;
+                T result = caseIdentifier(identifier);
+                if (result == null) result = caseIdentifier_Identifier(identifier);
+                if (result == null) result = caseStereotypableElement(identifier);
+                if (result == null) result = caseEModelElement(identifier);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case MetricSpecPackage.TEXTUAL_BASE_METRIC_DESCRIPTION: {
+                TextualBaseMetricDescription textualBaseMetricDescription = (TextualBaseMetricDescription)theEObject;
+                T result = caseTextualBaseMetricDescription(textualBaseMetricDescription);
+                if (result == null) result = caseBaseMetricDescription(textualBaseMetricDescription);
+                if (result == null) result = caseMetricDescription(textualBaseMetricDescription);
+                if (result == null) result = caseDescription(textualBaseMetricDescription);
+                if (result == null) result = caseIdentifier_Identifier(textualBaseMetricDescription);
+                if (result == null) result = caseStereotypableElement(textualBaseMetricDescription);
+                if (result == null) result = caseEModelElement(textualBaseMetricDescription);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case MetricSpecPackage.BASE_METRIC_DESCRIPTION: {
+                BaseMetricDescription baseMetricDescription = (BaseMetricDescription)theEObject;
+                T result = caseBaseMetricDescription(baseMetricDescription);
+                if (result == null) result = caseMetricDescription(baseMetricDescription);
+                if (result == null) result = caseDescription(baseMetricDescription);
+                if (result == null) result = caseIdentifier_Identifier(baseMetricDescription);
+                if (result == null) result = caseStereotypableElement(baseMetricDescription);
+                if (result == null) result = caseEModelElement(baseMetricDescription);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case MetricSpecPackage.METRIC_DESCRIPTION: {
+                MetricDescription metricDescription = (MetricDescription)theEObject;
+                T result = caseMetricDescription(metricDescription);
+                if (result == null) result = caseDescription(metricDescription);
+                if (result == null) result = caseIdentifier_Identifier(metricDescription);
+                if (result == null) result = caseStereotypableElement(metricDescription);
+                if (result == null) result = caseEModelElement(metricDescription);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case MetricSpecPackage.DESCRIPTION: {
+                Description description = (Description)theEObject;
+                T result = caseDescription(description);
+                if (result == null) result = caseIdentifier_Identifier(description);
+                if (result == null) result = caseStereotypableElement(description);
+                if (result == null) result = caseEModelElement(description);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case MetricSpecPackage.AGGREGATION_FUNCTION_DESCRIPTION: {
+                AggregationFunctionDescription aggregationFunctionDescription = (AggregationFunctionDescription)theEObject;
+                T result = caseAggregationFunctionDescription(aggregationFunctionDescription);
+                if (result == null) result = caseDescription(aggregationFunctionDescription);
+                if (result == null) result = caseIdentifier_Identifier(aggregationFunctionDescription);
+                if (result == null) result = caseStereotypableElement(aggregationFunctionDescription);
+                if (result == null) result = caseEModelElement(aggregationFunctionDescription);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case MetricSpecPackage.METRIC_SET_DESCRIPTION: {
+                MetricSetDescription metricSetDescription = (MetricSetDescription)theEObject;
+                T result = caseMetricSetDescription(metricSetDescription);
+                if (result == null) result = caseMetricDescription(metricSetDescription);
+                if (result == null) result = caseDescription(metricSetDescription);
+                if (result == null) result = caseIdentifier_Identifier(metricSetDescription);
+                if (result == null) result = caseStereotypableElement(metricSetDescription);
+                if (result == null) result = caseEModelElement(metricSetDescription);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case MetricSpecPackage.NUMERICAL_BASE_METRIC_DESCRIPTION: {
+                NumericalBaseMetricDescription numericalBaseMetricDescription = (NumericalBaseMetricDescription)theEObject;
+                T result = caseNumericalBaseMetricDescription(numericalBaseMetricDescription);
+                if (result == null) result = caseBaseMetricDescription(numericalBaseMetricDescription);
+                if (result == null) result = caseMetricDescription(numericalBaseMetricDescription);
+                if (result == null) result = caseDescription(numericalBaseMetricDescription);
+                if (result == null) result = caseIdentifier_Identifier(numericalBaseMetricDescription);
+                if (result == null) result = caseStereotypableElement(numericalBaseMetricDescription);
+                if (result == null) result = caseEModelElement(numericalBaseMetricDescription);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case MetricSpecPackage.IJS_QUANTITY: {
+                Quantity ijsQuantity = (Quantity)theEObject;
+                T result = caseIJSQuantity(ijsQuantity);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            case MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY: {
+                MetricDescriptionRepository metricDescriptionRepository = (MetricDescriptionRepository)theEObject;
+                T result = caseMetricDescriptionRepository(metricDescriptionRepository);
+                if (result == null) result = caseIdentifier_Identifier(metricDescriptionRepository);
+                if (result == null) result = caseStereotypableElement(metricDescriptionRepository);
+                if (result == null) result = caseEModelElement(metricDescriptionRepository);
+                if (result == null) result = defaultCase(theEObject);
+                return result;
+            }
+            default: return defaultCase(theEObject);
         }
     }
 
@@ -203,14 +188,11 @@ public class MetricSpecSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Textual Base Metric Description</em>'. <!-- begin-user-doc --> This implementation
+     * Returns the result of interpreting the object as an instance of '<em>Textual Base Metric Description</em>'.
+     * <!-- begin-user-doc --> This implementation
      * returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
-     * @param object
-     *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Textual Base Metric Description</em>'.
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Textual Base Metric Description</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -219,14 +201,11 @@ public class MetricSpecSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Base Metric Description</em>'. <!-- begin-user-doc --> This implementation returns null;
+     * Returns the result of interpreting the object as an instance of '<em>Base Metric Description</em>'.
+     * <!-- begin-user-doc --> This implementation returns null;
      * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
-     * @param object
-     *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Base Metric Description</em>'.
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Base Metric Description</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -235,14 +214,11 @@ public class MetricSpecSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Metric Description</em>
-     * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
+     * Returns the result of interpreting the object as an instance of '<em>Metric Description</em>'.
+     * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
-     * @param object
-     *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Metric Description</em>
-     *         '.
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Metric Description</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -266,14 +242,11 @@ public class MetricSpecSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Aggregation Function Description</em>'. <!-- begin-user-doc --> This implementation
+     * Returns the result of interpreting the object as an instance of '<em>Aggregation Function Description</em>'.
+     * <!-- begin-user-doc --> This implementation
      * returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
-     * @param object
-     *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Aggregation Function Description</em>'.
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Aggregation Function Description</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -282,14 +255,11 @@ public class MetricSpecSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Metric Set Description</em>'. <!-- begin-user-doc --> This implementation returns null;
+     * Returns the result of interpreting the object as an instance of '<em>Metric Set Description</em>'.
+     * <!-- begin-user-doc --> This implementation returns null;
      * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
-     * @param object
-     *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Metric Set Description</em>'.
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Metric Set Description</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -298,14 +268,11 @@ public class MetricSpecSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Numerical Base Metric Description</em>'. <!-- begin-user-doc --> This implementation
+     * Returns the result of interpreting the object as an instance of '<em>Numerical Base Metric Description</em>'.
+     * <!-- begin-user-doc --> This implementation
      * returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
-     * @param object
-     *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Numerical Base Metric Description</em>'.
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Numerical Base Metric Description</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -329,18 +296,45 @@ public class MetricSpecSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Metric Description Repository</em>'. <!-- begin-user-doc --> This implementation returns
+     * Returns the result of interpreting the object as an instance of '<em>Metric Description Repository</em>'.
+     * <!-- begin-user-doc --> This implementation returns
      * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
-     * @param object
-     *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Metric Description Repository</em>'.
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Metric Description Repository</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
     public T caseMetricDescriptionRepository(MetricDescriptionRepository object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>EModel Element</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>EModel Element</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseEModelElement(EModelElement object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Stereotypable Element</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Stereotypable Element</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseStereotypableElement(StereotypableElement object) {
         return null;
     }
 

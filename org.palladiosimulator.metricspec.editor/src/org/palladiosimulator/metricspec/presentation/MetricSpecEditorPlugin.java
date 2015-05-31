@@ -6,42 +6,53 @@ import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.ui.EclipseUIPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
+import org.modelversioning.emfprofile.provider.EMFProfileEditPlugin;
+import org.modelversioning.emfprofileapplication.provider.EMFProfileApplicationEditPlugin;
+import org.palladiosimulator.mdsdprofiles.provider.MdsdprofilesEditPlugin;
 import de.uka.ipd.sdq.identifier.provider.IdentifierEditPlugin;
 
 /**
- * This is the central singleton for the MetricSpec editor plugin. <!-- begin-user-doc --> <!--
+ * This is the central singleton for the MetricSpec editor plugin.
+ * <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * 
  * @generated
  */
 public final class MetricSpecEditorPlugin extends EMFPlugin {
     /**
-     * Keep track of the singleton. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Keep track of the singleton.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public static final MetricSpecEditorPlugin INSTANCE = new MetricSpecEditorPlugin();
 
     /**
-     * Keep track of the singleton. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Keep track of the singleton.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     private static Implementation plugin;
 
     /**
-     * Create the instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Create the instance.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public MetricSpecEditorPlugin() {
-        super(new ResourceLocator[] { IdentifierEditPlugin.INSTANCE, });
+        super
+            (new ResourceLocator [] {
+                IdentifierEditPlugin.INSTANCE,
+                EcoreEditPlugin.INSTANCE,
+                MdsdprofilesEditPlugin.INSTANCE,
+                EMFProfileEditPlugin.INSTANCE,
+                EMFProfileApplicationEditPlugin.INSTANCE,
+            });
     }
 
     /**
-     * Returns the singleton instance of the Eclipse plugin. <!-- begin-user-doc --> <!--
+     * Returns the singleton instance of the Eclipse plugin.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @return the singleton instance.
      * @generated
      */
@@ -51,9 +62,9 @@ public final class MetricSpecEditorPlugin extends EMFPlugin {
     }
 
     /**
-     * Returns the singleton instance of the Eclipse plugin. <!-- begin-user-doc --> <!--
+     * Returns the singleton instance of the Eclipse plugin.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @return the singleton instance.
      * @generated
      */
@@ -62,20 +73,20 @@ public final class MetricSpecEditorPlugin extends EMFPlugin {
     }
 
     /**
-     * The actual implementation of the Eclipse <b>Plugin</b>. <!-- begin-user-doc --> <!--
+     * The actual implementation of the Eclipse <b>Plugin</b>.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     public static class Implementation extends EclipseUIPlugin {
         /**
-         * Creates an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         * Creates an instance.
+         * <!-- begin-user-doc --> <!-- end-user-doc -->
          * @generated
          */
         public Implementation() {
             super();
-
+    
             // Remember the static instance.
             //
             plugin = this;

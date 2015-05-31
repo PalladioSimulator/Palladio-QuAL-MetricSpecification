@@ -35,16 +35,16 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
 /**
- * This is the action bar contributor for the MetricSpec model editor. <!-- begin-user-doc --> <!--
+ * This is the action bar contributor for the MetricSpec model editor.
+ * <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * 
  * @generated
  */
 public class MetricSpecActionBarContributor extends EditingDomainActionBarContributor implements
         ISelectionChangedListener {
     /**
-     * This keeps track of the active editor. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This keeps track of the active editor.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     protected IEditorPart activeEditorPart;
@@ -58,46 +58,45 @@ public class MetricSpecActionBarContributor extends EditingDomainActionBarContri
     protected ISelectionProvider selectionProvider;
 
     /**
-     * This action opens the Properties view. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This action opens the Properties view.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-    protected IAction showPropertiesViewAction = new Action(
-            MetricSpecEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
-        @Override
-        public void run() {
-            try {
-                getPage().showView("org.eclipse.ui.views.PropertySheet");
-            } catch (PartInitException exception) {
-                MetricSpecEditorPlugin.INSTANCE.log(exception);
-            }
-        }
-    };
-
-    /**
-     * This action refreshes the viewer of the current editor if the editor implements
-     * {@link org.eclipse.emf.common.ui.viewer.IViewerProvider}. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     * 
-     * @generated
-     */
-    protected IAction refreshViewerAction = new Action(
-            MetricSpecEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
-        @Override
-        public boolean isEnabled() {
-            return activeEditorPart instanceof IViewerProvider;
-        }
-
-        @Override
-        public void run() {
-            if (activeEditorPart instanceof IViewerProvider) {
-                Viewer viewer = ((IViewerProvider) activeEditorPart).getViewer();
-                if (viewer != null) {
-                    viewer.refresh();
+    protected IAction showPropertiesViewAction = new Action(MetricSpecEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
+            @Override
+            public void run() {
+                try {
+                    getPage().showView("org.eclipse.ui.views.PropertySheet");
+                }
+                catch (PartInitException exception) {
+                    MetricSpecEditorPlugin.INSTANCE.log(exception);
                 }
             }
-        }
-    };
+        };
+
+    /**
+     * This action refreshes the viewer of the current editor if the editor
+     * implements {@link org.eclipse.emf.common.ui.viewer.IViewerProvider}.
+     * <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * @generated
+     */
+    protected IAction refreshViewerAction = new Action(MetricSpecEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
+            @Override
+            public boolean isEnabled() {
+                return activeEditorPart instanceof IViewerProvider;
+            }
+
+            @Override
+            public void run() {
+                if (activeEditorPart instanceof IViewerProvider) {
+                    Viewer viewer = ((IViewerProvider)activeEditorPart).getViewer();
+                    if (viewer != null) {
+                        viewer.refresh();
+                    }
+                }
+            }
+        };
 
     /**
      * This will contain one {@link org.eclipse.emf.edit.ui.action.CreateChildAction} corresponding
@@ -109,33 +108,30 @@ public class MetricSpecActionBarContributor extends EditingDomainActionBarContri
     protected Collection<IAction> createChildActions;
 
     /**
-     * This is the menu manager into which menu contribution items should be added for CreateChild
-     * actions. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This is the menu manager into which menu contribution items should be added for CreateChild actions.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     protected IMenuManager createChildMenuManager;
 
     /**
-     * This will contain one {@link org.eclipse.emf.edit.ui.action.CreateSiblingAction}
-     * corresponding to each descriptor generated for the current selection by the item provider.
+     * This will contain one {@link org.eclipse.emf.edit.ui.action.CreateSiblingAction} corresponding to each descriptor
+     * generated for the current selection by the item provider.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected Collection<IAction> createSiblingActions;
 
     /**
-     * This is the menu manager into which menu contribution items should be added for CreateSibling
-     * actions. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This is the menu manager into which menu contribution items should be added for CreateSibling actions.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     protected IMenuManager createSiblingMenuManager;
 
     /**
-     * This creates an instance of the contributor. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This creates an instance of the contributor.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public MetricSpecActionBarContributor() {
@@ -146,9 +142,9 @@ public class MetricSpecActionBarContributor extends EditingDomainActionBarContri
     }
 
     /**
-     * This adds Separators for editor additions to the tool bar. <!-- begin-user-doc --> <!--
+     * This adds Separators for editor additions to the tool bar.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -158,18 +154,16 @@ public class MetricSpecActionBarContributor extends EditingDomainActionBarContri
     }
 
     /**
-     * This adds to the menu bar a menu and some separators for editor additions, as well as the
-     * sub-menus for object creation items. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This adds to the menu bar a menu and some separators for editor additions,
+     * as well as the sub-menus for object creation items.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
     public void contributeToMenu(IMenuManager menuManager) {
         super.contributeToMenu(menuManager);
 
-        IMenuManager submenuManager = new MenuManager(
-                MetricSpecEditorPlugin.INSTANCE.getString("_UI_MetricSpecEditor_menu"),
-                "org.palladiosimulator.metricspecMenuID");
+        IMenuManager submenuManager = new MenuManager(MetricSpecEditorPlugin.INSTANCE.getString("_UI_MetricSpecEditor_menu"), "org.palladiosimulator.metricspecMenuID");
         menuManager.insertAfter("additions", submenuManager);
         submenuManager.add(new Separator("settings"));
         submenuManager.add(new Separator("actions"));
@@ -183,25 +177,24 @@ public class MetricSpecActionBarContributor extends EditingDomainActionBarContri
 
         // Prepare for CreateSibling item addition or removal.
         //
-        createSiblingMenuManager = new MenuManager(
-                MetricSpecEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+        createSiblingMenuManager = new MenuManager(MetricSpecEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
         submenuManager.insertBefore("additions", createSiblingMenuManager);
 
         // Force an update because Eclipse hides empty menus now.
         //
-        submenuManager.addMenuListener(new IMenuListener() {
-            public void menuAboutToShow(IMenuManager menuManager) {
-                menuManager.updateAll(true);
-            }
-        });
+        submenuManager.addMenuListener
+            (new IMenuListener() {
+                 public void menuAboutToShow(IMenuManager menuManager) {
+                     menuManager.updateAll(true);
+                 }
+             });
 
         addGlobalActions(submenuManager);
     }
 
     /**
-     * When the active editor changes, this remembers the change and registers with it as a
-     * selection provider. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * When the active editor changes, this remembers the change and registers with it as a selection provider.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -216,7 +209,8 @@ public class MetricSpecActionBarContributor extends EditingDomainActionBarContri
         }
         if (part == null) {
             selectionProvider = null;
-        } else {
+        }
+        else {
             selectionProvider = part.getSite().getSelectionProvider();
             selectionProvider.addSelectionChangedListener(this);
 
@@ -252,10 +246,10 @@ public class MetricSpecActionBarContributor extends EditingDomainActionBarContri
         Collection<?> newSiblingDescriptors = null;
 
         ISelection selection = event.getSelection();
-        if (selection instanceof IStructuredSelection && ((IStructuredSelection) selection).size() == 1) {
-            Object object = ((IStructuredSelection) selection).getFirstElement();
+        if (selection instanceof IStructuredSelection && ((IStructuredSelection)selection).size() == 1) {
+            Object object = ((IStructuredSelection)selection).getFirstElement();
 
-            EditingDomain domain = ((IEditingDomainProvider) activeEditorPart).getEditingDomain();
+            EditingDomain domain = ((IEditingDomainProvider)activeEditorPart).getEditingDomain();
 
             newChildDescriptors = domain.getNewChildDescriptors(object, null);
             newSiblingDescriptors = domain.getNewChildDescriptors(null, object);
@@ -277,10 +271,10 @@ public class MetricSpecActionBarContributor extends EditingDomainActionBarContri
     }
 
     /**
-     * This generates a {@link org.eclipse.emf.edit.ui.action.CreateChildAction} for each object in
-     * <code>descriptors</code>, and returns the collection of these actions. <!-- begin-user-doc
+     * This generates a {@link org.eclipse.emf.edit.ui.action.CreateChildAction} for each object in <code>descriptors</code>,
+     * and returns the collection of these actions.
+     * <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected Collection<IAction> generateCreateChildActions(Collection<?> descriptors, ISelection selection) {
@@ -294,10 +288,10 @@ public class MetricSpecActionBarContributor extends EditingDomainActionBarContri
     }
 
     /**
-     * This generates a {@link org.eclipse.emf.edit.ui.action.CreateSiblingAction} for each object
-     * in <code>descriptors</code>, and returns the collection of these actions. <!-- begin-user-doc
+     * This generates a {@link org.eclipse.emf.edit.ui.action.CreateSiblingAction} for each object in <code>descriptors</code>,
+     * and returns the collection of these actions.
+     * <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected Collection<IAction> generateCreateSiblingActions(Collection<?> descriptors, ISelection selection) {
@@ -311,13 +305,12 @@ public class MetricSpecActionBarContributor extends EditingDomainActionBarContri
     }
 
     /**
-     * This populates the specified <code>manager</code> with
-     * {@link org.eclipse.jface.action.ActionContributionItem}s based on the
-     * {@link org.eclipse.jface.action.IAction}s contained in the <code>actions</code> collection,
-     * by inserting them before the specified contribution item <code>contributionID</code>. If
-     * <code>contributionID</code> is <code>null</code>, they are simply added. <!-- begin-user-doc
+     * This populates the specified <code>manager</code> with {@link org.eclipse.jface.action.ActionContributionItem}s
+     * based on the {@link org.eclipse.jface.action.IAction}s contained in the <code>actions</code> collection,
+     * by inserting them before the specified contribution item <code>contributionID</code>.
+     * If <code>contributionID</code> is <code>null</code>, they are simply added.
+     * <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void populateManager(IContributionManager manager, Collection<? extends IAction> actions,
@@ -326,7 +319,8 @@ public class MetricSpecActionBarContributor extends EditingDomainActionBarContri
             for (IAction action : actions) {
                 if (contributionID != null) {
                     manager.insertBefore(contributionID, action);
-                } else {
+                }
+                else {
                     manager.add(action);
                 }
             }
@@ -334,11 +328,9 @@ public class MetricSpecActionBarContributor extends EditingDomainActionBarContri
     }
 
     /**
-     * This removes from the specified <code>manager</code> all
-     * {@link org.eclipse.jface.action.ActionContributionItem}s based on the
-     * {@link org.eclipse.jface.action.IAction}s contained in the <code>actions</code> collection.
+     * This removes from the specified <code>manager</code> all {@link org.eclipse.jface.action.ActionContributionItem}s
+     * based on the {@link org.eclipse.jface.action.IAction}s contained in the <code>actions</code> collection.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected void depopulateManager(IContributionManager manager, Collection<? extends IAction> actions) {
@@ -349,13 +341,13 @@ public class MetricSpecActionBarContributor extends EditingDomainActionBarContri
                 //
                 IContributionItem contributionItem = items[i];
                 while (contributionItem instanceof SubContributionItem) {
-                    contributionItem = ((SubContributionItem) contributionItem).getInnerItem();
+                    contributionItem = ((SubContributionItem)contributionItem).getInnerItem();
                 }
 
                 // Delete the ActionContributionItems with matching action.
                 //
                 if (contributionItem instanceof ActionContributionItem) {
-                    IAction action = ((ActionContributionItem) contributionItem).getAction();
+                    IAction action = ((ActionContributionItem)contributionItem).getAction();
                     if (actions.contains(action)) {
                         manager.remove(contributionItem);
                     }
@@ -385,9 +377,9 @@ public class MetricSpecActionBarContributor extends EditingDomainActionBarContri
     }
 
     /**
-     * This inserts global actions before the "additions-end" separator. <!-- begin-user-doc -->
+     * This inserts global actions before the "additions-end" separator.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -395,7 +387,7 @@ public class MetricSpecActionBarContributor extends EditingDomainActionBarContri
         menuManager.insertAfter("additions-end", new Separator("ui-actions"));
         menuManager.insertAfter("ui-actions", showPropertiesViewAction);
 
-        refreshViewerAction.setEnabled(refreshViewerAction.isEnabled());
+        refreshViewerAction.setEnabled(refreshViewerAction.isEnabled());		
         menuManager.insertAfter("ui-actions", refreshViewerAction);
 
         super.addGlobalActions(menuManager);

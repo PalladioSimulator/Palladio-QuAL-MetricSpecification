@@ -40,13 +40,13 @@ public enum DataType implements Enumerator {
     QUALITATIVE(1, "Qualitative", "Qualitative");
 
     /**
-     * The '<em><b>Quantitative</b></em>' literal value. <!-- begin-user-doc -->
+     * The '<em><b>Quantitative</b></em>' literal value.
+     * <!-- begin-user-doc -->
      * <p>
      * If the meaning of '<em><b>Quantitative</b></em>' literal object isn't clear, there really
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
      * @see #QUANTITATIVE
      * @model name="Quantitative"
      * @generated
@@ -55,13 +55,13 @@ public enum DataType implements Enumerator {
     public static final int QUANTITATIVE_VALUE = 0;
 
     /**
-     * The '<em><b>Qualitative</b></em>' literal value. <!-- begin-user-doc -->
+     * The '<em><b>Qualitative</b></em>' literal value.
+     * <!-- begin-user-doc -->
      * <p>
      * If the meaning of '<em><b>Qualitative</b></em>' literal object isn't clear, there really
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
      * @see #QUALITATIVE
      * @model name="Qualitative"
      * @generated
@@ -70,12 +70,15 @@ public enum DataType implements Enumerator {
     public static final int QUALITATIVE_VALUE = 1;
 
     /**
-     * An array of all the '<em><b>Data Type</b></em>' enumerators. <!-- begin-user-doc --> <!--
+     * An array of all the '<em><b>Data Type</b></em>' enumerators.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
-    private static final DataType[] VALUES_ARRAY = new DataType[] { QUANTITATIVE, QUALITATIVE, };
+    private static final DataType[] VALUES_ARRAY = new DataType[] {
+            QUANTITATIVE,
+            QUALITATIVE,
+        };
 
     /**
      * A public read-only list of all the '<em><b>Data Type</b></em>' enumerators. <!--
@@ -102,9 +105,9 @@ public enum DataType implements Enumerator {
     }
 
     /**
-     * Returns the '<em><b>Data Type</b></em>' literal with the specified name. <!-- begin-user-doc
+     * Returns the '<em><b>Data Type</b></em>' literal with the specified name.
+     * <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static DataType getByName(String name) {
@@ -125,38 +128,33 @@ public enum DataType implements Enumerator {
      */
     public static DataType get(int value) {
         switch (value) {
-        case QUANTITATIVE_VALUE:
-            return QUANTITATIVE;
-        case QUALITATIVE_VALUE:
-            return QUALITATIVE;
+            case QUANTITATIVE_VALUE: return QUANTITATIVE;
+            case QUALITATIVE_VALUE: return QUALITATIVE;
         }
         return null;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     private final int value;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     private final String name;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     private final String literal;
 
     /**
-     * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Only this class can construct instances.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     private DataType(int value, String name, String literal) {
@@ -167,29 +165,26 @@ public enum DataType implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getValue() {
-        return value;
+      return value;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getName() {
-        return name;
+      return name;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getLiteral() {
-        return literal;
+      return literal;
     }
 
     /**

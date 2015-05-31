@@ -22,19 +22,16 @@ import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>
- * {@link org.palladiosimulator.metricspec.impl.MetricDescriptionRepositoryImpl#getMetricDescriptions
- * <em>Metric Descriptions</em>}</li>
+ *   <li>{@link org.palladiosimulator.metricspec.impl.MetricDescriptionRepositoryImpl#getMetricDescriptions <em>Metric Descriptions</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements MetricDescriptionRepository {
     /**
-     * The cached value of the '{@link #getMetricDescriptions() <em>Metric Descriptions</em>}'
-     * containment reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getMetricDescriptions() <em>Metric Descriptions</em>}' containment reference list.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getMetricDescriptions()
      * @generated
      * @ordered
@@ -43,7 +40,6 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected MetricDescriptionRepositoryImpl() {
@@ -52,7 +48,6 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -62,104 +57,94 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<MetricDescription> getMetricDescriptions() {
         if (metricDescriptions == null) {
-            metricDescriptions = new EObjectContainmentWithInverseEList<MetricDescription>(MetricDescription.class,
-                    this, MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS,
-                    MetricSpecPackage.METRIC_DESCRIPTION__REPOSITORY);
+            metricDescriptions = new EObjectContainmentWithInverseEList<MetricDescription>(MetricDescription.class, this, MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS, MetricSpecPackage.METRIC_DESCRIPTION__REPOSITORY);
         }
         return metricDescriptions;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
     @Override
     public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS:
-            return ((InternalEList<InternalEObject>) (InternalEList<?>) getMetricDescriptions()).basicAdd(otherEnd,
-                    msgs);
+            case MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS:
+                return ((InternalEList<InternalEObject>)(InternalEList<?>)getMetricDescriptions()).basicAdd(otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS:
-            return ((InternalEList<?>) getMetricDescriptions()).basicRemove(otherEnd, msgs);
+            case MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS:
+                return ((InternalEList<?>)getMetricDescriptions()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS:
-            return getMetricDescriptions();
+            case MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS:
+                return getMetricDescriptions();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS:
-            getMetricDescriptions().clear();
-            getMetricDescriptions().addAll((Collection<? extends MetricDescription>) newValue);
-            return;
+            case MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS:
+                getMetricDescriptions().clear();
+                getMetricDescriptions().addAll((Collection<? extends MetricDescription>)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS:
-            getMetricDescriptions().clear();
-            return;
+            case MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS:
+                getMetricDescriptions().clear();
+                return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS:
-            return metricDescriptions != null && !metricDescriptions.isEmpty();
+            case MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS:
+                return metricDescriptions != null && !metricDescriptions.isEmpty();
         }
         return super.eIsSet(featureID);
     }

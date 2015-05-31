@@ -4,30 +4,22 @@ package org.palladiosimulator.metricspec.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.palladiosimulator.metricspec.MetricDescription;
 
 /**
- * This is the item provider adapter for a
- * {@link org.palladiosimulator.metricspec.MetricDescription} object. <!-- begin-user-doc --> <!--
+ * This is the item provider adapter for a {@link org.palladiosimulator.metricspec.MetricDescription} object.
+ * <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * 
  * @generated
  */
-public class MetricDescriptionItemProvider extends DescriptionItemProvider implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class MetricDescriptionItemProvider extends DescriptionItemProvider {
     /**
-     * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
+     * This constructs an instance from a factory and a notifier.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     public MetricDescriptionItemProvider(AdapterFactory adapterFactory) {
@@ -35,9 +27,9 @@ public class MetricDescriptionItemProvider extends DescriptionItemProvider imple
     }
 
     /**
-     * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
+     * This returns the property descriptors for the adapted class.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -57,16 +49,16 @@ public class MetricDescriptionItemProvider extends DescriptionItemProvider imple
      */
     @Override
     public String getText(Object object) {
-        String label = ((MetricDescription) object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_MetricDescription_type")
-                : getString("_UI_MetricDescription_type") + " " + label;
+        String label = ((MetricDescription)object).getName();
+        return label == null || label.length() == 0 ?
+            getString("_UI_MetricDescription_type") :
+            getString("_UI_MetricDescription_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -76,9 +68,9 @@ public class MetricDescriptionItemProvider extends DescriptionItemProvider imple
     }
 
     /**
-     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
-     * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+     * that can be created under this object.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override

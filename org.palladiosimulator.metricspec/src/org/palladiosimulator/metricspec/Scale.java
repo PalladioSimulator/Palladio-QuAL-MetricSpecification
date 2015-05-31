@@ -19,8 +19,8 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Scale implements Enumerator {
     /**
-     * The '<em><b>Nominal</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The '<em><b>Nominal</b></em>' literal object.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #NOMINAL_VALUE
      * @generated
      * @ordered
@@ -28,8 +28,8 @@ public enum Scale implements Enumerator {
     NOMINAL(0, "Nominal", "Nominal"),
 
     /**
-     * The '<em><b>Ordinal</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The '<em><b>Ordinal</b></em>' literal object.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #ORDINAL_VALUE
      * @generated
      * @ordered
@@ -37,8 +37,8 @@ public enum Scale implements Enumerator {
     ORDINAL(1, "Ordinal", "Ordinal"),
 
     /**
-     * The '<em><b>Interval</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The '<em><b>Interval</b></em>' literal object.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #INTERVAL_VALUE
      * @generated
      * @ordered
@@ -46,8 +46,8 @@ public enum Scale implements Enumerator {
     INTERVAL(2, "Interval", "Interval"),
 
     /**
-     * The '<em><b>Ratio</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The '<em><b>Ratio</b></em>' literal object.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #RATIO_VALUE
      * @generated
      * @ordered
@@ -55,14 +55,13 @@ public enum Scale implements Enumerator {
     RATIO(3, "Ratio", "Ratio");
 
     /**
-     * The '<em><b>Nominal</b></em>' literal value. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * <!-- begin-model-doc --> Supports an equality operation on one-to-one object basis. Often
-     * used in conjunction with categorized data. Supported mathematical operations: =/≠.
-     * Mathematically, it is considered an unordered set.
+     * The '<em><b>Nominal</b></em>' literal value.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Supports an equality operation on one-to-one object basis. Often used in conjunction with categorized data. Supported mathematical operations: =/≠. Mathematically, it is considered an unordered set.
      * 
-     * For example, dots with the colors RED, BLUE, and PURPLE can be related to their color but
-     * nothing more can be said. <!-- end-model-doc -->
-     * 
+     * For example, dots with the colors RED, BLUE, and PURPLE can be related to their color but nothing more can be said.
+     * <!-- end-model-doc -->
      * @see #NOMINAL
      * @model name="Nominal"
      * @generated
@@ -71,20 +70,15 @@ public enum Scale implements Enumerator {
     public static final int NOMINAL_VALUE = 0;
 
     /**
-     * The '<em><b>Ordinal</b></em>' literal value. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The '<em><b>Ordinal</b></em>' literal value.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * <!-- begin-model-doc -->
-     * Supports&nbsp;an&nbsp;equality&nbsp;operation&nbsp;as&nbsp;well&nbsp;
-     * as&nbsp;a&nbsp;monotonic&
-     * nbsp;increasing&nbsp;order.&nbsp;Supported&nbsp;mathematical&nbsp;operations
-     * :&nbsp;=/≠&nbsp;;&
-     * nbsp;&lt;/&gt;.&nbsp;Mathematically,&nbsp;it&nbsp;is&nbsp;considered&nbsp;an
-     * &nbsp;ordered&nbsp;set.<br />
+     * Supports&nbsp;an&nbsp;equality&nbsp;operation&nbsp;as&nbsp;well&nbsp;as&nbsp;a&nbsp;monotonic&nbsp;increasing&nbsp;order.&nbsp;Supported&nbsp;mathematical&nbsp;operations:&nbsp;=/≠&nbsp;;&nbsp;&lt;/&gt;.&nbsp;Mathematically,&nbsp;it&nbsp;is&nbsp;considered&nbsp;an&nbsp;ordered&nbsp;set.<br />
      * <br />
-     * For&nbsp;example,&nbsp;the&nbsp;rank&nbsp;of&nbsp;a&nbsp;sports&nbsp;team&nbsp;in&nbsp;a&nbsp
-     * ;18-members&nbsp;league&nbsp;is&nbsp;on&nbsp;an&nbsp;ordinal&nbsp;scale. However, the teams
-     * with the same difference in rank does not mean that&nbsp;the difference of
-     * their&nbsp;achievements or performance is/was equal. <!-- end-model-doc -->
-     * 
+     * For&nbsp;example,&nbsp;the&nbsp;rank&nbsp;of&nbsp;a&nbsp;sports&nbsp;team&nbsp;in&nbsp;a&nbsp;18-members&nbsp;league&nbsp;is&nbsp;on&nbsp;an&nbsp;ordinal&nbsp;scale.
+     * However, the teams with the same difference in rank does not mean that&nbsp;the difference of their&nbsp;achievements or
+     * performance is/was equal.
+     * <!-- end-model-doc -->
      * @see #ORDINAL
      * @model name="Ordinal"
      * @generated
@@ -93,14 +87,13 @@ public enum Scale implements Enumerator {
     public static final int ORDINAL_VALUE = 1;
 
     /**
-     * The '<em><b>Interval</b></em>' literal value. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * <!-- begin-model-doc --> Supports the same as the ordinal scale but the magnitude of the
-     * difference between two values is comparable. Values can be negative. Supported mathematical
-     * operations: =/≠ ; </> ; +/− . Mathematically, it is considered an affine space or line.
+     * The '<em><b>Interval</b></em>' literal value.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Supports the same as the ordinal scale but the magnitude of the difference between two values is comparable. Values can be negative. Supported mathematical operations: =/≠ ; </> ; +/− . Mathematically, it is considered an affine space or line.
      * 
-     * For example, the temperature in degress Celcius is an interval measure. If you have two
-     * temperatures you can quantify the difference. <!-- end-model-doc -->
-     * 
+     * For example, the temperature in degress Celcius is an interval measure. If you have two temperatures you can quantify the difference.
+     * <!-- end-model-doc -->
      * @see #INTERVAL
      * @model name="Interval"
      * @generated
@@ -126,17 +119,22 @@ public enum Scale implements Enumerator {
     public static final int RATIO_VALUE = 3;
 
     /**
-     * An array of all the '<em><b>Scale</b></em>' enumerators. <!-- begin-user-doc --> <!--
+     * An array of all the '<em><b>Scale</b></em>' enumerators.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
-    private static final Scale[] VALUES_ARRAY = new Scale[] { NOMINAL, ORDINAL, INTERVAL, RATIO, };
+    private static final Scale[] VALUES_ARRAY = new Scale[] {
+            NOMINAL,
+            ORDINAL,
+            INTERVAL,
+            RATIO,
+        };
 
     /**
-     * A public read-only list of all the '<em><b>Scale</b></em>' enumerators. <!-- begin-user-doc
+     * A public read-only list of all the '<em><b>Scale</b></em>' enumerators.
+     * <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static final List<Scale> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
@@ -158,9 +156,9 @@ public enum Scale implements Enumerator {
     }
 
     /**
-     * Returns the '<em><b>Scale</b></em>' literal with the specified name. <!-- begin-user-doc -->
+     * Returns the '<em><b>Scale</b></em>' literal with the specified name.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @generated
      */
     public static Scale getByName(String name) {
@@ -181,42 +179,35 @@ public enum Scale implements Enumerator {
      */
     public static Scale get(int value) {
         switch (value) {
-        case NOMINAL_VALUE:
-            return NOMINAL;
-        case ORDINAL_VALUE:
-            return ORDINAL;
-        case INTERVAL_VALUE:
-            return INTERVAL;
-        case RATIO_VALUE:
-            return RATIO;
+            case NOMINAL_VALUE: return NOMINAL;
+            case ORDINAL_VALUE: return ORDINAL;
+            case INTERVAL_VALUE: return INTERVAL;
+            case RATIO_VALUE: return RATIO;
         }
         return null;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     private final int value;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     private final String name;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     private final String literal;
 
     /**
-     * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Only this class can construct instances.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     private Scale(int value, String name, String literal) {
@@ -227,29 +218,26 @@ public enum Scale implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getValue() {
-        return value;
+      return value;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getName() {
-        return name;
+      return name;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getLiteral() {
-        return literal;
+      return literal;
     }
 
     /**

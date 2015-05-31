@@ -11,9 +11,9 @@ import org.eclipse.emf.common.util.Enumerator;
 /**
  * <!-- begin-user-doc --> A representation of the literals of the enumeration '
  * <em><b>Capture Type</b></em>', and utility methods for working with them. <!-- end-user-doc -->
- * <!-- begin-model-doc --> Type of the captured data. E.g. if the data describes identifiers,
- * integer numbers or real numbers. <!-- end-model-doc -->
- * 
+ * <!-- begin-model-doc -->
+ * Type of the captured data. E.g. if the data describes identifiers, integer numbers or real numbers.
+ * <!-- end-model-doc -->
  * @see org.palladiosimulator.metricspec.MetricSpecPackage#getCaptureType()
  * @model
  * @generated
@@ -30,9 +30,9 @@ public enum CaptureType implements Enumerator {
     IDENTIFIER(0, "Identifier", "Identifier"),
 
     /**
-     * The '<em><b>Integer Number</b></em>' literal object. <!-- begin-user-doc --> <!--
+     * The '<em><b>Integer Number</b></em>' literal object.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @see #INTEGER_NUMBER_VALUE
      * @generated
      * @ordered
@@ -50,11 +50,12 @@ public enum CaptureType implements Enumerator {
     REAL_NUMBER(2, "RealNumber", "RealNumber");
 
     /**
-     * The '<em><b>Identifier</b></em>' literal value. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * <!-- begin-model-doc --> Identifiers are textual representations for different observable
-     * states. Examples are 'very bad', 'bad', 'okay', 'good', 'very good' in a questionaire, 'red',
-     * 'yellow', 'green' for a traffic light. <!-- end-model-doc -->
-     * 
+     * The '<em><b>Identifier</b></em>' literal value.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Identifiers are textual representations for different observable states. Examples are 'very bad', 'bad', 'okay', 'good',
+     * 'very good' in a questionaire, 'red', 'yellow', 'green' for a traffic light.
+     * <!-- end-model-doc -->
      * @see #IDENTIFIER
      * @model name="Identifier"
      * @generated
@@ -91,12 +92,16 @@ public enum CaptureType implements Enumerator {
     public static final int REAL_NUMBER_VALUE = 2;
 
     /**
-     * An array of all the '<em><b>Capture Type</b></em>' enumerators. <!-- begin-user-doc --> <!--
+     * An array of all the '<em><b>Capture Type</b></em>' enumerators.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
-    private static final CaptureType[] VALUES_ARRAY = new CaptureType[] { IDENTIFIER, INTEGER_NUMBER, REAL_NUMBER, };
+    private static final CaptureType[] VALUES_ARRAY = new CaptureType[] {
+            IDENTIFIER,
+            INTEGER_NUMBER,
+            REAL_NUMBER,
+        };
 
     /**
      * A public read-only list of all the '<em><b>Capture Type</b></em>' enumerators. <!--
@@ -146,40 +151,34 @@ public enum CaptureType implements Enumerator {
      */
     public static CaptureType get(int value) {
         switch (value) {
-        case IDENTIFIER_VALUE:
-            return IDENTIFIER;
-        case INTEGER_NUMBER_VALUE:
-            return INTEGER_NUMBER;
-        case REAL_NUMBER_VALUE:
-            return REAL_NUMBER;
+            case IDENTIFIER_VALUE: return IDENTIFIER;
+            case INTEGER_NUMBER_VALUE: return INTEGER_NUMBER;
+            case REAL_NUMBER_VALUE: return REAL_NUMBER;
         }
         return null;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     private final int value;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     private final String name;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     private final String literal;
 
     /**
-     * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Only this class can construct instances.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     private CaptureType(int value, String name, String literal) {
@@ -190,29 +189,26 @@ public enum CaptureType implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public int getValue() {
-        return value;
+      return value;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getName() {
-        return name;
+      return name;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getLiteral() {
-        return literal;
+      return literal;
     }
 
     /**

@@ -17,18 +17,16 @@ import org.palladiosimulator.metricspec.MetricSpecPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link org.palladiosimulator.metricspec.impl.MetricSetDescriptionImpl#getSubsumedMetrics <em>
- * Subsumed Metrics</em>}</li>
+ *   <li>{@link org.palladiosimulator.metricspec.impl.MetricSetDescriptionImpl#getSubsumedMetrics <em>Subsumed Metrics</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements MetricSetDescription {
     /**
-     * The cached value of the '{@link #getSubsumedMetrics() <em>Subsumed Metrics</em>}' reference
-     * list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getSubsumedMetrics() <em>Subsumed Metrics</em>}' reference list.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getSubsumedMetrics()
      * @generated
      * @ordered
@@ -37,7 +35,6 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected MetricSetDescriptionImpl() {
@@ -46,7 +43,6 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -56,73 +52,67 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public EList<MetricDescription> getSubsumedMetrics() {
         if (subsumedMetrics == null) {
-            subsumedMetrics = new EObjectResolvingEList<MetricDescription>(MetricDescription.class, this,
-                    MetricSpecPackage.METRIC_SET_DESCRIPTION__SUBSUMED_METRICS);
+            subsumedMetrics = new EObjectResolvingEList<MetricDescription>(MetricDescription.class, this, MetricSpecPackage.METRIC_SET_DESCRIPTION__SUBSUMED_METRICS);
         }
         return subsumedMetrics;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case MetricSpecPackage.METRIC_SET_DESCRIPTION__SUBSUMED_METRICS:
-            return getSubsumedMetrics();
+            case MetricSpecPackage.METRIC_SET_DESCRIPTION__SUBSUMED_METRICS:
+                return getSubsumedMetrics();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case MetricSpecPackage.METRIC_SET_DESCRIPTION__SUBSUMED_METRICS:
-            getSubsumedMetrics().clear();
-            getSubsumedMetrics().addAll((Collection<? extends MetricDescription>) newValue);
-            return;
+            case MetricSpecPackage.METRIC_SET_DESCRIPTION__SUBSUMED_METRICS:
+                getSubsumedMetrics().clear();
+                getSubsumedMetrics().addAll((Collection<? extends MetricDescription>)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case MetricSpecPackage.METRIC_SET_DESCRIPTION__SUBSUMED_METRICS:
-            getSubsumedMetrics().clear();
-            return;
+            case MetricSpecPackage.METRIC_SET_DESCRIPTION__SUBSUMED_METRICS:
+                getSubsumedMetrics().clear();
+                return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case MetricSpecPackage.METRIC_SET_DESCRIPTION__SUBSUMED_METRICS:
-            return subsumedMetrics != null && !subsumedMetrics.isEmpty();
+            case MetricSpecPackage.METRIC_SET_DESCRIPTION__SUBSUMED_METRICS:
+                return subsumedMetrics != null && !subsumedMetrics.isEmpty();
         }
         return super.eIsSet(featureID);
     }

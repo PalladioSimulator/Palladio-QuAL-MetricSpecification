@@ -8,19 +8,19 @@ import javax.measure.unit.Unit;
 /**
  * <!-- begin-user-doc --> A representation of the model object '
  * <em><b>Numerical Base Metric Description</b></em>'. <!-- end-user-doc -->
- * 
- * <!-- begin-model-doc --> self.captureType <> CaptureType::Identifier <!-- end-model-doc -->
- * 
+ *
+ * <!-- begin-model-doc -->
+ * self.captureType <> CaptureType::Identifier
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getDefaultUnit <em>
- * Default Unit</em>}</li>
- * <li>{@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getPersistenceKind
- * <em>Persistence Kind</em>}</li>
+ *   <li>{@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getDefaultUnit <em>Default Unit</em>}</li>
+ *   <li>{@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getPersistenceKind <em>Persistence Kind</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see org.palladiosimulator.metricspec.MetricSpecPackage#getNumericalBaseMetricDescription()
  * @model
  * @generated
@@ -43,12 +43,9 @@ public interface NumericalBaseMetricDescription extends BaseMetricDescription {
     Unit<Quantity> getDefaultUnit();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getDefaultUnit
-     * <em>Default Unit</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param value
-     *            the new value of the '<em>Default Unit</em>' attribute.
+     * Sets the value of the '{@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getDefaultUnit <em>Default Unit</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @param value the new value of the '<em>Default Unit</em>' attribute.
      * @see #getDefaultUnit()
      * @generated
      */
@@ -74,12 +71,9 @@ public interface NumericalBaseMetricDescription extends BaseMetricDescription {
     PersistenceKindOptions getPersistenceKind();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getPersistenceKind
-     * <em>Persistence Kind</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param value
-     *            the new value of the '<em>Persistence Kind</em>' attribute.
+     * Sets the value of the '{@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getPersistenceKind <em>Persistence Kind</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @param value the new value of the '<em>Persistence Kind</em>' attribute.
      * @see org.palladiosimulator.metricspec.PersistenceKindOptions
      * @see #getPersistenceKind()
      * @generated

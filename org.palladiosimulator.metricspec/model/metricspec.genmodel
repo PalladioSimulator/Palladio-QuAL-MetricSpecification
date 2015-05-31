@@ -5,8 +5,8 @@
     modelName="MetricSpec" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
     editPluginID="org.palladiosimulator.metricspec.edit" editorPluginID="org.palladiosimulator.metricspec.editor"
-    usedGenPackages="../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier"
-    operationReflection="true" importOrganizing="true">
+    usedGenPackages="../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.palladiosimulator.mdsdprofiles/model/mdsdprofiles.genmodel#//mdsdprofiles ../../org.modelversioning.emfprofile/model/emfprofiles.genmodel#//emfprofile ../../org.modelversioning.emfprofile/model/emfprofileapplication.genmodel#//emfprofileapplication"
+    importOrganizing="true">
   <foreignModel>metricspec.ecore</foreignModel>
   <genPackages prefix="MetricSpec" basePackage="org.palladiosimulator" disposableProviderFactory="true"
       ecorePackage="metricspec.ecore#/">
@@ -20,11 +20,6 @@
       <genEnumLiterals ecoreEnumLiteral="metricspec.ecore#//Scale/Ordinal"/>
       <genEnumLiterals ecoreEnumLiteral="metricspec.ecore#//Scale/Interval"/>
       <genEnumLiterals ecoreEnumLiteral="metricspec.ecore#//Scale/Ratio"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="metricspec.ecore#//Monotonic">
-      <genEnumLiterals ecoreEnumLiteral="metricspec.ecore#//Monotonic/No"/>
-      <genEnumLiterals ecoreEnumLiteral="metricspec.ecore#//Monotonic/Yes"/>
-      <genEnumLiterals ecoreEnumLiteral="metricspec.ecore#//Monotonic/Strong"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="metricspec.ecore#//PersistenceKindOptions">
       <genEnumLiterals ecoreEnumLiteral="metricspec.ecore#//PersistenceKindOptions/BinaryPreferred"/>
@@ -48,9 +43,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metricspec.ecore#//BaseMetricDescription/captureType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metricspec.ecore#//BaseMetricDescription/dataType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metricspec.ecore#//BaseMetricDescription/scale"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metricspec.ecore#//BaseMetricDescription/monotonic"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="metricspec.ecore#//MetricDescription"/>
+    <genClasses image="false" ecoreClass="metricspec.ecore#//MetricDescription">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference metricspec.ecore#//MetricDescription/repository"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="metricspec.ecore#//Description">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metricspec.ecore#//Description/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metricspec.ecore#//Description/textualDescription"/>
@@ -64,5 +60,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metricspec.ecore#//NumericalBaseMetricDescription/persistenceKind"/>
     </genClasses>
     <genClasses image="false" ecoreClass="metricspec.ecore#//IJSQuantity"/>
+    <genClasses ecoreClass="metricspec.ecore#//MetricDescriptionRepository">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference metricspec.ecore#//MetricDescriptionRepository/metricDescriptions"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

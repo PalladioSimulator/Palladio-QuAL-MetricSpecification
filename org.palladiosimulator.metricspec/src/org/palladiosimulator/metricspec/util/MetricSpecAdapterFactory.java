@@ -3,11 +3,12 @@
 package org.palladiosimulator.metricspec.util;
 
 import javax.measure.quantity.Quantity;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.EObject;
+import org.palladiosimulator.mdsdprofiles.StereotypableElement;
 import org.palladiosimulator.metricspec.AggregationFunctionDescription;
 import org.palladiosimulator.metricspec.BaseMetricDescription;
 import org.palladiosimulator.metricspec.Description;
@@ -22,21 +23,20 @@ import org.palladiosimulator.metricspec.TextualBaseMetricDescription;
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
  * <code>createXXX</code> method for each class of the model. <!-- end-user-doc -->
- * 
  * @see org.palladiosimulator.metricspec.MetricSpecPackage
  * @generated
  */
 public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
     /**
-     * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached model package.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     protected static MetricSpecPackage modelPackage;
 
     /**
-     * Creates an instance of the adapter factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Creates an instance of the adapter factory.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public MetricSpecAdapterFactory() {
@@ -46,10 +46,10 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Returns whether this factory is applicable for the type of the object. <!-- begin-user-doc
+     * Returns whether this factory is applicable for the type of the object.
+     * <!-- begin-user-doc
      * --> This implementation returns <code>true</code> if the object is either the model's package
      * or is an instance object of the model. <!-- end-user-doc -->
-     * 
      * @return whether this factory is applicable for the type of the object.
      * @generated
      */
@@ -59,98 +59,93 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
             return true;
         }
         if (object instanceof EObject) {
-            return ((EObject) object).eClass().getEPackage() == modelPackage;
+            return ((EObject)object).eClass().getEPackage() == modelPackage;
         }
         return false;
     }
 
     /**
-     * The switch that delegates to the <code>createXXX</code> methods. <!-- begin-user-doc --> <!--
+     * The switch that delegates to the <code>createXXX</code> methods.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @generated
      */
     protected MetricSpecSwitch<Adapter> modelSwitch = new MetricSpecSwitch<Adapter>() {
-        @Override
-        public Adapter caseIdentifier(Identifier object) {
-            return createIdentifierAdapter();
-        }
-
-        @Override
-        public Adapter caseTextualBaseMetricDescription(TextualBaseMetricDescription object) {
-            return createTextualBaseMetricDescriptionAdapter();
-        }
-
-        @Override
-        public Adapter caseBaseMetricDescription(BaseMetricDescription object) {
-            return createBaseMetricDescriptionAdapter();
-        }
-
-        @Override
-        public Adapter caseMetricDescription(MetricDescription object) {
-            return createMetricDescriptionAdapter();
-        }
-
-        @Override
-        public Adapter caseDescription(Description object) {
-            return createDescriptionAdapter();
-        }
-
-        @Override
-        public Adapter caseAggregationFunctionDescription(AggregationFunctionDescription object) {
-            return createAggregationFunctionDescriptionAdapter();
-        }
-
-        @Override
-        public Adapter caseMetricSetDescription(MetricSetDescription object) {
-            return createMetricSetDescriptionAdapter();
-        }
-
-        @Override
-        public Adapter caseNumericalBaseMetricDescription(NumericalBaseMetricDescription object) {
-            return createNumericalBaseMetricDescriptionAdapter();
-        }
-
-        @Override
-        public Adapter caseIJSQuantity(Quantity object) {
-            return createIJSQuantityAdapter();
-        }
-
-        @Override
-        public Adapter caseMetricDescriptionRepository(MetricDescriptionRepository object) {
-            return createMetricDescriptionRepositoryAdapter();
-        }
-
-        @Override
-        public Adapter caseIdentifier_Identifier(de.uka.ipd.sdq.identifier.Identifier object) {
-            return createIdentifier_IdentifierAdapter();
-        }
-
-        @Override
-        public Adapter defaultCase(EObject object) {
-            return createEObjectAdapter();
-        }
-    };
+            @Override
+            public Adapter caseIdentifier(Identifier object) {
+                return createIdentifierAdapter();
+            }
+            @Override
+            public Adapter caseTextualBaseMetricDescription(TextualBaseMetricDescription object) {
+                return createTextualBaseMetricDescriptionAdapter();
+            }
+            @Override
+            public Adapter caseBaseMetricDescription(BaseMetricDescription object) {
+                return createBaseMetricDescriptionAdapter();
+            }
+            @Override
+            public Adapter caseMetricDescription(MetricDescription object) {
+                return createMetricDescriptionAdapter();
+            }
+            @Override
+            public Adapter caseDescription(Description object) {
+                return createDescriptionAdapter();
+            }
+            @Override
+            public Adapter caseAggregationFunctionDescription(AggregationFunctionDescription object) {
+                return createAggregationFunctionDescriptionAdapter();
+            }
+            @Override
+            public Adapter caseMetricSetDescription(MetricSetDescription object) {
+                return createMetricSetDescriptionAdapter();
+            }
+            @Override
+            public Adapter caseNumericalBaseMetricDescription(NumericalBaseMetricDescription object) {
+                return createNumericalBaseMetricDescriptionAdapter();
+            }
+            @Override
+            public Adapter caseIJSQuantity(Quantity object) {
+                return createIJSQuantityAdapter();
+            }
+            @Override
+            public Adapter caseMetricDescriptionRepository(MetricDescriptionRepository object) {
+                return createMetricDescriptionRepositoryAdapter();
+            }
+            @Override
+            public Adapter caseEModelElement(EModelElement object) {
+                return createEModelElementAdapter();
+            }
+            @Override
+            public Adapter caseStereotypableElement(StereotypableElement object) {
+                return createStereotypableElementAdapter();
+            }
+            @Override
+            public Adapter caseIdentifier_Identifier(de.uka.ipd.sdq.identifier.Identifier object) {
+                return createIdentifier_IdentifierAdapter();
+            }
+            @Override
+            public Adapter defaultCase(EObject object) {
+                return createEObjectAdapter();
+            }
+        };
 
     /**
-     * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param target
-     *            the object to adapt.
+     * Creates an adapter for the <code>target</code>.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @param target the object to adapt.
      * @return the adapter for the <code>target</code>.
      * @generated
      */
     @Override
     public Adapter createAdapter(Notifier target) {
-        return modelSwitch.doSwitch((EObject) target);
+        return modelSwitch.doSwitch((EObject)target);
     }
 
     /**
-     * Creates a new adapter for an object of class '
-     * {@link org.palladiosimulator.metricspec.Identifier <em>Identifier</em>}'. <!-- begin-user-doc
+     * Creates a new adapter for an object of class '{@link org.palladiosimulator.metricspec.Identifier <em>Identifier</em>}'.
+     * <!-- begin-user-doc
      * --> This default implementation returns null so that we can easily ignore cases; it's useful
      * to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
      * @return the new adapter.
      * @see org.palladiosimulator.metricspec.Identifier
      * @generated
@@ -160,12 +155,10 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '
-     * {@link org.palladiosimulator.metricspec.TextualBaseMetricDescription
-     * <em>Textual Base Metric Description</em>}'. <!-- begin-user-doc --> This default
+     * Creates a new adapter for an object of class '{@link org.palladiosimulator.metricspec.TextualBaseMetricDescription <em>Textual Base Metric Description</em>}'.
+     * <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
      * @return the new adapter.
      * @see org.palladiosimulator.metricspec.TextualBaseMetricDescription
      * @generated
@@ -175,12 +168,10 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '
-     * {@link org.palladiosimulator.metricspec.BaseMetricDescription
-     * <em>Base Metric Description</em>}'. <!-- begin-user-doc --> This default implementation
+     * Creates a new adapter for an object of class '{@link org.palladiosimulator.metricspec.BaseMetricDescription <em>Base Metric Description</em>}'.
+     * <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
      * @return the new adapter.
      * @see org.palladiosimulator.metricspec.BaseMetricDescription
      * @generated
@@ -220,12 +211,10 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '
-     * {@link org.palladiosimulator.metricspec.AggregationFunctionDescription
-     * <em>Aggregation Function Description</em>}'. <!-- begin-user-doc --> This default
+     * Creates a new adapter for an object of class '{@link org.palladiosimulator.metricspec.AggregationFunctionDescription <em>Aggregation Function Description</em>}'.
+     * <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
      * @return the new adapter.
      * @see org.palladiosimulator.metricspec.AggregationFunctionDescription
      * @generated
@@ -235,12 +224,10 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '
-     * {@link org.palladiosimulator.metricspec.MetricSetDescription <em>Metric Set Description</em>}
-     * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
+     * Creates a new adapter for an object of class '{@link org.palladiosimulator.metricspec.MetricSetDescription <em>Metric Set Description</em>}'.
+     * <!-- begin-user-doc --> This default implementation returns null so that we can easily
      * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
-     * 
      * @return the new adapter.
      * @see org.palladiosimulator.metricspec.MetricSetDescription
      * @generated
@@ -250,12 +237,10 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '
-     * {@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription
-     * <em>Numerical Base Metric Description</em>}'. <!-- begin-user-doc --> This default
+     * Creates a new adapter for an object of class '{@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription <em>Numerical Base Metric Description</em>}'.
+     * <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
      * @return the new adapter.
      * @see org.palladiosimulator.metricspec.NumericalBaseMetricDescription
      * @generated
@@ -265,11 +250,10 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link javax.measure.quantity.Quantity
-     * <em>IJS Quantity</em>}'. <!-- begin-user-doc --> This default implementation returns null so
+     * Creates a new adapter for an object of class '{@link javax.measure.quantity.Quantity <em>IJS Quantity</em>}'.
+     * <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     * 
      * @return the new adapter.
      * @see javax.measure.quantity.Quantity
      * @generated
@@ -279,12 +263,10 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '
-     * {@link org.palladiosimulator.metricspec.MetricDescriptionRepository
-     * <em>Metric Description Repository</em>}'. <!-- begin-user-doc --> This default implementation
+     * Creates a new adapter for an object of class '{@link org.palladiosimulator.metricspec.MetricDescriptionRepository <em>Metric Description Repository</em>}'.
+     * <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
      * @return the new adapter.
      * @see org.palladiosimulator.metricspec.MetricDescriptionRepository
      * @generated
@@ -294,11 +276,38 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.identifier.Identifier
-     * <em>Identifier</em>}'. <!-- begin-user-doc --> This default implementation returns null so
+     * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecore.EModelElement <em>EModel Element</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.emf.ecore.EModelElement
+     * @generated
+     */
+    public Adapter createEModelElementAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.palladiosimulator.mdsdprofiles.StereotypableElement <em>Stereotypable Element</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.palladiosimulator.mdsdprofiles.StereotypableElement
+     * @generated
+     */
+    public Adapter createStereotypableElementAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.identifier.Identifier <em>Identifier</em>}'.
+     * <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.identifier.Identifier
      * @generated
@@ -308,9 +317,9 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for the default case. <!-- begin-user-doc --> This default
+     * Creates a new adapter for the default case.
+     * <!-- begin-user-doc --> This default
      * implementation returns null. <!-- end-user-doc -->
-     * 
      * @return the new adapter.
      * @generated
      */

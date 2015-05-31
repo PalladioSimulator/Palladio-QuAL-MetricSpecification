@@ -5,20 +5,20 @@ package org.palladiosimulator.metricspec;
 /**
  * <!-- begin-user-doc --> A representation of the model object '
  * <em><b>Base Metric Description</b></em>'. <!-- end-user-doc -->
- * 
- * <!-- begin-model-doc --> A one-dimensional metric description. <!-- end-model-doc -->
- * 
+ *
+ * <!-- begin-model-doc -->
+ * A one-dimensional metric description.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link org.palladiosimulator.metricspec.BaseMetricDescription#getCaptureType <em>Capture Type
- * </em>}</li>
- * <li>{@link org.palladiosimulator.metricspec.BaseMetricDescription#getDataType <em>Data Type</em>}
- * </li>
- * <li>{@link org.palladiosimulator.metricspec.BaseMetricDescription#getScale <em>Scale</em>}</li>
+ *   <li>{@link org.palladiosimulator.metricspec.BaseMetricDescription#getCaptureType <em>Capture Type</em>}</li>
+ *   <li>{@link org.palladiosimulator.metricspec.BaseMetricDescription#getDataType <em>Data Type</em>}</li>
+ *   <li>{@link org.palladiosimulator.metricspec.BaseMetricDescription#getScale <em>Scale</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see org.palladiosimulator.metricspec.MetricSpecPackage#getBaseMetricDescription()
  * @model abstract="true"
  * @generated
@@ -43,12 +43,9 @@ public interface BaseMetricDescription extends MetricDescription {
     CaptureType getCaptureType();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.metricspec.BaseMetricDescription#getCaptureType
-     * <em>Capture Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param value
-     *            the new value of the '<em>Capture Type</em>' attribute.
+     * Sets the value of the '{@link org.palladiosimulator.metricspec.BaseMetricDescription#getCaptureType <em>Capture Type</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @param value the new value of the '<em>Capture Type</em>' attribute.
      * @see org.palladiosimulator.metricspec.CaptureType
      * @see #getCaptureType()
      * @generated
@@ -71,12 +68,9 @@ public interface BaseMetricDescription extends MetricDescription {
     DataType getDataType();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.metricspec.BaseMetricDescription#getDataType <em>Data Type</em>}
-     * ' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param value
-     *            the new value of the '<em>Data Type</em>' attribute.
+     * Sets the value of the '{@link org.palladiosimulator.metricspec.BaseMetricDescription#getDataType <em>Data Type</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @param value the new value of the '<em>Data Type</em>' attribute.
      * @see org.palladiosimulator.metricspec.DataType
      * @see #getDataType()
      * @generated
@@ -99,12 +93,9 @@ public interface BaseMetricDescription extends MetricDescription {
     Scale getScale();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.metricspec.BaseMetricDescription#getScale <em>Scale</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param value
-     *            the new value of the '<em>Scale</em>' attribute.
+     * Sets the value of the '{@link org.palladiosimulator.metricspec.BaseMetricDescription#getScale <em>Scale</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @param value the new value of the '<em>Scale</em>' attribute.
      * @see org.palladiosimulator.metricspec.Scale
      * @see #getScale()
      * @generated

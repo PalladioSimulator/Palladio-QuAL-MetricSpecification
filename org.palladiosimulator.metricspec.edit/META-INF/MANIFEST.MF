@@ -12,6 +12,12 @@ Export-Package: org.palladiosimulator.metricspec.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.metricspec;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
- de.uka.ipd.sdq.identifier;visibility:=reexport;bundle-version="2.1.0",
- de.uka.ipd.sdq.identifier.edit;visibility:=reexport;bundle-version="2.1.0"
+ de.uka.ipd.sdq.identifier;bundle-version="2.1.0";visibility:=reexport,
+ de.uka.ipd.sdq.identifier.edit;bundle-version="2.1.0";visibility:=reexport,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.ecore.edit;visibility:=reexport,
+ org.palladiosimulator.mdsdprofiles;visibility:=reexport,
+ org.palladiosimulator.mdsdprofiles.edit;visibility:=reexport,
+ org.modelversioning.emfprofile;visibility:=reexport,
+ org.modelversioning.emfprofile.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
