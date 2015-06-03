@@ -11,8 +11,9 @@ import de.uka.ipd.sdq.identifier.Identifier;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.palladiosimulator.metricspec.Description#getName <em>Name</em>}</li>
- *   <li>{@link org.palladiosimulator.metricspec.Description#getTextualDescription <em>Textual Description</em>}</li>
+ * <li>{@link org.palladiosimulator.metricspec.Description#getName <em>Name</em>}</li>
+ * <li>{@link org.palladiosimulator.metricspec.Description#getTextualDescription <em>Textual
+ * Description</em>}</li>
  * </ul>
  * </p>
  *
@@ -21,14 +22,15 @@ import de.uka.ipd.sdq.identifier.Identifier;
  * @generated
  */
 public interface Description extends Identifier {
+
     /**
-     * Returns the value of the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a
      * description here...
      * </p>
      * <!-- end-user-doc -->
+     *
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
      * @see org.palladiosimulator.metricspec.MetricSpecPackage#getDescription_Name()
@@ -38,23 +40,25 @@ public interface Description extends Identifier {
     String getName();
 
     /**
-     * Sets the value of the '{@link org.palladiosimulator.metricspec.Description#getName <em>Name</em>}' attribute.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @param value the new value of the '<em>Name</em>' attribute.
+     * Sets the value of the '{@link org.palladiosimulator.metricspec.Description#getName
+     * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @param value
+     *            the new value of the '<em>Name</em>' attribute.
      * @see #getName()
      * @generated
      */
     void setName(String value);
 
     /**
-     * Returns the value of the '<em><b>Textual Description</b></em>' attribute.
-     * <!-- begin-user-doc
+     * Returns the value of the '<em><b>Textual Description</b></em>' attribute. <!-- begin-user-doc
      * -->
      * <p>
      * If the meaning of the '<em>Textual Description</em>' attribute isn't clear, there really
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     *
      * @return the value of the '<em>Textual Description</em>' attribute.
      * @see #setTextualDescription(String)
      * @see org.palladiosimulator.metricspec.MetricSpecPackage#getDescription_TextualDescription()
@@ -64,9 +68,12 @@ public interface Description extends Identifier {
     String getTextualDescription();
 
     /**
-     * Sets the value of the '{@link org.palladiosimulator.metricspec.Description#getTextualDescription <em>Textual Description</em>}' attribute.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @param value the new value of the '<em>Textual Description</em>' attribute.
+     * Sets the value of the '
+     * {@link org.palladiosimulator.metricspec.Description#getTextualDescription
+     * <em>Textual Description</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @param value
+     *            the new value of the '<em>Textual Description</em>' attribute.
      * @see #getTextualDescription()
      * @generated
      */

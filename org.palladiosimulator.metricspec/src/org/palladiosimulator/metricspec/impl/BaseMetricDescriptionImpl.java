@@ -17,19 +17,23 @@ import org.palladiosimulator.metricspec.Scale;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl#getCaptureType <em>Capture Type</em>}</li>
- *   <li>{@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl#getDataType <em>Data Type</em>}</li>
- *   <li>{@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl#getScale <em>Scale</em>}</li>
+ * <li>{@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl#getCaptureType <em>
+ * Capture Type</em>}</li>
+ * <li>{@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl#getDataType <em>Data
+ * Type</em>}</li>
+ * <li>{@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl#getScale <em>Scale
+ * </em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl implements BaseMetricDescription {
+
     /**
      * The default value of the '{@link #getCaptureType() <em>Capture Type</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getCaptureType()
      * @generated
      * @ordered
@@ -39,7 +43,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
     /**
      * The cached value of the '{@link #getCaptureType() <em>Capture Type</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getCaptureType()
      * @generated
      * @ordered
@@ -49,7 +53,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
     /**
      * The default value of the '{@link #getDataType() <em>Data Type</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getDataType()
      * @generated
      * @ordered
@@ -59,7 +63,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
     /**
      * The cached value of the '{@link #getDataType() <em>Data Type</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getDataType()
      * @generated
      * @ordered
@@ -67,9 +71,9 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
     protected DataType dataType = DATA_TYPE_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getScale() <em>Scale</em>}' attribute.
-     * <!-- begin-user-doc
+     * The default value of the '{@link #getScale() <em>Scale</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
+     *
      * @see #getScale()
      * @generated
      * @ordered
@@ -77,9 +81,9 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
     protected static final Scale SCALE_EDEFAULT = Scale.NOMINAL;
 
     /**
-     * The cached value of the '{@link #getScale() <em>Scale</em>}' attribute.
-     * <!-- begin-user-doc
+     * The cached value of the '{@link #getScale() <em>Scale</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
+     *
      * @see #getScale()
      * @generated
      * @ordered
@@ -88,6 +92,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     protected BaseMetricDescriptionImpl() {
@@ -96,6 +101,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
@@ -105,150 +111,175 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public CaptureType getCaptureType() {
-        return captureType;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public void setCaptureType(CaptureType newCaptureType) {
-        CaptureType oldCaptureType = captureType;
-        captureType = newCaptureType == null ? CAPTURE_TYPE_EDEFAULT : newCaptureType;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, MetricSpecPackage.BASE_METRIC_DESCRIPTION__CAPTURE_TYPE, oldCaptureType, captureType));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public DataType getDataType() {
-        return dataType;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public void setDataType(DataType newDataType) {
-        DataType oldDataType = dataType;
-        dataType = newDataType == null ? DATA_TYPE_EDEFAULT : newDataType;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, MetricSpecPackage.BASE_METRIC_DESCRIPTION__DATA_TYPE, oldDataType, dataType));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public Scale getScale() {
-        return scale;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public void setScale(Scale newScale) {
-        Scale oldScale = scale;
-        scale = newScale == null ? SCALE_EDEFAULT : newScale;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE, oldScale, scale));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public CaptureType getCaptureType() {
+        return this.captureType;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setCaptureType(final CaptureType newCaptureType) {
+        final CaptureType oldCaptureType = this.captureType;
+        this.captureType = newCaptureType == null ? CAPTURE_TYPE_EDEFAULT : newCaptureType;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    MetricSpecPackage.BASE_METRIC_DESCRIPTION__CAPTURE_TYPE, oldCaptureType, this.captureType));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public DataType getDataType() {
+        return this.dataType;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setDataType(final DataType newDataType) {
+        final DataType oldDataType = this.dataType;
+        this.dataType = newDataType == null ? DATA_TYPE_EDEFAULT : newDataType;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    MetricSpecPackage.BASE_METRIC_DESCRIPTION__DATA_TYPE, oldDataType, this.dataType));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Scale getScale() {
+        return this.scale;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setScale(final Scale newScale) {
+        final Scale oldScale = this.scale;
+        this.scale = newScale == null ? SCALE_EDEFAULT : newScale;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE, oldScale, this.scale));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-            case MetricSpecPackage.BASE_METRIC_DESCRIPTION__CAPTURE_TYPE:
-                return getCaptureType();
-            case MetricSpecPackage.BASE_METRIC_DESCRIPTION__DATA_TYPE:
-                return getDataType();
-            case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE:
-                return getScale();
+        case MetricSpecPackage.BASE_METRIC_DESCRIPTION__CAPTURE_TYPE:
+            return this.getCaptureType();
+        case MetricSpecPackage.BASE_METRIC_DESCRIPTION__DATA_TYPE:
+            return this.getDataType();
+        case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE:
+            return this.getScale();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-            case MetricSpecPackage.BASE_METRIC_DESCRIPTION__CAPTURE_TYPE:
-                setCaptureType((CaptureType)newValue);
-                return;
-            case MetricSpecPackage.BASE_METRIC_DESCRIPTION__DATA_TYPE:
-                setDataType((DataType)newValue);
-                return;
-            case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE:
-                setScale((Scale)newValue);
-                return;
+        case MetricSpecPackage.BASE_METRIC_DESCRIPTION__CAPTURE_TYPE:
+            this.setCaptureType((CaptureType) newValue);
+            return;
+        case MetricSpecPackage.BASE_METRIC_DESCRIPTION__DATA_TYPE:
+            this.setDataType((DataType) newValue);
+            return;
+        case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE:
+            this.setScale((Scale) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
-            case MetricSpecPackage.BASE_METRIC_DESCRIPTION__CAPTURE_TYPE:
-                setCaptureType(CAPTURE_TYPE_EDEFAULT);
-                return;
-            case MetricSpecPackage.BASE_METRIC_DESCRIPTION__DATA_TYPE:
-                setDataType(DATA_TYPE_EDEFAULT);
-                return;
-            case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE:
-                setScale(SCALE_EDEFAULT);
-                return;
+        case MetricSpecPackage.BASE_METRIC_DESCRIPTION__CAPTURE_TYPE:
+            this.setCaptureType(CAPTURE_TYPE_EDEFAULT);
+            return;
+        case MetricSpecPackage.BASE_METRIC_DESCRIPTION__DATA_TYPE:
+            this.setDataType(DATA_TYPE_EDEFAULT);
+            return;
+        case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE:
+            this.setScale(SCALE_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
-            case MetricSpecPackage.BASE_METRIC_DESCRIPTION__CAPTURE_TYPE:
-                return captureType != CAPTURE_TYPE_EDEFAULT;
-            case MetricSpecPackage.BASE_METRIC_DESCRIPTION__DATA_TYPE:
-                return dataType != DATA_TYPE_EDEFAULT;
-            case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE:
-                return scale != SCALE_EDEFAULT;
+        case MetricSpecPackage.BASE_METRIC_DESCRIPTION__CAPTURE_TYPE:
+            return this.captureType != CAPTURE_TYPE_EDEFAULT;
+        case MetricSpecPackage.BASE_METRIC_DESCRIPTION__DATA_TYPE:
+            return this.dataType != DATA_TYPE_EDEFAULT;
+        case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE:
+            return this.scale != SCALE_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (this.eIsProxy()) {
+            return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (captureType: ");
-        result.append(captureType);
+        result.append(this.captureType);
         result.append(", dataType: ");
-        result.append(dataType);
+        result.append(this.dataType);
         result.append(", scale: ");
-        result.append(scale);
+        result.append(this.scale);
         result.append(')');
         return result.toString();
     }

@@ -15,8 +15,10 @@ import org.palladiosimulator.metricspec.MetricSpecPackage;
  * @generated
  */
 public class AggregationFunctionDescriptionImpl extends DescriptionImpl implements AggregationFunctionDescription {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     protected AggregationFunctionDescriptionImpl() {
@@ -25,6 +27,7 @@ public class AggregationFunctionDescriptionImpl extends DescriptionImpl implemen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override

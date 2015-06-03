@@ -18,18 +18,20 @@ import org.palladiosimulator.metricspec.TextualBaseMetricDescription;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.palladiosimulator.metricspec.impl.IdentifierImpl#getLiteral <em>Literal</em>}</li>
- *   <li>{@link org.palladiosimulator.metricspec.impl.IdentifierImpl#getTextualBaseMetricDescription <em>Textual Base Metric Description</em>}</li>
+ * <li>{@link org.palladiosimulator.metricspec.impl.IdentifierImpl#getLiteral <em>Literal</em>}</li>
+ * <li>{@link org.palladiosimulator.metricspec.impl.IdentifierImpl#getTextualBaseMetricDescription
+ * <em>Textual Base Metric Description</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImpl implements Identifier {
+
     /**
      * The default value of the '{@link #getLiteral() <em>Literal</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getLiteral()
      * @generated
      * @ordered
@@ -39,7 +41,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
     /**
      * The cached value of the '{@link #getLiteral() <em>Literal</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getLiteral()
      * @generated
      * @ordered
@@ -48,6 +50,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     protected IdentifierImpl() {
@@ -56,6 +59,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
@@ -65,178 +69,216 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
+    @Override
     public String getLiteral() {
-        return literal;
+        return this.literal;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
-    public void setLiteral(String newLiteral) {
-        String oldLiteral = literal;
-        literal = newLiteral;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, MetricSpecPackage.IDENTIFIER__LITERAL, oldLiteral, literal));
+    @Override
+    public void setLiteral(final String newLiteral) {
+        final String oldLiteral = this.literal;
+        this.literal = newLiteral;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, MetricSpecPackage.IDENTIFIER__LITERAL,
+                    oldLiteral, this.literal));
+        }
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
+    @Override
     public TextualBaseMetricDescription getTextualBaseMetricDescription() {
-        if (eContainerFeatureID() != MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION) return null;
-        return (TextualBaseMetricDescription)eInternalContainer();
+        if (this.eContainerFeatureID() != MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION) {
+            return null;
+        }
+        return (TextualBaseMetricDescription) this.eInternalContainer();
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     public NotificationChain basicSetTextualBaseMetricDescription(
-            TextualBaseMetricDescription newTextualBaseMetricDescription, NotificationChain msgs) {
-        msgs = eBasicSetContainer((InternalEObject)newTextualBaseMetricDescription, MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION, msgs);
+            final TextualBaseMetricDescription newTextualBaseMetricDescription, NotificationChain msgs) {
+        msgs = this.eBasicSetContainer((InternalEObject) newTextualBaseMetricDescription,
+                MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION, msgs);
         return msgs;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
-    public void setTextualBaseMetricDescription(TextualBaseMetricDescription newTextualBaseMetricDescription) {
-        if (newTextualBaseMetricDescription != eInternalContainer() || (eContainerFeatureID() != MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION && newTextualBaseMetricDescription != null)) {
-            if (EcoreUtil.isAncestor(this, newTextualBaseMetricDescription))
-                throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+    @Override
+    public void setTextualBaseMetricDescription(final TextualBaseMetricDescription newTextualBaseMetricDescription) {
+        if (newTextualBaseMetricDescription != this.eInternalContainer()
+                || (this.eContainerFeatureID() != MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION && newTextualBaseMetricDescription != null)) {
+            if (EcoreUtil.isAncestor(this, newTextualBaseMetricDescription)) {
+                throw new IllegalArgumentException("Recursive containment not allowed for " + this.toString());
+            }
             NotificationChain msgs = null;
-            if (eInternalContainer() != null)
-                msgs = eBasicRemoveFromContainer(msgs);
-            if (newTextualBaseMetricDescription != null)
-                msgs = ((InternalEObject)newTextualBaseMetricDescription).eInverseAdd(this, MetricSpecPackage.TEXTUAL_BASE_METRIC_DESCRIPTION__IDENTIFIERS, TextualBaseMetricDescription.class, msgs);
-            msgs = basicSetTextualBaseMetricDescription(newTextualBaseMetricDescription, msgs);
-            if (msgs != null) msgs.dispatch();
+            if (this.eInternalContainer() != null) {
+                msgs = this.eBasicRemoveFromContainer(msgs);
+            }
+            if (newTextualBaseMetricDescription != null) {
+                msgs = ((InternalEObject) newTextualBaseMetricDescription).eInverseAdd(this,
+                        MetricSpecPackage.TEXTUAL_BASE_METRIC_DESCRIPTION__IDENTIFIERS,
+                        TextualBaseMetricDescription.class, msgs);
+            }
+            msgs = this.basicSetTextualBaseMetricDescription(newTextualBaseMetricDescription, msgs);
+            if (msgs != null) {
+                msgs.dispatch();
+            }
+        } else if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION, newTextualBaseMetricDescription,
+                    newTextualBaseMetricDescription));
         }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION, newTextualBaseMetricDescription, newTextualBaseMetricDescription));
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseAdd(final InternalEObject otherEnd, final int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION:
-                if (eInternalContainer() != null)
-                    msgs = eBasicRemoveFromContainer(msgs);
-                return basicSetTextualBaseMetricDescription((TextualBaseMetricDescription)otherEnd, msgs);
+        case MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION:
+            if (this.eInternalContainer() != null) {
+                msgs = this.eBasicRemoveFromContainer(msgs);
+            }
+            return this.basicSetTextualBaseMetricDescription((TextualBaseMetricDescription) otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
         switch (featureID) {
-            case MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION:
-                return basicSetTextualBaseMetricDescription(null, msgs);
+        case MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION:
+            return this.basicSetTextualBaseMetricDescription(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-        switch (eContainerFeatureID()) {
-            case MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION:
-                return eInternalContainer().eInverseRemove(this, MetricSpecPackage.TEXTUAL_BASE_METRIC_DESCRIPTION__IDENTIFIERS, TextualBaseMetricDescription.class, msgs);
+    public NotificationChain eBasicRemoveFromContainerFeature(final NotificationChain msgs) {
+        switch (this.eContainerFeatureID()) {
+        case MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION:
+            return this.eInternalContainer().eInverseRemove(this,
+                    MetricSpecPackage.TEXTUAL_BASE_METRIC_DESCRIPTION__IDENTIFIERS, TextualBaseMetricDescription.class,
+                    msgs);
         }
         return super.eBasicRemoveFromContainerFeature(msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-            case MetricSpecPackage.IDENTIFIER__LITERAL:
-                return getLiteral();
-            case MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION:
-                return getTextualBaseMetricDescription();
+        case MetricSpecPackage.IDENTIFIER__LITERAL:
+            return this.getLiteral();
+        case MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION:
+            return this.getTextualBaseMetricDescription();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-            case MetricSpecPackage.IDENTIFIER__LITERAL:
-                setLiteral((String)newValue);
-                return;
-            case MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION:
-                setTextualBaseMetricDescription((TextualBaseMetricDescription)newValue);
-                return;
+        case MetricSpecPackage.IDENTIFIER__LITERAL:
+            this.setLiteral((String) newValue);
+            return;
+        case MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION:
+            this.setTextualBaseMetricDescription((TextualBaseMetricDescription) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
-            case MetricSpecPackage.IDENTIFIER__LITERAL:
-                setLiteral(LITERAL_EDEFAULT);
-                return;
-            case MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION:
-                setTextualBaseMetricDescription((TextualBaseMetricDescription)null);
-                return;
+        case MetricSpecPackage.IDENTIFIER__LITERAL:
+            this.setLiteral(LITERAL_EDEFAULT);
+            return;
+        case MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION:
+            this.setTextualBaseMetricDescription((TextualBaseMetricDescription) null);
+            return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
-            case MetricSpecPackage.IDENTIFIER__LITERAL:
-                return LITERAL_EDEFAULT == null ? literal != null : !LITERAL_EDEFAULT.equals(literal);
-            case MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION:
-                return getTextualBaseMetricDescription() != null;
+        case MetricSpecPackage.IDENTIFIER__LITERAL:
+            return LITERAL_EDEFAULT == null ? this.literal != null : !LITERAL_EDEFAULT.equals(this.literal);
+        case MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION:
+            return this.getTextualBaseMetricDescription() != null;
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (this.eIsProxy()) {
+            return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (literal: ");
-        result.append(literal);
+        result.append(this.literal);
         result.append(')');
         return result.toString();
     }

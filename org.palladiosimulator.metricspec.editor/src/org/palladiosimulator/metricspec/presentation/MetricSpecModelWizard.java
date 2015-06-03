@@ -61,49 +61,53 @@ import org.palladiosimulator.metricspec.provider.MetricSpecEditPlugin;
 /**
  * This is a simple wizard for creating a new model file. <!-- begin-user-doc --> <!-- end-user-doc
  * -->
- * 
+ *
  * @generated
  */
 public class MetricSpecModelWizard extends Wizard implements INewWizard {
-    /**
-     * The supported extensions for created files.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(Arrays.asList(MetricSpecEditorPlugin.INSTANCE.getString("_UI_MetricSpecEditorFilenameExtensions").split("\\s*,\\s*")));
 
     /**
-     * A formatted list of supported file extensions, suitable for display.
-     * <!-- begin-user-doc -->
+     * The supported extensions for created files. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(Arrays
+            .asList(MetricSpecEditorPlugin.INSTANCE.getString("_UI_MetricSpecEditorFilenameExtensions").split(
+                    "\\s*,\\s*")));
+
+    /**
+     * A formatted list of supported file extensions, suitable for display. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
-    public static final String FORMATTED_FILE_EXTENSIONS = MetricSpecEditorPlugin.INSTANCE.getString("_UI_MetricSpecEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+    public static final String FORMATTED_FILE_EXTENSIONS = MetricSpecEditorPlugin.INSTANCE.getString(
+            "_UI_MetricSpecEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
     /**
-     * This caches an instance of the model package.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This caches an instance of the model package. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected MetricSpecPackage metricSpecPackage = MetricSpecPackage.eINSTANCE;
 
     /**
-     * This caches an instance of the model factory.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This caches an instance of the model factory. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    protected MetricSpecFactory metricSpecFactory = metricSpecPackage.getMetricSpecFactory();
+    protected MetricSpecFactory metricSpecFactory = this.metricSpecPackage.getMetricSpecFactory();
 
     /**
-     * This is the file creation page.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This is the file creation page. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected MetricSpecModelWizardNewFileCreationPage newFileCreationPage;
 
     /**
-     * This is the initial object creation page.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This is the initial object creation page. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected MetricSpecModelWizardInitialObjectCreationPage initialObjectCreationPage;
@@ -111,74 +115,77 @@ public class MetricSpecModelWizard extends Wizard implements INewWizard {
     /**
      * Remember the selection during initialization for populating the default container. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected IStructuredSelection selection;
 
     /**
-     * Remember the workbench during initialization.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Remember the workbench during initialization. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected IWorkbench workbench;
 
     /**
-     * Caches the names of the types that can be created as the root object.
-     * <!-- begin-user-doc -->
+     * Caches the names of the types that can be created as the root object. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected List<String> initialObjectNames;
 
     /**
-     * This just records the information.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This just records the information. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    public void init(IWorkbench workbench, IStructuredSelection selection) {
+    @Override
+    public void init(final IWorkbench workbench, final IStructuredSelection selection) {
         this.workbench = workbench;
         this.selection = selection;
-        setWindowTitle(MetricSpecEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
-        setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(MetricSpecEditorPlugin.INSTANCE.getImage("full/wizban/NewMetricSpec")));
+        this.setWindowTitle(MetricSpecEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
+        this.setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE
+                .getImageDescriptor(MetricSpecEditorPlugin.INSTANCE.getImage("full/wizban/NewMetricSpec")));
     }
 
     /**
-     * Returns the names of the types that can be created as the root object.
-     * <!-- begin-user-doc
+     * Returns the names of the types that can be created as the root object. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected Collection<String> getInitialObjectNames() {
-        if (initialObjectNames == null) {
-            initialObjectNames = new ArrayList<String>();
-            for (EClassifier eClassifier : metricSpecPackage.getEClassifiers()) {
+        if (this.initialObjectNames == null) {
+            this.initialObjectNames = new ArrayList<String>();
+            for (final EClassifier eClassifier : this.metricSpecPackage.getEClassifiers()) {
                 if (eClassifier instanceof EClass) {
-                    EClass eClass = (EClass)eClassifier;
+                    final EClass eClass = (EClass) eClassifier;
                     if (!eClass.isAbstract()) {
-                        initialObjectNames.add(eClass.getName());
+                        this.initialObjectNames.add(eClass.getName());
                     }
                 }
             }
-            Collections.sort(initialObjectNames, CommonPlugin.INSTANCE.getComparator());
+            Collections.sort(this.initialObjectNames, CommonPlugin.INSTANCE.getComparator());
         }
-        return initialObjectNames;
+        return this.initialObjectNames;
     }
 
     /**
-     * Create a new model.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Create a new model. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected EObject createInitialModel() {
-        EClass eClass = (EClass)metricSpecPackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
-        EObject rootObject = metricSpecFactory.create(eClass);
+        final EClass eClass = (EClass) this.metricSpecPackage.getEClassifier(this.initialObjectCreationPage
+                .getInitialObjectName());
+        final EObject rootObject = this.metricSpecFactory.create(eClass);
         return rootObject;
     }
 
     /**
-     * Do the work after everything is specified.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Do the work after everything is specified. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -186,114 +193,115 @@ public class MetricSpecModelWizard extends Wizard implements INewWizard {
         try {
             // Remember the file.
             //
-            final IFile modelFile = getModelFile();
+            final IFile modelFile = this.getModelFile();
 
             // Do the work within an operation.
             //
-            WorkspaceModifyOperation operation =
-                new WorkspaceModifyOperation() {
-                    @Override
-                    protected void execute(IProgressMonitor progressMonitor) {
-                        try {
-                            // Create a resource set
-                            //
-                            ResourceSet resourceSet = new ResourceSetImpl();
+            final WorkspaceModifyOperation operation = new WorkspaceModifyOperation() {
 
-                            // Get the URI of the model file.
-                            //
-                            URI fileURI = URI.createPlatformResourceURI(modelFile.getFullPath().toString(), true);
+                @Override
+                protected void execute(final IProgressMonitor progressMonitor) {
+                    try {
+                        // Create a resource set
+                        //
+                        final ResourceSet resourceSet = new ResourceSetImpl();
 
-                            // Create a resource for this file.
-                            //
-                            Resource resource = resourceSet.createResource(fileURI);
+                        // Get the URI of the model file.
+                        //
+                        final URI fileURI = URI.createPlatformResourceURI(modelFile.getFullPath().toString(), true);
 
-                            // Add the initial model object to the contents.
-                            //
-                            EObject rootObject = createInitialModel();
-                            if (rootObject != null) {
-                                resource.getContents().add(rootObject);
-                            }
+                        // Create a resource for this file.
+                        //
+                        final Resource resource = resourceSet.createResource(fileURI);
 
-                            // Save the contents of the resource to the file system.
-                            //
-                            Map<Object, Object> options = new HashMap<Object, Object>();
-                            options.put(XMLResource.OPTION_ENCODING, initialObjectCreationPage.getEncoding());
-                            resource.save(options);
+                        // Add the initial model object to the contents.
+                        //
+                        final EObject rootObject = MetricSpecModelWizard.this.createInitialModel();
+                        if (rootObject != null) {
+                            resource.getContents().add(rootObject);
                         }
-                        catch (Exception exception) {
-                            MetricSpecEditorPlugin.INSTANCE.log(exception);
-                        }
-                        finally {
-                            progressMonitor.done();
-                        }
+
+                        // Save the contents of the resource to the file system.
+                        //
+                        final Map<Object, Object> options = new HashMap<Object, Object>();
+                        options.put(XMLResource.OPTION_ENCODING,
+                                MetricSpecModelWizard.this.initialObjectCreationPage.getEncoding());
+                        resource.save(options);
+                    } catch (final Exception exception) {
+                        MetricSpecEditorPlugin.INSTANCE.log(exception);
+                    } finally {
+                        progressMonitor.done();
                     }
-                };
+                }
+            };
 
-            getContainer().run(false, false, operation);
+            this.getContainer().run(false, false, operation);
 
             // Select the new file resource in the current view.
             //
-            IWorkbenchWindow workbenchWindow = workbench.getActiveWorkbenchWindow();
-            IWorkbenchPage page = workbenchWindow.getActivePage();
+            final IWorkbenchWindow workbenchWindow = this.workbench.getActiveWorkbenchWindow();
+            final IWorkbenchPage page = workbenchWindow.getActivePage();
             final IWorkbenchPart activePart = page.getActivePart();
             if (activePart instanceof ISetSelectionTarget) {
                 final ISelection targetSelection = new StructuredSelection(modelFile);
-                getShell().getDisplay().asyncExec
-                    (new Runnable() {
-                         public void run() {
-                             ((ISetSelectionTarget)activePart).selectReveal(targetSelection);
-                         }
-                     });
+                this.getShell().getDisplay().asyncExec(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        ((ISetSelectionTarget) activePart).selectReveal(targetSelection);
+                    }
+                });
             }
 
             // Open an editor on the new file.
             //
             try {
-                page.openEditor
-                    (new FileEditorInput(modelFile),
-                     workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());					 	 
-            }
-            catch (PartInitException exception) {
-                MessageDialog.openError(workbenchWindow.getShell(), MetricSpecEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
+                page.openEditor(new FileEditorInput(modelFile),
+                        this.workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());
+            } catch (final PartInitException exception) {
+                MessageDialog.openError(workbenchWindow.getShell(),
+                        MetricSpecEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
                 return false;
             }
 
             return true;
-        }
-        catch (Exception exception) {
+        } catch (final Exception exception) {
             MetricSpecEditorPlugin.INSTANCE.log(exception);
             return false;
         }
     }
 
     /**
-     * This is the one page of the wizard.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This is the one page of the wizard. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public class MetricSpecModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
+
         /**
-         * Pass in the selection.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * Pass in the selection. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
-        public MetricSpecModelWizardNewFileCreationPage(String pageId, IStructuredSelection selection) {
+        public MetricSpecModelWizardNewFileCreationPage(final String pageId, final IStructuredSelection selection) {
             super(pageId, selection);
         }
 
         /**
-         * The framework calls this to see if the file is correct.
-         * <!-- begin-user-doc --> <!--
+         * The framework calls this to see if the file is correct. <!-- begin-user-doc --> <!--
          * end-user-doc -->
+         * 
          * @generated
          */
         @Override
         protected boolean validatePage() {
             if (super.validatePage()) {
-                String extension = new Path(getFileName()).getFileExtension();
+                final String extension = new Path(this.getFileName()).getFileExtension();
                 if (extension == null || !FILE_EXTENSIONS.contains(extension)) {
-                    String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions" : "_WARN_FilenameExtension";
-                    setErrorMessage(MetricSpecEditorPlugin.INSTANCE.getString(key, new Object [] { FORMATTED_FILE_EXTENSIONS }));
+                    final String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions"
+                            : "_WARN_FilenameExtension";
+                    this.setErrorMessage(MetricSpecEditorPlugin.INSTANCE.getString(key,
+                            new Object[] { FORMATTED_FILE_EXTENSIONS }));
                     return false;
                 }
                 return true;
@@ -303,22 +311,26 @@ public class MetricSpecModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
         public IFile getModelFile() {
-            return ResourcesPlugin.getWorkspace().getRoot().getFile(getContainerFullPath().append(getFileName()));
+            return ResourcesPlugin.getWorkspace().getRoot()
+                    .getFile(this.getContainerFullPath().append(this.getFileName()));
         }
     }
 
     /**
-     * This is the page where the type of object to create is selected.
-     * <!-- begin-user-doc --> <!--
+     * This is the page where the type of object to create is selected. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      */
     public class MetricSpecModelWizardInitialObjectCreationPage extends WizardPage {
+
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
         protected Combo initialObjectField;
@@ -330,136 +342,146 @@ public class MetricSpecModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
         protected Combo encodingField;
 
         /**
-         * Pass in the selection.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * Pass in the selection. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
-        public MetricSpecModelWizardInitialObjectCreationPage(String pageId) {
+        public MetricSpecModelWizardInitialObjectCreationPage(final String pageId) {
             super(pageId);
         }
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
-        public void createControl(Composite parent) {
-            Composite composite = new Composite(parent, SWT.NONE); {
-                GridLayout layout = new GridLayout();
+        @Override
+        public void createControl(final Composite parent) {
+            final Composite composite = new Composite(parent, SWT.NONE);
+            {
+                final GridLayout layout = new GridLayout();
                 layout.numColumns = 1;
                 layout.verticalSpacing = 12;
                 composite.setLayout(layout);
 
-                GridData data = new GridData();
+                final GridData data = new GridData();
                 data.verticalAlignment = GridData.FILL;
                 data.grabExcessVerticalSpace = true;
                 data.horizontalAlignment = GridData.FILL;
                 composite.setLayoutData(data);
             }
 
-            Label containerLabel = new Label(composite, SWT.LEFT);
+            final Label containerLabel = new Label(composite, SWT.LEFT);
             {
                 containerLabel.setText(MetricSpecEditorPlugin.INSTANCE.getString("_UI_ModelObject"));
 
-                GridData data = new GridData();
+                final GridData data = new GridData();
                 data.horizontalAlignment = GridData.FILL;
                 containerLabel.setLayoutData(data);
             }
 
-            initialObjectField = new Combo(composite, SWT.BORDER);
+            this.initialObjectField = new Combo(composite, SWT.BORDER);
             {
-                GridData data = new GridData();
+                final GridData data = new GridData();
                 data.horizontalAlignment = GridData.FILL;
                 data.grabExcessHorizontalSpace = true;
-                initialObjectField.setLayoutData(data);
+                this.initialObjectField.setLayoutData(data);
             }
 
-            for (String objectName : getInitialObjectNames()) {
-                initialObjectField.add(getLabel(objectName));
+            for (final String objectName : MetricSpecModelWizard.this.getInitialObjectNames()) {
+                this.initialObjectField.add(this.getLabel(objectName));
             }
 
-            if (initialObjectField.getItemCount() == 1) {
-                initialObjectField.select(0);
+            if (this.initialObjectField.getItemCount() == 1) {
+                this.initialObjectField.select(0);
             }
-            initialObjectField.addModifyListener(validator);
+            this.initialObjectField.addModifyListener(this.validator);
 
-            Label encodingLabel = new Label(composite, SWT.LEFT);
+            final Label encodingLabel = new Label(composite, SWT.LEFT);
             {
                 encodingLabel.setText(MetricSpecEditorPlugin.INSTANCE.getString("_UI_XMLEncoding"));
 
-                GridData data = new GridData();
+                final GridData data = new GridData();
                 data.horizontalAlignment = GridData.FILL;
                 encodingLabel.setLayoutData(data);
             }
-            encodingField = new Combo(composite, SWT.BORDER);
+            this.encodingField = new Combo(composite, SWT.BORDER);
             {
-                GridData data = new GridData();
+                final GridData data = new GridData();
                 data.horizontalAlignment = GridData.FILL;
                 data.grabExcessHorizontalSpace = true;
-                encodingField.setLayoutData(data);
+                this.encodingField.setLayoutData(data);
             }
 
-            for (String encoding : getEncodings()) {
-                encodingField.add(encoding);
+            for (final String encoding : this.getEncodings()) {
+                this.encodingField.add(encoding);
             }
 
-            encodingField.select(0);
-            encodingField.addModifyListener(validator);
+            this.encodingField.select(0);
+            this.encodingField.addModifyListener(this.validator);
 
-            setPageComplete(validatePage());
-            setControl(composite);
+            this.setPageComplete(this.validatePage());
+            this.setControl(composite);
         }
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
         protected ModifyListener validator = new ModifyListener() {
-                public void modifyText(ModifyEvent e) {
-                    setPageComplete(validatePage());
-                }
-            };
+
+            @Override
+            public void modifyText(final ModifyEvent e) {
+                MetricSpecModelWizardInitialObjectCreationPage.this
+                        .setPageComplete(MetricSpecModelWizardInitialObjectCreationPage.this.validatePage());
+            }
+        };
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
         protected boolean validatePage() {
-            return getInitialObjectName() != null && getEncodings().contains(encodingField.getText());
+            return this.getInitialObjectName() != null && this.getEncodings().contains(this.encodingField.getText());
         }
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
         @Override
-        public void setVisible(boolean visible) {
+        public void setVisible(final boolean visible) {
             super.setVisible(visible);
             if (visible) {
-                if (initialObjectField.getItemCount() == 1) {
-                    initialObjectField.clearSelection();
-                    encodingField.setFocus();
-                }
-                else {
-                    encodingField.clearSelection();
-                    initialObjectField.setFocus();
+                if (this.initialObjectField.getItemCount() == 1) {
+                    this.initialObjectField.clearSelection();
+                    this.encodingField.setFocus();
+                } else {
+                    this.encodingField.clearSelection();
+                    this.initialObjectField.setFocus();
                 }
             }
         }
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
         public String getInitialObjectName() {
-            String label = initialObjectField.getText();
+            final String label = this.initialObjectField.getText();
 
-            for (String name : getInitialObjectNames()) {
-                if (getLabel(name).equals(label)) {
+            for (final String name : MetricSpecModelWizard.this.getInitialObjectNames()) {
+                if (this.getLabel(name).equals(label)) {
                     return name;
                 }
             }
@@ -468,23 +490,23 @@ public class MetricSpecModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
         public String getEncoding() {
-            return encodingField.getText();
+            return this.encodingField.getText();
         }
 
         /**
          * Returns the label for the specified type name. <!-- begin-user-doc --> <!-- end-user-doc
          * -->
-         * 
+         *
          * @generated
          */
-        protected String getLabel(String typeName) {
+        protected String getLabel(final String typeName) {
             try {
                 return MetricSpecEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
-            }
-            catch(MissingResourceException mre) {
+            } catch (final MissingResourceException mre) {
                 MetricSpecEditorPlugin.INSTANCE.log(mre);
             }
             return typeName;
@@ -492,45 +514,50 @@ public class MetricSpecModelWizard extends Wizard implements INewWizard {
 
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
         protected Collection<String> getEncodings() {
-            if (encodings == null) {
-                encodings = new ArrayList<String>();
-                for (StringTokenizer stringTokenizer = new StringTokenizer(MetricSpecEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens(); ) {
-                    encodings.add(stringTokenizer.nextToken());
+            if (this.encodings == null) {
+                this.encodings = new ArrayList<String>();
+                for (final StringTokenizer stringTokenizer = new StringTokenizer(
+                        MetricSpecEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer
+                        .hasMoreTokens();) {
+                    this.encodings.add(stringTokenizer.nextToken());
                 }
             }
-            return encodings;
+            return this.encodings;
         }
     }
 
     /**
-     * The framework calls this to create the contents of the wizard.
-     * <!-- begin-user-doc --> <!--
+     * The framework calls this to create the contents of the wizard. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public void addPages() {
         // Create a page, set the title, and the initial model file name.
         //
-        newFileCreationPage = new MetricSpecModelWizardNewFileCreationPage("Whatever", selection);
-        newFileCreationPage.setTitle(MetricSpecEditorPlugin.INSTANCE.getString("_UI_MetricSpecModelWizard_label"));
-        newFileCreationPage.setDescription(MetricSpecEditorPlugin.INSTANCE.getString("_UI_MetricSpecModelWizard_description"));
-        newFileCreationPage.setFileName(MetricSpecEditorPlugin.INSTANCE.getString("_UI_MetricSpecEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
-        addPage(newFileCreationPage);
+        this.newFileCreationPage = new MetricSpecModelWizardNewFileCreationPage("Whatever", this.selection);
+        this.newFileCreationPage.setTitle(MetricSpecEditorPlugin.INSTANCE.getString("_UI_MetricSpecModelWizard_label"));
+        this.newFileCreationPage.setDescription(MetricSpecEditorPlugin.INSTANCE
+                .getString("_UI_MetricSpecModelWizard_description"));
+        this.newFileCreationPage.setFileName(MetricSpecEditorPlugin.INSTANCE
+                .getString("_UI_MetricSpecEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
+        this.addPage(this.newFileCreationPage);
 
         // Try and get the resource selection to determine a current directory for the file dialog.
         //
-        if (selection != null && !selection.isEmpty()) {
+        if (this.selection != null && !this.selection.isEmpty()) {
             // Get the resource...
             //
-            Object selectedElement = selection.iterator().next();
+            final Object selectedElement = this.selection.iterator().next();
             if (selectedElement instanceof IResource) {
                 // Get the resource parent, if its a file.
                 //
-                IResource selectedResource = (IResource)selectedElement;
+                IResource selectedResource = (IResource) selectedElement;
                 if (selectedResource.getType() == IResource.FILE) {
                     selectedResource = selectedResource.getParent();
                 }
@@ -540,33 +567,36 @@ public class MetricSpecModelWizard extends Wizard implements INewWizard {
                 if (selectedResource instanceof IFolder || selectedResource instanceof IProject) {
                     // Set this for the container.
                     //
-                    newFileCreationPage.setContainerFullPath(selectedResource.getFullPath());
+                    this.newFileCreationPage.setContainerFullPath(selectedResource.getFullPath());
 
                     // Make up a unique new name here.
                     //
-                    String defaultModelBaseFilename = MetricSpecEditorPlugin.INSTANCE.getString("_UI_MetricSpecEditorFilenameDefaultBase");
-                    String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
+                    final String defaultModelBaseFilename = MetricSpecEditorPlugin.INSTANCE
+                            .getString("_UI_MetricSpecEditorFilenameDefaultBase");
+                    final String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
                     String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension;
-                    for (int i = 1; ((IContainer)selectedResource).findMember(modelFilename) != null; ++i) {
+                    for (int i = 1; ((IContainer) selectedResource).findMember(modelFilename) != null; ++i) {
                         modelFilename = defaultModelBaseFilename + i + "." + defaultModelFilenameExtension;
                     }
-                    newFileCreationPage.setFileName(modelFilename);
+                    this.newFileCreationPage.setFileName(modelFilename);
                 }
             }
         }
-        initialObjectCreationPage = new MetricSpecModelWizardInitialObjectCreationPage("Whatever2");
-        initialObjectCreationPage.setTitle(MetricSpecEditorPlugin.INSTANCE.getString("_UI_MetricSpecModelWizard_label"));
-        initialObjectCreationPage.setDescription(MetricSpecEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
-        addPage(initialObjectCreationPage);
+        this.initialObjectCreationPage = new MetricSpecModelWizardInitialObjectCreationPage("Whatever2");
+        this.initialObjectCreationPage.setTitle(MetricSpecEditorPlugin.INSTANCE
+                .getString("_UI_MetricSpecModelWizard_label"));
+        this.initialObjectCreationPage.setDescription(MetricSpecEditorPlugin.INSTANCE
+                .getString("_UI_Wizard_initial_object_description"));
+        this.addPage(this.initialObjectCreationPage);
     }
 
     /**
-     * Get the file from the page.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Get the file from the page. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public IFile getModelFile() {
-        return newFileCreationPage.getModelFile();
+        return this.newFileCreationPage.getModelFile();
     }
 
 }
