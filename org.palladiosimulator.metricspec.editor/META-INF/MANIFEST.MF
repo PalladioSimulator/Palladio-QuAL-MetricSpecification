@@ -16,7 +16,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport,
  de.uka.ipd.sdq.identifier.edit;bundle-version="2.1.0";visibility:=reexport,
- org.eclipse.emf.ecore.edit;visibility:=reexport,
- org.palladiosimulator.mdsdprofiles.edit;visibility:=reexport,
- org.modelversioning.emfprofile.edit;visibility:=reexport
+ org.eclipse.emf.ecore.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

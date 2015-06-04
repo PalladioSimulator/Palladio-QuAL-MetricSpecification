@@ -4,10 +4,6 @@ package org.palladiosimulator.metricspec.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
-import org.modelversioning.emfprofile.provider.EMFProfileEditPlugin;
-import org.modelversioning.emfprofileapplication.provider.EMFProfileApplicationEditPlugin;
-import org.palladiosimulator.mdsdprofiles.provider.MdsdprofilesEditPlugin;
 
 import de.uka.ipd.sdq.identifier.provider.IdentifierEditPlugin;
 
@@ -39,9 +35,7 @@ public final class MetricSpecEditPlugin extends EMFPlugin {
      * @generated
      */
     public MetricSpecEditPlugin() {
-        super(new ResourceLocator[] { IdentifierEditPlugin.INSTANCE, EcoreEditPlugin.INSTANCE,
-                MdsdprofilesEditPlugin.INSTANCE, EMFProfileEditPlugin.INSTANCE,
-                EMFProfileApplicationEditPlugin.INSTANCE, });
+        super(new ResourceLocator[] { IdentifierEditPlugin.INSTANCE, });
     }
 
     /**

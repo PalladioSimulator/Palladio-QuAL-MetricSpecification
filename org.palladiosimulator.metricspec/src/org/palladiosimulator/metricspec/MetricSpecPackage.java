@@ -68,15 +68,6 @@ public interface MetricSpecPackage extends EPackage {
     int IDENTIFIER = 0;
 
     /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int IDENTIFIER__PROFILEABLE_ELEMENT = IdentifierPackage.IDENTIFIER__PROFILEABLE_ELEMENT;
-
-    /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -121,15 +112,6 @@ public interface MetricSpecPackage extends EPackage {
      * @generated
      */
     int DESCRIPTION = 4;
-
-    /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int DESCRIPTION__PROFILEABLE_ELEMENT = IdentifierPackage.IDENTIFIER__PROFILEABLE_ELEMENT;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -177,15 +159,6 @@ public interface MetricSpecPackage extends EPackage {
      * @generated
      */
     int METRIC_DESCRIPTION = 3;
-
-    /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int METRIC_DESCRIPTION__PROFILEABLE_ELEMENT = DESCRIPTION__PROFILEABLE_ELEMENT;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -242,15 +215,6 @@ public interface MetricSpecPackage extends EPackage {
      * @generated
      */
     int BASE_METRIC_DESCRIPTION = 2;
-
-    /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int BASE_METRIC_DESCRIPTION__PROFILEABLE_ELEMENT = METRIC_DESCRIPTION__PROFILEABLE_ELEMENT;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -335,15 +299,6 @@ public interface MetricSpecPackage extends EPackage {
      * @generated
      */
     int TEXTUAL_BASE_METRIC_DESCRIPTION = 1;
-
-    /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int TEXTUAL_BASE_METRIC_DESCRIPTION__PROFILEABLE_ELEMENT = BASE_METRIC_DESCRIPTION__PROFILEABLE_ELEMENT;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -439,15 +394,6 @@ public interface MetricSpecPackage extends EPackage {
     int AGGREGATION_FUNCTION_DESCRIPTION = 5;
 
     /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int AGGREGATION_FUNCTION_DESCRIPTION__PROFILEABLE_ELEMENT = DESCRIPTION__PROFILEABLE_ELEMENT;
-
-    /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -493,15 +439,6 @@ public interface MetricSpecPackage extends EPackage {
      * @generated
      */
     int METRIC_SET_DESCRIPTION = 6;
-
-    /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int METRIC_SET_DESCRIPTION__PROFILEABLE_ELEMENT = METRIC_DESCRIPTION__PROFILEABLE_ELEMENT;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -568,15 +505,6 @@ public interface MetricSpecPackage extends EPackage {
      * @generated
      */
     int NUMERICAL_BASE_METRIC_DESCRIPTION = 7;
-
-    /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int NUMERICAL_BASE_METRIC_DESCRIPTION__PROFILEABLE_ELEMENT = BASE_METRIC_DESCRIPTION__PROFILEABLE_ELEMENT;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -697,15 +625,6 @@ public interface MetricSpecPackage extends EPackage {
      * @generated
      */
     int METRIC_DESCRIPTION_REPOSITORY = 9;
-
-    /**
-     * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int METRIC_DESCRIPTION_REPOSITORY__PROFILEABLE_ELEMENT = IdentifierPackage.IDENTIFIER__PROFILEABLE_ELEMENT;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--

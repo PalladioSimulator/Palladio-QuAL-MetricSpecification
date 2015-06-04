@@ -7,7 +7,6 @@ import javax.measure.quantity.Quantity;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.palladiosimulator.mdsdprofiles.StereotypableElement;
 import org.palladiosimulator.metricspec.AggregationFunctionDescription;
 import org.palladiosimulator.metricspec.BaseMetricDescription;
 import org.palladiosimulator.metricspec.Description;
@@ -79,9 +78,6 @@ public class MetricSpecSwitch<T> extends Switch<T> {
                 result = this.caseIdentifier_Identifier(identifier);
             }
             if (result == null) {
-                result = this.caseStereotypableElement(identifier);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -102,9 +98,6 @@ public class MetricSpecSwitch<T> extends Switch<T> {
                 result = this.caseIdentifier_Identifier(textualBaseMetricDescription);
             }
             if (result == null) {
-                result = this.caseStereotypableElement(textualBaseMetricDescription);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -122,9 +115,6 @@ public class MetricSpecSwitch<T> extends Switch<T> {
                 result = this.caseIdentifier_Identifier(baseMetricDescription);
             }
             if (result == null) {
-                result = this.caseStereotypableElement(baseMetricDescription);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -139,9 +129,6 @@ public class MetricSpecSwitch<T> extends Switch<T> {
                 result = this.caseIdentifier_Identifier(metricDescription);
             }
             if (result == null) {
-                result = this.caseStereotypableElement(metricDescription);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -151,9 +138,6 @@ public class MetricSpecSwitch<T> extends Switch<T> {
             T result = this.caseDescription(description);
             if (result == null) {
                 result = this.caseIdentifier_Identifier(description);
-            }
-            if (result == null) {
-                result = this.caseStereotypableElement(description);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -168,9 +152,6 @@ public class MetricSpecSwitch<T> extends Switch<T> {
             }
             if (result == null) {
                 result = this.caseIdentifier_Identifier(aggregationFunctionDescription);
-            }
-            if (result == null) {
-                result = this.caseStereotypableElement(aggregationFunctionDescription);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -188,9 +169,6 @@ public class MetricSpecSwitch<T> extends Switch<T> {
             }
             if (result == null) {
                 result = this.caseIdentifier_Identifier(metricSetDescription);
-            }
-            if (result == null) {
-                result = this.caseStereotypableElement(metricSetDescription);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -213,9 +191,6 @@ public class MetricSpecSwitch<T> extends Switch<T> {
                 result = this.caseIdentifier_Identifier(numericalBaseMetricDescription);
             }
             if (result == null) {
-                result = this.caseStereotypableElement(numericalBaseMetricDescription);
-            }
-            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -233,9 +208,6 @@ public class MetricSpecSwitch<T> extends Switch<T> {
             T result = this.caseMetricDescriptionRepository(metricDescriptionRepository);
             if (result == null) {
                 result = this.caseIdentifier_Identifier(metricDescriptionRepository);
-            }
-            if (result == null) {
-                result = this.caseStereotypableElement(metricDescriptionRepository);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -401,22 +373,6 @@ public class MetricSpecSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseMetricDescriptionRepository(final MetricDescriptionRepository object) {
-        return null;
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Stereotypable Element</em>'. <!-- begin-user-doc --> This implementation returns null;
-     * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     *
-     * @param object
-     *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Stereotypable Element</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T caseStereotypableElement(final StereotypableElement object) {
         return null;
     }
 

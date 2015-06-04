@@ -5,7 +5,7 @@
     modelName="MetricSpec" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
     copyrightFields="false" editPluginID="org.palladiosimulator.metricspec.edit" editorPluginID="org.palladiosimulator.metricspec.editor"
-    usedGenPackages="../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.palladiosimulator.mdsdprofiles/model/mdsdprofiles.genmodel#//mdsdprofiles ../../org.modelversioning.emfprofile/model/emfprofiles.genmodel#//emfprofile ../../org.modelversioning.emfprofile/model/emfprofileapplication.genmodel#//emfprofileapplication"
+    usedGenPackages="../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier"
     importOrganizing="true" cleanup="true">
   <foreignModel>metricspec.ecore</foreignModel>
   <genPackages prefix="MetricSpec" basePackage="org.palladiosimulator" disposableProviderFactory="true"

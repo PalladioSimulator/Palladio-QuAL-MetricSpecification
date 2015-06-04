@@ -8,7 +8,6 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.palladiosimulator.mdsdprofiles.StereotypableElement;
 import org.palladiosimulator.metricspec.AggregationFunctionDescription;
 import org.palladiosimulator.metricspec.BaseMetricDescription;
 import org.palladiosimulator.metricspec.Description;
@@ -122,11 +121,6 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
         @Override
         public Adapter caseMetricDescriptionRepository(final MetricDescriptionRepository object) {
             return MetricSpecAdapterFactory.this.createMetricDescriptionRepositoryAdapter();
-        }
-
-        @Override
-        public Adapter caseStereotypableElement(final StereotypableElement object) {
-            return MetricSpecAdapterFactory.this.createStereotypableElementAdapter();
         }
 
         @Override
@@ -298,21 +292,6 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createMetricDescriptionRepositoryAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '
-     * {@link org.palladiosimulator.mdsdprofiles.StereotypableElement
-     * <em>Stereotypable Element</em>}'. <!-- begin-user-doc --> This default implementation returns
-     * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
-     * catch all the cases anyway. <!-- end-user-doc -->
-     *
-     * @return the new adapter.
-     * @see org.palladiosimulator.mdsdprofiles.StereotypableElement
-     * @generated
-     */
-    public Adapter createStereotypableElementAdapter() {
         return null;
     }
 
