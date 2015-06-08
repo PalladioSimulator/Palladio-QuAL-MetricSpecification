@@ -73,7 +73,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
     /**
      * The default value of the '{@link #getScale() <em>Scale</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getScale()
      * @generated
      * @ordered
@@ -83,7 +83,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
     /**
      * The cached value of the '{@link #getScale() <em>Scale</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getScale()
      * @generated
      * @ordered
@@ -92,7 +92,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected BaseMetricDescriptionImpl() {
@@ -101,7 +101,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -111,7 +111,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -121,7 +121,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -136,7 +136,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -146,7 +146,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -161,7 +161,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -171,7 +171,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -186,7 +186,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -204,7 +204,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -225,7 +225,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -246,7 +246,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -264,7 +264,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

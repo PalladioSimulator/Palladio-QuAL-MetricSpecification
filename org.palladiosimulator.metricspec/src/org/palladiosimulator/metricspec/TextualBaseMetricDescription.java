@@ -35,7 +35,7 @@ public interface TextualBaseMetricDescription extends BaseMetricDescription {
      * really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Identifiers</em>' containment reference list.
      * @see org.palladiosimulator.metricspec.MetricSpecPackage#getTextualBaseMetricDescription_Identifiers()
      * @see org.palladiosimulator.metricspec.Identifier#getTextualBaseMetricDescription

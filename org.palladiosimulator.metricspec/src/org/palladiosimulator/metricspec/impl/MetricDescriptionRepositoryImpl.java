@@ -35,7 +35,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
     /**
      * The cached value of the '{@link #getMetricDescriptions() <em>Metric Descriptions</em>}'
      * containment reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getMetricDescriptions()
      * @generated
      * @ordered
@@ -44,7 +44,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected MetricDescriptionRepositoryImpl() {
@@ -53,7 +53,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -63,7 +63,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -79,7 +79,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -96,7 +96,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -111,7 +111,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -125,7 +125,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -142,7 +142,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -157,7 +157,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

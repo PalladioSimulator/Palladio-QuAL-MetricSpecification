@@ -50,7 +50,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected IdentifierImpl() {
@@ -59,7 +59,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -69,7 +69,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -79,7 +79,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -94,7 +94,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -107,7 +107,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NotificationChain basicSetTextualBaseMetricDescription(
@@ -119,7 +119,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -151,7 +151,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -168,7 +168,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -183,7 +183,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -199,7 +199,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -215,7 +215,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -233,7 +233,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -251,7 +251,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -267,7 +267,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

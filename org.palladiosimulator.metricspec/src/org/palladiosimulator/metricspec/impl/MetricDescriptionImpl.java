@@ -29,7 +29,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected MetricDescriptionImpl() {
@@ -38,7 +38,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -48,7 +48,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -61,7 +61,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NotificationChain basicSetRepository(final MetricDescriptionRepository newRepository, NotificationChain msgs) {
@@ -72,7 +72,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -103,7 +103,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -120,7 +120,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -135,7 +135,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -151,7 +151,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -165,7 +165,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -180,7 +180,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -195,7 +195,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

@@ -34,7 +34,7 @@ public interface MetricSetDescription extends MetricDescription {
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Subsumed Metrics</em>' reference list.
      * @see org.palladiosimulator.metricspec.MetricSpecPackage#getMetricSetDescription_SubsumedMetrics()
      * @model required="true"

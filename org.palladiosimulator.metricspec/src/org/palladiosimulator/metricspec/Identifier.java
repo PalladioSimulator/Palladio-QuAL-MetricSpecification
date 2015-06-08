@@ -31,7 +31,7 @@ public interface Identifier extends de.uka.ipd.sdq.identifier.Identifier {
      * of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Literal</em>' attribute.
      * @see #setLiteral(String)
      * @see org.palladiosimulator.metricspec.MetricSpecPackage#getIdentifier_Literal()
@@ -43,7 +43,7 @@ public interface Identifier extends de.uka.ipd.sdq.identifier.Identifier {
     /**
      * Sets the value of the '{@link org.palladiosimulator.metricspec.Identifier#getLiteral
      * <em>Literal</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Literal</em>' attribute.
      * @see #getLiteral()
@@ -61,7 +61,7 @@ public interface Identifier extends de.uka.ipd.sdq.identifier.Identifier {
      * clear, there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Textual Base Metric Description</em>' container reference.
      * @see #setTextualBaseMetricDescription(TextualBaseMetricDescription)
      * @see org.palladiosimulator.metricspec.MetricSpecPackage#getIdentifier_TextualBaseMetricDescription()
@@ -76,7 +76,7 @@ public interface Identifier extends de.uka.ipd.sdq.identifier.Identifier {
      * {@link org.palladiosimulator.metricspec.Identifier#getTextualBaseMetricDescription
      * <em>Textual Base Metric Description</em>}' container reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Textual Base Metric Description</em>' container
      *            reference.

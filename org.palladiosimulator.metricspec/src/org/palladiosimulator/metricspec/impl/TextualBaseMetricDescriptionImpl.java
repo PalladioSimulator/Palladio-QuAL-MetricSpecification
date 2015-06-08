@@ -32,7 +32,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
     /**
      * The cached value of the '{@link #getIdentifiers() <em>Identifiers</em>}' containment
      * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getIdentifiers()
      * @generated
      * @ordered
@@ -41,7 +41,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected TextualBaseMetricDescriptionImpl() {
@@ -50,7 +50,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -60,7 +60,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -75,7 +75,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -91,7 +91,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -106,7 +106,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -120,7 +120,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -137,7 +137,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -152,7 +152,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * <em><b>Capture Type</b></em>', and utility methods for working with them. <!-- end-user-doc -->
  * <!-- begin-model-doc --> Type of the captured data. E.g. if the data describes identifiers,
  * integer numbers or real numbers. <!-- end-model-doc -->
- *
+ * 
  * @see org.palladiosimulator.metricspec.MetricSpecPackage#getCaptureType()
  * @model
  * @generated
@@ -32,7 +32,7 @@ public enum CaptureType implements Enumerator {
     /**
      * The '<em><b>Integer Number</b></em>' literal object. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @see #INTEGER_NUMBER_VALUE
      * @generated
      * @ordered
@@ -54,7 +54,7 @@ public enum CaptureType implements Enumerator {
      * <!-- begin-model-doc --> Identifiers are textual representations for different observable
      * states. Examples are 'very bad', 'bad', 'okay', 'good', 'very good' in a questionaire, 'red',
      * 'yellow', 'green' for a traffic light. <!-- end-model-doc -->
-     *
+     * 
      * @see #IDENTIFIER
      * @model name="Identifier"
      * @generated
@@ -93,7 +93,7 @@ public enum CaptureType implements Enumerator {
     /**
      * An array of all the '<em><b>Capture Type</b></em>' enumerators. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     private static final CaptureType[] VALUES_ARRAY = new CaptureType[] { IDENTIFIER, INTEGER_NUMBER, REAL_NUMBER, };
@@ -156,28 +156,28 @@ public enum CaptureType implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private final int value;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private final String name;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private final String literal;
 
     /**
      * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private CaptureType(final int value, final String name, final String literal) {
@@ -188,7 +188,7 @@ public enum CaptureType implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -198,7 +198,7 @@ public enum CaptureType implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -208,7 +208,7 @@ public enum CaptureType implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

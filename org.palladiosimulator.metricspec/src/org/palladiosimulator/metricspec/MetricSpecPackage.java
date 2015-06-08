@@ -22,7 +22,7 @@ import de.uka.ipd.sdq.identifier.IdentifierPackage;
  * <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- *
+ * 
  * @see org.palladiosimulator.metricspec.MetricSpecFactory
  * @model kind="package"
  * @generated
@@ -31,28 +31,28 @@ public interface MetricSpecPackage extends EPackage {
 
     /**
      * The package name. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     String eNAME = "metricspec";
 
     /**
      * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     String eNS_URI = "http://palladiosimulator.org/MetricSpec/1.0";
 
     /**
      * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     String eNS_PREFIX = "metricspec";
 
     /**
      * The singleton instance of the package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     MetricSpecPackage eINSTANCE = org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl.init();
@@ -60,7 +60,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.IdentifierImpl
      * <em>Identifier</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see org.palladiosimulator.metricspec.impl.IdentifierImpl
      * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getIdentifier()
      * @generated
@@ -70,7 +70,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -79,7 +79,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Literal</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -88,7 +88,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Textual Base Metric Description</b></em>' container reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -97,7 +97,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Identifier</em>' class. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -106,7 +106,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The meta object id for the '{@link org.palladiosimulator.metricspec.impl.DescriptionImpl
      * <em>Description</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see org.palladiosimulator.metricspec.impl.DescriptionImpl
      * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getDescription()
      * @generated
@@ -116,7 +116,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -125,7 +125,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -134,7 +134,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Textual Description</b></em>' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -143,7 +143,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Description</em>' class. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -153,7 +153,7 @@ public interface MetricSpecPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.metricspec.impl.MetricDescriptionImpl
      * <em>Metric Description</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see org.palladiosimulator.metricspec.impl.MetricDescriptionImpl
      * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getMetricDescription()
      * @generated
@@ -163,7 +163,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -172,7 +172,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -181,7 +181,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Textual Description</b></em>' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -190,7 +190,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Repository</b></em>' container reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -209,7 +209,7 @@ public interface MetricSpecPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl
      * <em>Base Metric Description</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl
      * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getBaseMetricDescription()
      * @generated
@@ -219,7 +219,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -228,7 +228,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -237,7 +237,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Textual Description</b></em>' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -246,7 +246,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Repository</b></em>' container reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -255,7 +255,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Capture Type</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -264,7 +264,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Data Type</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -273,7 +273,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Scale</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -303,7 +303,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -312,7 +312,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -321,7 +321,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Textual Description</b></em>' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -330,7 +330,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Repository</b></em>' container reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -339,7 +339,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Capture Type</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -348,7 +348,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Data Type</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -357,7 +357,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Scale</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -375,7 +375,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Textual Base Metric Description</em>' class.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -396,7 +396,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -405,7 +405,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -414,7 +414,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Textual Description</b></em>' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -423,7 +423,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Aggregation Function Description</em>' class.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -433,7 +433,7 @@ public interface MetricSpecPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.metricspec.impl.MetricSetDescriptionImpl
      * <em>Metric Set Description</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see org.palladiosimulator.metricspec.impl.MetricSetDescriptionImpl
      * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getMetricSetDescription()
      * @generated
@@ -443,7 +443,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -452,7 +452,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -461,7 +461,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Textual Description</b></em>' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -470,7 +470,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Repository</b></em>' container reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -479,7 +479,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Subsumed Metrics</b></em>' reference list. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -509,7 +509,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -518,7 +518,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -527,7 +527,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Textual Description</b></em>' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -536,7 +536,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Repository</b></em>' container reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -545,7 +545,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Capture Type</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -554,7 +554,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Data Type</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -563,7 +563,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Scale</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -572,7 +572,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Default Unit</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -581,7 +581,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Persistence Kind</b></em>' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -590,7 +590,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Numerical Base Metric Description</em>' class.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -599,7 +599,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The meta object id for the '{@link javax.measure.quantity.Quantity <em>IJS Quantity</em>}'
      * class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see javax.measure.quantity.Quantity
      * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getIJSQuantity()
      * @generated
@@ -609,7 +609,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The number of structural features of the '<em>IJS Quantity</em>' class. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -619,7 +619,7 @@ public interface MetricSpecPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.metricspec.impl.MetricDescriptionRepositoryImpl
      * <em>Metric Description Repository</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see org.palladiosimulator.metricspec.impl.MetricDescriptionRepositoryImpl
      * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getMetricDescriptionRepository()
      * @generated
@@ -629,7 +629,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -656,7 +656,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The meta object id for the '{@link org.palladiosimulator.metricspec.CaptureType
      * <em>Capture Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see org.palladiosimulator.metricspec.CaptureType
      * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getCaptureType()
      * @generated
@@ -666,7 +666,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The meta object id for the '{@link org.palladiosimulator.metricspec.Scale <em>Scale</em>}'
      * enum. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see org.palladiosimulator.metricspec.Scale
      * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getScale()
      * @generated
@@ -676,7 +676,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The meta object id for the '{@link org.palladiosimulator.metricspec.PersistenceKindOptions
      * <em>Persistence Kind Options</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see org.palladiosimulator.metricspec.PersistenceKindOptions
      * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getPersistenceKindOptions()
      * @generated
@@ -686,7 +686,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The meta object id for the '{@link org.palladiosimulator.metricspec.DataType
      * <em>Data Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see org.palladiosimulator.metricspec.DataType
      * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getDataType()
      * @generated
@@ -696,7 +696,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * The meta object id for the '<em>EJS Unit</em>' data type. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @see javax.measure.unit.Unit
      * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getEJSUnit()
      * @generated
@@ -706,7 +706,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * Returns the meta object for class '{@link org.palladiosimulator.metricspec.Identifier
      * <em>Identifier</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for class '<em>Identifier</em>'.
      * @see org.palladiosimulator.metricspec.Identifier
      * @generated
@@ -729,7 +729,7 @@ public interface MetricSpecPackage extends EPackage {
      * Returns the meta object for the container reference '
      * {@link org.palladiosimulator.metricspec.Identifier#getTextualBaseMetricDescription
      * <em>Textual Base Metric Description</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for the container reference '<em>Textual Base Metric Description</em>
      *         '.
      * @see org.palladiosimulator.metricspec.Identifier#getTextualBaseMetricDescription()
@@ -742,7 +742,7 @@ public interface MetricSpecPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.metricspec.TextualBaseMetricDescription
      * <em>Textual Base Metric Description</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for class '<em>Textual Base Metric Description</em>'.
      * @see org.palladiosimulator.metricspec.TextualBaseMetricDescription
      * @generated
@@ -753,7 +753,7 @@ public interface MetricSpecPackage extends EPackage {
      * Returns the meta object for the containment reference list '
      * {@link org.palladiosimulator.metricspec.TextualBaseMetricDescription#getIdentifiers
      * <em>Identifiers</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for the containment reference list '<em>Identifiers</em>'.
      * @see org.palladiosimulator.metricspec.TextualBaseMetricDescription#getIdentifiers()
      * @see #getTextualBaseMetricDescription()
@@ -765,7 +765,7 @@ public interface MetricSpecPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.metricspec.BaseMetricDescription
      * <em>Base Metric Description</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for class '<em>Base Metric Description</em>'.
      * @see org.palladiosimulator.metricspec.BaseMetricDescription
      * @generated
@@ -776,7 +776,7 @@ public interface MetricSpecPackage extends EPackage {
      * Returns the meta object for the attribute '
      * {@link org.palladiosimulator.metricspec.BaseMetricDescription#getCaptureType
      * <em>Capture Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for the attribute '<em>Capture Type</em>'.
      * @see org.palladiosimulator.metricspec.BaseMetricDescription#getCaptureType()
      * @see #getBaseMetricDescription()
@@ -788,7 +788,7 @@ public interface MetricSpecPackage extends EPackage {
      * Returns the meta object for the attribute '
      * {@link org.palladiosimulator.metricspec.BaseMetricDescription#getDataType <em>Data Type</em>}
      * '. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for the attribute '<em>Data Type</em>'.
      * @see org.palladiosimulator.metricspec.BaseMetricDescription#getDataType()
      * @see #getBaseMetricDescription()
@@ -811,7 +811,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * Returns the meta object for class '{@link org.palladiosimulator.metricspec.MetricDescription
      * <em>Metric Description</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for class '<em>Metric Description</em>'.
      * @see org.palladiosimulator.metricspec.MetricDescription
      * @generated
@@ -822,7 +822,7 @@ public interface MetricSpecPackage extends EPackage {
      * Returns the meta object for the container reference '
      * {@link org.palladiosimulator.metricspec.MetricDescription#getRepository <em>Repository</em>}
      * '. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for the container reference '<em>Repository</em>'.
      * @see org.palladiosimulator.metricspec.MetricDescription#getRepository()
      * @see #getMetricDescription()
@@ -833,7 +833,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * Returns the meta object for class '{@link org.palladiosimulator.metricspec.Description
      * <em>Description</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for class '<em>Description</em>'.
      * @see org.palladiosimulator.metricspec.Description
      * @generated
@@ -856,7 +856,7 @@ public interface MetricSpecPackage extends EPackage {
      * Returns the meta object for the attribute '
      * {@link org.palladiosimulator.metricspec.Description#getTextualDescription
      * <em>Textual Description</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for the attribute '<em>Textual Description</em>'.
      * @see org.palladiosimulator.metricspec.Description#getTextualDescription()
      * @see #getDescription()
@@ -868,7 +868,7 @@ public interface MetricSpecPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.metricspec.AggregationFunctionDescription
      * <em>Aggregation Function Description</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for class '<em>Aggregation Function Description</em>'.
      * @see org.palladiosimulator.metricspec.AggregationFunctionDescription
      * @generated
@@ -879,7 +879,7 @@ public interface MetricSpecPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.metricspec.MetricSetDescription <em>Metric Set Description</em>}
      * '. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for class '<em>Metric Set Description</em>'.
      * @see org.palladiosimulator.metricspec.MetricSetDescription
      * @generated
@@ -890,7 +890,7 @@ public interface MetricSpecPackage extends EPackage {
      * Returns the meta object for the reference list '
      * {@link org.palladiosimulator.metricspec.MetricSetDescription#getSubsumedMetrics
      * <em>Subsumed Metrics</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for the reference list '<em>Subsumed Metrics</em>'.
      * @see org.palladiosimulator.metricspec.MetricSetDescription#getSubsumedMetrics()
      * @see #getMetricSetDescription()
@@ -902,7 +902,7 @@ public interface MetricSpecPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription
      * <em>Numerical Base Metric Description</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for class '<em>Numerical Base Metric Description</em>'.
      * @see org.palladiosimulator.metricspec.NumericalBaseMetricDescription
      * @generated
@@ -913,7 +913,7 @@ public interface MetricSpecPackage extends EPackage {
      * Returns the meta object for the attribute '
      * {@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getDefaultUnit
      * <em>Default Unit</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for the attribute '<em>Default Unit</em>'.
      * @see org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getDefaultUnit()
      * @see #getNumericalBaseMetricDescription()
@@ -925,7 +925,7 @@ public interface MetricSpecPackage extends EPackage {
      * Returns the meta object for the attribute '
      * {@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getPersistenceKind
      * <em>Persistence Kind</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for the attribute '<em>Persistence Kind</em>'.
      * @see org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getPersistenceKind()
      * @see #getNumericalBaseMetricDescription()
@@ -936,7 +936,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * Returns the meta object for class '{@link javax.measure.quantity.Quantity
      * <em>IJS Quantity</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for class '<em>IJS Quantity</em>'.
      * @see javax.measure.quantity.Quantity
      * @model instanceClass="javax.measure.quantity.Quantity"
@@ -948,7 +948,7 @@ public interface MetricSpecPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.metricspec.MetricDescriptionRepository
      * <em>Metric Description Repository</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for class '<em>Metric Description Repository</em>'.
      * @see org.palladiosimulator.metricspec.MetricDescriptionRepository
      * @generated
@@ -959,7 +959,7 @@ public interface MetricSpecPackage extends EPackage {
      * Returns the meta object for the containment reference list '
      * {@link org.palladiosimulator.metricspec.MetricDescriptionRepository#getMetricDescriptions
      * <em>Metric Descriptions</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for the containment reference list '<em>Metric Descriptions</em>'.
      * @see org.palladiosimulator.metricspec.MetricDescriptionRepository#getMetricDescriptions()
      * @see #getMetricDescriptionRepository()
@@ -970,7 +970,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * Returns the meta object for enum '{@link org.palladiosimulator.metricspec.CaptureType
      * <em>Capture Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for enum '<em>Capture Type</em>'.
      * @see org.palladiosimulator.metricspec.CaptureType
      * @generated
@@ -980,7 +980,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * Returns the meta object for enum '{@link org.palladiosimulator.metricspec.Scale
      * <em>Scale</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for enum '<em>Scale</em>'.
      * @see org.palladiosimulator.metricspec.Scale
      * @generated
@@ -991,7 +991,7 @@ public interface MetricSpecPackage extends EPackage {
      * Returns the meta object for enum '
      * {@link org.palladiosimulator.metricspec.PersistenceKindOptions
      * <em>Persistence Kind Options</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for enum '<em>Persistence Kind Options</em>'.
      * @see org.palladiosimulator.metricspec.PersistenceKindOptions
      * @generated
@@ -1001,7 +1001,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * Returns the meta object for enum '{@link org.palladiosimulator.metricspec.DataType
      * <em>Data Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for enum '<em>Data Type</em>'.
      * @see org.palladiosimulator.metricspec.DataType
      * @generated
@@ -1011,7 +1011,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * Returns the meta object for data type '{@link javax.measure.unit.Unit <em>EJS Unit</em>}'.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the meta object for data type '<em>EJS Unit</em>'.
      * @see javax.measure.unit.Unit
      * @model instanceClass="javax.measure.unit.Unit" typeParameters="Q"
@@ -1023,7 +1023,7 @@ public interface MetricSpecPackage extends EPackage {
     /**
      * Returns the factory that creates the instances of the model. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @return the factory that creates the instances of the model.
      * @generated
      */
@@ -1039,7 +1039,7 @@ public interface MetricSpecPackage extends EPackage {
      * <li>and each data type</li>
      * </ul>
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     interface Literals {
@@ -1048,7 +1048,7 @@ public interface MetricSpecPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.metricspec.impl.IdentifierImpl <em>Identifier</em>}' class.
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @see org.palladiosimulator.metricspec.impl.IdentifierImpl
          * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getIdentifier()
          * @generated
@@ -1066,7 +1066,7 @@ public interface MetricSpecPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Textual Base Metric Description</b></em>'
          * container reference feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         EReference IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION = eINSTANCE.getIdentifier_TextualBaseMetricDescription();
@@ -1076,7 +1076,7 @@ public interface MetricSpecPackage extends EPackage {
          * {@link org.palladiosimulator.metricspec.impl.TextualBaseMetricDescriptionImpl
          * <em>Textual Base Metric Description</em>}' class. <!-- begin-user-doc --> <!--
          * end-user-doc -->
-         *
+         * 
          * @see org.palladiosimulator.metricspec.impl.TextualBaseMetricDescriptionImpl
          * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getTextualBaseMetricDescription()
          * @generated
@@ -1086,7 +1086,7 @@ public interface MetricSpecPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Identifiers</b></em>' containment reference list
          * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         EReference TEXTUAL_BASE_METRIC_DESCRIPTION__IDENTIFIERS = eINSTANCE
@@ -1096,7 +1096,7 @@ public interface MetricSpecPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl
          * <em>Base Metric Description</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @see org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl
          * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getBaseMetricDescription()
          * @generated
@@ -1131,7 +1131,7 @@ public interface MetricSpecPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.metricspec.impl.MetricDescriptionImpl
          * <em>Metric Description</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @see org.palladiosimulator.metricspec.impl.MetricDescriptionImpl
          * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getMetricDescription()
          * @generated
@@ -1141,7 +1141,7 @@ public interface MetricSpecPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Repository</b></em>' container reference feature.
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         EReference METRIC_DESCRIPTION__REPOSITORY = eINSTANCE.getMetricDescription_Repository();
@@ -1150,7 +1150,7 @@ public interface MetricSpecPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.metricspec.impl.DescriptionImpl <em>Description</em>}'
          * class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @see org.palladiosimulator.metricspec.impl.DescriptionImpl
          * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getDescription()
          * @generated
@@ -1168,7 +1168,7 @@ public interface MetricSpecPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Textual Description</b></em>' attribute feature.
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         EAttribute DESCRIPTION__TEXTUAL_DESCRIPTION = eINSTANCE.getDescription_TextualDescription();
@@ -1178,7 +1178,7 @@ public interface MetricSpecPackage extends EPackage {
          * {@link org.palladiosimulator.metricspec.impl.AggregationFunctionDescriptionImpl
          * <em>Aggregation Function Description</em>}' class. <!-- begin-user-doc --> <!--
          * end-user-doc -->
-         *
+         * 
          * @see org.palladiosimulator.metricspec.impl.AggregationFunctionDescriptionImpl
          * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getAggregationFunctionDescription()
          * @generated
@@ -1189,7 +1189,7 @@ public interface MetricSpecPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.metricspec.impl.MetricSetDescriptionImpl
          * <em>Metric Set Description</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @see org.palladiosimulator.metricspec.impl.MetricSetDescriptionImpl
          * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getMetricSetDescription()
          * @generated
@@ -1199,7 +1199,7 @@ public interface MetricSpecPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Subsumed Metrics</b></em>' reference list
          * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         EReference METRIC_SET_DESCRIPTION__SUBSUMED_METRICS = eINSTANCE.getMetricSetDescription_SubsumedMetrics();
@@ -1209,7 +1209,7 @@ public interface MetricSpecPackage extends EPackage {
          * {@link org.palladiosimulator.metricspec.impl.NumericalBaseMetricDescriptionImpl
          * <em>Numerical Base Metric Description</em>}' class. <!-- begin-user-doc --> <!--
          * end-user-doc -->
-         *
+         * 
          * @see org.palladiosimulator.metricspec.impl.NumericalBaseMetricDescriptionImpl
          * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getNumericalBaseMetricDescription()
          * @generated
@@ -1228,7 +1228,7 @@ public interface MetricSpecPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Persistence Kind</b></em>' attribute feature.
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         EAttribute NUMERICAL_BASE_METRIC_DESCRIPTION__PERSISTENCE_KIND = eINSTANCE
@@ -1237,7 +1237,7 @@ public interface MetricSpecPackage extends EPackage {
         /**
          * The meta object literal for the '{@link javax.measure.quantity.Quantity
          * <em>IJS Quantity</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @see javax.measure.quantity.Quantity
          * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getIJSQuantity()
          * @generated
@@ -1259,7 +1259,7 @@ public interface MetricSpecPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Metric Descriptions</b></em>' containment
          * reference list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         EReference METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS = eINSTANCE
@@ -1268,7 +1268,7 @@ public interface MetricSpecPackage extends EPackage {
         /**
          * The meta object literal for the '{@link org.palladiosimulator.metricspec.CaptureType
          * <em>Capture Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @see org.palladiosimulator.metricspec.CaptureType
          * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getCaptureType()
          * @generated
@@ -1278,7 +1278,7 @@ public interface MetricSpecPackage extends EPackage {
         /**
          * The meta object literal for the '{@link org.palladiosimulator.metricspec.Scale
          * <em>Scale</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @see org.palladiosimulator.metricspec.Scale
          * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getScale()
          * @generated
@@ -1289,7 +1289,7 @@ public interface MetricSpecPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.metricspec.PersistenceKindOptions
          * <em>Persistence Kind Options</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @see org.palladiosimulator.metricspec.PersistenceKindOptions
          * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getPersistenceKindOptions()
          * @generated
@@ -1299,7 +1299,7 @@ public interface MetricSpecPackage extends EPackage {
         /**
          * The meta object literal for the '{@link org.palladiosimulator.metricspec.DataType
          * <em>Data Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @see org.palladiosimulator.metricspec.DataType
          * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getDataType()
          * @generated
@@ -1309,7 +1309,7 @@ public interface MetricSpecPackage extends EPackage {
         /**
          * The meta object literal for the '<em>EJS Unit</em>' data type. <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         *
+         * 
          * @see javax.measure.unit.Unit
          * @see org.palladiosimulator.metricspec.impl.MetricSpecPackageImpl#getEJSUnit()
          * @generated

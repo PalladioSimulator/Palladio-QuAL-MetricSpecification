@@ -46,7 +46,7 @@ public enum DataType implements Enumerator {
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #QUANTITATIVE
      * @model name="Quantitative"
      * @generated
@@ -61,7 +61,7 @@ public enum DataType implements Enumerator {
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #QUALITATIVE
      * @model name="Qualitative"
      * @generated
@@ -72,7 +72,7 @@ public enum DataType implements Enumerator {
     /**
      * An array of all the '<em><b>Data Type</b></em>' enumerators. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     private static final DataType[] VALUES_ARRAY = new DataType[] { QUANTITATIVE, QUALITATIVE, };
@@ -103,7 +103,7 @@ public enum DataType implements Enumerator {
     /**
      * Returns the '<em><b>Data Type</b></em>' literal with the specified name. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static DataType getByName(final String name) {
@@ -133,28 +133,28 @@ public enum DataType implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private final int value;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private final String name;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private final String literal;
 
     /**
      * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private DataType(final int value, final String name, final String literal) {
@@ -165,7 +165,7 @@ public enum DataType implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -175,7 +175,7 @@ public enum DataType implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -185,7 +185,7 @@ public enum DataType implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

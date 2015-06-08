@@ -29,7 +29,7 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
     /**
      * The cached value of the '{@link #getSubsumedMetrics() <em>Subsumed Metrics</em>}' reference
      * list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getSubsumedMetrics()
      * @generated
      * @ordered
@@ -38,7 +38,7 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected MetricSetDescriptionImpl() {
@@ -47,7 +47,7 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -57,7 +57,7 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -71,7 +71,7 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -85,7 +85,7 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -102,7 +102,7 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -117,7 +117,7 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

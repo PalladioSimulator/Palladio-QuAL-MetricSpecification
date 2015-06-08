@@ -29,7 +29,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -39,7 +39,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
     /**
      * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -49,7 +49,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
     /**
      * The default value of the '{@link #getTextualDescription() <em>Textual Description</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getTextualDescription()
      * @generated
      * @ordered
@@ -59,7 +59,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
     /**
      * The cached value of the '{@link #getTextualDescription() <em>Textual Description</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getTextualDescription()
      * @generated
      * @ordered
@@ -68,7 +68,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected DescriptionImpl() {
@@ -77,7 +77,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -87,7 +87,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -97,7 +97,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -112,7 +112,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -122,7 +122,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -137,7 +137,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -153,7 +153,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -171,7 +171,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -189,7 +189,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -206,7 +206,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

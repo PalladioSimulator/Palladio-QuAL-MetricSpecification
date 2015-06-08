@@ -47,7 +47,7 @@ public interface BaseMetricDescription extends MetricDescription {
      * Sets the value of the '
      * {@link org.palladiosimulator.metricspec.BaseMetricDescription#getCaptureType
      * <em>Capture Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Capture Type</em>' attribute.
      * @see org.palladiosimulator.metricspec.CaptureType
@@ -75,7 +75,7 @@ public interface BaseMetricDescription extends MetricDescription {
      * Sets the value of the '
      * {@link org.palladiosimulator.metricspec.BaseMetricDescription#getDataType <em>Data Type</em>}
      * ' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Data Type</em>' attribute.
      * @see org.palladiosimulator.metricspec.DataType
@@ -103,7 +103,7 @@ public interface BaseMetricDescription extends MetricDescription {
      * Sets the value of the '
      * {@link org.palladiosimulator.metricspec.BaseMetricDescription#getScale <em>Scale</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Scale</em>' attribute.
      * @see org.palladiosimulator.metricspec.Scale

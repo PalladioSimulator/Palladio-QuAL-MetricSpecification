@@ -25,14 +25,14 @@ import org.palladiosimulator.metricspec.TextualBaseMetricDescription;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFactory {
 
     /**
      * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static MetricSpecFactory init() {
@@ -50,7 +50,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public MetricSpecFactoryImpl() {
@@ -59,7 +59,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -84,7 +84,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -107,7 +107,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -130,7 +130,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -141,7 +141,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -152,7 +152,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -163,7 +163,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -174,7 +174,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -185,7 +185,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -196,7 +196,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public CaptureType createCaptureTypeFromString(final EDataType eDataType, final String initialValue) {
@@ -210,7 +210,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public String convertCaptureTypeToString(final EDataType eDataType, final Object instanceValue) {
@@ -219,7 +219,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public Scale createScaleFromString(final EDataType eDataType, final String initialValue) {
@@ -233,7 +233,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public String convertScaleToString(final EDataType eDataType, final Object instanceValue) {
@@ -242,7 +242,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public PersistenceKindOptions createPersistenceKindOptionsFromString(final EDataType eDataType,
@@ -257,7 +257,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public String convertPersistenceKindOptionsToString(final EDataType eDataType, final Object instanceValue) {
@@ -266,7 +266,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public DataType createDataTypeFromString(final EDataType eDataType, final String initialValue) {
@@ -280,7 +280,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public String convertDataTypeToString(final EDataType eDataType, final Object instanceValue) {
@@ -289,7 +289,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public Unit<?> createEJSUnitFromString(final EDataType eDataType, final String initialValue) {
@@ -298,7 +298,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public String convertEJSUnitToString(final EDataType eDataType, final Object instanceValue) {
@@ -307,7 +307,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -317,7 +317,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @deprecated
      * @generated
      */

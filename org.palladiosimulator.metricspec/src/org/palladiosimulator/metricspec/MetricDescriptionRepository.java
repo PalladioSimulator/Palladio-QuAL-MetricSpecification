@@ -35,7 +35,7 @@ public interface MetricDescriptionRepository extends Identifier {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Metric Descriptions</em>' containment reference list.
      * @see org.palladiosimulator.metricspec.MetricSpecPackage#getMetricDescriptionRepository_MetricDescriptions()
      * @see org.palladiosimulator.metricspec.MetricDescription#getRepository

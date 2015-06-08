@@ -30,7 +30,7 @@ public interface Description extends Identifier {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
      * @see org.palladiosimulator.metricspec.MetricSpecPackage#getDescription_Name()
@@ -42,7 +42,7 @@ public interface Description extends Identifier {
     /**
      * Sets the value of the '{@link org.palladiosimulator.metricspec.Description#getName
      * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Name</em>' attribute.
      * @see #getName()
@@ -58,7 +58,7 @@ public interface Description extends Identifier {
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Textual Description</em>' attribute.
      * @see #setTextualDescription(String)
      * @see org.palladiosimulator.metricspec.MetricSpecPackage#getDescription_TextualDescription()
@@ -71,7 +71,7 @@ public interface Description extends Identifier {
      * Sets the value of the '
      * {@link org.palladiosimulator.metricspec.Description#getTextualDescription
      * <em>Textual Description</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Textual Description</em>' attribute.
      * @see #getTextualDescription()
