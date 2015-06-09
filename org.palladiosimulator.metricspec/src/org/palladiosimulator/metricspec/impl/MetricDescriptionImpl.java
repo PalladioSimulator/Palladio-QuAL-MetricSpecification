@@ -2,12 +2,9 @@
  */
 package org.palladiosimulator.metricspec.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.palladiosimulator.metricspec.MetricDescription;
 import org.palladiosimulator.metricspec.MetricDescriptionRepository;
 import org.palladiosimulator.metricspec.MetricSpecPackage;
@@ -53,10 +50,8 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
      */
     @Override
     public MetricDescriptionRepository getRepository() {
-        if (this.eContainerFeatureID() != MetricSpecPackage.METRIC_DESCRIPTION__REPOSITORY) {
-            return null;
-        }
-        return (MetricDescriptionRepository) this.eInternalContainer();
+        return (MetricDescriptionRepository) this.eDynamicGet(MetricSpecPackage.METRIC_DESCRIPTION__REPOSITORY,
+                MetricSpecPackage.Literals.METRIC_DESCRIPTION__REPOSITORY, true, true);
     }
 
     /**
@@ -77,28 +72,8 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
      */
     @Override
     public void setRepository(final MetricDescriptionRepository newRepository) {
-        if (newRepository != this.eInternalContainer()
-                || (this.eContainerFeatureID() != MetricSpecPackage.METRIC_DESCRIPTION__REPOSITORY && newRepository != null)) {
-            if (EcoreUtil.isAncestor(this, newRepository)) {
-                throw new IllegalArgumentException("Recursive containment not allowed for " + this.toString());
-            }
-            NotificationChain msgs = null;
-            if (this.eInternalContainer() != null) {
-                msgs = this.eBasicRemoveFromContainer(msgs);
-            }
-            if (newRepository != null) {
-                msgs = ((InternalEObject) newRepository).eInverseAdd(this,
-                        MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS,
-                        MetricDescriptionRepository.class, msgs);
-            }
-            msgs = this.basicSetRepository(newRepository, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MetricSpecPackage.METRIC_DESCRIPTION__REPOSITORY, newRepository, newRepository));
-        }
+        this.eDynamicSet(MetricSpecPackage.METRIC_DESCRIPTION__REPOSITORY,
+                MetricSpecPackage.Literals.METRIC_DESCRIPTION__REPOSITORY, newRepository);
     }
 
     /**

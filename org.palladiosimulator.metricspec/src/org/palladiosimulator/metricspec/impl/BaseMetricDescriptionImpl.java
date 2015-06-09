@@ -2,9 +2,7 @@
  */
 package org.palladiosimulator.metricspec.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.palladiosimulator.metricspec.BaseMetricDescription;
 import org.palladiosimulator.metricspec.CaptureType;
 import org.palladiosimulator.metricspec.DataType;
@@ -41,16 +39,6 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
     protected static final CaptureType CAPTURE_TYPE_EDEFAULT = CaptureType.IDENTIFIER;
 
     /**
-     * The cached value of the '{@link #getCaptureType() <em>Capture Type</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getCaptureType()
-     * @generated
-     * @ordered
-     */
-    protected CaptureType captureType = CAPTURE_TYPE_EDEFAULT;
-
-    /**
      * The default value of the '{@link #getDataType() <em>Data Type</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
@@ -61,16 +49,6 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
     protected static final DataType DATA_TYPE_EDEFAULT = DataType.QUANTITATIVE;
 
     /**
-     * The cached value of the '{@link #getDataType() <em>Data Type</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getDataType()
-     * @generated
-     * @ordered
-     */
-    protected DataType dataType = DATA_TYPE_EDEFAULT;
-
-    /**
      * The default value of the '{@link #getScale() <em>Scale</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      * 
@@ -79,16 +57,6 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
      * @ordered
      */
     protected static final Scale SCALE_EDEFAULT = Scale.NOMINAL;
-
-    /**
-     * The cached value of the '{@link #getScale() <em>Scale</em>}' attribute. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     * 
-     * @see #getScale()
-     * @generated
-     * @ordered
-     */
-    protected Scale scale = SCALE_EDEFAULT;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -116,7 +84,8 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
      */
     @Override
     public CaptureType getCaptureType() {
-        return this.captureType;
+        return (CaptureType) this.eDynamicGet(MetricSpecPackage.BASE_METRIC_DESCRIPTION__CAPTURE_TYPE,
+                MetricSpecPackage.Literals.BASE_METRIC_DESCRIPTION__CAPTURE_TYPE, true, true);
     }
 
     /**
@@ -126,12 +95,8 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
      */
     @Override
     public void setCaptureType(final CaptureType newCaptureType) {
-        final CaptureType oldCaptureType = this.captureType;
-        this.captureType = newCaptureType == null ? CAPTURE_TYPE_EDEFAULT : newCaptureType;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MetricSpecPackage.BASE_METRIC_DESCRIPTION__CAPTURE_TYPE, oldCaptureType, this.captureType));
-        }
+        this.eDynamicSet(MetricSpecPackage.BASE_METRIC_DESCRIPTION__CAPTURE_TYPE,
+                MetricSpecPackage.Literals.BASE_METRIC_DESCRIPTION__CAPTURE_TYPE, newCaptureType);
     }
 
     /**
@@ -141,7 +106,8 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
      */
     @Override
     public DataType getDataType() {
-        return this.dataType;
+        return (DataType) this.eDynamicGet(MetricSpecPackage.BASE_METRIC_DESCRIPTION__DATA_TYPE,
+                MetricSpecPackage.Literals.BASE_METRIC_DESCRIPTION__DATA_TYPE, true, true);
     }
 
     /**
@@ -151,12 +117,8 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
      */
     @Override
     public void setDataType(final DataType newDataType) {
-        final DataType oldDataType = this.dataType;
-        this.dataType = newDataType == null ? DATA_TYPE_EDEFAULT : newDataType;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MetricSpecPackage.BASE_METRIC_DESCRIPTION__DATA_TYPE, oldDataType, this.dataType));
-        }
+        this.eDynamicSet(MetricSpecPackage.BASE_METRIC_DESCRIPTION__DATA_TYPE,
+                MetricSpecPackage.Literals.BASE_METRIC_DESCRIPTION__DATA_TYPE, newDataType);
     }
 
     /**
@@ -166,7 +128,8 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
      */
     @Override
     public Scale getScale() {
-        return this.scale;
+        return (Scale) this.eDynamicGet(MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE,
+                MetricSpecPackage.Literals.BASE_METRIC_DESCRIPTION__SCALE, true, true);
     }
 
     /**
@@ -176,12 +139,8 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
      */
     @Override
     public void setScale(final Scale newScale) {
-        final Scale oldScale = this.scale;
-        this.scale = newScale == null ? SCALE_EDEFAULT : newScale;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE, oldScale, this.scale));
-        }
+        this.eDynamicSet(MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE,
+                MetricSpecPackage.Literals.BASE_METRIC_DESCRIPTION__SCALE, newScale);
     }
 
     /**
@@ -253,35 +212,13 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case MetricSpecPackage.BASE_METRIC_DESCRIPTION__CAPTURE_TYPE:
-            return this.captureType != CAPTURE_TYPE_EDEFAULT;
+            return this.getCaptureType() != CAPTURE_TYPE_EDEFAULT;
         case MetricSpecPackage.BASE_METRIC_DESCRIPTION__DATA_TYPE:
-            return this.dataType != DATA_TYPE_EDEFAULT;
+            return this.getDataType() != DATA_TYPE_EDEFAULT;
         case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE:
-            return this.scale != SCALE_EDEFAULT;
+            return this.getScale() != SCALE_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (captureType: ");
-        result.append(this.captureType);
-        result.append(", dataType: ");
-        result.append(this.dataType);
-        result.append(", scale: ");
-        result.append(this.scale);
-        result.append(')');
-        return result.toString();
     }
 
 } // BaseMetricDescriptionImpl

@@ -2,9 +2,7 @@
  */
 package org.palladiosimulator.metricspec.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.palladiosimulator.metricspec.Description;
 import org.palladiosimulator.metricspec.MetricSpecPackage;
 
@@ -37,16 +35,6 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
     protected static final String NAME_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @see #getName()
-     * @generated
-     * @ordered
-     */
-    protected String name = NAME_EDEFAULT;
-
-    /**
      * The default value of the '{@link #getTextualDescription() <em>Textual Description</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
@@ -55,16 +43,6 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
      * @ordered
      */
     protected static final String TEXTUAL_DESCRIPTION_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getTextualDescription() <em>Textual Description</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see #getTextualDescription()
-     * @generated
-     * @ordered
-     */
-    protected String textualDescription = TEXTUAL_DESCRIPTION_EDEFAULT;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -92,7 +70,8 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
      */
     @Override
     public String getName() {
-        return this.name;
+        return (String) this.eDynamicGet(MetricSpecPackage.DESCRIPTION__NAME,
+                MetricSpecPackage.Literals.DESCRIPTION__NAME, true, true);
     }
 
     /**
@@ -102,12 +81,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
      */
     @Override
     public void setName(final String newName) {
-        final String oldName = this.name;
-        this.name = newName;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, MetricSpecPackage.DESCRIPTION__NAME, oldName,
-                    this.name));
-        }
+        this.eDynamicSet(MetricSpecPackage.DESCRIPTION__NAME, MetricSpecPackage.Literals.DESCRIPTION__NAME, newName);
     }
 
     /**
@@ -117,7 +91,8 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
      */
     @Override
     public String getTextualDescription() {
-        return this.textualDescription;
+        return (String) this.eDynamicGet(MetricSpecPackage.DESCRIPTION__TEXTUAL_DESCRIPTION,
+                MetricSpecPackage.Literals.DESCRIPTION__TEXTUAL_DESCRIPTION, true, true);
     }
 
     /**
@@ -127,12 +102,8 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
      */
     @Override
     public void setTextualDescription(final String newTextualDescription) {
-        final String oldTextualDescription = this.textualDescription;
-        this.textualDescription = newTextualDescription;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MetricSpecPackage.DESCRIPTION__TEXTUAL_DESCRIPTION, oldTextualDescription, this.textualDescription));
-        }
+        this.eDynamicSet(MetricSpecPackage.DESCRIPTION__TEXTUAL_DESCRIPTION,
+                MetricSpecPackage.Literals.DESCRIPTION__TEXTUAL_DESCRIPTION, newTextualDescription);
     }
 
     /**
@@ -196,32 +167,12 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case MetricSpecPackage.DESCRIPTION__NAME:
-            return NAME_EDEFAULT == null ? this.name != null : !NAME_EDEFAULT.equals(this.name);
+            return NAME_EDEFAULT == null ? this.getName() != null : !NAME_EDEFAULT.equals(this.getName());
         case MetricSpecPackage.DESCRIPTION__TEXTUAL_DESCRIPTION:
-            return TEXTUAL_DESCRIPTION_EDEFAULT == null ? this.textualDescription != null
-                    : !TEXTUAL_DESCRIPTION_EDEFAULT.equals(this.textualDescription);
+            return TEXTUAL_DESCRIPTION_EDEFAULT == null ? this.getTextualDescription() != null
+            : !TEXTUAL_DESCRIPTION_EDEFAULT.equals(this.getTextualDescription());
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (name: ");
-        result.append(this.name);
-        result.append(", textualDescription: ");
-        result.append(this.textualDescription);
-        result.append(')');
-        return result.toString();
     }
 
 } // DescriptionImpl

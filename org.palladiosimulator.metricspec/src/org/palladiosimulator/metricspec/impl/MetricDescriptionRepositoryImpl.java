@@ -8,7 +8,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.palladiosimulator.metricspec.MetricDescription;
 import org.palladiosimulator.metricspec.MetricDescriptionRepository;
@@ -31,16 +30,6 @@ import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
  * @generated
  */
 public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements MetricDescriptionRepository {
-
-    /**
-     * The cached value of the '{@link #getMetricDescriptions() <em>Metric Descriptions</em>}'
-     * containment reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see #getMetricDescriptions()
-     * @generated
-     * @ordered
-     */
-    protected EList<MetricDescription> metricDescriptions;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -66,15 +55,12 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
      * 
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public EList<MetricDescription> getMetricDescriptions() {
-        if (this.metricDescriptions == null) {
-            this.metricDescriptions = new EObjectContainmentWithInverseEList<MetricDescription>(
-                    MetricDescription.class, this,
-                    MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS,
-                    MetricSpecPackage.METRIC_DESCRIPTION__REPOSITORY);
-        }
-        return this.metricDescriptions;
+        return (EList<MetricDescription>) this.eDynamicGet(
+                MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS,
+                MetricSpecPackage.Literals.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS, true, true);
     }
 
     /**
@@ -164,7 +150,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS:
-            return this.metricDescriptions != null && !this.metricDescriptions.isEmpty();
+            return !this.getMetricDescriptions().isEmpty();
         }
         return super.eIsSet(featureID);
     }

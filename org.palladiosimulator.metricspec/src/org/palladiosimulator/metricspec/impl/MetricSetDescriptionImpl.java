@@ -6,7 +6,6 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.palladiosimulator.metricspec.MetricDescription;
 import org.palladiosimulator.metricspec.MetricSetDescription;
 import org.palladiosimulator.metricspec.MetricSpecPackage;
@@ -25,16 +24,6 @@ import org.palladiosimulator.metricspec.MetricSpecPackage;
  * @generated
  */
 public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements MetricSetDescription {
-
-    /**
-     * The cached value of the '{@link #getSubsumedMetrics() <em>Subsumed Metrics</em>}' reference
-     * list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see #getSubsumedMetrics()
-     * @generated
-     * @ordered
-     */
-    protected EList<MetricDescription> subsumedMetrics;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -60,13 +49,11 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
      * 
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public EList<MetricDescription> getSubsumedMetrics() {
-        if (this.subsumedMetrics == null) {
-            this.subsumedMetrics = new EObjectResolvingEList<MetricDescription>(MetricDescription.class, this,
-                    MetricSpecPackage.METRIC_SET_DESCRIPTION__SUBSUMED_METRICS);
-        }
-        return this.subsumedMetrics;
+        return (EList<MetricDescription>) this.eDynamicGet(MetricSpecPackage.METRIC_SET_DESCRIPTION__SUBSUMED_METRICS,
+                MetricSpecPackage.Literals.METRIC_SET_DESCRIPTION__SUBSUMED_METRICS, true, true);
     }
 
     /**
@@ -124,7 +111,7 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case MetricSpecPackage.METRIC_SET_DESCRIPTION__SUBSUMED_METRICS:
-            return this.subsumedMetrics != null && !this.subsumedMetrics.isEmpty();
+            return !this.getSubsumedMetrics().isEmpty();
         }
         return super.eIsSet(featureID);
     }

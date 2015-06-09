@@ -2,12 +2,9 @@
  */
 package org.palladiosimulator.metricspec.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.palladiosimulator.metricspec.Identifier;
 import org.palladiosimulator.metricspec.MetricSpecPackage;
 import org.palladiosimulator.metricspec.TextualBaseMetricDescription;
@@ -39,16 +36,6 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
     protected static final String LITERAL_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getLiteral() <em>Literal</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getLiteral()
-     * @generated
-     * @ordered
-     */
-    protected String literal = LITERAL_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -74,7 +61,8 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
      */
     @Override
     public String getLiteral() {
-        return this.literal;
+        return (String) this.eDynamicGet(MetricSpecPackage.IDENTIFIER__LITERAL,
+                MetricSpecPackage.Literals.IDENTIFIER__LITERAL, true, true);
     }
 
     /**
@@ -84,12 +72,8 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
      */
     @Override
     public void setLiteral(final String newLiteral) {
-        final String oldLiteral = this.literal;
-        this.literal = newLiteral;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, MetricSpecPackage.IDENTIFIER__LITERAL,
-                    oldLiteral, this.literal));
-        }
+        this.eDynamicSet(MetricSpecPackage.IDENTIFIER__LITERAL, MetricSpecPackage.Literals.IDENTIFIER__LITERAL,
+                newLiteral);
     }
 
     /**
@@ -99,10 +83,9 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
      */
     @Override
     public TextualBaseMetricDescription getTextualBaseMetricDescription() {
-        if (this.eContainerFeatureID() != MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION) {
-            return null;
-        }
-        return (TextualBaseMetricDescription) this.eInternalContainer();
+        return (TextualBaseMetricDescription) this.eDynamicGet(
+                MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION,
+                MetricSpecPackage.Literals.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION, true, true);
     }
 
     /**
@@ -124,29 +107,8 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
      */
     @Override
     public void setTextualBaseMetricDescription(final TextualBaseMetricDescription newTextualBaseMetricDescription) {
-        if (newTextualBaseMetricDescription != this.eInternalContainer()
-                || (this.eContainerFeatureID() != MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION && newTextualBaseMetricDescription != null)) {
-            if (EcoreUtil.isAncestor(this, newTextualBaseMetricDescription)) {
-                throw new IllegalArgumentException("Recursive containment not allowed for " + this.toString());
-            }
-            NotificationChain msgs = null;
-            if (this.eInternalContainer() != null) {
-                msgs = this.eBasicRemoveFromContainer(msgs);
-            }
-            if (newTextualBaseMetricDescription != null) {
-                msgs = ((InternalEObject) newTextualBaseMetricDescription).eInverseAdd(this,
-                        MetricSpecPackage.TEXTUAL_BASE_METRIC_DESCRIPTION__IDENTIFIERS,
-                        TextualBaseMetricDescription.class, msgs);
-            }
-            msgs = this.basicSetTextualBaseMetricDescription(newTextualBaseMetricDescription, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION, newTextualBaseMetricDescription,
-                    newTextualBaseMetricDescription));
-        }
+        this.eDynamicSet(MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION,
+                MetricSpecPackage.Literals.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION, newTextualBaseMetricDescription);
     }
 
     /**
@@ -258,29 +220,11 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case MetricSpecPackage.IDENTIFIER__LITERAL:
-            return LITERAL_EDEFAULT == null ? this.literal != null : !LITERAL_EDEFAULT.equals(this.literal);
+            return LITERAL_EDEFAULT == null ? this.getLiteral() != null : !LITERAL_EDEFAULT.equals(this.getLiteral());
         case MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION:
             return this.getTextualBaseMetricDescription() != null;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (literal: ");
-        result.append(this.literal);
-        result.append(')');
-        return result.toString();
     }
 
 } // IdentifierImpl

@@ -5,9 +5,7 @@ package org.palladiosimulator.metricspec.impl;
 import javax.measure.quantity.Quantity;
 import javax.measure.unit.Unit;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.palladiosimulator.metricspec.MetricSpecPackage;
 import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
 import org.palladiosimulator.metricspec.PersistenceKindOptions;
@@ -33,16 +31,6 @@ public class NumericalBaseMetricDescriptionImpl extends BaseMetricDescriptionImp
 NumericalBaseMetricDescription {
 
     /**
-     * The cached value of the '{@link #getDefaultUnit() <em>Default Unit</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getDefaultUnit()
-     * @generated
-     * @ordered
-     */
-    protected Unit<Quantity> defaultUnit;
-
-    /**
      * The default value of the '{@link #getPersistenceKind() <em>Persistence Kind</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
@@ -51,16 +39,6 @@ NumericalBaseMetricDescription {
      * @ordered
      */
     protected static final PersistenceKindOptions PERSISTENCE_KIND_EDEFAULT = PersistenceKindOptions.BINARY_PREFERRED;
-
-    /**
-     * The cached value of the '{@link #getPersistenceKind() <em>Persistence Kind</em>}' attribute.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see #getPersistenceKind()
-     * @generated
-     * @ordered
-     */
-    protected PersistenceKindOptions persistenceKind = PERSISTENCE_KIND_EDEFAULT;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -88,7 +66,8 @@ NumericalBaseMetricDescription {
      */
     @Override
     public Unit<Quantity> getDefaultUnit() {
-        return this.defaultUnit;
+        return (Unit<Quantity>) this.eDynamicGet(MetricSpecPackage.NUMERICAL_BASE_METRIC_DESCRIPTION__DEFAULT_UNIT,
+                MetricSpecPackage.Literals.NUMERICAL_BASE_METRIC_DESCRIPTION__DEFAULT_UNIT, true, true);
     }
 
     /**
@@ -98,12 +77,8 @@ NumericalBaseMetricDescription {
      */
     @Override
     public void setDefaultUnit(final Unit<Quantity> newDefaultUnit) {
-        final Unit<Quantity> oldDefaultUnit = this.defaultUnit;
-        this.defaultUnit = newDefaultUnit;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MetricSpecPackage.NUMERICAL_BASE_METRIC_DESCRIPTION__DEFAULT_UNIT, oldDefaultUnit, this.defaultUnit));
-        }
+        this.eDynamicSet(MetricSpecPackage.NUMERICAL_BASE_METRIC_DESCRIPTION__DEFAULT_UNIT,
+                MetricSpecPackage.Literals.NUMERICAL_BASE_METRIC_DESCRIPTION__DEFAULT_UNIT, newDefaultUnit);
     }
 
     /**
@@ -113,7 +88,9 @@ NumericalBaseMetricDescription {
      */
     @Override
     public PersistenceKindOptions getPersistenceKind() {
-        return this.persistenceKind;
+        return (PersistenceKindOptions) this.eDynamicGet(
+                MetricSpecPackage.NUMERICAL_BASE_METRIC_DESCRIPTION__PERSISTENCE_KIND,
+                MetricSpecPackage.Literals.NUMERICAL_BASE_METRIC_DESCRIPTION__PERSISTENCE_KIND, true, true);
     }
 
     /**
@@ -123,13 +100,8 @@ NumericalBaseMetricDescription {
      */
     @Override
     public void setPersistenceKind(final PersistenceKindOptions newPersistenceKind) {
-        final PersistenceKindOptions oldPersistenceKind = this.persistenceKind;
-        this.persistenceKind = newPersistenceKind == null ? PERSISTENCE_KIND_EDEFAULT : newPersistenceKind;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    MetricSpecPackage.NUMERICAL_BASE_METRIC_DESCRIPTION__PERSISTENCE_KIND, oldPersistenceKind,
-                    this.persistenceKind));
-        }
+        this.eDynamicSet(MetricSpecPackage.NUMERICAL_BASE_METRIC_DESCRIPTION__PERSISTENCE_KIND,
+                MetricSpecPackage.Literals.NUMERICAL_BASE_METRIC_DESCRIPTION__PERSISTENCE_KIND, newPersistenceKind);
     }
 
     /**
@@ -194,31 +166,11 @@ NumericalBaseMetricDescription {
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case MetricSpecPackage.NUMERICAL_BASE_METRIC_DESCRIPTION__DEFAULT_UNIT:
-            return this.defaultUnit != null;
+            return this.getDefaultUnit() != null;
         case MetricSpecPackage.NUMERICAL_BASE_METRIC_DESCRIPTION__PERSISTENCE_KIND:
-            return this.persistenceKind != PERSISTENCE_KIND_EDEFAULT;
+            return this.getPersistenceKind() != PERSISTENCE_KIND_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (defaultUnit: ");
-        result.append(this.defaultUnit);
-        result.append(", persistenceKind: ");
-        result.append(this.persistenceKind);
-        result.append(')');
-        return result.toString();
     }
 
 } // NumericalBaseMetricDescriptionImpl

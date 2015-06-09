@@ -8,7 +8,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.palladiosimulator.metricspec.Identifier;
 import org.palladiosimulator.metricspec.MetricSpecPackage;
@@ -28,16 +27,6 @@ import org.palladiosimulator.metricspec.TextualBaseMetricDescription;
  * @generated
  */
 public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl implements TextualBaseMetricDescription {
-
-    /**
-     * The cached value of the '{@link #getIdentifiers() <em>Identifiers</em>}' containment
-     * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see #getIdentifiers()
-     * @generated
-     * @ordered
-     */
-    protected EList<Identifier> identifiers;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -63,14 +52,11 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
      * 
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public EList<Identifier> getIdentifiers() {
-        if (this.identifiers == null) {
-            this.identifiers = new EObjectContainmentWithInverseEList<Identifier>(Identifier.class, this,
-                    MetricSpecPackage.TEXTUAL_BASE_METRIC_DESCRIPTION__IDENTIFIERS,
-                    MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION);
-        }
-        return this.identifiers;
+        return (EList<Identifier>) this.eDynamicGet(MetricSpecPackage.TEXTUAL_BASE_METRIC_DESCRIPTION__IDENTIFIERS,
+                MetricSpecPackage.Literals.TEXTUAL_BASE_METRIC_DESCRIPTION__IDENTIFIERS, true, true);
     }
 
     /**
@@ -159,7 +145,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case MetricSpecPackage.TEXTUAL_BASE_METRIC_DESCRIPTION__IDENTIFIERS:
-            return this.identifiers != null && !this.identifiers.isEmpty();
+            return !this.getIdentifiers().isEmpty();
         }
         return super.eIsSet(featureID);
     }
