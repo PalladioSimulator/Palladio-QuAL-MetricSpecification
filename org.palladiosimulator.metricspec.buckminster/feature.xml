@@ -3,12 +3,11 @@
       id="org.palladiosimulator.metricspec.buckminster"
       label="Palladio Metric Specification Framework"
       version="1.0.0.qualifier"
-      provider-name="palladiosimulator.org">
+      provider-name="palladiosimulator.org"
+      license-feature="org.palladiosimulator.license"
+      license-feature-version="1.0.0.qualifier">
 
-   <includes
-         id="org.palladiosimulator.metricspec.feature"
-         version="0.0.0"/>
-         
+   
    <url>
       <discovery label="Palladio Third Party Wrapper" url="https://sdqweb.ipd.kit.edu/eclipse/thirdpartywrapper/nightly/"/>
       <discovery label="Palladio Commons" url="https://sdqweb.ipd.kit.edu/eclipse/commons/nightly/"/>
@@ -16,6 +15,10 @@
       <discovery label="Eclipse Release" url="http://download.eclipse.org/releases/luna/"/>
       <discovery label="Eclipse Orbit" url="http://download.eclipse.org/tools/orbit/downloads/drops/R20130827064939/repository/"/>
    </url>
+
+   <includes
+         id="org.palladiosimulator.metricspec.feature"
+         version="0.0.0"/>
 
    <requires>
       <import plugin="org.junit"/>
