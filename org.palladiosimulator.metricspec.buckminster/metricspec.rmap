@@ -9,10 +9,10 @@
 
   <rm:searchPath name="metricspec">
     <rm:provider resolutionFilter="(resolveFrom=nightly)" componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
-      <rm:uri format="http://sdqweb.ipd.kit.edu/eclipse/metricspec/nightly/"/>
+      <rm:uri format="https://sdqweb.ipd.kit.edu/eclipse/metricspec/nightly/"/>
     </rm:provider>
     <rm:provider resolutionFilter="(resolveFrom=release)" componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
-      <rm:uri format="http://sdqweb.ipd.kit.edu/eclipse/metricspec/releases/latest/"/>
+      <rm:uri format="https://sdqweb.ipd.kit.edu/eclipse/metricspec/releases/latest/"/>
     </rm:provider>
     <rm:provider componentTypes="eclipse.feature,osgi.bundle" readerType="svn" source="true">
       <rm:uri format="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/MetricSpecification/trunk/{0}">
