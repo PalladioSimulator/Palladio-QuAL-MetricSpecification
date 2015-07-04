@@ -3,13 +3,14 @@
       id="org.palladiosimulator.metricspec.feature"
       label="Metric Specification Feature"
       version="1.0.0.qualifier"
+      plugin="org.palladiosimulator.branding"
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
 
    <description url="http://palladiosimulator.org">
       Allows the definition of metrics for measurements.
    </description>
-   
+
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.emf.ecore"/>
@@ -47,6 +48,13 @@
 
    <plugin
          id="org.palladiosimulator.metricspec.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.palladiosimulator.branding"
          download-size="0"
          install-size="0"
          version="0.0.0"
