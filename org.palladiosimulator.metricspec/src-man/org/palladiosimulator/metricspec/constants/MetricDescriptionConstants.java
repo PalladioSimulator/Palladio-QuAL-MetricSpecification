@@ -4,12 +4,15 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.Map;
 
+import javax.measure.unit.UnitFormat;
+
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.palladiosimulator.metricspec.BaseMetricDescription;
 import org.palladiosimulator.metricspec.MetricSetDescription;
+import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
 
 /**
  * Constant metric descriptions, commonly used by ProbeFramework.
@@ -21,79 +24,6 @@ import org.palladiosimulator.metricspec.MetricSetDescription;
 public final class MetricDescriptionConstants {
     private static final String PATHMAP_METRIC_SPEC_MODELS_COMMON_METRICS_METRICSPEC = "pathmap://METRIC_SPEC_MODELS/commonMetrics.metricspec";
     private static final Map<?, ?> OPTIONS = Collections.emptyMap();
-
-    static {
-        final ResourceSet resourceSet = new ResourceSetImpl();
-        final Resource resource = resourceSet.createResource(URI.createURI(
-                PATHMAP_METRIC_SPEC_MODELS_COMMON_METRICS_METRICSPEC, true));
-        try {
-            resource.load(OPTIONS);
-        } catch (final IOException e) {
-            // TODO Auto-generated catch block. Use eclipse error log instead?
-            e.printStackTrace();
-            throw new RuntimeException(e);
-        }
-
-        POINT_IN_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_NCRBos7pEeOX_4BzImuHbA");
-
-        RESPONSE_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_6rYmYs7nEeOX_4BzImuHbA");
-        RESPONSE_TIME_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_mZb3MdoLEeO-WvSDaR6unQ");
-
-        HOLDING_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_zETOUs7pEeOX_4BzImuHbA");
-        HOLDING_TIME_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_UyxagdpjEeO-WvSDaR6unQ");
-
-        WAITING_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_QWjAYs7qEeOX_4BzImuHbA");
-        WAITING_TIME_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_CEIUodpkEeO-WvSDaR6unQ");
-
-        RESOURCE_DEMAND_METRIC = (BaseMetricDescription) resource.getEObject("_eg_F0s7qEeOX_4BzImuHbA");
-        RESOURCE_DEMAND_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_sefjUeJCEeO6l86uYUhhyw");
-
-        STATE_OF_ACTIVE_RESOURCE_METRIC = (BaseMetricDescription) resource.getEObject("_paDhIs7qEeOX_4BzImuHbA");
-        STATE_OF_ACTIVE_RESOURCE_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_-buIceJDEeO6l86uYUhhyw");
-        OVERALL_STATE_OF_ACTIVE_RESOURCE_METRIC = (MetricSetDescription) resource.getEObject("_1dsBAeJEEeO6l86uYUhhyw");
-        STATE_OF_ACTIVE_RESOURCE_OVER_TIME_METRIC = (MetricSetDescription) resource
-                .getEObject("_MSlw0c7sEeOX_4BzImuHbA");
-
-        STATE_OF_PASSIVE_RESOURCE_METRIC = (BaseMetricDescription) resource.getEObject("_x0-pks7rEeOX_4BzImuHbA");
-        STATE_OF_PASSIVE_RESOURCE_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_E-GEoespEeOpcPDUs0BVCg");
-        OVERALL_STATE_OF_PASSIVE_RESOURCE_METRIC = (MetricSetDescription) resource
-                .getEObject("_INq_AespEeOpcPDUs0BVCg");
-        STATE_OF_PASSIVE_RESOURCE_OVER_TIME_METRIC = (MetricSetDescription) resource
-                .getEObject("_M_jZoespEeOpcPDUs0BVCg");
-
-        EXECUTION_RESULT_METRIC = (BaseMetricDescription) resource.getEObject("_7Is3ss7rEeOX_4BzImuHbA");
-        EXECUTION_RESULT_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_3aoZYeJFEeO6l86uYUhhyw");
-
-        SCALABILITY_RANGE = (BaseMetricDescription) resource.getEObject("_gNxNEtBxEeONzY86HEL4JQ");
-        SLOPE = (BaseMetricDescription) resource.getEObject("_Nz_HctBzEeONzY86HEL4JQ");
-        SCALABILITY_SPEED = (MetricSetDescription) resource.getEObject("_kx_7UdBzEeONzY86HEL4JQ");
-        USER_CAPACITY = (BaseMetricDescription) resource.getEObject("_HlBOUtB0EeONzY86HEL4JQ");
-        USER_CAPACITY_TUPLE = (MetricSetDescription) resource.getEObject("_gUGzAR-sEeS5JNmAl33L9g");
-        INTER_ARRIVAL_TIME_CAPACITY = (BaseMetricDescription) resource.getEObject("_Q6HwkrgjEeScGvogGbaYPw");
-        INTER_ARRIVAL_TIME_CAPACITY_TUPLE = (MetricSetDescription) resource.getEObject("_VTNQsbgjEeScGvogGbaYPw");
-
-        NUMBER_OF_SLO_VIOLATIONS = (BaseMetricDescription) resource.getEObject("_LJJm8tB1EeONzY86HEL4JQ");
-        NUMBER_OF_SLO_VIOLATIONS_OVER_TIME = (MetricSetDescription) resource.getEObject("_la5r0RlYEeSLJe9XpFDksA");
-
-        MEAN_TIME_TO_QUALITY_REPAIR = (BaseMetricDescription) resource.getEObject("_8m5pAtB1EeONzY86HEL4JQ");
-        RESOURCE_PROVISIONING_EFFICIENCY = (BaseMetricDescription) resource.getEObject("_RjNq4tB2EeONzY86HEL4JQ");
-        MARGINAL_COST = (BaseMetricDescription) resource.getEObject("_eQICYtB2EeONzY86HEL4JQ");
-
-        UTILIZATION_OF_ACTIVE_RESOURCE = (BaseMetricDescription) resource.getEObject("_QIb6cikUEeSuf8LV7cHLgA");
-        UTILIZATION_OF_ACTIVE_RESOURCE_TUPLE = (MetricSetDescription) resource.getEObject("_mhws4SkUEeSuf8LV7cHLgA");
-
-        POWER_CONSUMPTION = (BaseMetricDescription) resource.getEObject("_NbIowlt_EeS0LdH-diVVEQ");
-        POWER_CONSUMPTION_TUPLE = (MetricSetDescription) resource.getEObject("_EZBPQV91EeSUTcC2MkYv_Q");
-
-        ENERGY_CONSUMPTION = (BaseMetricDescription) resource.getEObject("_SxzJMncPEeS8FogxzuXBPA");
-        CUMULATIVE_ENERGY_CONSUMPTION_TUPLE = (MetricSetDescription) resource.getEObject("_hjElIXcPEeS8FogxzuXBPA");
-
-        NUMBER_OF_RESOURCE_CONTAINERS = (BaseMetricDescription) resource.getEObject("_e7x3gq-eEeSgL6DrxYuwZg");
-        NUMBER_OF_RESOURCE_CONTAINERS_OVER_TIME = (MetricSetDescription) resource.getEObject("_d4k4oa-fEeSgL6DrxYuwZg");
-
-        RECONFIGURATION_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_VYg6MujFEeSB6OBq2SKZxQ");
-        RECONFIGURATION_TIME_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_2mStsejFEeSB6OBq2SKZxQ");
-    }
 
     /** Specifies a point in time metric, e.g., to store an event time stamp. */
     public final static BaseMetricDescription POINT_IN_TIME_METRIC;
@@ -316,6 +246,82 @@ public final class MetricDescriptionConstants {
      */
     public final static MetricSetDescription RECONFIGURATION_TIME_METRIC_TUPLE;
 
+    static {
+        final ResourceSet resourceSet = new ResourceSetImpl();
+        final Resource resource = resourceSet.createResource(URI.createURI(
+                PATHMAP_METRIC_SPEC_MODELS_COMMON_METRICS_METRICSPEC, true));
+        try {
+            resource.load(OPTIONS);
+        } catch (final IOException e) {
+            // TODO Auto-generated catch block. Use eclipse error log instead?
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+
+        POINT_IN_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_NCRBos7pEeOX_4BzImuHbA");
+
+        RESPONSE_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_6rYmYs7nEeOX_4BzImuHbA");
+        RESPONSE_TIME_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_mZb3MdoLEeO-WvSDaR6unQ");
+
+        HOLDING_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_zETOUs7pEeOX_4BzImuHbA");
+        HOLDING_TIME_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_UyxagdpjEeO-WvSDaR6unQ");
+
+        WAITING_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_QWjAYs7qEeOX_4BzImuHbA");
+        WAITING_TIME_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_CEIUodpkEeO-WvSDaR6unQ");
+
+        RESOURCE_DEMAND_METRIC = (BaseMetricDescription) resource.getEObject("_eg_F0s7qEeOX_4BzImuHbA");
+        RESOURCE_DEMAND_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_sefjUeJCEeO6l86uYUhhyw");
+
+        STATE_OF_ACTIVE_RESOURCE_METRIC = (BaseMetricDescription) resource.getEObject("_paDhIs7qEeOX_4BzImuHbA");
+        STATE_OF_ACTIVE_RESOURCE_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_-buIceJDEeO6l86uYUhhyw");
+        OVERALL_STATE_OF_ACTIVE_RESOURCE_METRIC = (MetricSetDescription) resource.getEObject("_1dsBAeJEEeO6l86uYUhhyw");
+        STATE_OF_ACTIVE_RESOURCE_OVER_TIME_METRIC = (MetricSetDescription) resource
+                .getEObject("_MSlw0c7sEeOX_4BzImuHbA");
+
+        STATE_OF_PASSIVE_RESOURCE_METRIC = (BaseMetricDescription) resource.getEObject("_x0-pks7rEeOX_4BzImuHbA");
+        STATE_OF_PASSIVE_RESOURCE_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_E-GEoespEeOpcPDUs0BVCg");
+        OVERALL_STATE_OF_PASSIVE_RESOURCE_METRIC = (MetricSetDescription) resource
+                .getEObject("_INq_AespEeOpcPDUs0BVCg");
+        STATE_OF_PASSIVE_RESOURCE_OVER_TIME_METRIC = (MetricSetDescription) resource
+                .getEObject("_M_jZoespEeOpcPDUs0BVCg");
+
+        EXECUTION_RESULT_METRIC = (BaseMetricDescription) resource.getEObject("_7Is3ss7rEeOX_4BzImuHbA");
+        EXECUTION_RESULT_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_3aoZYeJFEeO6l86uYUhhyw");
+
+        SCALABILITY_RANGE = (BaseMetricDescription) resource.getEObject("_gNxNEtBxEeONzY86HEL4JQ");
+        SLOPE = (BaseMetricDescription) resource.getEObject("_Nz_HctBzEeONzY86HEL4JQ");
+        SCALABILITY_SPEED = (MetricSetDescription) resource.getEObject("_kx_7UdBzEeONzY86HEL4JQ");
+        USER_CAPACITY = (BaseMetricDescription) resource.getEObject("_HlBOUtB0EeONzY86HEL4JQ");
+        USER_CAPACITY_TUPLE = (MetricSetDescription) resource.getEObject("_gUGzAR-sEeS5JNmAl33L9g");
+        INTER_ARRIVAL_TIME_CAPACITY = (BaseMetricDescription) resource.getEObject("_Q6HwkrgjEeScGvogGbaYPw");
+        INTER_ARRIVAL_TIME_CAPACITY_TUPLE = (MetricSetDescription) resource.getEObject("_VTNQsbgjEeScGvogGbaYPw");
+
+        NUMBER_OF_SLO_VIOLATIONS = (BaseMetricDescription) resource.getEObject("_LJJm8tB1EeONzY86HEL4JQ");
+        NUMBER_OF_SLO_VIOLATIONS_OVER_TIME = (MetricSetDescription) resource.getEObject("_la5r0RlYEeSLJe9XpFDksA");
+
+        MEAN_TIME_TO_QUALITY_REPAIR = (BaseMetricDescription) resource.getEObject("_8m5pAtB1EeONzY86HEL4JQ");
+        RESOURCE_PROVISIONING_EFFICIENCY = (BaseMetricDescription) resource.getEObject("_RjNq4tB2EeONzY86HEL4JQ");
+        MARGINAL_COST = (BaseMetricDescription) resource.getEObject("_eQICYtB2EeONzY86HEL4JQ");
+
+        UTILIZATION_OF_ACTIVE_RESOURCE = (BaseMetricDescription) resource.getEObject("_QIb6cikUEeSuf8LV7cHLgA");
+        UTILIZATION_OF_ACTIVE_RESOURCE_TUPLE = (MetricSetDescription) resource.getEObject("_mhws4SkUEeSuf8LV7cHLgA");
+
+        POWER_CONSUMPTION = (BaseMetricDescription) resource.getEObject("_NbIowlt_EeS0LdH-diVVEQ");
+        POWER_CONSUMPTION_TUPLE = (MetricSetDescription) resource.getEObject("_EZBPQV91EeSUTcC2MkYv_Q");
+
+        ENERGY_CONSUMPTION = (BaseMetricDescription) resource.getEObject("_SxzJMncPEeS8FogxzuXBPA");
+        CUMULATIVE_ENERGY_CONSUMPTION_TUPLE = (MetricSetDescription) resource.getEObject("_hjElIXcPEeS8FogxzuXBPA");
+
+        NUMBER_OF_RESOURCE_CONTAINERS = (BaseMetricDescription) resource.getEObject("_e7x3gq-eEeSgL6DrxYuwZg");
+        NUMBER_OF_RESOURCE_CONTAINERS_OVER_TIME = (MetricSetDescription) resource.getEObject("_d4k4oa-fEeSgL6DrxYuwZg");
+
+        RECONFIGURATION_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_VYg6MujFEeSB6OBq2SKZxQ");
+        RECONFIGURATION_TIME_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_2mStsejFEeSB6OBq2SKZxQ");
+        
+        //label unit correctly
+        UnitFormat.getInstance().label(((NumericalBaseMetricDescription) ENERGY_CONSUMPTION).getDefaultUnit(),"kWh");
+    }
+    
     /**
      * Private constructor to forbid instantiation.
      */
