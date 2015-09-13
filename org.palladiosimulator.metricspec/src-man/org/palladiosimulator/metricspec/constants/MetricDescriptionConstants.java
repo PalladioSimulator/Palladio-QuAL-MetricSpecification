@@ -246,6 +246,22 @@ public final class MetricDescriptionConstants {
      */
     public final static MetricSetDescription RECONFIGURATION_TIME_METRIC_TUPLE;
 
+    /**
+     * The cost over time calculated from the Number of Resource Containers over Time and 
+     * the cost per resource container
+     */
+    public final static MetricSetDescription COST_OVER_TIME;	
+    
+    /**
+     * The cost of for each single resource container
+     */
+    public final static BaseMetricDescription COST_PER_RESOURCE_CONTAINER;
+    
+    /**
+     * The cost for a set of resource containers
+     */
+    public final static BaseMetricDescription COST_OF_RESOURCE_CONTAINERS;
+    
     static {
         final ResourceSet resourceSet = new ResourceSetImpl();
         final Resource resource = resourceSet.createResource(URI.createURI(
@@ -317,6 +333,10 @@ public final class MetricDescriptionConstants {
 
         RECONFIGURATION_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_VYg6MujFEeSB6OBq2SKZxQ");
         RECONFIGURATION_TIME_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_2mStsejFEeSB6OBq2SKZxQ");
+        
+        COST_OVER_TIME = (MetricSetDescription)resource.getEObject("_IiHVQdgLEeSCcbn_evnMvQ");
+        COST_PER_RESOURCE_CONTAINER = (BaseMetricDescription) resource.getEObject("_cWdpgtgLEeSCcbn_evnMvQ");
+        COST_OF_RESOURCE_CONTAINERS = (BaseMetricDescription) resource.getEObject("_HkIKIv-3EeSjS6KmS7i5VA");
         
         //label unit correctly
         UnitFormat.getInstance().label(((NumericalBaseMetricDescription) ENERGY_CONSUMPTION).getDefaultUnit(),"kWh");
