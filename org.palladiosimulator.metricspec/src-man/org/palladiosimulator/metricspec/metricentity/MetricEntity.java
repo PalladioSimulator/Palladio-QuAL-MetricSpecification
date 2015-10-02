@@ -61,7 +61,7 @@ public class MetricEntity implements IMetricEntity {
      * @see org.palladiosimulator.edp2.metricentity.IMetricEntity#getMetricDesciption()
      */
     @Override
-    public final MetricDescription getMetricDesciption() {
+    public MetricDescription getMetricDesciption() {
         checkInitialised();
         return metricDesciption;
     }
