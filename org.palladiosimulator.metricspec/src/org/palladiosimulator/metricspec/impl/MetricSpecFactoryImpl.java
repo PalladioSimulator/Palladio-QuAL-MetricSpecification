@@ -22,6 +22,7 @@ import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
 import org.palladiosimulator.metricspec.PersistenceKindOptions;
 import org.palladiosimulator.metricspec.Scale;
 import org.palladiosimulator.metricspec.TextualBaseMetricDescription;
+import org.palladiosimulator.metricspec.util.DeserializationUtil;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
@@ -290,10 +291,10 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @generated
+     * @generated NOT
      */
     public Unit<?> createEJSUnitFromString(final EDataType eDataType, final String initialValue) {
-        return (Unit<?>) super.createFromString(initialValue);
+        return (Unit<?>) DeserializationUtil.createFromString(initialValue, Unit.class.getClassLoader());
     }
 
     /**
