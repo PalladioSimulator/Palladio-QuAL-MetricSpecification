@@ -1,7 +1,5 @@
 package org.palladiosimulator.metricspec.metricentity;
 
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.palladiosimulator.metricspec.MetricDescription;
 
 public class MetricEntity implements IMetricEntity {
@@ -40,24 +38,25 @@ public class MetricEntity implements IMetricEntity {
         checkValidString(metricDesciption.getId());
 
         this.metricDesciption = metricDesciption;
-        this.metricDesciption.eAdapters().add(new AdapterImpl() {
-            @Override
-            public void notifyChanged(final Notification notification) {
-                if (notification.getEventType() != Notification.REMOVING_ADAPTER
-                        && notification.getEventType() != Notification.RESOLVE) {
-                    // if (notification.getFeature() !=
-                    // MetricSpecFactory.eINSTANCE.getDescription_Repository()) {
-                    throw new RuntimeException("Metric description altered after initializing. This is not allowed.");
-                    // }
-                }
-            }
-        });
+        // TODO FIXME: In this variant this code is a performance issue
+        //        this.metricDesciption.eAdapters().add(new AdapterImpl() {
+        //            @Override
+        //            public void notifyChanged(final Notification notification) {
+        //                if (notification.getEventType() != Notification.REMOVING_ADAPTER
+        //                        && notification.getEventType() != Notification.RESOLVE) {
+        //                    // if (notification.getFeature() !=
+        //                    // MetricSpecFactory.eINSTANCE.getDescription_Repository()) {
+        //                    throw new RuntimeException("Metric description altered after initializing. This is not allowed.");
+        //                    // }
+        //                }
+        //            }
+        //        });
         isInitialised = true;
     }
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see org.palladiosimulator.edp2.metricentity.IMetricEntity#getMetricDesciption()
      */
     @Override
@@ -67,7 +66,7 @@ public class MetricEntity implements IMetricEntity {
     }
 
     /**
-     * 
+     *
      */
     private void checkInitialised() {
         if (!isInitialised) {
@@ -77,7 +76,7 @@ public class MetricEntity implements IMetricEntity {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see
      * org.palladiosimulator.edp2.metricentity.IMetricEntity#isCompatibleWith(org.palladiosimulator
      * .edp2.models.ExperimentData.MetricDescription)
