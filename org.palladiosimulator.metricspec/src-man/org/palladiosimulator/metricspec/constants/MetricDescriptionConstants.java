@@ -245,7 +245,18 @@ public final class MetricDescriptionConstants {
      * plus the reconfiguration time.
      */
     public final static MetricSetDescription RECONFIGURATION_TIME_METRIC_TUPLE;
+    
+    /**
+     * This measure represents the execution time of an algorithm that made a reconfiguration plan.
+     */
+    public final static BaseMetricDescription OPTIMISATION_TIME_METRIC;
 
+    /**
+     * Specifies a (point in time, optimisation time)-tuple, i.e., the point at which an 
+     * optimisation algorithm was triggered to execute and its execution time.
+     */
+    public final static MetricSetDescription OPTIMISATION_TIME_METRIC_TUPLE;
+    
     /**
      * The cost over time calculated from the Number of Resource Containers over Time and 
      * the cost per resource container
@@ -333,6 +344,9 @@ public final class MetricDescriptionConstants {
 
         RECONFIGURATION_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_VYg6MujFEeSB6OBq2SKZxQ");
         RECONFIGURATION_TIME_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_2mStsejFEeSB6OBq2SKZxQ");
+        
+        OPTIMISATION_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_bpPfMnMvEeWcDbSj7t-_fg");
+        OPTIMISATION_TIME_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_O4Yb0XMvEeWcDbSj7t-_fg");
         
         COST_OVER_TIME = (MetricSetDescription)resource.getEObject("_IiHVQdgLEeSCcbn_evnMvQ");
         COST_PER_RESOURCE_CONTAINER = (BaseMetricDescription) resource.getEObject("_cWdpgtgLEeSCcbn_evnMvQ");
