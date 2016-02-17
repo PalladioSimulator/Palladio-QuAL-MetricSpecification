@@ -16,9 +16,9 @@ import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
 
 /**
  * Constant metric descriptions, commonly used by ProbeFramework.
- * 
+ *
  * TODO Let this file be generated from model. [Lehrig]
- * 
+ *
  * @author Sebastian Lehrig, Steffen Becker
  */
 public final class MetricDescriptionConstants {
@@ -46,7 +46,9 @@ public final class MetricDescriptionConstants {
      */
     public final static MetricSetDescription HOLDING_TIME_METRIC_TUPLE;
 
-    /** Specifies a waiting time metric, e.g., to store the waiting time at passive resource pools. */
+    /**
+     * Specifies a waiting time metric, e.g., to store the waiting time at passive resource pools.
+     */
     public final static BaseMetricDescription WAITING_TIME_METRIC;
 
     /**
@@ -166,13 +168,19 @@ public final class MetricDescriptionConstants {
      */
     public final static MetricSetDescription NUMBER_OF_SLO_VIOLATIONS_OVER_TIME;
 
-    /** The mean time to stop violating SLOs, e.g., 30 seconds fir an additional 10 requests/hour. */
+    /**
+     * The mean time to stop violating SLOs, e.g., 30 seconds fir an additional 10 requests/hour.
+     */
     public final static BaseMetricDescription MEAN_TIME_TO_QUALITY_REPAIR;
 
-    /** Efficiency of provisioning resources, e.g., 10% more resources than actual resource demand. */
+    /**
+     * Efficiency of provisioning resources, e.g., 10% more resources than actual resource demand.
+     */
     public final static BaseMetricDescription RESOURCE_PROVISIONING_EFFICIENCY;
 
-    /** Marginal cost for serving additional load, e.g., $1.00 for an additional 100 requests/hour. */
+    /**
+     * Marginal cost for serving additional load, e.g., $1.00 for an additional 100 requests/hour.
+     */
     public final static BaseMetricDescription MARGINAL_COST;
 
     /**
@@ -188,7 +196,7 @@ public final class MetricDescriptionConstants {
     /**
      * Specifies a {@code (point in time, utilization)} tuple, i.e., the point in time the
      * utilization was measured plus the utilization itself.
-     * 
+     *
      * @see MetricDescriptionConstants#UTILIZATION_OF_ACTIVE_RESOURCE
      */
     public static final MetricSetDescription UTILIZATION_OF_ACTIVE_RESOURCE_TUPLE;
@@ -203,7 +211,7 @@ public final class MetricDescriptionConstants {
     /**
      * Specifies a {@code (point in time, power consumption)} tuple, i.e., the point in time the
      * power consumption was measured plus the consumption itself.
-     * 
+     *
      * @see MetricDescriptionConstants#POWER_CONSUMPTION
      */
     public static final MetricSetDescription POWER_CONSUMPTION_TUPLE;
@@ -212,7 +220,7 @@ public final class MetricDescriptionConstants {
      * Specifies the energy consumption of an entity based on its power consumption and the power
      * consumption of potential child nodes.<br>
      * Thus, the power consumption value is always relative to a fixed time period.
-     * 
+     *
      * @see MetricDescriptionConstants#POWER_CONSUMPTION
      */
     public static final BaseMetricDescription ENERGY_CONSUMPTION;
@@ -220,7 +228,7 @@ public final class MetricDescriptionConstants {
     /**
      * Specifies a {@code (point in time, energy consumption)} tuple, i.e., the total energy
      * consumption until the interval ending at the specified point in time.
-     * 
+     *
      * @see MetricDescriptionConstants#ENERGY_CONSUMPTION
      * @see MetricDescriptionConstants#POWER_CONSUMPTION_TUPLE
      */
@@ -245,38 +253,40 @@ public final class MetricDescriptionConstants {
      * plus the reconfiguration time.
      */
     public final static MetricSetDescription RECONFIGURATION_TIME_METRIC_TUPLE;
-    
+
     /**
      * This measure represents the execution time of an algorithm that made a reconfiguration plan.
      */
     public final static BaseMetricDescription OPTIMISATION_TIME_METRIC;
 
     /**
-     * Specifies a (point in time, optimisation time)-tuple, i.e., the point at which an 
+     * Specifies a (point in time, optimisation time)-tuple, i.e., the point at which an
      * optimisation algorithm was triggered to execute and its execution time.
      */
     public final static MetricSetDescription OPTIMISATION_TIME_METRIC_TUPLE;
-    
+
     /**
-     * The cost over time calculated from the Number of Resource Containers over Time and 
-     * the cost per resource container
+     * The cost over time calculated from the Number of Resource Containers over Time and the cost
+     * per resource container
      */
-    public final static MetricSetDescription COST_OVER_TIME;	
-    
+    public final static MetricSetDescription COST_OVER_TIME;
+
+    public final static MetricSetDescription AGGREGATED_COST_OVER_TIME;
+
     /**
      * The cost of for each single resource container
      */
     public final static BaseMetricDescription COST_PER_RESOURCE_CONTAINER;
-    
+
     /**
      * The cost for a set of resource containers
      */
     public final static BaseMetricDescription COST_OF_RESOURCE_CONTAINERS;
-    
+
     static {
         final ResourceSet resourceSet = new ResourceSetImpl();
-        final Resource resource = resourceSet.createResource(URI.createURI(
-                PATHMAP_METRIC_SPEC_MODELS_COMMON_METRICS_METRICSPEC, true));
+        final Resource resource = resourceSet
+                .createResource(URI.createURI(PATHMAP_METRIC_SPEC_MODELS_COMMON_METRICS_METRICSPEC, true));
         try {
             resource.load(OPTIONS);
         } catch (final IOException e) {
@@ -344,18 +354,18 @@ public final class MetricDescriptionConstants {
 
         RECONFIGURATION_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_VYg6MujFEeSB6OBq2SKZxQ");
         RECONFIGURATION_TIME_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_2mStsejFEeSB6OBq2SKZxQ");
-        
+
         OPTIMISATION_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_bpPfMnMvEeWcDbSj7t-_fg");
         OPTIMISATION_TIME_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_O4Yb0XMvEeWcDbSj7t-_fg");
-        
-        COST_OVER_TIME = (MetricSetDescription)resource.getEObject("_IiHVQdgLEeSCcbn_evnMvQ");
+
+        COST_OVER_TIME = (MetricSetDescription) resource.getEObject("_IiHVQdgLEeSCcbn_evnMvQ");
+        AGGREGATED_COST_OVER_TIME = (MetricSetDescription) resource.getEObject("_1mevAaPcEeWsk49gaPcqIg");
         COST_PER_RESOURCE_CONTAINER = (BaseMetricDescription) resource.getEObject("_cWdpgtgLEeSCcbn_evnMvQ");
         COST_OF_RESOURCE_CONTAINERS = (BaseMetricDescription) resource.getEObject("_HkIKIv-3EeSjS6KmS7i5VA");
-        
-        //label unit correctly
-        UnitFormat.getInstance().label(((NumericalBaseMetricDescription) ENERGY_CONSUMPTION).getDefaultUnit(),"kWh");
+        // label unit correctly
+        UnitFormat.getInstance().label(((NumericalBaseMetricDescription) ENERGY_CONSUMPTION).getDefaultUnit(), "kWh");
     }
-    
+
     /**
      * Private constructor to forbid instantiation.
      */
