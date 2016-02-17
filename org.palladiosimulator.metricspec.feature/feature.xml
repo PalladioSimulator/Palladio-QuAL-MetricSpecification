@@ -2,7 +2,7 @@
 <feature
       id="org.palladiosimulator.metricspec.feature"
       label="Metric Specification Feature"
-      version="1.0.0.qualifier"
+      version="1.0.1.qualifier"
       plugin="org.palladiosimulator.branding"
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
@@ -18,12 +18,13 @@
       <import plugin="org.jscience" version="4.1.3" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.edit"/>
       <import plugin="de.uka.ipd.sdq.identifier.edit" version="2.1.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.ecore.edit"/>
       <import plugin="org.eclipse.emf.ecore" version="2.9.2" match="greaterOrEqual"/>
       <import plugin="org.eclipse.core.resources"/>
       <import plugin="org.eclipse.emf.ecore.xmi"/>
       <import plugin="org.eclipse.emf.edit.ui"/>
       <import plugin="org.eclipse.ui.ide"/>
-      <import plugin="org.eclipse.emf.ecore.edit"/>
+      <import plugin="org.eclipse.emf.cdo"/>
    </requires>
 
    <plugin
