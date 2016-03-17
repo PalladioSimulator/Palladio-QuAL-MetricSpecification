@@ -283,6 +283,12 @@ public final class MetricDescriptionConstants {
      */
     public final static BaseMetricDescription COST_OF_RESOURCE_CONTAINERS;
 
+    
+    /**
+     * The point in simulation time an external event is triggered
+     */
+    public final static BaseMetricDescription EXTERNAL_EVENT_TIME_METRIC;
+    
     static {
         final ResourceSet resourceSet = new ResourceSetImpl();
         final Resource resource = resourceSet
@@ -362,8 +368,11 @@ public final class MetricDescriptionConstants {
         AGGREGATED_COST_OVER_TIME = (MetricSetDescription) resource.getEObject("_1mevAaPcEeWsk49gaPcqIg");
         COST_PER_RESOURCE_CONTAINER = (BaseMetricDescription) resource.getEObject("_cWdpgtgLEeSCcbn_evnMvQ");
         COST_OF_RESOURCE_CONTAINERS = (BaseMetricDescription) resource.getEObject("_HkIKIv-3EeSjS6KmS7i5VA");
-        // label unit correctly
-        UnitFormat.getInstance().label(((NumericalBaseMetricDescription) ENERGY_CONSUMPTION).getDefaultUnit(), "kWh");
+        
+        EXTERNAL_EVENT_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_cstc8snXEeWQ7JWjPeXsEQ");
+        
+        //label unit correctly
+        UnitFormat.getInstance().label(((NumericalBaseMetricDescription) ENERGY_CONSUMPTION).getDefaultUnit(),"kWh");
     }
 
     /**
