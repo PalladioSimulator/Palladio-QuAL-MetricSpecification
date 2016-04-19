@@ -289,6 +289,44 @@ public final class MetricDescriptionConstants {
      */
     public final static BaseMetricDescription EXTERNAL_EVENT_TIME_METRIC;
     
+    /**
+     *  This metric captures for an operation the number of users that are concurrently executing the operation.
+     */
+    public final static BaseMetricDescription NUMBER_OF_CONCURRENTLY_EXECUTING_INVOCATIONS;
+    
+    /**
+     *  This metric captures for an operation the number of users that are concurrently executing the operation 
+     *  together with the simulation point in time of the measurement.
+     */
+    public final static MetricSetDescription NUMBER_OF_CONCURRENTLY_EXECUTING_INVOCATIONS_TUPLE;
+    
+    /**
+     *  This metric captures for entities the arrival rate of requests (e.g. the rate of invocations of a provided operation).
+     */
+    public final static BaseMetricDescription REQUEST_ARRIVAL_RATE;
+    
+    /**
+     *  This metric captures for entities the arrival rate of requests together with the point in simulation 
+     *  time the measurement was taken.
+     */
+    public final static MetricSetDescription REQUEST_ARRIVAL_RATE_TUPLE;
+    
+    /**
+     *  This metric captures for entities the arrival rate of responses (e.g. the rate of a provided 
+     *  operation finishing the execution of a request).
+     */
+    public final static BaseMetricDescription RESPONSE_ARRIVAL_RATE;
+    
+    /**
+     *  This metric captures for entities the arrival rate of responses (e.g. the rate of a provided 
+     *  operation finishing the execution of a request) together with the point in simulation time 
+     *  the measurement was taken.
+     */
+    public final static MetricSetDescription RESPONSE_ARRIVAL_RATE_TUPLE;
+    
+    
+    
+    
     static {
         final ResourceSet resourceSet = new ResourceSetImpl();
         final Resource resource = resourceSet
@@ -370,6 +408,15 @@ public final class MetricDescriptionConstants {
         COST_OF_RESOURCE_CONTAINERS = (BaseMetricDescription) resource.getEObject("_HkIKIv-3EeSjS6KmS7i5VA");
         
         EXTERNAL_EVENT_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_cstc8snXEeWQ7JWjPeXsEQ");
+        
+        NUMBER_OF_CONCURRENTLY_EXECUTING_INVOCATIONS = (BaseMetricDescription) resource.getEObject("_Ijec8gVjEeadKqaUdKaaNQ");
+        NUMBER_OF_CONCURRENTLY_EXECUTING_INVOCATIONS_TUPLE = (MetricSetDescription) resource.getEObject("_k20WwQVjEeadKqaUdKaaNQ");
+
+        REQUEST_ARRIVAL_RATE = (BaseMetricDescription) resource.getEObject("_fzOdogX-Eeaz8bKeq_K-2w");
+        REQUEST_ARRIVAL_RATE_TUPLE = (MetricSetDescription) resource.getEObject("_j8UvEQYAEeaz8bKeq_K-2w");
+        
+        RESPONSE_ARRIVAL_RATE = (BaseMetricDescription) resource.getEObject("_XqX1QgYAEeaz8bKeq_K-2w");
+        RESPONSE_ARRIVAL_RATE_TUPLE = (MetricSetDescription) resource.getEObject("_wyMOQQYAEeaz8bKeq_K-2w");
         
         //label unit correctly
         UnitFormat.getInstance().label(((NumericalBaseMetricDescription) ENERGY_CONSUMPTION).getDefaultUnit(),"kWh");
