@@ -2,7 +2,7 @@
 <feature
       id="org.palladiosimulator.metricspec.feature"
       label="Metric Specification Feature"
-      version="1.0.1.qualifier"
+      version="1.0.2.qualifier"
       plugin="org.palladiosimulator.branding"
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
