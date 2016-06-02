@@ -13,12 +13,12 @@ import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
  * end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  * <li>{@link org.palladiosimulator.metricspec.impl.DescriptionImpl#getName <em>Name</em>}</li>
- * <li>{@link org.palladiosimulator.metricspec.impl.DescriptionImpl#getTextualDescription <em>
- * Textual Description</em>}</li>
+ * <li>{@link org.palladiosimulator.metricspec.impl.DescriptionImpl#getTextualDescription
+ * <em>Textual Description</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -27,7 +27,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getName()
      * @generated
      * @ordered
@@ -37,7 +37,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
     /**
      * The default value of the '{@link #getTextualDescription() <em>Textual Description</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getTextualDescription()
      * @generated
      * @ordered
@@ -46,7 +46,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected DescriptionImpl() {
@@ -55,7 +55,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -65,7 +65,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -76,7 +76,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -86,7 +86,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -97,7 +97,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -108,7 +108,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -124,7 +124,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -142,7 +142,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -160,7 +160,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -170,7 +170,7 @@ public abstract class DescriptionImpl extends IdentifierImpl implements Descript
             return NAME_EDEFAULT == null ? this.getName() != null : !NAME_EDEFAULT.equals(this.getName());
         case MetricSpecPackage.DESCRIPTION__TEXTUAL_DESCRIPTION:
             return TEXTUAL_DESCRIPTION_EDEFAULT == null ? this.getTextualDescription() != null
-            : !TEXTUAL_DESCRIPTION_EDEFAULT.equals(this.getTextualDescription());
+                    : !TEXTUAL_DESCRIPTION_EDEFAULT.equals(this.getTextualDescription());
         }
         return super.eIsSet(featureID);
     }

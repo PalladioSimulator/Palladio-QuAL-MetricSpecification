@@ -53,8 +53,8 @@ public class MetricDescriptionItemProvider extends DescriptionItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((MetricDescription) object).getName();
-        return label == null || label.length() == 0 ? this.getString("_UI_MetricDescription_type") : this
-                .getString("_UI_MetricDescription_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_MetricDescription_type")
+                : this.getString("_UI_MetricDescription_type") + " " + label;
     }
 
     /**

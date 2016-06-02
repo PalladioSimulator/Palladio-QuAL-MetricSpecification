@@ -20,12 +20,12 @@ import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
  * <em><b>Metric Description Repository</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  * <li>
  * {@link org.palladiosimulator.metricspec.impl.MetricDescriptionRepositoryImpl#getMetricDescriptions
  * <em>Metric Descriptions</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -33,7 +33,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MetricDescriptionRepositoryImpl() {
@@ -42,7 +42,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -52,7 +52,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -65,7 +65,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -74,15 +74,15 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
             final NotificationChain msgs) {
         switch (featureID) {
         case MetricSpecPackage.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS:
-            return ((InternalEList<InternalEObject>) (InternalEList<?>) this.getMetricDescriptions()).basicAdd(
-                    otherEnd, msgs);
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) this.getMetricDescriptions()).basicAdd(otherEnd,
+                    msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -97,7 +97,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -111,7 +111,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -128,7 +128,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -143,7 +143,7 @@ public class MetricDescriptionRepositoryImpl extends IdentifierImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

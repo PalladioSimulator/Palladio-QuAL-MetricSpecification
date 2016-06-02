@@ -71,9 +71,8 @@ public class MetricSpecModelWizard extends Wizard implements INewWizard {
      * 
      * @generated
      */
-    public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(Arrays
-            .asList(MetricSpecEditorPlugin.INSTANCE.getString("_UI_MetricSpecEditorFilenameExtensions").split(
-                    "\\s*,\\s*")));
+    public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(Arrays.asList(
+            MetricSpecEditorPlugin.INSTANCE.getString("_UI_MetricSpecEditorFilenameExtensions").split("\\s*,\\s*")));
 
     /**
      * A formatted list of supported file extensions, suitable for display. <!-- begin-user-doc -->
@@ -81,8 +80,8 @@ public class MetricSpecModelWizard extends Wizard implements INewWizard {
      * 
      * @generated
      */
-    public static final String FORMATTED_FILE_EXTENSIONS = MetricSpecEditorPlugin.INSTANCE.getString(
-            "_UI_MetricSpecEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+    public static final String FORMATTED_FILE_EXTENSIONS = MetricSpecEditorPlugin.INSTANCE
+            .getString("_UI_MetricSpecEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
     /**
      * This caches an instance of the model package. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -177,8 +176,8 @@ public class MetricSpecModelWizard extends Wizard implements INewWizard {
      * @generated
      */
     protected EObject createInitialModel() {
-        final EClass eClass = (EClass) this.metricSpecPackage.getEClassifier(this.initialObjectCreationPage
-                .getInitialObjectName());
+        final EClass eClass = (EClass) this.metricSpecPackage
+                .getEClassifier(this.initialObjectCreationPage.getInitialObjectName());
         final EObject rootObject = this.metricSpecFactory.create(eClass);
         return rootObject;
     }
@@ -256,8 +255,8 @@ public class MetricSpecModelWizard extends Wizard implements INewWizard {
             // Open an editor on the new file.
             //
             try {
-                page.openEditor(new FileEditorInput(modelFile),
-                        this.workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());
+                page.openEditor(new FileEditorInput(modelFile), this.workbench.getEditorRegistry()
+                        .getDefaultEditor(modelFile.getFullPath().toString()).getId());
             } catch (final PartInitException exception) {
                 MessageDialog.openError(workbenchWindow.getShell(),
                         MetricSpecEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
@@ -300,8 +299,8 @@ public class MetricSpecModelWizard extends Wizard implements INewWizard {
                 if (extension == null || !FILE_EXTENSIONS.contains(extension)) {
                     final String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions"
                             : "_WARN_FilenameExtension";
-                    this.setErrorMessage(MetricSpecEditorPlugin.INSTANCE.getString(key,
-                            new Object[] { FORMATTED_FILE_EXTENSIONS }));
+                    this.setErrorMessage(
+                            MetricSpecEditorPlugin.INSTANCE.getString(key, new Object[] { FORMATTED_FILE_EXTENSIONS }));
                     return false;
                 }
                 return true;
@@ -522,7 +521,7 @@ public class MetricSpecModelWizard extends Wizard implements INewWizard {
                 this.encodings = new ArrayList<String>();
                 for (final StringTokenizer stringTokenizer = new StringTokenizer(
                         MetricSpecEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer
-                        .hasMoreTokens();) {
+                                .hasMoreTokens();) {
                     this.encodings.add(stringTokenizer.nextToken());
                 }
             }
@@ -542,10 +541,11 @@ public class MetricSpecModelWizard extends Wizard implements INewWizard {
         //
         this.newFileCreationPage = new MetricSpecModelWizardNewFileCreationPage("Whatever", this.selection);
         this.newFileCreationPage.setTitle(MetricSpecEditorPlugin.INSTANCE.getString("_UI_MetricSpecModelWizard_label"));
-        this.newFileCreationPage.setDescription(MetricSpecEditorPlugin.INSTANCE
-                .getString("_UI_MetricSpecModelWizard_description"));
-        this.newFileCreationPage.setFileName(MetricSpecEditorPlugin.INSTANCE
-                .getString("_UI_MetricSpecEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
+        this.newFileCreationPage
+                .setDescription(MetricSpecEditorPlugin.INSTANCE.getString("_UI_MetricSpecModelWizard_description"));
+        this.newFileCreationPage
+                .setFileName(MetricSpecEditorPlugin.INSTANCE.getString("_UI_MetricSpecEditorFilenameDefaultBase") + "."
+                        + FILE_EXTENSIONS.get(0));
         this.addPage(this.newFileCreationPage);
 
         // Try and get the resource selection to determine a current directory for the file dialog.
@@ -583,10 +583,10 @@ public class MetricSpecModelWizard extends Wizard implements INewWizard {
             }
         }
         this.initialObjectCreationPage = new MetricSpecModelWizardInitialObjectCreationPage("Whatever2");
-        this.initialObjectCreationPage.setTitle(MetricSpecEditorPlugin.INSTANCE
-                .getString("_UI_MetricSpecModelWizard_label"));
-        this.initialObjectCreationPage.setDescription(MetricSpecEditorPlugin.INSTANCE
-                .getString("_UI_Wizard_initial_object_description"));
+        this.initialObjectCreationPage
+                .setTitle(MetricSpecEditorPlugin.INSTANCE.getString("_UI_MetricSpecModelWizard_label"));
+        this.initialObjectCreationPage
+                .setDescription(MetricSpecEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
         this.addPage(this.initialObjectCreationPage);
     }
 

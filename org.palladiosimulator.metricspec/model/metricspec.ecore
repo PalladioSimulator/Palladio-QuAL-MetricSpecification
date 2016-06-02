@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="metricspec" nsURI="http://palladiosimulator.org/MetricSpec/1.0"
     nsPrefix="metricspec">
-  <eClassifiers xsi:type="ecore:EClass" name="Identifier" eSuperTypes="../../de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+  <eClassifiers xsi:type="ecore:EClass" name="Identifier" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Identifier&amp;nbsp;for a certain measurable/observable state of the measured object. Identifiers"/>
     </eAnnotations>
@@ -41,12 +41,14 @@
         <details key="documentation" value="Determines the mathematical scale of the metric."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scopeOfValidity" lowerBound="1"
+        eType="#//ScopeOfValidity"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MetricDescription" abstract="true" eSuperTypes="#//Description">
     <eStructuralFeatures xsi:type="ecore:EReference" name="repository" lowerBound="1"
         eType="#//MetricDescriptionRepository" eOpposite="#//MetricDescriptionRepository/metricDescriptions"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Description" abstract="true" eSuperTypes="../../de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+  <eClassifiers xsi:type="ecore:EClass" name="Description" abstract="true" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="textualDescription" ordered="false"
@@ -138,8 +140,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IJSQuantity" instanceClassName="javax.measure.quantity.Quantity"
       abstract="true" interface="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MetricDescriptionRepository" eSuperTypes="../../de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+  <eClassifiers xsi:type="ecore:EClass" name="MetricDescriptionRepository" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
     <eStructuralFeatures xsi:type="ecore:EReference" name="metricDescriptions" upperBound="-1"
         eType="#//MetricDescription" containment="true" eOpposite="#//MetricDescription/repository"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ScopeOfValidity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="We distinguish the scope of validity for a metric: a metric can either be discrete (only valid for the event the metric was measured) or continuous (for every point in time, the a valid measurement exists).&#xA;&#xA;Note for continuous option: we currently define that measurements are valid staring from the point they where taken until the next measurement is taken. This is, e.g., important for measurements that need to be aggregated over intervals. If this definition does not fit a use-case, discuss about redefining this definition."/>
+    </eAnnotations>
+    <eLiterals name="Discrete"/>
+    <eLiterals name="Continuous" value="1"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -10,14 +10,16 @@ package org.palladiosimulator.metricspec;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.metricspec.BaseMetricDescription#getCaptureType <em>Capture Type
- * </em>}</li>
+ * <li>{@link org.palladiosimulator.metricspec.BaseMetricDescription#getCaptureType
+ * <em>Capture Type</em>}</li>
  * <li>{@link org.palladiosimulator.metricspec.BaseMetricDescription#getDataType <em>Data Type</em>}
  * </li>
  * <li>{@link org.palladiosimulator.metricspec.BaseMetricDescription#getScale <em>Scale</em>}</li>
+ * <li>{@link org.palladiosimulator.metricspec.BaseMetricDescription#getScopeOfValidity
+ * <em>Scope Of Validity</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.palladiosimulator.metricspec.MetricSpecPackage#getBaseMetricDescription()
  * @model abstract="true"
@@ -47,7 +49,7 @@ public interface BaseMetricDescription extends MetricDescription {
      * Sets the value of the '
      * {@link org.palladiosimulator.metricspec.BaseMetricDescription#getCaptureType
      * <em>Capture Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Capture Type</em>' attribute.
      * @see org.palladiosimulator.metricspec.CaptureType
@@ -75,7 +77,7 @@ public interface BaseMetricDescription extends MetricDescription {
      * Sets the value of the '
      * {@link org.palladiosimulator.metricspec.BaseMetricDescription#getDataType <em>Data Type</em>}
      * ' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Data Type</em>' attribute.
      * @see org.palladiosimulator.metricspec.DataType
@@ -100,10 +102,9 @@ public interface BaseMetricDescription extends MetricDescription {
     Scale getScale();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.metricspec.BaseMetricDescription#getScale <em>Scale</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Sets the value of the '{@link org.palladiosimulator.metricspec.BaseMetricDescription#getScale
+     * <em>Scale</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @param value
      *            the new value of the '<em>Scale</em>' attribute.
      * @see org.palladiosimulator.metricspec.Scale
@@ -111,5 +112,37 @@ public interface BaseMetricDescription extends MetricDescription {
      * @generated
      */
     void setScale(Scale value);
+
+    /**
+     * Returns the value of the '<em><b>Scope Of Validity</b></em>' attribute. The literals are from
+     * the enumeration {@link org.palladiosimulator.metricspec.ScopeOfValidity}. <!-- begin-user-doc
+     * -->
+     * <p>
+     * If the meaning of the '<em>Scope Of Validity</em>' attribute isn't clear, there really should
+     * be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     *
+     * @return the value of the '<em>Scope Of Validity</em>' attribute.
+     * @see org.palladiosimulator.metricspec.ScopeOfValidity
+     * @see #setScopeOfValidity(ScopeOfValidity)
+     * @see org.palladiosimulator.metricspec.MetricSpecPackage#getBaseMetricDescription_ScopeOfValidity()
+     * @model required="true"
+     * @generated
+     */
+    ScopeOfValidity getScopeOfValidity();
+
+    /**
+     * Sets the value of the '
+     * {@link org.palladiosimulator.metricspec.BaseMetricDescription#getScopeOfValidity
+     * <em>Scope Of Validity</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @param value
+     *            the new value of the '<em>Scope Of Validity</em>' attribute.
+     * @see org.palladiosimulator.metricspec.ScopeOfValidity
+     * @see #getScopeOfValidity()
+     * @generated
+     */
+    void setScopeOfValidity(ScopeOfValidity value);
 
 } // BaseMetricDescription

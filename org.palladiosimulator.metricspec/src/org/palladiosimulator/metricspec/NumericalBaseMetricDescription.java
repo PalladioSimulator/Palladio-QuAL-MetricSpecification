@@ -13,13 +13,13 @@ import javax.measure.unit.Unit;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getDefaultUnit <em>
- * Default Unit</em>}</li>
+ * <li>{@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getDefaultUnit
+ * <em>Default Unit</em>}</li>
  * <li>{@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getPersistenceKind
  * <em>Persistence Kind</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.palladiosimulator.metricspec.MetricSpecPackage#getNumericalBaseMetricDescription()
  * @model
@@ -47,7 +47,7 @@ public interface NumericalBaseMetricDescription extends BaseMetricDescription {
      * Sets the value of the '
      * {@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getDefaultUnit
      * <em>Default Unit</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Default Unit</em>' attribute.
      * @see #getDefaultUnit()
@@ -78,7 +78,7 @@ public interface NumericalBaseMetricDescription extends BaseMetricDescription {
      * Sets the value of the '
      * {@link org.palladiosimulator.metricspec.NumericalBaseMetricDescription#getPersistenceKind
      * <em>Persistence Kind</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Persistence Kind</em>' attribute.
      * @see org.palladiosimulator.metricspec.PersistenceKindOptions

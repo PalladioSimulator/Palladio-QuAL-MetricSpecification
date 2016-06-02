@@ -15,6 +15,7 @@ import org.palladiosimulator.metricspec.PersistenceKindOptions;
  * <em><b>Numerical Base Metric Description</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  * <li>
  * {@link org.palladiosimulator.metricspec.impl.NumericalBaseMetricDescriptionImpl#getDefaultUnit
@@ -23,17 +24,16 @@ import org.palladiosimulator.metricspec.PersistenceKindOptions;
  * {@link org.palladiosimulator.metricspec.impl.NumericalBaseMetricDescriptionImpl#getPersistenceKind
  * <em>Persistence Kind</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class NumericalBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl implements
-NumericalBaseMetricDescription {
+public class NumericalBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl
+        implements NumericalBaseMetricDescription {
 
     /**
      * The default value of the '{@link #getPersistenceKind() <em>Persistence Kind</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getPersistenceKind()
      * @generated
      * @ordered
@@ -42,7 +42,7 @@ NumericalBaseMetricDescription {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected NumericalBaseMetricDescriptionImpl() {
@@ -51,7 +51,7 @@ NumericalBaseMetricDescription {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -61,7 +61,7 @@ NumericalBaseMetricDescription {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -72,7 +72,7 @@ NumericalBaseMetricDescription {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -83,7 +83,7 @@ NumericalBaseMetricDescription {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -95,7 +95,7 @@ NumericalBaseMetricDescription {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -106,7 +106,7 @@ NumericalBaseMetricDescription {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -122,7 +122,7 @@ NumericalBaseMetricDescription {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -141,7 +141,7 @@ NumericalBaseMetricDescription {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -159,7 +159,7 @@ NumericalBaseMetricDescription {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

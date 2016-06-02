@@ -98,8 +98,8 @@ public class TextualBaseMetricDescriptionItemProvider extends BaseMetricDescript
     @Override
     public String getText(final Object object) {
         final String label = ((TextualBaseMetricDescription) object).getName();
-        return label == null || label.length() == 0 ? this.getString("_UI_TextualBaseMetricDescription_type") : this
-                .getString("_UI_TextualBaseMetricDescription_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_TextualBaseMetricDescription_type")
+                : this.getString("_UI_TextualBaseMetricDescription_type") + " " + label;
     }
 
     /**
@@ -131,9 +131,9 @@ public class TextualBaseMetricDescriptionItemProvider extends BaseMetricDescript
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(this.createChildParameter(
-                MetricSpecPackage.Literals.TEXTUAL_BASE_METRIC_DESCRIPTION__IDENTIFIERS,
-                MetricSpecFactory.eINSTANCE.createIdentifier()));
+        newChildDescriptors
+                .add(this.createChildParameter(MetricSpecPackage.Literals.TEXTUAL_BASE_METRIC_DESCRIPTION__IDENTIFIERS,
+                        MetricSpecFactory.eINSTANCE.createIdentifier()));
     }
 
 }

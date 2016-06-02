@@ -8,21 +8,24 @@ import org.palladiosimulator.metricspec.CaptureType;
 import org.palladiosimulator.metricspec.DataType;
 import org.palladiosimulator.metricspec.MetricSpecPackage;
 import org.palladiosimulator.metricspec.Scale;
+import org.palladiosimulator.metricspec.ScopeOfValidity;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Base Metric Description</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl#getCaptureType <em>
- * Capture Type</em>}</li>
- * <li>{@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl#getDataType <em>Data
- * Type</em>}</li>
- * <li>{@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl#getScale <em>Scale
- * </em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl#getCaptureType
+ * <em>Capture Type</em>}</li>
+ * <li>{@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl#getDataType
+ * <em>Data Type</em>}</li>
+ * <li>{@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl#getScale
+ * <em>Scale</em>}</li>
+ * <li>{@link org.palladiosimulator.metricspec.impl.BaseMetricDescriptionImpl#getScopeOfValidity
+ * <em>Scope Of Validity</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -51,7 +54,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
     /**
      * The default value of the '{@link #getScale() <em>Scale</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getScale()
      * @generated
      * @ordered
@@ -59,8 +62,18 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
     protected static final Scale SCALE_EDEFAULT = Scale.NOMINAL;
 
     /**
+     * The default value of the '{@link #getScopeOfValidity() <em>Scope Of Validity</em>}'
+     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @see #getScopeOfValidity()
+     * @generated
+     * @ordered
+     */
+    protected static final ScopeOfValidity SCOPE_OF_VALIDITY_EDEFAULT = ScopeOfValidity.DISCRETE;
+
+    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected BaseMetricDescriptionImpl() {
@@ -69,7 +82,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -79,7 +92,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -90,7 +103,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -101,7 +114,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -112,7 +125,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -123,7 +136,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -134,7 +147,7 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -145,7 +158,29 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    @Override
+    public ScopeOfValidity getScopeOfValidity() {
+        return (ScopeOfValidity) this.eDynamicGet(MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCOPE_OF_VALIDITY,
+                MetricSpecPackage.Literals.BASE_METRIC_DESCRIPTION__SCOPE_OF_VALIDITY, true, true);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setScopeOfValidity(final ScopeOfValidity newScopeOfValidity) {
+        this.eDynamicSet(MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCOPE_OF_VALIDITY,
+                MetricSpecPackage.Literals.BASE_METRIC_DESCRIPTION__SCOPE_OF_VALIDITY, newScopeOfValidity);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
@@ -157,13 +192,15 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
             return this.getDataType();
         case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE:
             return this.getScale();
+        case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCOPE_OF_VALIDITY:
+            return this.getScopeOfValidity();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -178,13 +215,16 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
         case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE:
             this.setScale((Scale) newValue);
             return;
+        case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCOPE_OF_VALIDITY:
+            this.setScopeOfValidity((ScopeOfValidity) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -199,13 +239,16 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
         case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE:
             this.setScale(SCALE_EDEFAULT);
             return;
+        case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCOPE_OF_VALIDITY:
+            this.setScopeOfValidity(SCOPE_OF_VALIDITY_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -217,6 +260,8 @@ public abstract class BaseMetricDescriptionImpl extends MetricDescriptionImpl im
             return this.getDataType() != DATA_TYPE_EDEFAULT;
         case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE:
             return this.getScale() != SCALE_EDEFAULT;
+        case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCOPE_OF_VALIDITY:
+            return this.getScopeOfValidity() != SCOPE_OF_VALIDITY_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

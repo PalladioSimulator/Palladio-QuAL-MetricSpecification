@@ -12,11 +12,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.palladiosimulator.metricspec.TextualBaseMetricDescription#getIdentifiers <em>
- * Identifiers</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.palladiosimulator.metricspec.TextualBaseMetricDescription#getIdentifiers
+ * <em>Identifiers</em>}</li>
+ * </ul>
  *
  * @see org.palladiosimulator.metricspec.MetricSpecPackage#getTextualBaseMetricDescription()
  * @model
@@ -35,7 +35,7 @@ public interface TextualBaseMetricDescription extends BaseMetricDescription {
      * really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Identifiers</em>' containment reference list.
      * @see org.palladiosimulator.metricspec.MetricSpecPackage#getTextualBaseMetricDescription_Identifiers()
      * @see org.palladiosimulator.metricspec.Identifier#getTextualBaseMetricDescription

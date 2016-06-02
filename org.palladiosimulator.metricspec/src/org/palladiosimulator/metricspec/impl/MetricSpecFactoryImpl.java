@@ -21,19 +21,20 @@ import org.palladiosimulator.metricspec.MetricSpecPackage;
 import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
 import org.palladiosimulator.metricspec.PersistenceKindOptions;
 import org.palladiosimulator.metricspec.Scale;
+import org.palladiosimulator.metricspec.ScopeOfValidity;
 import org.palladiosimulator.metricspec.TextualBaseMetricDescription;
 import org.palladiosimulator.metricspec.util.DeserializationUtil;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFactory {
 
     /**
      * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static MetricSpecFactory init() {
@@ -51,7 +52,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public MetricSpecFactoryImpl() {
@@ -60,7 +61,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -85,7 +86,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -99,6 +100,8 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
             return this.createPersistenceKindOptionsFromString(eDataType, initialValue);
         case MetricSpecPackage.DATA_TYPE:
             return this.createDataTypeFromString(eDataType, initialValue);
+        case MetricSpecPackage.SCOPE_OF_VALIDITY:
+            return this.createScopeOfValidityFromString(eDataType, initialValue);
         case MetricSpecPackage.EJS_UNIT:
             return this.createEJSUnitFromString(eDataType, initialValue);
         default:
@@ -108,7 +111,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -122,6 +125,8 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
             return this.convertPersistenceKindOptionsToString(eDataType, instanceValue);
         case MetricSpecPackage.DATA_TYPE:
             return this.convertDataTypeToString(eDataType, instanceValue);
+        case MetricSpecPackage.SCOPE_OF_VALIDITY:
+            return this.convertScopeOfValidityToString(eDataType, instanceValue);
         case MetricSpecPackage.EJS_UNIT:
             return this.convertEJSUnitToString(eDataType, instanceValue);
         default:
@@ -131,7 +136,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -142,7 +147,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -153,7 +158,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -164,7 +169,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -175,7 +180,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -186,7 +191,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -197,21 +202,21 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public CaptureType createCaptureTypeFromString(final EDataType eDataType, final String initialValue) {
         final CaptureType result = CaptureType.get(initialValue);
         if (result == null) {
-            throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '"
-                    + eDataType.getName() + "'");
+            throw new IllegalArgumentException(
+                    "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
         }
         return result;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public String convertCaptureTypeToString(final EDataType eDataType, final Object instanceValue) {
@@ -220,21 +225,21 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public Scale createScaleFromString(final EDataType eDataType, final String initialValue) {
         final Scale result = Scale.get(initialValue);
         if (result == null) {
-            throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '"
-                    + eDataType.getName() + "'");
+            throw new IllegalArgumentException(
+                    "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
         }
         return result;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public String convertScaleToString(final EDataType eDataType, final Object instanceValue) {
@@ -243,22 +248,22 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public PersistenceKindOptions createPersistenceKindOptionsFromString(final EDataType eDataType,
             final String initialValue) {
         final PersistenceKindOptions result = PersistenceKindOptions.get(initialValue);
         if (result == null) {
-            throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '"
-                    + eDataType.getName() + "'");
+            throw new IllegalArgumentException(
+                    "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
         }
         return result;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public String convertPersistenceKindOptionsToString(final EDataType eDataType, final Object instanceValue) {
@@ -267,21 +272,21 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public DataType createDataTypeFromString(final EDataType eDataType, final String initialValue) {
         final DataType result = DataType.get(initialValue);
         if (result == null) {
-            throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '"
-                    + eDataType.getName() + "'");
+            throw new IllegalArgumentException(
+                    "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
         }
         return result;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public String convertDataTypeToString(final EDataType eDataType, final Object instanceValue) {
@@ -290,7 +295,30 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    public ScopeOfValidity createScopeOfValidityFromString(final EDataType eDataType, final String initialValue) {
+        final ScopeOfValidity result = ScopeOfValidity.get(initialValue);
+        if (result == null) {
+            throw new IllegalArgumentException(
+                    "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+        }
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public String convertScopeOfValidityToString(final EDataType eDataType, final Object instanceValue) {
+        return instanceValue == null ? null : instanceValue.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated NOT
      */
     public Unit<?> createEJSUnitFromString(final EDataType eDataType, final String initialValue) {
@@ -299,7 +327,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public String convertEJSUnitToString(final EDataType eDataType, final Object instanceValue) {
@@ -308,7 +336,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -318,7 +346,7 @@ public class MetricSpecFactoryImpl extends EFactoryImpl implements MetricSpecFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @deprecated
      * @generated
      */

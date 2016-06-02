@@ -52,8 +52,8 @@ public class AggregationFunctionDescriptionItemProvider extends DescriptionItemP
      */
     @Override
     public Object getImage(final Object object) {
-        return this.overlayImage(object, this.getResourceLocator()
-                .getImage("full/obj16/AggregationFunctionDescription"));
+        return this.overlayImage(object,
+                this.getResourceLocator().getImage("full/obj16/AggregationFunctionDescription"));
     }
 
     /**
@@ -65,8 +65,8 @@ public class AggregationFunctionDescriptionItemProvider extends DescriptionItemP
     @Override
     public String getText(final Object object) {
         final String label = ((AggregationFunctionDescription) object).getName();
-        return label == null || label.length() == 0 ? this.getString("_UI_AggregationFunctionDescription_type") : this
-                .getString("_UI_AggregationFunctionDescription_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_AggregationFunctionDescription_type")
+                : this.getString("_UI_AggregationFunctionDescription_type") + " " + label;
     }
 
     /**

@@ -30,6 +30,10 @@
       <genEnumLiterals ecoreEnumLiteral="metricspec.ecore#//DataType/Quantitative"/>
       <genEnumLiterals ecoreEnumLiteral="metricspec.ecore#//DataType/Qualitative"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="metricspec.ecore#//ScopeOfValidity">
+      <genEnumLiterals ecoreEnumLiteral="metricspec.ecore#//ScopeOfValidity/Discrete"/>
+      <genEnumLiterals ecoreEnumLiteral="metricspec.ecore#//ScopeOfValidity/Continuous"/>
+    </genEnums>
     <genDataTypes ecoreDataType="metricspec.ecore#//EJSUnit">
       <genTypeParameters ecoreTypeParameter="metricspec.ecore#//EJSUnit/Q"/>
     </genDataTypes>
@@ -44,6 +48,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metricspec.ecore#//BaseMetricDescription/captureType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metricspec.ecore#//BaseMetricDescription/dataType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metricspec.ecore#//BaseMetricDescription/scale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metricspec.ecore#//BaseMetricDescription/scopeOfValidity"/>
     </genClasses>
     <genClasses image="false" ecoreClass="metricspec.ecore#//MetricDescription">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference metricspec.ecore#//MetricDescription/repository"/>

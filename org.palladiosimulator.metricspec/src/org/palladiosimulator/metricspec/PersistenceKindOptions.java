@@ -12,7 +12,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * <!-- begin-user-doc --> A representation of the literals of the enumeration '
  * <em><b>Persistence Kind Options</b></em>', and utility methods for working with them. <!--
  * end-user-doc -->
- * 
+ *
  * @see org.palladiosimulator.metricspec.MetricSpecPackage#getPersistenceKindOptions()
  * @model
  * @generated
@@ -21,7 +21,7 @@ public enum PersistenceKindOptions implements Enumerator {
     /**
      * The '<em><b>Binary Preferred</b></em>' literal object. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @see #BINARY_PREFERRED_VALUE
      * @generated
      * @ordered
@@ -31,7 +31,7 @@ public enum PersistenceKindOptions implements Enumerator {
     /**
      * The '<em><b>JS Xml Preferred</b></em>' literal object. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @see #JS_XML_PREFERRED_VALUE
      * @generated
      * @ordered
@@ -45,7 +45,7 @@ public enum PersistenceKindOptions implements Enumerator {
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #BINARY_PREFERRED
      * @model name="BinaryPreferred"
      * @generated
@@ -60,7 +60,7 @@ public enum PersistenceKindOptions implements Enumerator {
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #JS_XML_PREFERRED
      * @model name="JSXmlPreferred"
      * @generated
@@ -75,12 +75,12 @@ public enum PersistenceKindOptions implements Enumerator {
      * @generated
      */
     private static final PersistenceKindOptions[] VALUES_ARRAY = new PersistenceKindOptions[] { BINARY_PREFERRED,
-        JS_XML_PREFERRED, };
+            JS_XML_PREFERRED, };
 
     /**
      * A public read-only list of all the '<em><b>Persistence Kind Options</b></em>' enumerators.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final List<PersistenceKindOptions> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
@@ -88,7 +88,10 @@ public enum PersistenceKindOptions implements Enumerator {
     /**
      * Returns the '<em><b>Persistence Kind Options</b></em>' literal with the specified literal
      * value. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @param literal
+     *            the literal.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
     public static PersistenceKindOptions get(final String literal) {
@@ -118,7 +121,10 @@ public enum PersistenceKindOptions implements Enumerator {
     /**
      * Returns the '<em><b>Persistence Kind Options</b></em>' literal with the specified integer
      * value. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @param value
+     *            the integer value.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
     public static PersistenceKindOptions get(final int value) {
@@ -133,28 +139,28 @@ public enum PersistenceKindOptions implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final int value;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final String name;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final String literal;
 
     /**
      * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private PersistenceKindOptions(final int value, final String name, final String literal) {
@@ -165,7 +171,7 @@ public enum PersistenceKindOptions implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -175,7 +181,7 @@ public enum PersistenceKindOptions implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -185,7 +191,7 @@ public enum PersistenceKindOptions implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

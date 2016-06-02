@@ -18,19 +18,20 @@ import org.palladiosimulator.metricspec.TextualBaseMetricDescription;
  * <em><b>Textual Base Metric Description</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  * <li>{@link org.palladiosimulator.metricspec.impl.TextualBaseMetricDescriptionImpl#getIdentifiers
  * <em>Identifiers</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl implements TextualBaseMetricDescription {
+public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl
+        implements TextualBaseMetricDescription {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected TextualBaseMetricDescriptionImpl() {
@@ -39,7 +40,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -49,7 +50,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -61,7 +62,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -77,7 +78,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -92,7 +93,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -106,7 +107,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -123,7 +124,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -138,7 +139,7 @@ public class TextualBaseMetricDescriptionImpl extends BaseMetricDescriptionImpl 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

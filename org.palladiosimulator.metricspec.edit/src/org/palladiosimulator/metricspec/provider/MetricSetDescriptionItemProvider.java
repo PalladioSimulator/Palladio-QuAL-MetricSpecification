@@ -56,8 +56,8 @@ public class MetricSetDescriptionItemProvider extends MetricDescriptionItemProvi
     protected void addSubsumedMetricsPropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_MetricSetDescription_subsumedMetrics_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_MetricSetDescription_subsumedMetrics_feature",
+                this.getString("_UI_MetricSetDescription_subsumedMetrics_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_MetricSetDescription_subsumedMetrics_feature",
                         "_UI_MetricSetDescription_type"),
                 MetricSpecPackage.Literals.METRIC_SET_DESCRIPTION__SUBSUMED_METRICS, true, false, true, null, null,
                 null));
@@ -82,8 +82,8 @@ public class MetricSetDescriptionItemProvider extends MetricDescriptionItemProvi
     @Override
     public String getText(final Object object) {
         final String label = ((MetricSetDescription) object).getName();
-        return label == null || label.length() == 0 ? this.getString("_UI_MetricSetDescription_type") : this
-                .getString("_UI_MetricSetDescription_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_MetricSetDescription_type")
+                : this.getString("_UI_MetricSetDescription_type") + " " + label;
     }
 
     /**

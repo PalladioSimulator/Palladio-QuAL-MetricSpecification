@@ -13,11 +13,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.palladiosimulator.metricspec.MetricSetDescription#getSubsumedMetrics <em>Subsumed
- * Metrics</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.palladiosimulator.metricspec.MetricSetDescription#getSubsumedMetrics
+ * <em>Subsumed Metrics</em>}</li>
+ * </ul>
  *
  * @see org.palladiosimulator.metricspec.MetricSpecPackage#getMetricSetDescription()
  * @model
@@ -34,7 +34,7 @@ public interface MetricSetDescription extends MetricDescription {
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Subsumed Metrics</em>' reference list.
      * @see org.palladiosimulator.metricspec.MetricSpecPackage#getMetricSetDescription_SubsumedMetrics()
      * @model required="true"

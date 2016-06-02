@@ -14,11 +14,11 @@ import org.palladiosimulator.metricspec.MetricSpecPackage;
  * '. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link org.palladiosimulator.metricspec.impl.MetricDescriptionImpl#getRepository <em>
- * Repository</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.palladiosimulator.metricspec.impl.MetricDescriptionImpl#getRepository
+ * <em>Repository</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -26,7 +26,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MetricDescriptionImpl() {
@@ -35,7 +35,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -45,7 +45,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -56,10 +56,11 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public NotificationChain basicSetRepository(final MetricDescriptionRepository newRepository, NotificationChain msgs) {
+    public NotificationChain basicSetRepository(final MetricDescriptionRepository newRepository,
+            NotificationChain msgs) {
         msgs = this.eBasicSetContainer((InternalEObject) newRepository,
                 MetricSpecPackage.METRIC_DESCRIPTION__REPOSITORY, msgs);
         return msgs;
@@ -67,7 +68,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -78,7 +79,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -95,7 +96,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -110,7 +111,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -126,7 +127,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -140,7 +141,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -155,7 +156,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -170,7 +171,7 @@ public abstract class MetricDescriptionImpl extends DescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

@@ -30,8 +30,8 @@ import org.palladiosimulator.metricspec.util.MetricSpecAdapterFactory;
  *
  * @generated
  */
-public class MetricSpecItemProviderAdapterFactory extends MetricSpecAdapterFactory implements
-        ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+public class MetricSpecItemProviderAdapterFactory extends MetricSpecAdapterFactory
+        implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
 
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--

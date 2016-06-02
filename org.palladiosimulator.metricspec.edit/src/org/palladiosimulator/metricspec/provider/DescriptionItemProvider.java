@@ -61,10 +61,11 @@ public class DescriptionItemProvider extends IdentifierItemProvider {
     protected void addNamePropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Description_name_feature"), this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_Description_name_feature", "_UI_Description_type"),
-                        MetricSpecPackage.Literals.DESCRIPTION__NAME, true, false, false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                this.getString("_UI_Description_name_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_Description_name_feature",
+                        "_UI_Description_type"),
+                MetricSpecPackage.Literals.DESCRIPTION__NAME, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -76,10 +77,11 @@ public class DescriptionItemProvider extends IdentifierItemProvider {
     protected void addTextualDescriptionPropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Description_textualDescription_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_Description_textualDescription_feature",
-                        "_UI_Description_type"), MetricSpecPackage.Literals.DESCRIPTION__TEXTUAL_DESCRIPTION, true,
-                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                this.getString("_UI_Description_textualDescription_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_Description_textualDescription_feature",
+                        "_UI_Description_type"),
+                MetricSpecPackage.Literals.DESCRIPTION__TEXTUAL_DESCRIPTION, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -91,8 +93,8 @@ public class DescriptionItemProvider extends IdentifierItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((Description) object).getName();
-        return label == null || label.length() == 0 ? this.getString("_UI_Description_type") : this
-                .getString("_UI_Description_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_Description_type")
+                : this.getString("_UI_Description_type") + " " + label;
     }
 
     /**

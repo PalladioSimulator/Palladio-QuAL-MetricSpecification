@@ -15,11 +15,11 @@ import org.palladiosimulator.metricspec.MetricSpecPackage;
  * <em><b>Metric Set Description</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>{@link org.palladiosimulator.metricspec.impl.MetricSetDescriptionImpl#getSubsumedMetrics <em>
- * Subsumed Metrics</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ * <li>{@link org.palladiosimulator.metricspec.impl.MetricSetDescriptionImpl#getSubsumedMetrics
+ * <em>Subsumed Metrics</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -27,7 +27,7 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MetricSetDescriptionImpl() {
@@ -36,7 +36,7 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -46,7 +46,7 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -58,7 +58,7 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -72,7 +72,7 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -89,7 +89,7 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -104,7 +104,7 @@ public class MetricSetDescriptionImpl extends MetricDescriptionImpl implements M
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

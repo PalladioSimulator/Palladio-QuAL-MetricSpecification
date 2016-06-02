@@ -14,12 +14,12 @@ import org.palladiosimulator.metricspec.TextualBaseMetricDescription;
  * end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  * <li>{@link org.palladiosimulator.metricspec.impl.IdentifierImpl#getLiteral <em>Literal</em>}</li>
  * <li>{@link org.palladiosimulator.metricspec.impl.IdentifierImpl#getTextualBaseMetricDescription
  * <em>Textual Base Metric Description</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -37,7 +37,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected IdentifierImpl() {
@@ -46,7 +46,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -56,7 +56,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -67,7 +67,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -78,7 +78,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -90,7 +90,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetTextualBaseMetricDescription(
@@ -102,18 +102,19 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setTextualBaseMetricDescription(final TextualBaseMetricDescription newTextualBaseMetricDescription) {
         this.eDynamicSet(MetricSpecPackage.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION,
-                MetricSpecPackage.Literals.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION, newTextualBaseMetricDescription);
+                MetricSpecPackage.Literals.IDENTIFIER__TEXTUAL_BASE_METRIC_DESCRIPTION,
+                newTextualBaseMetricDescription);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -130,7 +131,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -145,7 +146,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -161,7 +162,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -177,7 +178,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -195,7 +196,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -213,7 +214,7 @@ public class IdentifierImpl extends de.uka.ipd.sdq.identifier.impl.IdentifierImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

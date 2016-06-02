@@ -47,6 +47,7 @@ public class BaseMetricDescriptionItemProvider extends MetricDescriptionItemProv
             this.addCaptureTypePropertyDescriptor(object);
             this.addDataTypePropertyDescriptor(object);
             this.addScalePropertyDescriptor(object);
+            this.addScopeOfValidityPropertyDescriptor(object);
         }
         return this.itemPropertyDescriptors;
     }
@@ -60,8 +61,8 @@ public class BaseMetricDescriptionItemProvider extends MetricDescriptionItemProv
     protected void addCaptureTypePropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_BaseMetricDescription_captureType_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_BaseMetricDescription_captureType_feature",
+                this.getString("_UI_BaseMetricDescription_captureType_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_BaseMetricDescription_captureType_feature",
                         "_UI_BaseMetricDescription_type"),
                 MetricSpecPackage.Literals.BASE_METRIC_DESCRIPTION__CAPTURE_TYPE, true, false, false,
                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -76,8 +77,8 @@ public class BaseMetricDescriptionItemProvider extends MetricDescriptionItemProv
     protected void addDataTypePropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_BaseMetricDescription_dataType_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_BaseMetricDescription_dataType_feature",
+                this.getString("_UI_BaseMetricDescription_dataType_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_BaseMetricDescription_dataType_feature",
                         "_UI_BaseMetricDescription_type"),
                 MetricSpecPackage.Literals.BASE_METRIC_DESCRIPTION__DATA_TYPE, true, false, false,
                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -92,10 +93,27 @@ public class BaseMetricDescriptionItemProvider extends MetricDescriptionItemProv
     protected void addScalePropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_BaseMetricDescription_scale_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_BaseMetricDescription_scale_feature",
-                        "_UI_BaseMetricDescription_type"), MetricSpecPackage.Literals.BASE_METRIC_DESCRIPTION__SCALE,
-                true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                this.getString("_UI_BaseMetricDescription_scale_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_BaseMetricDescription_scale_feature",
+                        "_UI_BaseMetricDescription_type"),
+                MetricSpecPackage.Literals.BASE_METRIC_DESCRIPTION__SCALE, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+    }
+
+    /**
+     * This adds a property descriptor for the Scope Of Validity feature. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    protected void addScopeOfValidityPropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_BaseMetricDescription_scopeOfValidity_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_BaseMetricDescription_scopeOfValidity_feature", "_UI_BaseMetricDescription_type"),
+                MetricSpecPackage.Literals.BASE_METRIC_DESCRIPTION__SCOPE_OF_VALIDITY, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -107,8 +125,8 @@ public class BaseMetricDescriptionItemProvider extends MetricDescriptionItemProv
     @Override
     public String getText(final Object object) {
         final String label = ((BaseMetricDescription) object).getName();
-        return label == null || label.length() == 0 ? this.getString("_UI_BaseMetricDescription_type") : this
-                .getString("_UI_BaseMetricDescription_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_BaseMetricDescription_type")
+                : this.getString("_UI_BaseMetricDescription_type") + " " + label;
     }
 
     /**
@@ -126,6 +144,7 @@ public class BaseMetricDescriptionItemProvider extends MetricDescriptionItemProv
         case MetricSpecPackage.BASE_METRIC_DESCRIPTION__CAPTURE_TYPE:
         case MetricSpecPackage.BASE_METRIC_DESCRIPTION__DATA_TYPE:
         case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCALE:
+        case MetricSpecPackage.BASE_METRIC_DESCRIPTION__SCOPE_OF_VALIDITY:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }

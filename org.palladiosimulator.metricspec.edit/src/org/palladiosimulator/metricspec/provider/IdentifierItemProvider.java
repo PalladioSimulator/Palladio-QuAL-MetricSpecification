@@ -58,10 +58,11 @@ public class IdentifierItemProvider extends de.uka.ipd.sdq.identifier.provider.I
     protected void addLiteralPropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Identifier_literal_feature"), this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_Identifier_literal_feature", "_UI_Identifier_type"),
-                        MetricSpecPackage.Literals.IDENTIFIER__LITERAL, true, false, false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                this.getString("_UI_Identifier_literal_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_Identifier_literal_feature",
+                        "_UI_Identifier_type"),
+                MetricSpecPackage.Literals.IDENTIFIER__LITERAL, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -83,8 +84,8 @@ public class IdentifierItemProvider extends de.uka.ipd.sdq.identifier.provider.I
     @Override
     public String getText(final Object object) {
         final String label = ((Identifier) object).getId();
-        return label == null || label.length() == 0 ? this.getString("_UI_Identifier_type") : this
-                .getString("_UI_Identifier_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_Identifier_type")
+                : this.getString("_UI_Identifier_type") + " " + label;
     }
 
     /**

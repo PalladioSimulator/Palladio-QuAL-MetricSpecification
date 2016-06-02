@@ -101,8 +101,8 @@ public class MetricDescriptionRepositoryItemProvider extends IdentifierItemProvi
     @Override
     public String getText(final Object object) {
         final String label = ((MetricDescriptionRepository) object).getId();
-        return label == null || label.length() == 0 ? this.getString("_UI_MetricDescriptionRepository_type") : this
-                .getString("_UI_MetricDescriptionRepository_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_MetricDescriptionRepository_type")
+                : this.getString("_UI_MetricDescriptionRepository_type") + " " + label;
     }
 
     /**
@@ -134,17 +134,17 @@ public class MetricDescriptionRepositoryItemProvider extends IdentifierItemProvi
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(this.createChildParameter(
-                MetricSpecPackage.Literals.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS,
-                MetricSpecFactory.eINSTANCE.createTextualBaseMetricDescription()));
+        newChildDescriptors.add(
+                this.createChildParameter(MetricSpecPackage.Literals.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS,
+                        MetricSpecFactory.eINSTANCE.createTextualBaseMetricDescription()));
 
-        newChildDescriptors.add(this.createChildParameter(
-                MetricSpecPackage.Literals.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS,
-                MetricSpecFactory.eINSTANCE.createMetricSetDescription()));
+        newChildDescriptors.add(
+                this.createChildParameter(MetricSpecPackage.Literals.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS,
+                        MetricSpecFactory.eINSTANCE.createMetricSetDescription()));
 
-        newChildDescriptors.add(this.createChildParameter(
-                MetricSpecPackage.Literals.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS,
-                MetricSpecFactory.eINSTANCE.createNumericalBaseMetricDescription()));
+        newChildDescriptors.add(
+                this.createChildParameter(MetricSpecPackage.Literals.METRIC_DESCRIPTION_REPOSITORY__METRIC_DESCRIPTIONS,
+                        MetricSpecFactory.eINSTANCE.createNumericalBaseMetricDescription()));
     }
 
     /**

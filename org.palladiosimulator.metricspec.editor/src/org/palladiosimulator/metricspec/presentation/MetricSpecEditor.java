@@ -125,8 +125,8 @@ import de.uka.ipd.sdq.identifier.provider.IdentifierItemProviderAdapterFactory;
  * 
  * @generated
  */
-public class MetricSpecEditor extends MultiPageEditorPart implements IEditingDomainProvider, ISelectionProvider,
-IMenuListener, IViewerProvider, IGotoMarker {
+public class MetricSpecEditor extends MultiPageEditorPart
+        implements IEditingDomainProvider, ISelectionProvider, IMenuListener, IViewerProvider, IGotoMarker {
 
     /**
      * This keeps track of the editing domain that is used to track all changes to the model. <!--
@@ -673,8 +673,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
                         if (mostRecentCommand != null) {
                             MetricSpecEditor.this.setSelectionToViewer(mostRecentCommand.getAffectedObjects());
                         }
-                        for (final Iterator<PropertySheetPage> i = MetricSpecEditor.this.propertySheetPages.iterator(); i
-                                .hasNext();) {
+                        for (final Iterator<PropertySheetPage> i = MetricSpecEditor.this.propertySheetPages
+                                .iterator(); i.hasNext();) {
                             final PropertySheetPage propertySheetPage = i.next();
                             if (propertySheetPage.getControl().isDisposed()) {
                                 i.remove();
@@ -722,8 +722,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
                     // Try to select the items in the current content viewer of the editor.
                     //
                     if (MetricSpecEditor.this.currentViewer != null) {
-                        MetricSpecEditor.this.currentViewer.setSelection(
-                                new StructuredSelection(theSelection.toArray()), true);
+                        MetricSpecEditor.this.currentViewer
+                                .setSelection(new StructuredSelection(theSelection.toArray()), true);
                     }
                 }
             };
@@ -861,8 +861,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
 
             // Set the editors selection based on the current viewer's selection.
             //
-            this.setSelection(this.currentViewer == null ? StructuredSelection.EMPTY : this.currentViewer
-                    .getSelection());
+            this.setSelection(
+                    this.currentViewer == null ? StructuredSelection.EMPTY : this.currentViewer.getSelection());
         }
     }
 
@@ -893,8 +893,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
         this.getSite().registerContextMenu(contextMenu, new UnwrappingSelectionProvider(viewer));
 
         final int dndOperations = DND.DROP_COPY | DND.DROP_MOVE | DND.DROP_LINK;
-        final Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(),
-                LocalSelectionTransfer.getTransfer(), FileTransfer.getInstance() };
+        final Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(),
+                FileTransfer.getInstance() };
         viewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(viewer));
         viewer.addDropSupport(dndOperations, transfers, new EditingDomainViewerDropAdapter(this.editingDomain, viewer));
     }
@@ -906,7 +906,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
      * @generated
      */
     public void createModel() {
-        final URI resourceURI = EditUIUtil.getURI(this.getEditorInput());
+        final URI resourceURI = EditUIUtil.getURI(this.getEditorInput(),
+                this.editingDomain.getResourceSet().getURIConverter());
         Exception exception = null;
         Resource resource = null;
         try {
@@ -932,15 +933,17 @@ IMenuListener, IViewerProvider, IGotoMarker {
      * @generated
      */
     public Diagnostic analyzeResourceProblems(final Resource resource, final Exception exception) {
-        if (!resource.getErrors().isEmpty() || !resource.getWarnings().isEmpty()) {
-            final BasicDiagnostic basicDiagnostic = new BasicDiagnostic(Diagnostic.ERROR,
-                    "org.palladiosimulator.metricspec.editor", 0, getString("_UI_CreateModelError_message",
-                            resource.getURI()), new Object[] { exception == null ? (Object) resource : exception });
+        final boolean hasErrors = !resource.getErrors().isEmpty();
+        if (hasErrors || !resource.getWarnings().isEmpty()) {
+            final BasicDiagnostic basicDiagnostic = new BasicDiagnostic(
+                    hasErrors ? Diagnostic.ERROR : Diagnostic.WARNING, "org.palladiosimulator.metricspec.editor", 0,
+                    getString("_UI_CreateModelError_message", resource.getURI()),
+                    new Object[] { exception == null ? (Object) resource : exception });
             basicDiagnostic.merge(EcoreUtil.computeDiagnostic(resource, true));
             return basicDiagnostic;
         } else if (exception != null) {
-            return new BasicDiagnostic(Diagnostic.ERROR, "org.palladiosimulator.metricspec.editor", 0, getString(
-                    "_UI_CreateModelError_message", resource.getURI()), new Object[] { exception });
+            return new BasicDiagnostic(Diagnostic.ERROR, "org.palladiosimulator.metricspec.editor", 0,
+                    getString("_UI_CreateModelError_message", resource.getURI()), new Object[] { exception });
         } else {
             return Diagnostic.OK_INSTANCE;
         }
@@ -986,8 +989,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
 
                 this.selectionViewer.setLabelProvider(new AdapterFactoryLabelProvider(this.adapterFactory));
                 this.selectionViewer.setInput(this.editingDomain.getResourceSet());
-                this.selectionViewer.setSelection(new StructuredSelection(this.editingDomain.getResourceSet()
-                        .getResources().get(0)), true);
+                this.selectionViewer.setSelection(
+                        new StructuredSelection(this.editingDomain.getResourceSet().getResources().get(0)), true);
                 viewerPane.setTitle(this.editingDomain.getResourceSet());
 
                 new AdapterFactoryTreeEditor(this.selectionViewer.getTree(), this.adapterFactory);
@@ -1292,12 +1295,12 @@ IMenuListener, IViewerProvider, IGotoMarker {
 
                     // Set up the tree viewer.
                     //
-                    MetricSpecEditor.this.contentOutlineViewer.setContentProvider(new AdapterFactoryContentProvider(
-                            MetricSpecEditor.this.adapterFactory));
-                    MetricSpecEditor.this.contentOutlineViewer.setLabelProvider(new AdapterFactoryLabelProvider(
-                            MetricSpecEditor.this.adapterFactory));
-                    MetricSpecEditor.this.contentOutlineViewer.setInput(MetricSpecEditor.this.editingDomain
-                            .getResourceSet());
+                    MetricSpecEditor.this.contentOutlineViewer.setContentProvider(
+                            new AdapterFactoryContentProvider(MetricSpecEditor.this.adapterFactory));
+                    MetricSpecEditor.this.contentOutlineViewer
+                            .setLabelProvider(new AdapterFactoryLabelProvider(MetricSpecEditor.this.adapterFactory));
+                    MetricSpecEditor.this.contentOutlineViewer
+                            .setInput(MetricSpecEditor.this.editingDomain.getResourceSet());
 
                     // Make sure our popups work.
                     //
@@ -1306,8 +1309,10 @@ IMenuListener, IViewerProvider, IGotoMarker {
                     if (!MetricSpecEditor.this.editingDomain.getResourceSet().getResources().isEmpty()) {
                         // Select the root object in the view.
                         //
-                        MetricSpecEditor.this.contentOutlineViewer.setSelection(new StructuredSelection(
-                                MetricSpecEditor.this.editingDomain.getResourceSet().getResources().get(0)), true);
+                        MetricSpecEditor.this.contentOutlineViewer.setSelection(
+                                new StructuredSelection(
+                                        MetricSpecEditor.this.editingDomain.getResourceSet().getResources().get(0)),
+                                true);
                     }
                 }
 
@@ -1530,8 +1535,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
         if (path != null) {
             final IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(path);
             if (file != null) {
-                this.doSaveAs(URI.createPlatformResourceURI(file.getFullPath().toString(), true), new FileEditorInput(
-                        file));
+                this.doSaveAs(URI.createPlatformResourceURI(file.getFullPath().toString(), true),
+                        new FileEditorInput(file));
             }
         }
     }
@@ -1545,9 +1550,9 @@ IMenuListener, IViewerProvider, IGotoMarker {
         (this.editingDomain.getResourceSet().getResources().get(0)).setURI(uri);
         this.setInputWithNotify(editorInput);
         this.setPartName(editorInput.getName());
-        final IProgressMonitor progressMonitor = this.getActionBars().getStatusLineManager() != null ? this
-                .getActionBars().getStatusLineManager().getProgressMonitor() : new NullProgressMonitor();
-                this.doSave(progressMonitor);
+        final IProgressMonitor progressMonitor = this.getActionBars().getStatusLineManager() != null
+                ? this.getActionBars().getStatusLineManager().getProgressMonitor() : new NullProgressMonitor();
+        this.doSave(progressMonitor);
     }
 
     /**
@@ -1650,8 +1655,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
      */
     public void setStatusLineManager(final ISelection selection) {
         final IStatusLineManager statusLineManager = this.currentViewer != null
-                && this.currentViewer == this.contentOutlineViewer ? this.contentOutlineStatusLineManager : this
-                .getActionBars().getStatusLineManager();
+                && this.currentViewer == this.contentOutlineViewer ? this.contentOutlineStatusLineManager
+                        : this.getActionBars().getStatusLineManager();
 
         if (statusLineManager != null) {
             if (selection instanceof IStructuredSelection) {
@@ -1662,14 +1667,14 @@ IMenuListener, IViewerProvider, IGotoMarker {
                     break;
                 }
                 case 1: {
-                    final String text = new AdapterFactoryItemDelegator(this.adapterFactory).getText(collection
-                            .iterator().next());
+                    final String text = new AdapterFactoryItemDelegator(this.adapterFactory)
+                            .getText(collection.iterator().next());
                     statusLineManager.setMessage(getString("_UI_SingleObjectSelected", text));
                     break;
                 }
                 default: {
-                    statusLineManager.setMessage(getString("_UI_MultiObjectSelected",
-                            Integer.toString(collection.size())));
+                    statusLineManager
+                            .setMessage(getString("_UI_MultiObjectSelected", Integer.toString(collection.size())));
                     break;
                 }
                 }

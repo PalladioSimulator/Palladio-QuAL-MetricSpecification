@@ -12,11 +12,11 @@ import de.uka.ipd.sdq.identifier.Identifier;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  * <li>{@link org.palladiosimulator.metricspec.MetricDescriptionRepository#getMetricDescriptions
  * <em>Metric Descriptions</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.palladiosimulator.metricspec.MetricSpecPackage#getMetricDescriptionRepository()
  * @model
@@ -35,7 +35,7 @@ public interface MetricDescriptionRepository extends Identifier {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Metric Descriptions</em>' containment reference list.
      * @see org.palladiosimulator.metricspec.MetricSpecPackage#getMetricDescriptionRepository_MetricDescriptions()
      * @see org.palladiosimulator.metricspec.MetricDescription#getRepository

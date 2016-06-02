@@ -22,7 +22,7 @@ import org.palladiosimulator.metricspec.TextualBaseMetricDescription;
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
  * <code>createXXX</code> method for each class of the model. <!-- end-user-doc -->
- * 
+ *
  * @see org.palladiosimulator.metricspec.MetricSpecPackage
  * @generated
  */
@@ -30,14 +30,14 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected static MetricSpecPackage modelPackage;
 
     /**
      * Creates an instance of the adapter factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public MetricSpecAdapterFactory() {
@@ -50,7 +50,7 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
      * Returns whether this factory is applicable for the type of the object. <!-- begin-user-doc
      * --> This implementation returns <code>true</code> if the object is either the model's package
      * or is an instance object of the model. <!-- end-user-doc -->
-     * 
+     *
      * @return whether this factory is applicable for the type of the object.
      * @generated
      */
@@ -68,7 +68,7 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
     /**
      * The switch that delegates to the <code>createXXX</code> methods. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MetricSpecSwitch<Adapter> modelSwitch = new MetricSpecSwitch<Adapter>() {
@@ -136,7 +136,7 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param target
      *            the object to adapt.
      * @return the adapter for the <code>target</code>.
@@ -152,7 +152,7 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
      * {@link org.palladiosimulator.metricspec.Identifier <em>Identifier</em>}'. <!-- begin-user-doc
      * --> This default implementation returns null so that we can easily ignore cases; it's useful
      * to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.metricspec.Identifier
      * @generated
@@ -167,7 +167,7 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
      * <em>Textual Base Metric Description</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.metricspec.TextualBaseMetricDescription
      * @generated
@@ -182,7 +182,7 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
      * <em>Base Metric Description</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.metricspec.BaseMetricDescription
      * @generated
@@ -227,7 +227,7 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
      * <em>Aggregation Function Description</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.metricspec.AggregationFunctionDescription
      * @generated
@@ -242,7 +242,7 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
      * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
      * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.metricspec.MetricSetDescription
      * @generated
@@ -257,7 +257,7 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
      * <em>Numerical Base Metric Description</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.metricspec.NumericalBaseMetricDescription
      * @generated
@@ -271,7 +271,7 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
      * <em>IJS Quantity</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see javax.measure.quantity.Quantity
      * @generated
@@ -286,7 +286,7 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
      * <em>Metric Description Repository</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.metricspec.MetricDescriptionRepository
      * @generated
@@ -300,7 +300,7 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
      * <em>Identifier</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see de.uka.ipd.sdq.identifier.Identifier
      * @generated
@@ -312,7 +312,7 @@ public class MetricSpecAdapterFactory extends AdapterFactoryImpl {
     /**
      * Creates a new adapter for the default case. <!-- begin-user-doc --> This default
      * implementation returns null. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @generated
      */

@@ -59,8 +59,9 @@ public class NumericalBaseMetricDescriptionItemProvider extends BaseMetricDescri
     protected void addDefaultUnitPropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_NumericalBaseMetricDescription_defaultUnit_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_NumericalBaseMetricDescription_defaultUnit_feature",
+                this.getString("_UI_NumericalBaseMetricDescription_defaultUnit_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_NumericalBaseMetricDescription_defaultUnit_feature",
                         "_UI_NumericalBaseMetricDescription_type"),
                 MetricSpecPackage.Literals.NUMERICAL_BASE_METRIC_DESCRIPTION__DEFAULT_UNIT, true, false, false,
                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
@@ -75,8 +76,8 @@ public class NumericalBaseMetricDescriptionItemProvider extends BaseMetricDescri
     protected void addPersistenceKindPropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_NumericalBaseMetricDescription_persistenceKind_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description",
+                this.getString("_UI_NumericalBaseMetricDescription_persistenceKind_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
                         "_UI_NumericalBaseMetricDescription_persistenceKind_feature",
                         "_UI_NumericalBaseMetricDescription_type"),
                 MetricSpecPackage.Literals.NUMERICAL_BASE_METRIC_DESCRIPTION__PERSISTENCE_KIND, true, false, false,
@@ -91,8 +92,8 @@ public class NumericalBaseMetricDescriptionItemProvider extends BaseMetricDescri
      */
     @Override
     public Object getImage(final Object object) {
-        return this.overlayImage(object, this.getResourceLocator()
-                .getImage("full/obj16/NumericalBaseMetricDescription"));
+        return this.overlayImage(object,
+                this.getResourceLocator().getImage("full/obj16/NumericalBaseMetricDescription"));
     }
 
     /**
@@ -104,8 +105,8 @@ public class NumericalBaseMetricDescriptionItemProvider extends BaseMetricDescri
     @Override
     public String getText(final Object object) {
         final String label = ((NumericalBaseMetricDescription) object).getName();
-        return label == null || label.length() == 0 ? this.getString("_UI_NumericalBaseMetricDescription_type") : this
-                .getString("_UI_NumericalBaseMetricDescription_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_NumericalBaseMetricDescription_type")
+                : this.getString("_UI_NumericalBaseMetricDescription_type") + " " + label;
     }
 
     /**

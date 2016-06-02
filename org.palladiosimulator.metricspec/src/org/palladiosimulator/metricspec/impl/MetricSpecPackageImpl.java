@@ -28,118 +28,126 @@ import org.palladiosimulator.metricspec.MetricSpecPackage;
 import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
 import org.palladiosimulator.metricspec.PersistenceKindOptions;
 import org.palladiosimulator.metricspec.Scale;
+import org.palladiosimulator.metricspec.ScopeOfValidity;
 import org.palladiosimulator.metricspec.TextualBaseMetricDescription;
 
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass identifierEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass textualBaseMetricDescriptionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass baseMetricDescriptionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass metricDescriptionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass descriptionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass aggregationFunctionDescriptionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass metricSetDescriptionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass numericalBaseMetricDescriptionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass ijsQuantityEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass metricDescriptionRepositoryEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EEnum captureTypeEEnum = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EEnum scaleEEnum = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EEnum persistenceKindOptionsEEnum = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EEnum dataTypeEEnum = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    private EEnum scopeOfValidityEEnum = null;
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     private EDataType ejsUnitEDataType = null;
@@ -152,7 +160,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
      * Note: the correct way to create the package is via the static factory method {@link #init
      * init()}, which also performs initialization of the package, or returns the registered
      * package, if one already exists. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.eclipse.emf.ecore.EPackage.Registry
      * @see org.palladiosimulator.metricspec.MetricSpecPackage#eNS_URI
      * @see #init()
@@ -164,7 +172,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private static boolean isInited = false;
@@ -177,7 +185,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
      * This method is used to initialize {@link MetricSpecPackage#eINSTANCE} when that field is
      * accessed. Clients should not invoke it directly. Instead, they should simply access that
      * field to obtain the package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #eNS_URI
      * @see #createPackageContents()
      * @see #initializePackageContents()
@@ -191,7 +199,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
         // Obtain or create and register package
         final MetricSpecPackageImpl theMetricSpecPackage = (MetricSpecPackageImpl) (EPackage.Registry.INSTANCE
                 .get(eNS_URI) instanceof MetricSpecPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
-                : new MetricSpecPackageImpl());
+                        : new MetricSpecPackageImpl());
 
         isInited = true;
 
@@ -214,7 +222,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -224,7 +232,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -234,7 +242,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -244,7 +252,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -254,7 +262,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -264,7 +272,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -274,7 +282,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -284,7 +292,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -294,7 +302,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -304,7 +312,17 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    @Override
+    public EAttribute getBaseMetricDescription_ScopeOfValidity() {
+        return (EAttribute) this.baseMetricDescriptionEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
@@ -314,7 +332,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -324,7 +342,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -334,7 +352,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -344,7 +362,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -354,7 +372,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -364,7 +382,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -374,7 +392,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -384,7 +402,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -394,7 +412,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -404,7 +422,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -414,7 +432,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -424,7 +442,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -434,7 +452,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -444,7 +462,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -454,7 +472,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -464,7 +482,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -474,7 +492,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -484,7 +502,17 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    @Override
+    public EEnum getScopeOfValidity() {
+        return this.scopeOfValidityEEnum;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
@@ -494,7 +522,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -504,7 +532,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private boolean isCreated = false;
@@ -512,7 +540,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
     /**
      * Creates the meta-model objects for the package. This method is guarded to have no affect on
      * any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public void createPackageContents() {
@@ -533,6 +561,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
         this.createEAttribute(this.baseMetricDescriptionEClass, BASE_METRIC_DESCRIPTION__CAPTURE_TYPE);
         this.createEAttribute(this.baseMetricDescriptionEClass, BASE_METRIC_DESCRIPTION__DATA_TYPE);
         this.createEAttribute(this.baseMetricDescriptionEClass, BASE_METRIC_DESCRIPTION__SCALE);
+        this.createEAttribute(this.baseMetricDescriptionEClass, BASE_METRIC_DESCRIPTION__SCOPE_OF_VALIDITY);
 
         this.metricDescriptionEClass = this.createEClass(METRIC_DESCRIPTION);
         this.createEReference(this.metricDescriptionEClass, METRIC_DESCRIPTION__REPOSITORY);
@@ -563,6 +592,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
         this.scaleEEnum = this.createEEnum(SCALE);
         this.persistenceKindOptionsEEnum = this.createEEnum(PERSISTENCE_KIND_OPTIONS);
         this.dataTypeEEnum = this.createEEnum(DATA_TYPE);
+        this.scopeOfValidityEEnum = this.createEEnum(SCOPE_OF_VALIDITY);
 
         // Create data types
         this.ejsUnitEDataType = this.createEDataType(EJS_UNIT);
@@ -570,7 +600,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private boolean isInitialized = false;
@@ -578,7 +608,7 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
     /**
      * Complete the initialization of the package and its meta-model. This method is guarded to have
      * no affect on any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public void initializePackageContents() {
@@ -643,13 +673,16 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
         this.initEAttribute(this.getBaseMetricDescription_Scale(), this.getScale(), "scale", null, 1, 1,
                 BaseMetricDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
                 IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEAttribute(this.getBaseMetricDescription_ScopeOfValidity(), this.getScopeOfValidity(),
+                "scopeOfValidity", null, 1, 1, BaseMetricDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.metricDescriptionEClass, MetricDescription.class, "MetricDescription", IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         this.initEReference(this.getMetricDescription_Repository(), this.getMetricDescriptionRepository(),
                 this.getMetricDescriptionRepository_MetricDescriptions(), "repository", null, 1, 1,
-                MetricDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+                MetricDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.descriptionEClass, Description.class, "Description", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
@@ -710,6 +743,10 @@ public class MetricSpecPackageImpl extends EPackageImpl implements MetricSpecPac
         this.initEEnum(this.dataTypeEEnum, DataType.class, "DataType");
         this.addEEnumLiteral(this.dataTypeEEnum, DataType.QUANTITATIVE);
         this.addEEnumLiteral(this.dataTypeEEnum, DataType.QUALITATIVE);
+
+        this.initEEnum(this.scopeOfValidityEEnum, ScopeOfValidity.class, "ScopeOfValidity");
+        this.addEEnumLiteral(this.scopeOfValidityEEnum, ScopeOfValidity.DISCRETE);
+        this.addEEnumLiteral(this.scopeOfValidityEEnum, ScopeOfValidity.CONTINUOUS);
 
         // Initialize data types
         this.initEDataType(this.ejsUnitEDataType, Unit.class, "EJSUnit", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
