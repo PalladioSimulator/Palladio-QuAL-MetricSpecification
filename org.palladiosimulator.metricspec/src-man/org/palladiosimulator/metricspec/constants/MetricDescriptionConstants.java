@@ -22,11 +22,11 @@ import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
  * @author Sebastian Lehrig, Steffen Becker
  */
 public final class MetricDescriptionConstants {
-    private static final String PATHMAP_METRIC_SPEC_MODELS_COMMON_METRICS_METRICSPEC = "pathmap://METRIC_SPEC_MODELS/commonMetrics.metricspec";
+    public static final String PATHMAP_METRIC_SPEC_MODELS_COMMON_METRICS_METRICSPEC = "pathmap://METRIC_SPEC_MODELS/commonMetrics.metricspec";
     private static final Map<?, ?> OPTIONS = Collections.emptyMap();
 
     /** Specifies a point in time metric, e.g., to store an event time stamp. */
-    public final static BaseMetricDescription POINT_IN_TIME_METRIC;
+    public final static NumericalBaseMetricDescription POINT_IN_TIME_METRIC;
 
     /** Specifies a response time metric, e.g., to store the response time of operation calls. */
     public final static BaseMetricDescription RESPONSE_TIME_METRIC;
@@ -206,7 +206,7 @@ public final class MetricDescriptionConstants {
      * potential child nodes.<br>
      * Thus, the power consumption value is always relative to a fixed time period.
      */
-    public static final BaseMetricDescription POWER_CONSUMPTION;
+    public static final NumericalBaseMetricDescription POWER_CONSUMPTION;
 
     /**
      * Specifies a {@code (point in time, power consumption)} tuple, i.e., the point in time the
@@ -323,6 +323,10 @@ public final class MetricDescriptionConstants {
      *  the measurement was taken.
      */
     public final static MetricSetDescription RESPONSE_ARRIVAL_RATE_TUPLE;
+    public static BaseMetricDescription HDD_READ_RATE;
+    public static MetricSetDescription HDD_READ_RATE_TUPLE;
+    public static BaseMetricDescription HDD_WRITE_RATE;
+    public static MetricSetDescription HDD_WRITE_RATE_TUPLE;
     
     
     
@@ -339,7 +343,7 @@ public final class MetricDescriptionConstants {
             throw new RuntimeException(e);
         }
 
-        POINT_IN_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_NCRBos7pEeOX_4BzImuHbA");
+        POINT_IN_TIME_METRIC = (NumericalBaseMetricDescription) resource.getEObject("_NCRBos7pEeOX_4BzImuHbA");
 
         RESPONSE_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_6rYmYs7nEeOX_4BzImuHbA");
         RESPONSE_TIME_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_mZb3MdoLEeO-WvSDaR6unQ");
@@ -387,7 +391,7 @@ public final class MetricDescriptionConstants {
         UTILIZATION_OF_ACTIVE_RESOURCE = (BaseMetricDescription) resource.getEObject("_QIb6cikUEeSuf8LV7cHLgA");
         UTILIZATION_OF_ACTIVE_RESOURCE_TUPLE = (MetricSetDescription) resource.getEObject("_mhws4SkUEeSuf8LV7cHLgA");
 
-        POWER_CONSUMPTION = (BaseMetricDescription) resource.getEObject("_NbIowlt_EeS0LdH-diVVEQ");
+        POWER_CONSUMPTION = (NumericalBaseMetricDescription) resource.getEObject("_NbIowlt_EeS0LdH-diVVEQ");
         POWER_CONSUMPTION_TUPLE = (MetricSetDescription) resource.getEObject("_EZBPQV91EeSUTcC2MkYv_Q");
 
         ENERGY_CONSUMPTION = (BaseMetricDescription) resource.getEObject("_SxzJMncPEeS8FogxzuXBPA");
@@ -417,6 +421,12 @@ public final class MetricDescriptionConstants {
         
         RESPONSE_ARRIVAL_RATE = (BaseMetricDescription) resource.getEObject("_XqX1QgYAEeaz8bKeq_K-2w");
         RESPONSE_ARRIVAL_RATE_TUPLE = (MetricSetDescription) resource.getEObject("_wyMOQQYAEeaz8bKeq_K-2w");
+        
+        HDD_READ_RATE = (BaseMetricDescription) resource.getEObject("_dwmeElVcEea-nOJ8YX6eWg");
+        HDD_READ_RATE_TUPLE = (MetricSetDescription) resource.getEObject("_8nG4MVVcEea-nOJ8YX6eWg");
+        
+        HDD_WRITE_RATE = (BaseMetricDescription) resource.getEObject("_1Q6twlVcEea-nOJ8YX6eWg");
+        HDD_WRITE_RATE_TUPLE = (MetricSetDescription) resource.getEObject("__hLcoVVcEea-nOJ8YX6eWg");
         
         //label unit correctly
         UnitFormat.getInstance().label(((NumericalBaseMetricDescription) ENERGY_CONSUMPTION).getDefaultUnit(),"kWh");
