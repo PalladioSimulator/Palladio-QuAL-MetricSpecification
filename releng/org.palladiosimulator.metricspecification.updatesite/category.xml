@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+	<feature url="features/org.palladiosimulator.metricspec.feature_1.0.3.qualifier.jar" id="org.palladiosimulator.metricspec.feature" version="1.0.3.qualifier">
+	   <category name="org.palladiosimulator.qual.category"/>
+	</feature>
+	<feature url="features/org.palladiosimulator.metricspec.feature.source_1.0.3.qualifier.jar" id="org.palladiosimulator.metricspec.feature.source" version="1.0.3.qualifier">
+	   <category name="org.palladiosimulator.qual.source.category"/>
+	</feature>
+	<category-def name="org.palladiosimulator.qual.category" label="Quality Analysis Lab">
+	   <description>
+	      The Quality Analysis Lab (QuAL) is responsible for taking measurements from experiments or simulations and their persistance
+	   </description>
+	  </category-def>
+	  <category-def name="org.palladiosimulator.qual.source.category" label="Quality Analysis Lab Source">
+	     <description>
+	        Quality Analysis Lab Source
+	     </description>
+	  </category-def>
+</site>
