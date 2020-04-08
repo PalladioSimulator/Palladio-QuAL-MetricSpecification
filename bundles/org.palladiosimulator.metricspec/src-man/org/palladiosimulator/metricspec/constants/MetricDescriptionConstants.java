@@ -6,12 +6,15 @@ import java.util.Map;
 
 import javax.measure.unit.UnitFormat;
 
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.palladiosimulator.metricspec.BaseMetricDescription;
 import org.palladiosimulator.metricspec.MetricSetDescription;
+import org.palladiosimulator.metricspec.MetricSpecPackage;
 import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
 
 /**
@@ -23,6 +26,8 @@ import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
  */
 public final class MetricDescriptionConstants {
     public static final String PATHMAP_METRIC_SPEC_MODELS_COMMON_METRICS_METRICSPEC = "pathmap://METRIC_SPEC_MODELS/commonMetrics.metricspec";
+    public static final String CLASSPATH_RELATIVE_COMMON_METRICS_METRICSPEC = "commonMetrics.metricspec";
+    
     private static final Map<?, ?> OPTIONS = Collections.emptyMap();
 
     /** Specifies a point in time metric, e.g., to store an event time stamp. */
@@ -332,7 +337,24 @@ public final class MetricDescriptionConstants {
     
     
     static {
-        final ResourceSet resourceSet = new ResourceSetImpl();
+    	final ResourceSet resourceSet = new ResourceSetImpl();
+    	
+		if (!Platform.isRunning()) {
+			//Trigger package initialization
+			MetricSpecPackage.eINSTANCE.getEFactoryInstance();
+			
+			//Register the ResourceFactory
+			resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap()
+				.putIfAbsent("metricspec", new XMIResourceFactoryImpl());
+			
+			//If we are running in standalone mode, the dependencies, and consequently the
+			// common metrics model, are available directly on the classpath.
+			resourceSet.getURIConverter().getURIMap().putIfAbsent(
+					URI.createURI(PATHMAP_METRIC_SPEC_MODELS_COMMON_METRICS_METRICSPEC),
+					URI.createURI(Thread.currentThread().getContextClassLoader()
+							.getResource(CLASSPATH_RELATIVE_COMMON_METRICS_METRICSPEC).toString()));
+		}
+		
         final Resource resource = resourceSet
                 .createResource(URI.createURI(PATHMAP_METRIC_SPEC_MODELS_COMMON_METRICS_METRICSPEC, true));
         try {
