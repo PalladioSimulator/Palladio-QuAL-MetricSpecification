@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.palladiosimulator</groupId>
 		<artifactId>eclipse-parent-updatesite</artifactId>
-		<version>0.4.3</version>
+		<version>0.5.0</version>
 	</parent>
 	<groupId>org.palladiosimulator.metricspecification</groupId>
 	<artifactId>parent</artifactId>	
