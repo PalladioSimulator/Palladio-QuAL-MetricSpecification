@@ -1,8 +1,10 @@
 package org.palladiosimulator.metricspec.constants;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Collections;
 import java.util.Map;
+import java.util.Optional;
 
 import javax.measure.unit.UnitFormat;
 
@@ -288,54 +290,52 @@ public final class MetricDescriptionConstants {
      */
     public final static BaseMetricDescription COST_OF_RESOURCE_CONTAINERS;
 
-    
     /**
      * The point in simulation time an external event is triggered
      */
     public final static BaseMetricDescription EXTERNAL_EVENT_TIME_METRIC;
-    
+
     /**
-     *  This metric captures for an operation the number of users that are concurrently executing the operation.
+     * This metric captures for an operation the number of users that are concurrently executing the
+     * operation.
      */
     public final static BaseMetricDescription NUMBER_OF_CONCURRENTLY_EXECUTING_INVOCATIONS;
-    
+
     /**
-     *  This metric captures for an operation the number of users that are concurrently executing the operation 
-     *  together with the simulation point in time of the measurement.
+     * This metric captures for an operation the number of users that are concurrently executing the
+     * operation together with the simulation point in time of the measurement.
      */
     public final static MetricSetDescription NUMBER_OF_CONCURRENTLY_EXECUTING_INVOCATIONS_TUPLE;
-    
+
     /**
-     *  This metric captures for entities the arrival rate of requests (e.g. the rate of invocations of a provided operation).
+     * This metric captures for entities the arrival rate of requests (e.g. the rate of invocations
+     * of a provided operation).
      */
     public final static BaseMetricDescription REQUEST_ARRIVAL_RATE;
-    
+
     /**
-     *  This metric captures for entities the arrival rate of requests together with the point in simulation 
-     *  time the measurement was taken.
+     * This metric captures for entities the arrival rate of requests together with the point in
+     * simulation time the measurement was taken.
      */
     public final static MetricSetDescription REQUEST_ARRIVAL_RATE_TUPLE;
-    
+
     /**
-     *  This metric captures for entities the arrival rate of responses (e.g. the rate of a provided 
-     *  operation finishing the execution of a request).
+     * This metric captures for entities the arrival rate of responses (e.g. the rate of a provided
+     * operation finishing the execution of a request).
      */
     public final static BaseMetricDescription RESPONSE_ARRIVAL_RATE;
-    
+
     /**
-     *  This metric captures for entities the arrival rate of responses (e.g. the rate of a provided 
-     *  operation finishing the execution of a request) together with the point in simulation time 
-     *  the measurement was taken.
+     * This metric captures for entities the arrival rate of responses (e.g. the rate of a provided
+     * operation finishing the execution of a request) together with the point in simulation time
+     * the measurement was taken.
      */
     public final static MetricSetDescription RESPONSE_ARRIVAL_RATE_TUPLE;
     public static BaseMetricDescription HDD_READ_RATE;
     public static MetricSetDescription HDD_READ_RATE_TUPLE;
     public static BaseMetricDescription HDD_WRITE_RATE;
     public static MetricSetDescription HDD_WRITE_RATE_TUPLE;
-    
-    
-    
-    
+
     static {
     	final ResourceSet resourceSet = new ResourceSetImpl();
     	
@@ -349,10 +349,14 @@ public final class MetricDescriptionConstants {
 			
 			//If we are running in standalone mode, the dependencies, and consequently the
 			// common metrics model, are available directly on the classpath.
+            URL res = Optional.ofNullable(Thread.currentThread()
+                .getContextClassLoader()
+                .getResource(CLASSPATH_RELATIVE_COMMON_METRICS_METRICSPEC))
+                .orElseThrow(() -> new IllegalStateException(
+                        "You are running in standalone mode. Make sure the bundle \"org.palladiosimulator.metricspec.resource\" is on the class path."));
 			resourceSet.getURIConverter().getURIMap().putIfAbsent(
 					URI.createURI(PATHMAP_METRIC_SPEC_MODELS_COMMON_METRICS_METRICSPEC),
-					URI.createURI(Thread.currentThread().getContextClassLoader()
-							.getResource(CLASSPATH_RELATIVE_COMMON_METRICS_METRICSPEC).toString()));
+					URI.createURI(res.toString()));
 		}
 		
         final Resource resource = resourceSet
