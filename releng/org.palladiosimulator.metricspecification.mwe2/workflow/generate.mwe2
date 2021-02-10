@@ -29,7 +29,7 @@ Workflow {
 		generateEdit = true
 		generateEditor = true
 		genModel = "platform:/resource/org.palladiosimulator.metricspec/model/metricspec.genmodel"
-		srcPath = "platform:/resource/org.palladiosimulator.pcm/src-gen"
+		srcPath = "platform:/resource/org.palladiosimulator.metricspec/src-gen"
 	}
 
 	component = GapPatternPostProcessor {

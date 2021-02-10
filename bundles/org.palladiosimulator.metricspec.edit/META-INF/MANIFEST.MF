@@ -16,6 +16,5 @@ Require-Bundle: org.eclipse.core.runtime,
  de.uka.ipd.sdq.identifier;bundle-version="2.1.0";visibility:=reexport,
  de.uka.ipd.sdq.identifier.edit;bundle-version="2.1.0";visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.emf.ecore.edit;visibility:=reexport,
- org.palladiosimulator.metricspecification.mwe2;bundle-version="5.0.0";resolution:=optional
+ org.eclipse.emf.ecore.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
