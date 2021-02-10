@@ -21,4 +21,5 @@ Export-Package: org.palladiosimulator.metricspec,
  org.palladiosimulator.metricspec.constants,
  org.palladiosimulator.metricspec.impl,
  org.palladiosimulator.metricspec.metricentity,
- org.palladiosimulator.metricspec.util
+ org.palladiosimulator.metricspec.util,
+ org.palladiosimulator.metricspec.util.builder
