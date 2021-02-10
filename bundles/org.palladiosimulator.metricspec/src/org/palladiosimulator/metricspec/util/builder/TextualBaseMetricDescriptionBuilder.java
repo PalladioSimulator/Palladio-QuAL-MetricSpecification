@@ -7,6 +7,7 @@ package org.palladiosimulator.metricspec.util.builder;
  * 
  * @generated
  */
+@Deprecated(forRemoval = true)
 public class TextualBaseMetricDescriptionBuilder
         implements
         org.palladiosimulator.metricspec.util.builder.IMetricspecBuilder<org.palladiosimulator.metricspec.TextualBaseMetricDescription> {
