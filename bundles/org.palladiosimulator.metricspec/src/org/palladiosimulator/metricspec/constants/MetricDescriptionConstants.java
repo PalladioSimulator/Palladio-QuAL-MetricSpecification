@@ -15,9 +15,11 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.palladiosimulator.metricspec.BaseMetricDescription;
+import org.palladiosimulator.metricspec.Identifier;
 import org.palladiosimulator.metricspec.MetricSetDescription;
 import org.palladiosimulator.metricspec.MetricSpecPackage;
 import org.palladiosimulator.metricspec.NumericalBaseMetricDescription;
+import org.palladiosimulator.metricspec.TextualBaseMetricDescription;
 
 /**
  * Constant metric descriptions, commonly used by ProbeFramework.
@@ -324,6 +326,27 @@ public final class MetricDescriptionConstants {
      * operation finishing the execution of a request).
      */
     public final static BaseMetricDescription RESPONSE_ARRIVAL_RATE;
+    
+    /**
+     * This metric captures for activities, whether the activity finished regularly or due to a failure
+     */
+    public final static TextualBaseMetricDescription EXECUTION_RESULT_TYPE;
+    
+    /**
+     * The literal represents a successful execution of activities.
+     */
+    public final static Identifier EXECUTION_RESULT_TYPE_SUCCESS;
+    
+    /**
+     * The literal represents an unsuccessful execution of activities.
+     */
+    public final static Identifier EXECUTION_RESULT_TYPE_FAILURE;
+    
+    /**
+     * This metric captures for activities, whether the activity finished regularly or due to a failure 
+     * together with the point in simulation time the measurement was taken.
+     */
+    public final static MetricSetDescription EXECUTION_RESULT_TYPE_TUPLE;
 
     /**
      * This metric captures for entities the arrival rate of responses (e.g. the rate of a provided
@@ -453,6 +476,11 @@ public final class MetricDescriptionConstants {
         
         HDD_WRITE_RATE = (BaseMetricDescription) resource.getEObject("_1Q6twlVcEea-nOJ8YX6eWg");
         HDD_WRITE_RATE_TUPLE = (MetricSetDescription) resource.getEObject("__hLcoVVcEea-nOJ8YX6eWg");
+        
+        EXECUTION_RESULT_TYPE = (TextualBaseMetricDescription) resource.getEObject("_wvh0gBX7Eey-ibmvVnJ8rg");
+        EXECUTION_RESULT_TYPE_TUPLE = (MetricSetDescription) resource.getEObject("_-TkoURX7Eey-ibmvVnJ8rg");
+        EXECUTION_RESULT_TYPE_SUCCESS = (Identifier) resource.getEObject("_6ti80BX7Eey-ibmvVnJ8rg");
+        EXECUTION_RESULT_TYPE_FAILURE = (Identifier) resource.getEObject("_74GEYBX7Eey-ibmvVnJ8rg");
         
         //label unit correctly
         UnitFormat.getInstance().label(((NumericalBaseMetricDescription) ENERGY_CONSUMPTION).getDefaultUnit(),"kWh");
