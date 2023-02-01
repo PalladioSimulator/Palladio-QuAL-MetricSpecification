@@ -4,7 +4,7 @@ Bundle-Name: Model-driven workflow for MetricSpec
 Bundle-SymbolicName: org.palladiosimulator.metricspecification.mwe2
 Bundle-Version: 5.1.0.qualifier
 Automatic-Module-Name: org.palladiosimulator.metricspecification.mwe2
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: tools.mdsd.ecoreworkflow.mwe2lib;bundle-version="0.2.0",
  org.eclipse.emf.mwe2.launch;bundle-version="2.12.0",
  org.apache.log4j;bundle-version="1.2.15",
