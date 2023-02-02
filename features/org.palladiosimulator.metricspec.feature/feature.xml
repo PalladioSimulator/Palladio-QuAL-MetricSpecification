@@ -19,7 +19,6 @@
       <import plugin="org.eclipse.emf.edit"/>
       <import plugin="de.uka.ipd.sdq.identifier.edit" version="2.1.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.ecore.edit"/>
-      <import plugin="org.eclipse.emf.ecore" version="2.9.2" match="greaterOrEqual"/>
       <import plugin="org.eclipse.core.resources"/>
       <import plugin="org.eclipse.emf.ecore.xmi"/>
       <import plugin="org.eclipse.emf.edit.ui"/>
