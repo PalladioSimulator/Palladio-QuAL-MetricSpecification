@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Model-driven workflow for MetricSpec
 Bundle-SymbolicName: org.palladiosimulator.metricspecification.mwe2
-Bundle-Version: 5.1.0.qualifier
+Bundle-Version: 5.2.0.qualifier
 Automatic-Module-Name: org.palladiosimulator.metricspecification.mwe2
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: tools.mdsd.ecoreworkflow.mwe2lib,
