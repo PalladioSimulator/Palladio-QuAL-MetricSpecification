@@ -3,7 +3,7 @@ The framework is build around a meta model for specifying metric descriptions.
 This meta model allowed us to create a library of common metric descriptions. The meta model can also be used by Palladio developers who want to provide custom metric descriptions.
 
 ## Documentation
-For comprehensive documentation, please visit our [wiki page](https://sdqweb.ipd.kit.edu/wiki/QuAL).
+For comprehensive documentation, please consult the [user manual](https://github.com/user-attachments/files/15523611/QualityAnalysisLab.pdf).
 
 ## Support
 For support
