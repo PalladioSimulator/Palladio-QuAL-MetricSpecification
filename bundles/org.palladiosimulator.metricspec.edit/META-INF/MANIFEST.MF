@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.palladiosimulator.metricspec.edit;singleton:=true
 Automatic-Module-Name: org.palladiosimulator.metricspec.edit
-Bundle-Version: 5.2.0.qualifier
+Bundle-Version: 5.2.1.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.metricspec.provider.MetricSpecEditPlugin$Implementation
 Bundle-Vendor: %providerName
