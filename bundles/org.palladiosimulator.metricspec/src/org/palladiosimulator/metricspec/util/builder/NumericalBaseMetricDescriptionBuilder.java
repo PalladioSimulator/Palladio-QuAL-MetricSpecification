@@ -14,7 +14,7 @@ public class NumericalBaseMetricDescriptionBuilder
     // features and builders
     private org.palladiosimulator.metricspec.CaptureType m_captureType;
     private org.palladiosimulator.metricspec.DataType m_dataType;
-    private javax.measure.unit.Unit m_defaultUnit;
+    private jakarta.measure.unit.Unit m_defaultUnit;
     private java.lang.String m_id;
     private java.lang.String m_name;
     private org.palladiosimulator.metricspec.PersistenceKindOptions m_persistenceKind;
@@ -168,7 +168,7 @@ public class NumericalBaseMetricDescriptionBuilder
         return this;
     }
 
-    public NumericalBaseMetricDescriptionBuilder defaultUnit(javax.measure.unit.Unit p_defaultUnit) {
+    public NumericalBaseMetricDescriptionBuilder defaultUnit(jakarta.measure.unit.Unit p_defaultUnit) {
         m_defaultUnit = p_defaultUnit;
         m_featureDefaultUnitSet = true;
         return this;

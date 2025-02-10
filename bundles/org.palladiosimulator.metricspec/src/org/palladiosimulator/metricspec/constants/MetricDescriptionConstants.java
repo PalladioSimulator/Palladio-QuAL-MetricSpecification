@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.Optional;
 
-import javax.measure.unit.UnitFormat;
+import jakarta.measure.unit.UnitFormat;
 
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.URI;

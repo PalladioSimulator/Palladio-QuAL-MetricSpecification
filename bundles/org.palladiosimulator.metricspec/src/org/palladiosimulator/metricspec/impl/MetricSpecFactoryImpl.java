@@ -2,7 +2,7 @@
  */
 package org.palladiosimulator.metricspec.impl;
 
-import javax.measure.unit.Unit;
+import jakarta.measure.unit.Unit;
 
 import org.eclipse.emf.ecore.EDataType;
 import org.palladiosimulator.metricspec.util.DeserializationUtil;
