@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.palladiosimulator.metricspec.editor;singleton:=true
 Automatic-Module-Name: org.palladiosimulator.metricspec.editor
-Bundle-Version: 5.2.2
+Bundle-Version: 6.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.metricspec.presentation.MetricSpecEditorPlugin$Implementation
 Bundle-Vendor: %providerName
@@ -16,6 +16,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport,
- de.uka.ipd.sdq.identifier.edit;bundle-version="2.1.0";visibility:=reexport,
+ de.uka.ipd.sdq.identifier.edit;visibility:=reexport,
  org.eclipse.emf.ecore.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
